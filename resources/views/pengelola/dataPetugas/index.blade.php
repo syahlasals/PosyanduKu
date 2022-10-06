@@ -76,7 +76,7 @@
                             </tr>
                             @endforeach
                         </table>
-                        <a href="{{ url('berandaPengelola') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
+                        <a href="{{ url('pengelola') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
                     </div>
 
                 </div>

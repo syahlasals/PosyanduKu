@@ -10,7 +10,7 @@ class DaftarAnakController extends Controller
 {
     public function index()
     {
-        return view('pendaftaranAnak.index');
+        return view('entry.pendaftaranAnak.index');
     }
 
     public function store(Request $request)
@@ -35,6 +35,6 @@ class DaftarAnakController extends Controller
             'golongan_darah'=>$request->golongan_darah
         ]);
 
-        return redirect('/berandaEntry')->with('success', 'Data berhasil di tambahkan');
+        return redirect('/entry')->with('success', 'Data berhasil di tambahkan');
     }
 }

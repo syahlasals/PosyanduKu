@@ -94,7 +94,7 @@
                 </div>
                     <br>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-center mb-3">
-                    <a href="{{ url('dataAnak') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
+                    <a href="{{ url('/pengelola/dataAnak') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
                 </div>
                 </div>
                 <!-- /.container-fluid -->

@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Petugas Pengelola</title>
+    <title>Petugas Entry</title>
     @include('template.head')
 </head>
 
@@ -12,7 +12,7 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
     <!--sidebar-->
-       @include('template.sidepengelola')
+       @include('template.sideentry')
     <!--End Sidebar-->
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -26,7 +26,7 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <h1 class="text-center"><b>Edit Data</b></h1><br>
+                    <h1 class="text-center"><b>Masukan Data Vitamin</b></h1><br>
                     <div class="container d-flex justify-item-center justify-content-center"><br>
                         <div class="card card-form">
                             <div class="card-body">
@@ -40,63 +40,50 @@
                                     </ul>
                                 </div>
                             @endif
-                            <form method="POST" action="{{ route('dataPetugas.update', $ptgs->nip) }}" id="myform">
+                            <form method="POST" action="/entry/vitamin" id="myform">
                                 @csrf
-                                @method('PUT')
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <div class="col-3">
+                                        <label for="kode_vitamin"><b>Kode Vitamin</b></label>
+                                    </div>
+                                    <div class="col-1"><b>:</b></div>
+                                    <div class="col-8">
+                                        <input type="number" name="kode_vitamin" id="kode_vitamin" class="form-control">
+                                    </div>
+                                </div>
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
                                         <label for="nip"><b>NIP</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
-                                    <div class="col-8">
-                                        <input type="text" name="nip" id="nip" class="form-control" value="{{ $ptgs->nip }}" required="">
-                                    </div>
-                                </div>
-                                <div class="row" style="margin-bottom: 15px;">
-                                    <div class="col-3">
-                                        <label for="nama"><b>NAMA</b></label>
-                                    </div>
-                                    <div class="col-1"><b>:</b></div>
                                     <div class="col-8"> 
-                                        <input type="text" name="nama_petugas" id="nama_petugas" class="form-control" value="{{ $ptgs->nama_petugas }}" required="">
+                                        <input type="number" name="nip" id="nip" class="form-control">
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
-                                        <label for="jenkel_petugas"><b>JENIS KELAMIN</b></label>
+                                        <label for="nik_anak"><b>NIK Anak</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <div class="form-check">
-                                        <input type="radio" class="form-check-input" name="jenkel_petugas" id="lakilaki"
-                                            value="L" {{ $ptgs->jenkel_petugas == 'L' ? 'checked' : '' }}> 
-                                        <label for="lakilaki" class="form-check-label">Laki-laki</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <input type="radio" class="form-check-input" name="jenkel_petugas" id="perempuan"
-                                            value="P" {{ $ptgs->jenkel_petugas == 'P' ? 'checked' : '' }}> 
-                                        <label for="perempuan" class="form-check-label">Perempuan</label>
-                                        </div>
+                                        <input type="number" name="nik_anak" id="nik_anak" class="form-control">
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
-                                        <label for="jabatan"><b>JABATAN</b></label>
+                                        <label for="janis_vitamin"><b>Jenis Vitamin</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="text" name="jabatan" id="jabatan" class="form-control" value="{{ $ptgs->jabatan }}" required="">
+                                        <select class="form-select" aria-label="Default select example" style="border-radius: 30px; width: 250px;" name="jenis_vitamin" id="jenis_vitamin">
+                                            <option selected>Pilih Vitamin</option>
+                                            <option value="Kapsul Merah">Kapsul Merah</option>
+                                            <option value="Kapsul Biru">Kapsul Biru</option>
+                                        </select>                                    
                                     </div>
                                 </div>
-                                <div class="row" style="margin-bottom: 15px;">
-                                    <div class="col-3">
-                                        <label for="alamat_petugas"><b>ALAMAT</b></label>
-                                    </div>
-                                    <div class="col-1"><b>:</b></div>
-                                    <div class="col-8">
-                                        <input type="text" name="alamat_petugas" id="alamat_petugas" class="form-control" value="{{ $ptgs->alamat_petugas }}" required="">
-                                    </div>
-                                </div>
-                                <button class="btn btn-main" type="submit">Save</button>
-                                <button class="btn btn-main" type="btn" href="{{ url('/daPetugas') }}">Kembali</button>
+                                <button class="btn btn-main" type="submit">Simpan</button>
+                                <a href="{{ url('entry') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
                             </form>
                         </div><br>
                     </div>
@@ -149,4 +136,3 @@
 </body>
 
 </html>
-

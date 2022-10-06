@@ -33,7 +33,7 @@
                     </div>
                     <div class="row mb-3">
                         <div class="col d-flex justify-content-end">
-                            <a href="{{ url('dataAnak') }}"class="card card-ap">
+                            <a href="{{ url('pengelola/dataAnak') }}"class="card card-ap">
                                 <div class="card-body">
                                     <h3 class=" d-flex align-items-center justify-content-center mb-3"><b>Data Anak</b></h3> 
                                     <div class="baby d-flex align-items-center justify-content-center">
@@ -43,7 +43,7 @@
                             </a>
                         </div>
                         <div class="col d-flex justify-content-start">
-                            <a href="{{ url('dataImunisasi') }}" class="card card-ip">
+                            <a href="{{ url('pengelola/dataImunisasi') }}" class="card card-ip">
                                 <div class="card-body">
                                     <h3 class=" d-flex align-items-center justify-content-center mb-3"><b>Data Imunisasi</b></h3> 
                                     <div class="baby d-flex align-items-center justify-content-center">
@@ -55,7 +55,7 @@
                     </div>
                     <div class="row mb-3">
                         <div class="col d-flex justify-content-end">
-                            <a href="{{ url('dataPetugas') }}" class="card card-ip ">
+                            <a href="{{ url('pengelola/dataPetugas') }}" class="card card-ip ">
                                 <div class="card-body">
                                     <h3 class=" d-flex align-items-center justify-content-center mb-3"><b>Data Petugas</b></h3> 
                                     <div class="baby d-flex align-items-center justify-content-center">
@@ -65,7 +65,7 @@
                             </a>
                         </div>
                         <div class="col d-flex justify-content-start">
-                            <a href="{{ url('dataPosyandu') }}" class="card card-ap">
+                            <a href="{{ url('pengelola/dataPosyandu') }}" class="card card-ap">
                                 <div class="card-body">
                                     <h3 class=" d-flex align-items-center justify-content-center mb-3"><b>Data Posyandu</b></h3> 
                                     <div class="baby d-flex align-items-center justify-content-center">

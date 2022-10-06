@@ -9,7 +9,7 @@ class VaksinController extends Controller
 {
     public function index()
     {
-        return view('vaksin.index');
+        return view('entry.vaksin.index');
     }
 
     public function store(Request $request)
@@ -28,7 +28,7 @@ class VaksinController extends Controller
             'jenis_vaksin'=>$request->jenis_vaksin
         ]);
 
-        return redirect('/vaksin')->with('success', 'Vaksin berhasil di tambahkan');
+        return redirect('/entry/vaksin')->with('success', 'Vaksin berhasil di tambahkan');
     }
 
 }

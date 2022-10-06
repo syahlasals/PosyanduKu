@@ -25,7 +25,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item">
-        <a class="nav-link" href="{{ url('berandaPengelola') }}">
+        <a class="nav-link" href="{{ url('pengelola') }}">
             <i class="bi bi-house-door-fill"></i>
             <span>Beranda</span></a>
     </li>
@@ -41,13 +41,13 @@
             data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Data Status:</h6>
-                <a class="collapse-item" href="{{ url('dataImunisasi') }}">Data Imunisasi</a>
-                <a class="collapse-item" href="{{ url('dataStunting') }}">Data Stunting</a>
+                <a class="collapse-item" href="{{ url('pengelola/dataImunisasi') }}">Data Imunisasi</a>
+                <a class="collapse-item" href="{{ url('pengelola/dataStunting') }}">Data Stunting</a>
                 <div class="collapse-divider"></div>
                 <h6 class="collapse-header">Data Umum:</h6>
-                <a class="collapse-item" href="{{ url('dataAnak') }}">Data Anak</a>
-                <a class="collapse-item" href="{{ url('dataPetugas') }}">Data Petugas</a>
-                <a class="collapse-item" href="{{ url('dataPosyandu') }}">Data Posyandu</a>
+                <a class="collapse-item" href="{{ url('pengelola/dataAnak') }}">Data Anak</a>
+                <a class="collapse-item" href="{{ url('pengelola/dataPetugas') }}">Data Petugas</a>
+                <a class="collapse-item" href="{{ url('pengelola/dataPosyandu') }}">Data Posyandu</a>
             </div>
         </div>
     </li>

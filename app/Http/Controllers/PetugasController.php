@@ -11,15 +11,15 @@ class PetugasController extends Controller
     public function index()
     {
         $petugass = petugas::all();
-        return view('dataPetugas.index', compact('petugass'));
+        return view('pengelola.dataPetugas.index', compact('petugass'));
     }
     
     public function hapuspetugas(Request $request){
-      
-       
+    
+    
         $petugass = petugas::where('nip', $request->nip)->delete();    
 
-        return redirect("/dataPetugas")->with('success', 'Data Petugas Berhasil Di Hapus');
+        return redirect("/pengelola/dataPetugas")->with('success', 'Data Petugas Berhasil Di Hapus');
     }
 
     /**
@@ -32,7 +32,7 @@ class PetugasController extends Controller
     public function edit($nip)
     {
         $petugass = DB::table('tb_petugas')->where('nip', $nip)->first();
-        return view('dataPetugas.edit', ['ptgs'=> $petugass]);
+        return view('/pengelola/dataPetugas.edit', ['ptgs'=> $petugass]);
 
     }
 
@@ -54,7 +54,8 @@ class PetugasController extends Controller
                 'alamat_petugas'=>$request->alamat_petugas,
         ]);
         
-        return redirect()->route('dataPetugas.index')->with('success', 'Data Berhasil Diedit!');
+        return redirect('/pengelola/dataPetugas')->with('success', 'Data berhasil Di Update');
+        // return redirect()->route('pengelola.dataPetugas.index')->with('success', 'Data Berhasil Diedit!');
     }
 
     /**

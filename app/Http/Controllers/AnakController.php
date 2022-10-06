@@ -16,7 +16,7 @@ class AnakController extends Controller
     public function index()
     {
         $anaks = Anak::all();
-        return view('dataAnak.index', compact('anaks'));
+        return view('pengelola.dataAnak.index', compact('anaks'));
     }
 
     /**
@@ -26,7 +26,7 @@ class AnakController extends Controller
      */
     public function create()
     {
-        return view('dataAnak.create');
+        return view('pengelola.dataAnak.create');
     }
 
     /**
@@ -47,7 +47,7 @@ class AnakController extends Controller
             'golongan_darah'=>'required',
         ]);
 
-        return redirect('/dataAnak')->with('success', 'Data berhasil di tambahkan');
+        return redirect('/pengelola/dataAnak')->with('success', 'Data berhasil di tambahkan');
     }
 
     /**
@@ -59,7 +59,7 @@ class AnakController extends Controller
     public function show($nik_anak)
     {
         $anak = Anak::find($nik_anak);
-            return view('dataAnak.show',[
+            return view('pengelola.dataAnak.show',[
                 "anak" => $anak
         ]);
     }
@@ -73,7 +73,7 @@ class AnakController extends Controller
     public function edit($nik_anak)
     {
         $anaks = Anak::find($nik_anak);
-        return view('dataAnak.edit', ['anak' => $anaks]);
+        return view('pengelola.dataAnak.edit', ['anak' => $anaks]);
     }
 
     /**
@@ -92,7 +92,7 @@ class AnakController extends Controller
         // ]);
         $anaks = Anak::find($nik_anak);
         $anaks->update($request->all());
-        return redirect('/dataAnak')->with('success', 'Data berhasil Di Update');
+        return redirect('/pengelola/dataAnak')->with('success', 'Data berhasil Di Update');
     }
 
     /**
@@ -107,6 +107,6 @@ class AnakController extends Controller
 
         $anak = Anak::findOrFail($nik_anak);
         $anak->delete();
-        return redirect('/dataAnak')->with('success', 'data berhasil dihapus');
+        return redirect('/pengelola/dataAnak')->with('success', 'data berhasil dihapus');
     }
 }

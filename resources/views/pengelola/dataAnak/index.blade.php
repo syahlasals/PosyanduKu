@@ -62,13 +62,13 @@
                                 <td>
                                     <div class="row">
                                         <div class="col-4">
-                                            <a href="/dataAnak/{{ $anak->nik_anak }}" class="btn btn-warning d-flex"><iconify-icon icon="fa:eye" width="20px" height="20px"></iconify-icon></a>
+                                            <a href="dataAnak/{{ $anak->nik_anak }}" class="btn btn-warning d-flex"><iconify-icon icon="fa:eye" width="20px" height="20px"></iconify-icon></a>
                                         </div>
                                         <div class="col-4">
-                                            <a href="/dataAnak/{{ $anak->nik_anak }}/edit" class="btn btn-info d-flex"><iconify-icon icon="akar-icons:edit" width="20px" height="20px"></iconify-icon></a>
+                                            <a href="dataAnak/{{ $anak->nik_anak }}/edit" class="btn btn-info d-flex"><iconify-icon icon="akar-icons:edit" width="20px" height="20px"></iconify-icon></a>
                                         </div>
                                         <div class="col-4">
-                                            <form id="delete-form" method="POST" action="/dataAnak/{{ $anak->nik_anak }}">
+                                            <form id="delete-form" method="POST" action="dataAnak/{{ $anak->nik_anak }}">
                                                 @csrf
                                                 @method('delete')
                                                 <div class="form-group">
@@ -84,7 +84,7 @@
                             @endforeach
                             </div>
                         </table>
-                        <a href="{{ url('berandaPengelola') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
+                        <a href="{{ url('pengelola') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
                     </div>
                 </div>
                 <!-- /.container-fluid -->

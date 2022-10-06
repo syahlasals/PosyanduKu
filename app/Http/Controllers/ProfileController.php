@@ -11,6 +11,6 @@ class ProfileController extends Controller
     public function index()
     {
         $profiles = profile::all();
-        return view('dataPosyandu.index', compact('profiles'));
+        return view('pengelola.dataPosyandu.index', compact('profiles'));
     }
 }

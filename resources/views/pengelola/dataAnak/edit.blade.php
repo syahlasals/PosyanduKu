@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Petugas Entry</title>
+    <title>Petugas Pengelola</title>
     @include('template.head')
 </head>
 
@@ -12,7 +12,7 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
     <!--sidebar-->
-       @include('template.sideentry')
+       @include('template.sidepengelola')
     <!--End Sidebar-->
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -26,7 +26,7 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <h1 class="text-center"><b>Pendaftaran Anak</b></h1><br>
+                    <h1 class="text-center"><b>Perbaharui Data Anak</b></h1><br>
                     <div class="container d-flex justify-item-center justify-content-center"><br>
                         <div class="card card-form">
                             <div class="card-body">
@@ -40,15 +40,16 @@
                                     </ul>
                                 </div>
                             @endif
-                            <form method="POST" action="/pendaftaranAnak" id="myform">
+                            <form method="POST" action="/pengelola/dataAnak/{{ $anak->nik_anak }}" id="myform">
                                 @csrf
+                                @method('PUT')
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
                                         <label for="no_kk"><b>Nomor Kartu Keluarga</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="number" name="no_kk" id="no_kk" class="form-control">
+                                        <input type="integer" name="no_kk" id="no_kk" class="form-control" value="{{ $anak->no_kk }}" disabled>
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
@@ -56,8 +57,8 @@
                                         <label for="nik_anak"><b>NIK Anak</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
-                                    <div class="col-8">
-                                        <input type="number" name="nik_anak" id="nik_anak" class="form-control">
+                                    <div class="col-8"> 
+                                        <input type="text" name="nik_anak" id="nik_anak" class="form-control" value="{{ $anak->nik_anak }}" disabled>
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
@@ -66,62 +67,60 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="text" name="nama_anak" id="nama_anak" class="form-control">
+                                        <input type="text" name="nama_anak" id="nama_anak" class="form-control" value="{{ $anak->nama_anak }}">
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
-                                        <label for="jenkel_anak"><b>Jenis Kelamin</b></label>
+                                        <label for="tmp_anak"><b>Tempat Lahir Anak</b></label>
+                                    </div>
+                                    <div class="col-1"><b>:</b></div>
+                                    <div class="col-8">
+                                        <input type="text" name="tmp_anak" id="tmp_anak" class="form-control" value="{{ $anak->tmp_anak }}">                        
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <div class="col-3">
+                                        <label for="tgl_anak"><b>Tempat Lahir Anak</b></label>
+                                    </div>
+                                    <div class="col-1"><b>:</b></div>
+                                    <div class="col-8">
+                                        <input type="date" name="tgl_anak" id="tgl_anak" class="form-control" value="{{ $anak->tgl_anak }}">                        
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <div class="col-3">
+                                        <label for="jenkel_anak"><b>Jenis Kelamin Anak</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
                                         <div class="form-check">
-                                            <input type="radio" class="form-check-input" name="jenkel_anak" id="lakilaki"
-                                                value="L">
+                                            <input type="radio" class="form-check-input" name="jenkel_anak" id="lakilaki" value="L"  {{ $anak->jenkel_anak == 'L' ? 'checked' : '' }}>
                                             <label for="lakilaki" class="form-check-label">Laki-laki</label>
                                         </div>
                                         <div class="form-check">
-                                            <input type="radio" class="form-check-input" name="jenkel_anak" id="perempuan"
-                                                value="P">
+                                            <input type="radio" class="form-check-input" name="jenkel_anak" id="perempuan" value="P"  {{ $anak->jenkel_anak == 'P' ? 'checked' : '' }}>
                                             <label for="perempuan" class="form-check-label">Perempuan</label>
-                                        </div>                    
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
-                                        <label for="tgl_anak"><b>Tanggal Lahir</b></label>
+                                        <label for="tgl_anak"><b>Golongan Darah</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="date" name="tgl_anak" id="tgl_anak" class="form-control">
+                                        <input type="text" name="golongan_darah" id="golongan_darah" class="form-control" value="{{ $anak->golongan_darah }}" required="">                        
                                     </div>
                                 </div>
-                                <div class="row" style="margin-bottom: 15px;">
-                                    <div class="col-3">
-                                        <label for="tmp_anak"><b>Tempat Lahir</b></label>
-                                    </div>
-                                    <div class="col-1"><b>:</b></div>
-                                    <div class="col-8">
-                                        <input type="text" name="tmp_anak" id="tmp_anak" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="row" style="margin-bottom: 15px;">
-                                    <div class="col-3">
-                                        <label for="golongan_darah"><b>Golongan Darah</b></label>
-                                    </div>
-                                    <div class="col-1"><b>:</b></div>
-                                    <div class="col-8">
-                                        <input type="text" name="golongan_darah" id="golongan_darah" class="form-control">
-                                    </div>
-                                </div>
-                                <button class="btn btn-main" type="submit">Daftar</button>
-                                <a href="{{ url('berandaEntry') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
-                               </form>
+                                <button class="btn btn-main" type="submit">Save</button>
+                                {{-- <button class="btn btn-main" type="btn" href="{{ url('pengelola/dataAnak') }}">Kembali</button> --}}
+                                <a href="{{ url('/pengelola/dataAnak') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
+                            </form>
                         </div><br>
                     </div>
                 </div>
-                </div>
-                
+            </div>
                 <!-- /.container-fluid -->
 
             </div>
@@ -169,10 +168,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-

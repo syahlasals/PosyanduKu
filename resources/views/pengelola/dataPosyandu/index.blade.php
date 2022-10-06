@@ -82,7 +82,7 @@
                     @endforeach
 
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-3">
-                        <a href="{{ url('berandaPengelola') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
+                        <a href="{{ url('pengelola') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
                       </div>
                 </div>
                 <!-- /.container-fluid -->

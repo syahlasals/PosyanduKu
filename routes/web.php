@@ -25,21 +25,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('dataAnak', AnakController::class);
+Route::resource('pengelola/dataAnak', AnakController::class);
 
-Route::get('/dataPosyandu',[ProfileController::class,'index']);
+Route::get('pengelola/dataPosyandu',[ProfileController::class,'index']);
 
-Route::get('/berandaPengelola',[BerandapController::class,'index']);
+Route::get('/pengelola',[BerandapController::class,'index']);
 
-Route::get('/berandaEntry',[BerandaeController::class,'index']);
+Route::get('/entry',[BerandaeController::class,'index']);
 
-Route::resource('dataPetugas', PetugasController::class);
-Route::get('/hapuspetugas', [PetugasController::class, 'hapuspetugas'])->name('hapuspetugas');
-Route::get('/dataPetugas/edit/{nip}',[PetugasController::class,'edit'])->name('edit');
-Route::post('/dataPetugas/update/{nip}',[PetugasController::class,'update']);
+Route::resource('pengelola/dataPetugas', PetugasController::class);
+Route::get('/pengelola/hapuspetugas', [PetugasController::class, 'hapuspetugas'])->name('hapuspetugas');
+Route::get('/pengelola/dataPetugas/edit/{nip}',[PetugasController::class,'edit'])->name('edit');
+Route::post('/pengelola/dataPetugas/update/{nip}',[PetugasController::class,'update']);
 
-Route::resource('vaksin', VaksinController::class);
+Route::resource('entry/vaksin', VaksinController::class);
 
-Route::resource('vitamin', VitaminController::class);
+Route::resource('entry/vitamin', VitaminController::class);
 
-Route::resource('pendaftaranAnak', DaftarAnakController::class);
+Route::resource('entry/pendaftaranAnak', DaftarAnakController::class);

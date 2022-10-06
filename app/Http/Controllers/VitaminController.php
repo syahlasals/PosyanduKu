@@ -9,7 +9,7 @@ class VitaminController extends Controller
 {
     public function index()
     {
-        return view('vitamin.index');
+        return view('entry.vitamin.index');
     }
 
     public function store(Request $request)
@@ -28,7 +28,7 @@ class VitaminController extends Controller
             'jenis_vitamin'=>$request->jenis_vitamin
         ]);
 
-        return redirect('/vitamin')->with('success', 'Vitamin berhasil di tambahkan');
+        return redirect('/entry/vitamin')->with('success', 'Vitamin berhasil di tambahkan');
     }
 
 }

@@ -34,10 +34,10 @@
             data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Form Input</h6>
-                <a class="collapse-item" href="{{ url('pendaftaranAnak') }}">Form Pendaftaran</a>
+                <a class="collapse-item" href="{{ url('entry/pendaftaranAnak') }}">Form Pendaftaran</a>
                 <a class="collapse-item" href="#">Form Pertumbuhan</a>
-                <a class="collapse-item" href="{{ url('vaksin') }}">Form Vaksin</a>
-                <a class="collapse-item" href="{{ url('vitamin') }}">Form Vitamin</a>
+                <a class="collapse-item" href="{{ url('entry/vaksin') }}">Form Vaksin</a>
+                <a class="collapse-item" href="{{ url('entry/vitamin') }}">Form Vitamin</a>
                 <a class="collapse-item" href="#">Form Riwayat Penyakit</a>
                 <div class="collapse-divider"></div>
             </div>

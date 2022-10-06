@@ -10,6 +10,6 @@ class BerandapController extends Controller
 {
     public function index()
     {
-        return view('berandaPengelola.index');
+        return view('pengelola.index');
     }
 }

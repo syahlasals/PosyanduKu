@@ -8,6 +8,6 @@ class BerandaeController extends Controller
 {
     public function index()
     {
-        return view('berandaEntry.index');
+        return view('entry.index');
     }
 }

@@ -33,7 +33,7 @@
                     </div>
                     <div class="row mb-3">
                         <div class="col d-flex justify-content-end">
-                            <a href="/pendaftaranAnak" class="card card-ap">
+                            <a href="/entry/pendaftaranAnak" class="card card-ap">
                                 <div class="card-body">
                                     <h4 class=" d-flex align-items-center justify-content-center mb-3"><b>Pendaftaran</b></h4> 
                                 </div>
@@ -49,7 +49,7 @@
                     </div>
                     <div class="row mb-3">
                         <div class="col d-flex justify-content-end">
-                            <a href="/vitamin" class="card card-pv ">
+                            <a href="/entry/vitamin" class="card card-pv ">
                                 <div class="card-body">
                                     <h4 class=" d-flex align-items-center justify-content-center mb-3"><b>Vitamin</b></h4> 
                                 </div>
@@ -65,7 +65,7 @@
                     </div>
                     <div class="row mb-3">
                         <div class="col d-flex justify-content-center">
-                            <a href="/vaksin" class="card card-pv ">
+                            <a href="/entry/vaksin" class="card card-pv ">
                                 <div class="card-body">
                                     <h4 class=" d-flex align-items-center justify-content-center mb-3"><b>Vaksin</b></h4> 
                                 </div>
