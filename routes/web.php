@@ -9,6 +9,7 @@ use App\Http\Controllers\VitaminController;
 use App\Http\Controllers\BerandaeController;
 use App\Http\Controllers\BerandapController;
 use App\Http\Controllers\DaftarAnakController;
+use App\Http\Controllers\ImunisasiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,3 +44,5 @@ Route::resource('entry/vaksin', VaksinController::class);
 Route::resource('entry/vitamin', VitaminController::class);
 
 Route::resource('entry/pendaftaranAnak', DaftarAnakController::class);
+
+Route::resource('pengelola/dataImunisasi', ImunisasiController::class);
