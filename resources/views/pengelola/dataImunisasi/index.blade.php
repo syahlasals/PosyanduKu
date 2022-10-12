@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,8 +11,9 @@
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
                 @include('template.nav')
+<body>
     <div class="container"><br>
-        <h1 class="text-center" >DATA PETUGAS</h1>
+        <h1 class="text-center" >DATA IMUNISASI</h1>
         <br>
         <br><br>
         <div>
@@ -25,45 +24,37 @@
               </div>
             @endif
         </div>
-        <table id="datapetugas" class="table table-striped table-bordered text-center">
+        <table id="dataimunisasi" class="table table-striped table-bordered text-center">
             <thead>
                 <tr>
                     <th>NOMOR</th>
+                    <th>KODE IMUNISASI</th>
+                    <th>ID POSYANDU</th>
+                    <th>KODE VAKSIN</th>
+                    <th>KODE VITAMIN</th>
                     <th>NIP</th>
-                    <th>NAMA</th>
-                    <th>JENIS KELAMIN</th>
-                    <th>JABATAN</th>
-                    <th>ALAMAT</th>
-                    <th>AKSI</th>
+                    <th>NIK ANAK</th>
+                    <th>KODE PERTUMBUHAN</th>
+                    <th>TANGGAL IMUNISASI</th>
 
                 </tr>
             </thead>
-            @foreach ($petugass as $key => $ptgs)
+            @foreach ($imunisasis as $key => $imns)
             <tr>
                 <td>{{$key+1}}</td>
-                <td>{{$ptgs->nip}}</td>
-                <td>{{$ptgs->nama_petugas}}</td>
-                <td>{{$ptgs->jenkel_petugas}}</td>
-                <td>{{$ptgs->jabatan}}</td>
-                <td>{{$ptgs->alamat_petugas}}</td>
-                <td>
-                <div class="row justify-content">
-                <div class="col-3">         
-                <form action="{{ route('hapuspetugas') }}">
-                    <input type="hidden" name= "nip" value="{{ $ptgs->nip }}">
-                    <button type="submit" class="btn btn-danger" style="color:#000000;"><i class="fas fa-trash-alt"></i></button>
-                </form>
-                </div>
-                <div class="col-3">
-                <a href="{{ route('edit', $ptgs->nip) }}" class="btn btn-warning" style="background-color:#AFEEEE; color:#000000;"><i class="fas fa-pencil-alt"></i></a>
-                </div>
-                </td>
-                </div>
+                <td>{{$imns->kode_imunisasi}}</td>
+                <td>{{$imns->id_posyandu}}</td>
+                <td>{{$imns->kode_vaksin}}</td>
+                <td>{{$imns->kode_vitamin}}</td>
+                <td>{{$imns->nip}}</td>
+                <td>{{$imns->nik_anak}}</td>
+                <td>{{$imns->kode_pertumbuhan}}</td>
+                <td>{{$imns->tgl_imunisasi}}</td>
             </tr>
             @endforeach
         </table>
     </div>
-                @include('template.footer')
+    @include('template.footer')
         </div>
     </div>
     <a class="scroll-to-top rounded" href="#page-top">
@@ -89,7 +80,7 @@
     </div>
 </body>
 <script> $(document).ready( function () {
-    $('#datapetugas').DataTable();
+    $('#dataimunisasi').DataTable();
 } );
 </script>
 </html>

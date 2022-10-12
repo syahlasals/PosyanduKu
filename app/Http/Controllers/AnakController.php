@@ -135,4 +135,49 @@ class AnakController extends Controller
     {
         return view('entry.anakEntry.vitamin');
     }
+
+    // public function search(Request $request)
+    // {
+
+    //     $output="";
+
+    //     $anaks=Anak::where('nama_anak', 'Like', '%'.$request->
+    //         search.'%')->orWhere('no_kk', 'Like', '%'.$request->
+    //         search.'%')->orWhere('nik_anak', 'Like', '%'.$request->
+    //         search.'%')->get();
+
+    //     // foreach($anaks as $anak)
+    //     // {
+    //     //     $output.=
+
+    //     //     '<tr>
+            
+    //     //     <td> '.$anak->nama_anak.' </td>
+            
+    //     //     <tr>';
+    //     // }
+
+    //     foreach ($anaks as $key => $anak)
+
+    //         $output.=
+    //             '<tr>
+    //                 <td> '.$key + 1..' </td>
+    //                 <td> '.$anak->no_kk.' </td>
+    //                 <td> '.$anak->nik_anak.'</td>
+    //                 <td> '.$anak->nama_anak.'</td>
+    //                 <td> '.$anak->tmp_anak.', '.$anak->tgl_anak.'</td>
+    //                 <td> '.$anak->jenkel_anak.'</td>
+    //                 <td> '.$anak->golongan_darah.' </td>
+
+    //                 <td>
+    //                 '.'
+    //                     <a href="/anak/'.$anak->nik_anak.'/edit" class="btn btn-warning"><i class="bi bi-pencil-fill"></i></a>
+    //                 '.'
+    //                     <a href="/anak/'.$anak->nik_anak.'" class="btn btn-info"><i class="bi bi-eye-fill"></i></a>
+    //                 '.'
+    //                 </td>
+    //             </tr>';
+
+    //     return response($output);
+    // }
 }

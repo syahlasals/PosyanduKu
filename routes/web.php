@@ -9,6 +9,7 @@ use App\Http\Controllers\VitaminController;
 use App\Http\Controllers\BerandaeController;
 use App\Http\Controllers\BerandapController;
 use App\Http\Controllers\DaftarAnakController;
+use App\Http\Controllers\ImunisasiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,3 +50,5 @@ Route::get('entry/anakEntry/historyImunisasi', [AnakController::class, 'historyI
 Route::get('entry/anakEntry/pertumbuhan', [AnakController::class, 'pertumbuhan']);
 Route::get('entry/anakEntry/vaksin', [AnakController::class, 'vaksin']);
 Route::get('/entry/anakEntry/vitamin', [AnakController::class, 'vitamin']);
+
+Route::resource('pengelola/dataImunisasi', ImunisasiController::class);
