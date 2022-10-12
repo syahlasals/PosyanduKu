@@ -64,7 +64,7 @@
                                             <a href="/anakEntry/historyImunisasi"><button type="button" class="btn btn-primary">History</button>
                                         </div>
                                         <div class="col-3">
-                                            <a href="/anakEntry/pertumbuhan"><button type="button" class="btn btn-secondary">Pertumbuhan</button>
+                                            <a href="/entry/pertumbuhan"><button type="button" class="btn btn-secondary">Pertumbuhan</button>
                                         </div>
                                         <div class="col-3">
                                             <a href="/entry/vaksin"><button type="button" class="btn btn-success">Vaksin</button>
