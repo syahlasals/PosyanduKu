@@ -12,10 +12,9 @@
             <div id="content">
                 @include('template.nav')
 <body>
-    <div class="container"><br>
-        <h1 class="text-center" >DATA IMUNISASI</h1>
-        <br>
-        <br><br>
+    <div class="container">
+        <h1 class="text-center mt-5 mb-5"><b>DATA IMUNISASI</b></h1>
+        
         <div>
             @if ($message = Session::get('success'))
             <div class="alert alert-success " role="alert">

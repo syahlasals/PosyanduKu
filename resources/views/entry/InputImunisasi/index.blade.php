@@ -26,7 +26,7 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                <h1 class="text-center"><b>Data Anak</b></h1>
+                <h1 class="text-center mb-5 mt-5"><b>INPUT IMUNISASI</b></h1>
                 <div class="container">
                         <div>
                         @if ($message = Session::get('success'))
