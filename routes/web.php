@@ -10,6 +10,7 @@ use App\Http\Controllers\BerandaeController;
 use App\Http\Controllers\BerandapController;
 use App\Http\Controllers\DaftarAnakController;
 use App\Http\Controllers\ImunisasiController;
+use App\Http\Controllers\StuntingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,3 +53,4 @@ Route::get('entry/anakEntry/vaksin', [AnakController::class, 'vaksin']);
 Route::get('/entry/anakEntry/vitamin', [AnakController::class, 'vitamin']);
 
 Route::resource('pengelola/dataImunisasi', ImunisasiController::class);
+Route::resource('pengelola/dataStunting', StuntingController::class);
