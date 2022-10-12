@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +25,7 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <h1 class="text-center"><b>Masukan Data Vitamin</b></h1><br>
+                    <h1 class="text-center"><b>Masukan Data Pertumbuhan</b></h1><br>
                     <div class="container d-flex justify-item-center justify-content-center"><br>
                         <div class="card card-form">
                             <div class="card-body">
@@ -40,46 +39,42 @@
                                     </ul>
                                 </div>
                             @endif
-                            <form method="POST" action="/entry/vitamin" id="myform">
+                            <form method="POST" action="/entry/pertumbuhan" id="myform">
                                 @csrf
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
-                                        <label for="kode_vitamin"><b>Kode Vitamin</b></label>
+                                        <label for="kode_pertumnuhan"><b>Kode Pertumbuhan</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="number" name="kode_vitamin" id="kode_vitamin" class="form-control">
+                                        <input type="number" name="kode_pertumbuhan" id="kode_pertumbuhan" class="form-control">
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
-                                        <label for="nip"><b>NIP</b></label>
+                                        <label for="tinggi"><b>Tinggi</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8"> 
-                                        <input type="number" name="nip" id="nip" class="form-control">
+                                        <input type="number" name="tinggi" id="tinggi" class="form-control">
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
-                                        <label for="nik_anak"><b>NIK Anak</b></label>
+                                        <label for="berat"><b>Berat</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="number" name="nik_anak" id="nik_anak" class="form-control">
+                                        <input type="number" name="berat" id="berat" class="form-control">
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
-                                        <label for="janis_vitamin"><b>Jenis Vitamin</b></label>
+                                        <label for="lingkar_kepala"><b>Lingkar Kepala</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <select class="form-select" aria-label="Default select example" style="border-radius: 30px; width: 250px;" name="jenis_vitamin" id="jenis_vitamin">
-                                            <option selected>Pilih Vitamin</option>
-                                            <option value="Kapsul Merah">Kapsul Merah</option>
-                                            <option value="Kapsul Biru">Kapsul Biru</option>
-                                        </select>                                    
+                                        <input type="number" name="lingkar_kepala" id="lingkar_kepala" class="form-control">                                
                                     </div>
                                 </div>
                                 <a href="{{ url('entry/InputImunisasi') }}" class="btn btn-main" type="submit">Simpan</a>

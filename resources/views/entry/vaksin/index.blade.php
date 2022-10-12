@@ -42,7 +42,6 @@
                             @endif
                             <form method="POST" action="/entry/vaksin" id="myform">
                                 @csrf
-                                @method('PUT')
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
                                         <label for="kode_vaksin"><b>Kode Vaksin</b></label>
@@ -79,8 +78,8 @@
                                         <input type="text" name="jenis_vaksin" id="jenis_vaksin" class="form-control">
                                     </div>
                                 </div>
-                                <button class="btn btn-main" type="submit">Simpan</button>
-                                <a href="{{ url('entry') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
+                                <a href="{{ url('entry/InputImunisasi') }}" class="btn btn-main" type="submit">Simpan</a>
+                                <a href="{{ url('entry/InputImunisasi') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
                             </form>
                         </div><br>
                     </div>
