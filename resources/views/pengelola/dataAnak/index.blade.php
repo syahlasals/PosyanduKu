@@ -11,9 +11,8 @@
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
                 @include('template.nav')
-    <div class="container"><br>
-
-                    <h1 class="text-center"><b>Data Anak</b></h1>
+    <div class="container">
+                    <h1 class="text-center mt-5 mb-5"><b>DATA ANAK</b></h1>
                     <div class="container">
                         <div>
                         @if ($message = Session::get('success'))

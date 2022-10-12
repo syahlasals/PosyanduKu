@@ -26,7 +26,7 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                <h1 class="text-center"><b>Data Anak</b></h1>
+                <h1 class="text-center mb-5 mt-5"><b>INPUT IMUNISASI</b></h1>
                 <div class="container">
                         <div>
                         @if ($message = Session::get('success'))
@@ -61,7 +61,7 @@
                                 <td>
                                     <div class="row">
                                         <div class="col-3">
-                                            <a href="/anakEntry/historyImunisasi"><button type="button" class="btn btn-primary">History</button>
+                                            <a href="/entry/history"><button type="button" class="btn btn-primary">History</button>
                                         </div>
                                         <div class="col-3">
                                             <a href="/entry/pertumbuhan"><button type="button" class="btn btn-secondary">Pertumbuhan</button>

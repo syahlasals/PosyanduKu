@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,10 +11,9 @@
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
                 @include('template.nav')
-    <div class="container"><br>
-        <h1 class="text-center" >DATA PETUGAS</h1>
-        <br>
-        <br><br>
+    <div class="container">
+        <h1 class="text-center mb-5 mt-5"><b>DATA PETUGAS</b></h1>
+        
         <div>
             @if ($message = Session::get('success'))
             <div class="alert alert-success " role="alert">
