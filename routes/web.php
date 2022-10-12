@@ -45,10 +45,8 @@ Route::resource('entry/vitamin', VitaminController::class);
 
 Route::resource('entry/pendaftaranAnak', DaftarAnakController::class);
 
-Route::get('entry/anakEntry', [AnakController::class, 'indexAnak']);
-Route::get('entry/anakEntry/historyImunisasi', [AnakController::class, 'historyImunisasi']);
-Route::get('entry/anakEntry/pertumbuhan', [AnakController::class, 'pertumbuhan']);
-Route::get('entry/anakEntry/vaksin', [AnakController::class, 'vaksin']);
-Route::get('/entry/anakEntry/vitamin', [AnakController::class, 'vitamin']);
+Route::get('entry/InputImunisasi', [AnakController::class, 'indexInputImunisasi'])->name('index-imunisasi');
+Route::get('entry/history', [AnakController::class, 'historyImunisasi']);
+Route::get('entry/pertumbuhan', [AnakController::class, 'pertumbuhan']);
 
 Route::resource('pengelola/dataImunisasi', ImunisasiController::class);
