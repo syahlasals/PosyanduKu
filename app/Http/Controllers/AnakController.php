@@ -109,4 +109,30 @@ class AnakController extends Controller
         $anak->delete();
         return redirect('/pengelola/dataAnak')->with('success', 'data berhasil dihapus');
     }
+
+    public function indexAnak()
+    {
+        $anaks = Anak::all();
+        return view('entry.anakEntry.index', compact('anaks'));
+    }
+
+    public function historyImunisasi()
+    {
+        return view('entry.anakEntry.historyImunisasi');
+    }
+
+    public function pertumbuhan()
+    {
+        return view('entry.anakEntry.pertumbuhan');
+    }
+
+    public function vaksin()
+    {
+        return view('entry.anakEntry.vaksin');
+    }
+
+    public function vitamin()
+    {
+        return view('entry.anakEntry.vitamin');
+    }
 }

@@ -39,6 +39,7 @@
                 <a class="collapse-item" href="{{ url('entry/vaksin') }}">Form Vaksin</a>
                 <a class="collapse-item" href="{{ url('entry/vitamin') }}">Form Vitamin</a>
                 <a class="collapse-item" href="#">Form Riwayat Penyakit</a>
+                <a class="collapse-item" href="{{ url('entry/anakEntry') }}">Form Data Anak</a>
                 <div class="collapse-divider"></div>
             </div>
         </div>
