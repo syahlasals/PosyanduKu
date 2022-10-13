@@ -69,5 +69,5 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
-Route::resource('pengelola/dataStunting', StuntingController::class);
+Route::resource('entry/sdidtkAnak', StuntingController::class);
 

@@ -7,7 +7,7 @@
 </head>
 <body>
 <div id="wrapper">
-       @include('template.sidepengelola')
+       @include('template.sideentry')
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
                 @include('template.nav')
@@ -53,86 +53,86 @@
                 </tr>
             </thead>
 
-            @foreach ($stuntings as $stntg)
+            @foreach ($sdidtks as $sdidtk)
             <tr>
                 <th>0 Bulan</th>
-                <td>{{$stntg->kode_pertumbuhan}}</td>
-                <td>{{$stntg->bbdn_tbdn}}</td>
-                <td>{{$stntg->tb_u}}</td>
-                <td>{{$stntg->lk}}</td>
-                <td>{{$stntg->kpsp}}</td>
-                <td>{{$stntg->tdd}}</td>
-                <td>{{$stntg->tdl}}</td>
-                <td>{{$stntg->kmpe}}</td>
-                <td>{{$stntg->mchat}}</td>
-                <td>{{$stntg->gpph}}</td>
+                <td>{{$sdidtk->kode_pertumbuhan}}</td>
+                <td>{{$sdidtk->bbdn_tbdn}}</td>
+                <td>{{$sdidtk->tb_u}}</td>
+                <td>{{$sdidtk->lk}}</td>
+                <td>{{$sdidtk->kpsp}}</td>
+                <td>{{$sdidtk->tdd}}</td>
+                <td>{{$sdidtk->tdl}}</tsd>
+                <td>{{$sdidtk->kmpe}}</td>
+                <td>{{$sdidtk->mchat}}</td>
+                <td>{{$sdidtk->gpph}}</td>
             </tr>
             <tr>
                 <th>3 Bulan</th>
-                <td>{{$stntg->kode_pertumbuhan}}</td>
-                <td>{{$stntg->bbdn_tbdn}}</td>
-                <td>{{$stntg->tb_u}}</td>
-                <td>{{$stntg->lk}}</td>
-                <td>{{$stntg->kpsp}}</td>
-                <td>{{$stntg->tdd}}</td>
-                <td>{{$stntg->tdl}}</td>
-                <td>{{$stntg->kmpe}}</td>
-                <td>{{$stntg->mchat}}</td>
-                <td>{{$stntg->gpph}}</td>
+                <td>{{$sdidtk->kode_pertumbuhan}}</td>
+                <td>{{$sdidtk->bbdn_tbdn}}</td>
+                <td>{{$sdidtk->tb_u}}</td>
+                <td>{{$sdidtk->lk}}</td>
+                <td>{{$sdidtk->kpsp}}</td>
+                <td>{{$sdidtk->tdd}}</td>
+                <td>{{$sdidtk->tdl}}</td>
+                <td>{{$sdidtk->kmpe}}</td>
+                <td>{{$sdidtk->mchat}}</td>
+                <td>{{$sdidtk->gpph}}</td>
             </tr>
             <tr>
                 <th>6 Bulan</th>
-                <td>{{$stntg->kode_pertumbuhan}}</td>
-                <td>{{$stntg->bbdn_tbdn}}</td>
-                <td>{{$stntg->tb_u}}</td>
-                <td>{{$stntg->lk}}</td>
-                <td>{{$stntg->kpsp}}</td>
-                <td>{{$stntg->tdd}}</td>
-                <td>{{$stntg->tdl}}</td>
-                <td>{{$stntg->kmpe}}</td>
-                <td>{{$stntg->mchat}}</td>
-                <td>{{$stntg->gpph}}</td>
+                <td>{{$sdidtk->kode_pertumbuhan}}</td>
+                <td>{{$sdidtk->bbdn_tbdn}}</td>
+                <td>{{$sdidtk->tb_u}}</td>
+                <td>{{$sdidtk->lk}}</td>
+                <td>{{$sdidtk->kpsp}}</td>
+                <td>{{$sdidtk->tdd}}</td>
+                <td>{{$sdidtk->tdl}}</td>
+                <td>{{$sdidtk->kmpe}}</td>
+                <td>{{$sdidtk->mchat}}</td>
+                <td>{{$sdidtk->gpph}}</td>
             </tr>
             <tr>
                 <th>9 Bulan</th>
-                <td>{{$stntg->kode_pertumbuhan}}</td>
-                <td>{{$stntg->bbdn_tbdn}}</td>
-                <td>{{$stntg->tb_u}}</td>
-                <td>{{$stntg->lk}}</td>
-                <td>{{$stntg->kpsp}}</td>
-                <td>{{$stntg->tdd}}</td>
-                <td>{{$stntg->tdl}}</td>
-                <td>{{$stntg->kmpe}}</td>
-                <td>{{$stntg->mchat}}</td>
-                <td>{{$stntg->gpph}}</td>
+                <td>{{$sdidtk->kode_pertumbuhan}}</td>
+                <td>{{$sdidtk->bbdn_tbdn}}</td>
+                <td>{{$sdidtk->tb_u}}</td>
+                <td>{{$sdidtk->lk}}</td>
+                <td>{{$sdidtk->kpsp}}</td>
+                <td>{{$sdidtk->tdd}}</td>
+                <td>{{$sdidtk->tdl}}</td>
+                <td>{{$sdidtk->kmpe}}</td>
+                <td>{{$sdidtk->mchat}}</td>
+                <td>{{$sdidtk->gpph}}</td>
             </tr>
 
             <tr>
                 <th>12 Bulan</th>
-                <td>{{$stntg->kode_pertumbuhan}}</td>
-                <td>{{$stntg->bbdn_tbdn}}</td>
-                <td>{{$stntg->tb_u}}</td>
-                <td>{{$stntg->lk}}</td>
-                <td>{{$stntg->kpsp}}</td>
-                <td>{{$stntg->tdd}}</td>
-                <td>{{$stntg->tdl}}</td>
-                <td>{{$stntg->kmpe}}</td>
-                <td>{{$stntg->mchat}}</td>
-                <td>{{$stntg->gpph}}</td>
+                <td>{{$sdidtk->kode_pertumbuhan}}</td>
+                <td>{{$sdidtk->bbdn_tbdn}}</td>
+                <td>{{$sdidtk->tb_u}}</td>
+                <td>{{$sdidtk->lk}}</td>
+                <td>{{$sdidtk->kpsp}}</td>
+                <td>{{$sdidtk->tdd}}</td>
+                <td>{{$sdidtk->tdl}}</td>
+                <td>{{$sdidtk->kmpe}}</td>
+                <td>{{$sdidtk->mchat}}</td>
+                <td>{{$sdidtk->gpph}}</td>
             </tr>
 
             <tr>
                 <th>15 Bulan</th>
-                <td>{{$stntg->kode_pertumbuhan}}</td>
-                <td>{{$stntg->bbdn_tbdn}}</td>
-                <td>{{$stntg->tb_u}}</td>
-                <td>{{$stntg->lk}}</td>
-                <td>{{$stntg->kpsp}}</td>
-                <td>{{$stntg->tdd}}</td>
-                <td>{{$stntg->tdl}}</td>
-                <td>{{$stntg->kmpe}}</td>
-                <td>{{$stntg->mchat}}</td>
-                <td>{{$stntg->gpph}}</td>
+                <td>{{$sdidtk->kode_pertumbuhan}}</td>
+                <td>{{$sdidtk->bbdn_tbdn}}</td>
+                <td>{{$sdidtk->tb_u}}</td>
+                <td>{{$sdidtk->lk}}</td>
+                <td>{{$sdidtk->kpsp}}</td>
+                <td>{{$sdidtk->tdd}}</td>
+                <td>{{$sdidtk->tdl}}</td>
+                <td>{{$sdidtk->kmpe}}</td>
+                <td>{{$sdidtk->mchat}}</td>
+                <td>{{$sdidtk->gpph}}</td>
             </tr>
 
             <tr>
@@ -171,14 +171,6 @@
                 <th>60 Bulan-6 Tahun</th>
             </tr>
             @endforeach
-
-            <!-- @foreach ($stuntings as $stntg)
-            <tr>
-</tr>
-<tr>
-                
-            </tr>
-            @endforeach -->
         </table>
     </div>
     @include('template.footer')

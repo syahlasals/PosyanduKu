@@ -67,7 +67,7 @@
                         <a href="/entry/vitamin"><button type="button" class="btn btn-danger">Vitamin</button>
                     </div>
                     <div class="col-3">
-                        <a href="/entry/dataStunting"><button type="button" class="btn btn-danger" style="background-color: #FFD700; border-color: #FFD700;">SDIDTK</button>
+                        <a href="/entry/sdidtkAnak"><button type="button" class="btn btn-danger" style="background-color: #FFD700; border-color: #FFD700;">SDIDTK</button>
                     </div>
                 </div>
                 </td>               
