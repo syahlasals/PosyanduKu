@@ -9,6 +9,7 @@ use App\Http\Controllers\VitaminController;
 use App\Http\Controllers\BerandaeController;
 use App\Http\Controllers\BerandapController;
 use App\Http\Controllers\ImunisasiController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\StuntingController;
 use App\Http\Controllers\DaftarAnakController;
 use App\Http\Controllers\PertumbuhanController;
@@ -54,5 +55,19 @@ Route::get('entry/history', [AnakController::class, 'historyImunisasi']);
 Route::get('entry/pertumbuhan', [AnakController::class, 'pertumbuhan']);
 
 Route::resource('pengelola/dataImunisasi', ImunisasiController::class);
+
+Route::get('/redirects', [HomeController::class, 'index']);
+// Route::get('/redirects', [HomeController::class, 'logout']);
+
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
 Route::resource('pengelola/dataStunting', StuntingController::class);
 
