@@ -10,6 +10,7 @@ use App\Http\Controllers\BerandaeController;
 use App\Http\Controllers\BerandapController;
 use App\Http\Controllers\DaftarAnakController;
 use App\Http\Controllers\ImunisasiController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,3 +47,17 @@ Route::resource('entry/vitamin', VitaminController::class);
 Route::resource('entry/pendaftaranAnak', DaftarAnakController::class);
 
 Route::resource('pengelola/dataImunisasi', ImunisasiController::class);
+
+Route::get('/redirects', [HomeController::class, 'index']);
+// Route::get('/redirects', [HomeController::class, 'logout']);
+
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});

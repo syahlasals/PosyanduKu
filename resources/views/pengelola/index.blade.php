@@ -23,6 +23,8 @@
                 <!--Topbar-->
                 @include('template.nav')
                 <!--End of Topbar-->
+                {{-- <x-app-layout>
+                </x-app-layout> --}}
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
