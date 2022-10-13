@@ -40,7 +40,7 @@
                                     </ul>
                                 </div>
                             @endif
-                            <form method="POST" action="/entry/pendaftaranAnak" id="myform">
+                            <form method="POST" action="/entry/pendaftaranAnak" id="myform" style="margin-top: 15px; margin-bottom: 15px;>
                                 @csrf
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
@@ -114,10 +114,14 @@
                                         <input type="text" name="golongan_darah" id="golongan_darah" class="form-control">
                                     </div>
                                 </div>
-                                <button class="btn btn-main" type="submit">Daftar</button>
-                                <a href="{{ url('entry') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
+                                <div class="row">
+                                    <div class="col" colspan="3">
+                                        <button class="btn btn-main" type="submit" style="margin-left: 260px;">Daftar</button>
+                                        <a href="{{ url('entry') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
+                                    </div>
+                                </div>
                                </form>
-                        </div><br>
+                        </div>
                     </div>
                 </div>
                 </div>

@@ -4,7 +4,7 @@
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center">
         <div class="sidebar-brand-icon">
-            <img style=" width: 80%; height:80%;" src="{{ asset('template/img/minilogo_posyandu.svg') }}" alt="logo">
+            <img style=" width: 160%; height:160%;" src="{{ asset('template/img/minilogo_posyandu.svg') }}" alt="logo">
         </div>
         <div class="sidebar-brand-text mx-3"><i>Posyanduku</i></div>
     </a>

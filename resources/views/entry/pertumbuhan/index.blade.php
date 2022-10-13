@@ -39,7 +39,7 @@
                                     </ul>
                                 </div>
                             @endif
-                            <form method="POST" action="/entry/pertumbuhan" id="myform">
+                            <form method="POST" action="/entry/pertumbuhan" id="myform" style="margin-top: 15px; margin-bottom: 15px;">
                                 @csrf
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
@@ -77,10 +77,14 @@
                                         <input type="number" name="lingkar_kepala" id="lingkar_kepala" class="form-control">                                
                                     </div>
                                 </div>
-                                <a href="{{ url('entry/InputImunisasi') }}" class="btn btn-main" type="submit">Simpan</a>
-                                <a href="{{ url('entry/InputImunisasi') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
+                                <div class="row">
+                                    <div class="col">
+                                        <a href="{{ url('entry/inputImunisasi') }}" class="btn btn-main" type="submit">Simpan</a>
+                                        <a href="{{ url('entry/inputImunisasi') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
+                                    </div>
+                                </div>
                             </form>
-                        </div><br>
+                        </div>
                     </div>
                 </div>
             </div>
