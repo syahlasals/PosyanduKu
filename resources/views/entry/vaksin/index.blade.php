@@ -42,7 +42,6 @@
                             @endif
                             <form method="POST" action="/entry/vaksin" id="myform">
                                 @csrf
-                                @method('PUT')
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
                                         <label for="kode_vaksin"><b>Kode Vaksin</b></label>
