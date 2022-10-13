@@ -24,14 +24,14 @@
     </div>
 
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item">
+    <li class="nav-item {{ Request::is('pengelola') ? 'active' : '' }}">
         <a class="nav-link" href="{{ url('pengelola') }}">
             <i class="bi bi-house-door-fill"></i>
             <span>Beranda</span></a>
     </li>
 
     <!-- Nav Item - Pages Collapse Menu -->
-    <li class="nav-item active">
+    <li class="nav-item">
         <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true"
             aria-controls="collapsePages">
             <i class="fas fa-fw fa-folder"></i>
@@ -41,13 +41,13 @@
             data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Data Status:</h6>
-                <a class="collapse-item" href="{{ url('pengelola/dataImunisasi') }}">Data Imunisasi</a>
-                <a class="collapse-item" href="{{ url('pengelola/dataStunting') }}">Data Stunting</a>
+                <a class="collapse-item {{ Request::is('pengelola/dataImunisasi') ? 'active' : '' }}" href="{{ url('pengelola/dataImunisasi') }}">Data Imunisasi</a>
+                <a class="collapse-item {{ Request::is('pengelola/dataStunting') ? 'active' : '' }}" href="{{ url('pengelola/dataStunting') }}">Data Stunting</a>
                 <div class="collapse-divider"></div>
                 <h6 class="collapse-header">Data Umum:</h6>
-                <a class="collapse-item" href="{{ url('pengelola/dataAnak') }}">Data Anak</a>
-                <a class="collapse-item" href="{{ url('pengelola/dataPetugas') }}">Data Petugas</a>
-                <a class="collapse-item" href="{{ url('pengelola/dataPosyandu') }}">Data Posyandu</a>
+                <a class="collapse-item {{ Request::is('pengelola/dataAnak') ? 'active' : '' }}" href="{{ url('pengelola/dataAnak') }}">Data Anak</a>
+                <a class="collapse-item {{ Request::is('pengelola/dataPetugas') ? 'active' : '' }}" href="{{ url('pengelola/dataPetugas') }}">Data Petugas</a>
+                <a class="collapse-item {{ Request::is('pengelola/dataPosyandu') ? 'active' : '' }}" href="{{ url('pengelola/dataPosyandu') }}">Data Posyandu</a>
             </div>
         </div>
     </li>
