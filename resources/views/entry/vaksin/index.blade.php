@@ -78,8 +78,8 @@
                                         <input type="text" name="jenis_vaksin" id="jenis_vaksin" class="form-control">
                                     </div>
                                 </div>
-                                <button class="btn btn-main" type="submit">Simpan</button>
-                                <a href="{{ url('entry') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
+                                <a href="{{ url('entry/InputImunisasi') }}" class="btn btn-main" type="submit">Simpan</a>
+                                <a href="{{ url('entry/InputImunisasi') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
                             </form>
                         </div><br>
                     </div>
