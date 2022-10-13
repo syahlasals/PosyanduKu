@@ -8,9 +8,11 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\VitaminController;
 use App\Http\Controllers\BerandaeController;
 use App\Http\Controllers\BerandapController;
-use App\Http\Controllers\DaftarAnakController;
 use App\Http\Controllers\ImunisasiController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\StuntingController;
+use App\Http\Controllers\DaftarAnakController;
+use App\Http\Controllers\PertumbuhanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,7 +46,13 @@ Route::resource('entry/vaksin', VaksinController::class);
 
 Route::resource('entry/vitamin', VitaminController::class);
 
+Route::resource('entry/pertumbuhan', PertumbuhanController::class);
+
 Route::resource('entry/pendaftaranAnak', DaftarAnakController::class);
+
+Route::get('entry/InputImunisasi', [AnakController::class, 'indexInputImunisasi'])->name('index-imunisasi');
+Route::get('entry/history', [AnakController::class, 'historyImunisasi']);
+Route::get('entry/pertumbuhan', [AnakController::class, 'pertumbuhan']);
 
 Route::resource('pengelola/dataImunisasi', ImunisasiController::class);
 
@@ -61,3 +69,5 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+Route::resource('pengelola/dataStunting', StuntingController::class);
+

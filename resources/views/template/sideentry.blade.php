@@ -35,7 +35,8 @@
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Form Input</h6>
                 <a class="collapse-item" href="{{ url('entry/pendaftaranAnak') }}">Form Pendaftaran</a>
-                <a class="collapse-item" href="#">Form Pertumbuhan</a>
+                <a class="collapse-item" href="{{ url('entry/pertumbuhan') }}">Form Pertumbuhan</a>
+                <a class="collapse-item" href="{{ url('entry/InputImunisasi') }}">Input Imunisasi Anak</a>
                 <a class="collapse-item" href="{{ url('entry/vaksin') }}">Form Vaksin</a>
                 <a class="collapse-item" href="{{ url('entry/vitamin') }}">Form Vitamin</a>
                 <a class="collapse-item" href="#">Form Riwayat Penyakit</a>

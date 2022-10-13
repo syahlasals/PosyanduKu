@@ -1,16 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Imunisasi;
+use App\Models\Stunting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class ImunisasiController extends Controller
+class StuntingController extends Controller
 {
     public function index()
     {
-        $imunisasis = Imunisasi::all();
-        return view('pengelola.dataImunisasi.index', compact('imunisasis'));
+        $stuntings = Stunting::all();
+        return view('pengelola.dataStunting.index', compact('stuntings'));
     }
 
     /**
@@ -18,10 +18,10 @@ class ImunisasiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    // public function create()
-    // {
-    //     //
-    // }
+    public function create()
+    {
+        //
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -51,7 +51,7 @@ class ImunisasiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($kode_imunisasi)
+    public function edit($id)
     {
         //
     }
@@ -78,5 +78,4 @@ class ImunisasiController extends Controller
     {
         //
     }
-    
 }

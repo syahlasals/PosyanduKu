@@ -110,6 +110,32 @@ class AnakController extends Controller
         return redirect('/pengelola/dataAnak')->with('success', 'data berhasil dihapus');
     }
 
+    // PETUGAS ENTRY
+    public function indexInputImunisasi()
+    {
+        $anaks = Anak::all();
+        return view('entry.InputImunisasi.index', compact('anaks'));
+    }
+
+    public function historyImunisasi()
+    {
+        return view('entry.historyImunisasi.index');
+    }
+
+    public function pertumbuhan()
+    {
+        return view('entry.pertumbuhan.index');
+    }
+
+    // public function vaksin()
+    // {
+    //     return view('entry.InputImunisasi.vaksin');
+    // }
+
+    // public function vitamin()
+    // {
+    //     return view('entry.InputImunisasi.vitamin');
+    // }
 
     // public function search(Request $request)
     // {
