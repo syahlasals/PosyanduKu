@@ -114,7 +114,7 @@ class AnakController extends Controller
     public function indexInputImunisasi()
     {
         $anaks = Anak::all();
-        return view('entry.InputImunisasi.index', compact('anaks'));
+        return view('entry.inputImunisasi.index', compact('anaks'));
     }
 
     public function historyImunisasi()

@@ -36,7 +36,7 @@
                 <h6 class="collapse-header">Form Input</h6>
                 <a class="collapse-item side-link {{ Request::is('entry/pendaftaranAnak') ? 'active' : '' }}" href="{{ url('entry/pendaftaranAnak') }}">Form Pendaftaran</a>
                 <a class="collapse-item {{ Request::is('entry/pertumbuhan') ? 'active' : '' }}" href="{{ url('entry/pertumbuhan') }}">Form Pertumbuhan</a>
-                <a class="collapse-item {{ Request::is('entry/InputImunisasi') ? 'active' : '' }}" href="{{ url('entry/inputImunisasi') }}">Input Imunisasi Anak</a>
+                <a class="collapse-item {{ Request::is('entry/inputImunisasi') ? 'active' : '' }}" href="{{ url('entry/inputImunisasi') }}">Input Imunisasi Anak</a>
                 <a class="collapse-item {{ Request::is('entry/vaksin') ? 'active' : '' }}" href="{{ url('entry/vaksin') }}">Form Vaksin</a>
                 <a class="collapse-item {{ Request::is('entry/vitamin') ? 'active' : '' }}" href="{{ url('entry/vitamin') }}">Form Vitamin</a>
                 <a class="collapse-item {{ Request::is('entry/riwayatPenyakit') ? 'active' : '' }}" href="#">Form Riwayat Penyakit</a>

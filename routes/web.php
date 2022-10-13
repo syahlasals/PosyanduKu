@@ -50,7 +50,7 @@ Route::resource('entry/pertumbuhan', PertumbuhanController::class);
 
 Route::resource('entry/pendaftaranAnak', DaftarAnakController::class);
 
-Route::get('entry/InputImunisasi', [AnakController::class, 'indexInputImunisasi'])->name('index-imunisasi');
+Route::get('entry/inputImunisasi', [AnakController::class, 'indexInputImunisasi'])->name('index-imunisasi');
 Route::get('entry/history', [AnakController::class, 'historyImunisasi']);
 Route::get('entry/pertumbuhan', [AnakController::class, 'pertumbuhan']);
 
