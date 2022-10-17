@@ -26,7 +26,7 @@ use App\Http\Controllers\PertumbuhanController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth/login');
 });
 
 Route::resource('pengelola/dataAnak', AnakController::class);
