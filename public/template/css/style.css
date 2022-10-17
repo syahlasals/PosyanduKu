@@ -13,10 +13,16 @@ body{
 }
 .btn-main{
     background: #CCB2E0;
-    border: 1px solid #CCB2E0;
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /* border: 1px solid #CCB2E0; */
+    /* box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
     color: #000000;
+}
+.btn-main:hover{
+    transform: scale(1.05);
+    background: #647BB1;
+    color: #ffffff;
 }
 
 .card-welcomep{
