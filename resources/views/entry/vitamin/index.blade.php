@@ -26,7 +26,7 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <h1 class="text-center"><b>Masukan Data Vitamin</b></h1><br>
+                    <h1 class="text-center"><b>Form Vitamin</b></h1><br>
                     <div class="container d-flex justify-item-center justify-content-center"><br>
                         <div class="card card-form">
                             <div class="card-body">
@@ -57,7 +57,7 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8"> 
-                                        <input type="number" name="nip" id="nip" class="form-control">
+                                        <input type="number" name="nip" id="nip" class="form-control" readonly="readonly">
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
@@ -66,7 +66,7 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="number" name="nik_anak" id="nik_anak" class="form-control">
+                                        <input type="number" name="nik_anak" id="nik_anak" class="form-control" readonly="readonly">
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
@@ -128,10 +128,10 @@
             </div>
         </div>
     </div>
-
     <!--Script-->
     @include('template.script')
     <!-- End of Script-->
+
 
 </body>
 
