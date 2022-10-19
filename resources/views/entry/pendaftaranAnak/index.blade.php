@@ -120,7 +120,7 @@
                                         <a href="{{ url('entry') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
                                     </div>
                                 </div>
-                               </form>
+                                </form>
                         </div>
                     </div>
                 </div>
