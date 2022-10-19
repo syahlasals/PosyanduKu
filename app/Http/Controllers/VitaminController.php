@@ -30,5 +30,6 @@ class VitaminController extends Controller
 
         return redirect('/entry/vitamin')->with('success', 'Vitamin berhasil di tambahkan');
     }
+    
 
 }

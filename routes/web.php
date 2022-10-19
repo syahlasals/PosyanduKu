@@ -26,7 +26,7 @@ use App\Http\Controllers\PertumbuhanController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth/login');
 });
 
 Route::resource('pengelola/dataAnak', AnakController::class);
@@ -50,7 +50,7 @@ Route::resource('entry/pertumbuhan', PertumbuhanController::class);
 
 Route::resource('entry/pendaftaranAnak', DaftarAnakController::class);
 
-Route::get('entry/InputImunisasi', [AnakController::class, 'indexInputImunisasi'])->name('indexInputImunisasi');
+Route::get('entry/inputImunisasi', [AnakController::class, 'indexInputImunisasi'])->name('index-imunisasi');
 Route::get('entry/history', [AnakController::class, 'historyImunisasi']);
 Route::get('entry/pertumbuhan', [AnakController::class, 'pertumbuhan']);
 
@@ -69,5 +69,5 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
-Route::resource('pengelola/dataStunting', StuntingController::class);
+Route::resource('entry/sdidtkAnak', StuntingController::class);
 
