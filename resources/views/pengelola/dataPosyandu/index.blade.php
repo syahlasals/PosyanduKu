@@ -78,9 +78,9 @@
                                 <p class="d-flex align-items-center justify-content-center">{{ $prfl->bendahara }}</p>
                             </div>
                         </div>
-                    </div>
+                   
+ </div>
                     @endforeach
-
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-3">
                         <a href="{{ url('pengelola') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
                       </div>

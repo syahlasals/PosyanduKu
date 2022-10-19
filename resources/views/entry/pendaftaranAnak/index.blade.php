@@ -40,7 +40,7 @@
                                     </ul>
                                 </div>
                             @endif
-                            <form method="POST" action="/entry/pendaftaranAnak" id="myform" style="margin-top: 15px; margin-bottom: 15px;>
+                            <form method="POST" action="/entry/pendaftaranAnak" id="myform" style="margin-top: 15px; margin-bottom: 15px;">
                                 @csrf
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">

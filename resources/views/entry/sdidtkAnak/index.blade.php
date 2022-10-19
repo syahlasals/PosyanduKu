@@ -172,6 +172,7 @@
             </tr>
             @endforeach
         </table>
+        <a href="{{ url('entry/inputImunisasi') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
     </div>
     @include('template.footer')
         </div>
