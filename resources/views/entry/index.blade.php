@@ -31,7 +31,7 @@
                 <div class="container-fluid">
                     <div class="card card-welcomep mb-5">
                         <div class="card-body d-flex align-items-center justify-content-center">
-                         <h1 style="color: white;"><b>Selamat Datang, Petugas Entry</b></h1>
+                        <h1 style="color: white;"><b>Selamat Datang, Petugas Entry</b></h1>
                         </div>
                     </div>
                     <div class="row mb-3">

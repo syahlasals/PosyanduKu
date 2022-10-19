@@ -52,15 +52,16 @@
                 </form>
                 </div>
                 <div class="col-3">
-                <a href="{{ route('edit', $ptgs->nip) }}" class="btn btn-warning" style="background-color:#AFEEEE; color:#000000;"><i class="fas fa-pencil-alt"></i></a>
+                <a href="{{ route('edit', $ptgs->nip) }}" class="btn btn-warning" style="color:#000000;"><i class="fas fa-pencil-alt"></i></a>
                 </div>
                 </td>
                 </div>
             </tr>
             @endforeach
         </table>
-    </div>
-                @include('template.footer')
+        <a href="{{ url('pengelola') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
+        </div>
+            @include('template.footer')
         </div>
     </div>
     <a class="scroll-to-top rounded" href="#page-top">
