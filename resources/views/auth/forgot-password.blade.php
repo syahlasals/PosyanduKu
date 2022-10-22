@@ -1,8 +1,13 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+            <!-- <x-jet-authentication-card-logo /> -->
         </x-slot>
+
+        <div class="logo mb-3">
+            <img style="height: 50%; width: 50%; display:block; margin-left: auto; margin-right: auto;"
+                src="{{ asset('template/img/posyandu-welcome.svg') }}" alt="logo">
+        </div>
 
         <div class="mb-4 text-sm text-gray-600">
             {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
