@@ -35,6 +35,6 @@ class DaftarAnakController extends Controller
             'golongan_darah'=>$request->golongan_darah
         ]);
 
-        return redirect('/entry')->with('success', 'Data berhasil di tambahkan');
+        return redirect('/entry/pendaftaranAnak')->with('success', 'Data berhasil di tambahkan');
     }
 }

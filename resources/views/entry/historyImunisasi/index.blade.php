@@ -8,5 +8,7 @@
 </head>
 <body>
     HISTORY IMUNISASI
+    <!-- Logout Modal-->
+    @include('template.modalLogout')
 </body>
 </html>

@@ -1,16 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CRUD ANAK | PosyanduKu</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <title>Data Posyandu</title>
+    @include('template.head')
 </head>
+<body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+    <!--sidebar-->
+       @include('template.sidepengelola')
+    <!--End Sidebar-->
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
 
-<body>
+            <!-- Main Content -->
+            <div id="content">
+
+                <!--Topbar-->
+                @include('template.nav')
+                <!--End of Topbar-->
 
     <div class="card">
         <div class="card-header">
@@ -93,6 +102,31 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
     </script>
+</div>
+<!-- End of Main Content -->
+
+<!-- Footer -->
+@include('template.footer')
+<!-- End of Footer -->
+
+</div>
+<!-- End of Content Wrapper -->
+
+</div>
+<!-- End of Page Wrapper -->
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+<i class="fas fa-angle-up"></i>
+</a>
+
+<!-- Logout Modal-->
+@include('template.modalLogout')
+
+<!--Script-->
+@include('template.script')
+<!-- End of Script-->
+
 </body>
 
 </html>
