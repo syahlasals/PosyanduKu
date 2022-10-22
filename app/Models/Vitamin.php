@@ -13,4 +13,5 @@ class Vitamin extends Model
     protected $table = "tb_vitamin";
     protected $fillable = [
        'kode_vitamin', 'nip','nik_anak', 'jenis_vitamin'];
+
 }
