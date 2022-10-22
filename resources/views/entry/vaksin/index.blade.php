@@ -57,7 +57,7 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8"> 
-                                        <input type="number" name="nip" id="nip" class="form-control" readonly="readonly">
+                                        <input type="number" name="nip" id="nip" class="form-control">
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
@@ -66,7 +66,7 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="number" name="nik_anak" id="nik_anak" class="form-control" readonly="readonly">
+                                        <input type="number" name="nik_anak" id="nik_anak" class="form-control">
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
@@ -75,11 +75,31 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="text" name="jenis_vaksin" id="jenis_vaksin" class="form-control">
+                                        <select class="form-select" aria-label="Default select example" style="border-radius: 30px; width: 250px;" name="jenis_vaksin" id="jenis_vaksin">
+                                            <option value="HB 0">HB 0</option>
+                                            <option value="BCG">BCG</option>
+                                            <option value="Polio">Polio</option>
+                                            <option value="DPT-HB-Hib 1">DPT-HB-Hib 1</option>
+                                            <option value="Polio 2">Polio 2</option>
+                                            <option value="DPT-HB-Hib 2">DPT-HB-Hib 2</option>
+                                            <option value="Polio 3">Polio 3</option>
+                                            <option value="DPT-HB-Hib 3">DPT-HB-Hib 3</option>
+                                            <option value="Polio 4">Polio 4</option>
+                                            <option value="IPV">IPV</option>
+                                            <option value="Campak">Campak</option>
+                                        </select>                                    
                                     </div>
                                 </div>
-                                <a href="{{ url('entry/inputImunisasi') }}" class="btn btn-main" type="submit">Simpan</a>
-                                <a href="{{ url('entry/inputImunisasi') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
+                                <br>
+                                <div class="row">
+                                    <div class="col" colspan="3">
+                                        <button class="btn btn-main" type="submit" style="margin-left: 260px;">Simpan</button>
+                                        <a href="{{ url('entry/InputImunisasi') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
+                                    </div>
+                                </div>
+
+                                {{-- <a href="{{ url('entry/vaksin') }}" class="btn btn-main" type="submit">Simpan</a> --}}
+                                {{-- <a href="{{ url('entry/InputImunisasi') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a> --}}
                             </form>
                         </div><br>
                     </div>

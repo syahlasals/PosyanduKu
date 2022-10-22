@@ -6,8 +6,8 @@
             {{-- <x-jet-authentication-card-logo /> --}}
         </x-slot>
 
-        <h1 class="text-center">Welcome !</h1><br>
-        <h1 class="text-center">Please Login to Your Account</h1>
+        <h1 class="text-center mb 2">Welcome !</h1>
+        <h1 class="text-center mb-3">Please Login to Your Account</h1>
         <div class="logo">
             <img style="height: 50%; width: 50%; display:block; margin-left: auto; margin-right: auto;"
                 src="{{ asset('template/img/posyandu-welcome.svg') }}" alt="logo">
