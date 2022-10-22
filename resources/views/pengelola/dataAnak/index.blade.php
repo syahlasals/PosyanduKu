@@ -7,7 +7,7 @@
 </head>
 <body>
 <div id="wrapper">
-       @include('template.sidepengelola')
+        @include('template.sidepengelola')
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
                 @include('template.nav')

@@ -46,7 +46,7 @@
                 </div>
 
                 <div class="block mt-4">
-                    <a href="">Register</a>
+                    <a href="/register">Register</a>
                 </div>
 
                 <div class="flex items-center justify-end mt-4">
