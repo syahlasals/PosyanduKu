@@ -2,17 +2,19 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AnakController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\VaksinController;
 use App\Http\Controllers\PetugasController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\VitaminController;
 use App\Http\Controllers\BerandaeController;
+use App\Http\Controllers\BerandaoController;
 use App\Http\Controllers\BerandapController;
-use App\Http\Controllers\ImunisasiController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\StuntingController;
+use App\Http\Controllers\ImunisasiController;
 use App\Http\Controllers\DaftarAnakController;
 use App\Http\Controllers\PertumbuhanController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +38,12 @@ Route::get('pengelola/dataPosyandu',[ProfileController::class,'index']);
 Route::get('/pengelola',[BerandapController::class,'index']);
 
 Route::get('/entry',[BerandaeController::class,'index']);
+
+Route::get('/ortu',[BerandaoController::class,'index']);
+Route::get('/ortu/edit/{no_kk}',[BerandaoController::class,'ortuEdit'])->name('ortuEdit');
+Route::post('/ortu/updateOrtu/{no_kk}',[BerandaoController::class,'updateOrtu']);
+
+Route::get('/ortu/anak',[BerandaoController::class,'indexanak']);
 
 Route::resource('pengelola/dataPetugas', PetugasController::class);
 Route::get('/pengelola/hapuspetugas', [PetugasController::class, 'hapuspetugas'])->name('hapuspetugas');

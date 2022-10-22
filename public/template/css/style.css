@@ -82,3 +82,23 @@ body{
     border-color: #CCB2E0;
     border-radius: 10px;
 }
+.card-nav{
+    height: 50%;
+    border-color: #647BB1;
+    border-radius: 0;
+    border-width: 3px;
+}
+.nav-ortu{
+    background-color: #647BB1;
+}
+.greeting{
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px 0px #647BB1;
+}
+.choice1{
+    text-align: start;
+}
+.choice1 :hover {
+    text-decoration: none;
+}
+
