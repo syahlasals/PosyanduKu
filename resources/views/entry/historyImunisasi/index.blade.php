@@ -1,14 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Petugas Entry</title>
+    @include('template.head')
 </head>
-<body>
-    HISTORY IMUNISASI
-    <!-- Logout Modal-->
-    @include('template.modalLogout')
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+    <!--sidebar-->
+       @include('template.sideentry')
+    <!--End Sidebar-->
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!--Topbar-->
+                @include('template.nav')
+                <!--End of Topbar-->
+
+    <div class="container">
+        <h1 class="text-center mt-5 mb-5"><b>HISTORY IMUNISASI</b></h1>
+
+    </div>
+    <!-- /.container-fluid -->
+
+</div>
+<!-- End of Main Content -->
+
+<!-- Footer -->
+@include('template.footer')
+<!-- End of Footer -->
+
+</div>
+<!-- End of Content Wrapper -->
+
+</div>
+<!-- End of Page Wrapper -->
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+<i class="fas fa-angle-up"></i>
+</a>
+
+<!-- Logout Modal-->
+@include('template.modalLogout')
+
+<!--Script-->
+@include('template.script')
+<!-- End of Script-->
+
 </body>
 </html>
