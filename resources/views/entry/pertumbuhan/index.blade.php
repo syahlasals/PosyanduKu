@@ -47,7 +47,7 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="number" name="kode_pertumbuhan" id="kode_pertumbuhan" class="form-control">
+                                        <input type="text" name="kode_pertumbuhan" id="kode_pertumbuhan" class="form-control">
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
