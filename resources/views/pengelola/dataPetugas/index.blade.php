@@ -71,7 +71,6 @@
         </table>
         <a href="{{ url('pengelola') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
         </div>
-            @include('template.footer')
         </div>
     </div>
     
@@ -95,14 +94,6 @@
 
 <!-- Logout Modal-->
 @include('template.modalLogout')
-
-<!--Script-->
-@include('template.script')
-<!-- End of Script-->
-
-</body>
-
-</html>
 
 </body>
 <script> $(document).ready( function () {
