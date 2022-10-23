@@ -1,10 +1,3 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,12 +5,27 @@
     <title>Petugas Entry</title>
     @include('template.head')
 </head>
-<body>
-<div id="wrapper">
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+    <!--sidebar-->
        @include('template.sideentry')
+    <!--End Sidebar-->
+        <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
             <div id="content">
+
+                <!--Topbar-->
                 @include('template.nav')
+<<<<<<< HEAD
+=======
+                <!--End of Topbar-->
+
+>>>>>>> d2f1e383ed27f217c6e37344c7a88a6add43ca19
     <div class="container">
         <h1 class="text-center mt-5 mb-5"><b>INPUT IMUNISASI</b></h1>
         
@@ -66,31 +74,35 @@
             @endforeach
         </table>
         <a href="{{ url('entry') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
+        <br>
     </div>
-    @include('template.footer')
-        </div>
-    </div>
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
+                    <!-- /.container-fluid -->
+
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
+                <!-- End of Main Content -->
+    
+                <!-- Footer -->
+                @include('template.footer')
+                <!-- End of Footer -->
+    
             </div>
+            <!-- End of Content Wrapper -->
+    
         </div>
-    </div>
+        <!-- End of Page Wrapper -->
+    
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+    
+        <!-- Logout Modal-->
+        @include('template.modalLogout')
+    
+        <!--Script-->
+        @include('template.script')
+        <!-- End of Script-->
+    
 </body>
 <script> $(document).ready( function () {
     $('#inputimunisasi').DataTable();

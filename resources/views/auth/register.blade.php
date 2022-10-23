@@ -1,8 +1,15 @@
-<x-guest-layout>
-    <x-jet-authentication-card>
+<x-guest-layout style="position:absolute; z-index: 5; background-image:url('template/img/wave-vector.svg');">
+    <x-jet-authentication-card style="position:absolute; z-index: 6; box-shadow: ;">
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+            {{-- <x-jet-authentication-card-logo /> --}}
         </x-slot>
+
+        <h1 class="text-center mb 2">Welcome !</h1>
+        <h1 class="text-center mb-3">Please Create Your Account</h1>
+        <div class="logo">
+            <img style="height: 50%; width: 50%; display:block; margin-left: auto; margin-right: auto;"
+                src="{{ asset('template/img/posyandu-welcome.svg') }}" alt="logo">
+        </div>
 
         <x-jet-validation-errors class="mb-4" />
 

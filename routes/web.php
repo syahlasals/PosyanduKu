@@ -31,6 +31,7 @@ use App\Http\Controllers\PertumbuhanController;
 Route::get('/', function () {
     return view('auth/login');
 });
+Route::get('auth/register',[HomeController::class,'linkregister']);
 
 Route::resource('pengelola/dataAnak', AnakController::class);
 
