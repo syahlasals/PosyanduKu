@@ -48,7 +48,7 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="number" name="kode_vaksin" id="kode_vaksin" class="form-control">
+                                        <input type="text" name="kode_vaksin" id="kode_vaksin" class="form-control">
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
@@ -98,8 +98,8 @@
                                     </div>
                                 </div>
 
-                                {{-- <a href="{{ url('entry/vaksin') }}" class="btn btn-main" type="submit">Simpan</a> --}}
-                                {{-- <a href="{{ url('entry/InputImunisasi') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a> --}}
+                                <!-- {{-- <a href="{{ url('entry/vaksin') }}" class="btn btn-main" type="submit">Simpan</a> --}} -->
+                                <!-- {{-- <a href="{{ url('entry/InputImunisasi') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a> --}} -->
                             </form>
                         </div><br>
                     </div>
