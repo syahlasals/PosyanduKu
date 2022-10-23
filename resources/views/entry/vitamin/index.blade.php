@@ -57,7 +57,7 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8"> 
-                                        <input type="number" name="nip" id="nip" class="form-control" readonly="readonly">
+                                        <input type="number" name="nip" id="nip" class="form-control">
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
@@ -66,7 +66,7 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="number" name="nik_anak" id="nik_anak" class="form-control" readonly="readonly">
+                                        <input type="text" name="nik_anak" id="nik_anak" class="form-control">
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
@@ -76,14 +76,20 @@
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
                                         <select class="form-select" aria-label="Default select example" style="border-radius: 30px; width: 250px;" name="jenis_vitamin" id="jenis_vitamin">
-                                            <option selected>Pilih Vitamin</option>
                                             <option value="Kapsul Merah">Kapsul Merah</option>
                                             <option value="Kapsul Biru">Kapsul Biru</option>
                                         </select>                                    
                                     </div>
                                 </div>
-                                <a href="{{ url('entry/InputImunisasi') }}" class="btn btn-main" type="submit">Simpan</a>
-                                <a href="{{ url('entry/InputImunisasi') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
+                                <br>
+                                <div class="row">
+                                    <div class="col" colspan="3">
+                                        <button class="btn btn-main" type="submit" style="margin-left: 260px;">Simpan</button>
+                                        <a href="vitamin" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
+                                    </div>
+                                </div>
+                                {{-- <a href="{{ url('entry/InputImunisasi') }}" class="btn btn-main" type="submit">Simpan</a>
+                                <a href="{{ url('entry/InputImunisasi') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a> --}}
                             </form>
                         </div><br>
                     </div>
@@ -110,24 +116,7 @@
     </a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    @include('template.modalLogout')
     <!--Script-->
     @include('template.script')
     <!-- End of Script-->

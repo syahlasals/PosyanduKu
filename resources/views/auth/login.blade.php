@@ -6,8 +6,8 @@
             {{-- <x-jet-authentication-card-logo /> --}}
         </x-slot>
 
-        <h1 class="text-center">Welcome !</h1><br>
-        <h1 class="text-center">Please Login to Your Account</h1>
+        <h1 class="text-center mb 2">Welcome !</h1>
+        <h1 class="text-center mb-3">Please Login to Your Account</h1>
         <div class="logo">
             <img style="height: 50%; width: 50%; display:block; margin-left: auto; margin-right: auto;"
                 src="{{ asset('template/img/posyandu-welcome.svg') }}" alt="logo">
@@ -56,11 +56,17 @@
                             {{ __('Forgot your password?') }}
                         </a>
                     @endif
-
-                    <x-jet-button class="ml-4">
+                </div>
+                
+                <div class="flex items-center justify-end mt-4">
+                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('register') }}">
+                        {{ __('Create Your Account Now!') }}
+                    </a>
+                    <x-jet-button class="ml-4 items-center">
                         {{ __('Log in') }}
                     </x-jet-button>
                 </div>
+
             </form>
         </div>
 
