@@ -13,6 +13,7 @@ class BerandaoController extends Controller
         $ortus = ProfileOrtu::all();
         return view('ortu.index', compact('ortus'));  
     }
+    
     public function ortuEdit($no_kk)
     {
         $ortus = DB::table('tb_ortu')->where('no_kk', $no_kk)->first();

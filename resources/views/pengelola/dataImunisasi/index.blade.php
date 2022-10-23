@@ -87,9 +87,6 @@
 <!-- Logout Modal-->
 @include('template.modalLogout')
 
-<!--Script-->
-@include('template.script')
-<!-- End of Script-->
 
 </body>
 <script> $(document).ready( function () {
