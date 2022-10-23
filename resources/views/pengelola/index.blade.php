@@ -69,7 +69,7 @@
                         <div class="col d-flex justify-content-start">
                             <a href="{{ url('pengelola/dataPosyandu') }}" class="card card-ap">
                                 <div class="card-body">
-                                    <h3 class=" d-flex align-items-center justify-content-center mb-3"><b>Data Posyandu</b></h3> 
+                                    <h3 class=" d-flex align-items-center justify-content-center mb-3"><b>Profile Posyandu</b></h3> 
                                     <div class="baby d-flex align-items-center justify-content-center">
                                         <iconify-icon icon="icon-park-solid:hospital-three" style="color: white;" width="125" height="106"></iconify-icon>
                                     </div> 

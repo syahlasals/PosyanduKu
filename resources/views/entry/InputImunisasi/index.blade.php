@@ -18,7 +18,6 @@
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
                 @include('template.nav')
-<body>
     <div class="container">
         <h1 class="text-center mt-5 mb-5"><b>INPUT IMUNISASI</b></h1>
         
