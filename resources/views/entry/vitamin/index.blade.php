@@ -48,7 +48,7 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="number" name="kode_vitamin" id="kode_vitamin" class="form-control">
+                                        <input type="text" name="kode_vitamin" id="kode_vitamin" class="form-control">
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
@@ -66,7 +66,7 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="number" name="nik_anak" id="nik_anak" class="form-control">
+                                        <input type="text" name="nik_anak" id="nik_anak" class="form-control">
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">

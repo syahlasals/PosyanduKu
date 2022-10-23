@@ -107,11 +107,13 @@
 @include('template.modalLogout')
 
 <!--Script-->
-@include('template.script')
+{{-- @include('template.script') --}}
 <!-- End of Script-->
-</body>
-<script> $(document).ready( function () {
-    $('#dataanak').DataTable();
-} );
-</script>
-</html>
+
+
+    </body>
+    <script> $(document).ready( function () {
+        $('#dataanak').DataTable();
+    } );
+    </script>
+    </html>
