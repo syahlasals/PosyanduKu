@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BioController;
 use App\Http\Controllers\AnakController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\VaksinController;
@@ -40,11 +41,7 @@ Route::get('/pengelola',[BerandapController::class,'index']);
 
 Route::get('/entry',[BerandaeController::class,'index']);
 
-Route::get('/ortu',[BerandaoController::class,'index']);
-Route::get('/ortu/edit/{no_kk}',[BerandaoController::class,'ortuEdit'])->name('ortuEdit');
-Route::post('/ortu/updateOrtu/{no_kk}',[BerandaoController::class,'updateOrtu']);
-
-Route::get('/ortu/anak',[BerandaoController::class,'indexanak']);
+Route::resource('ortu', BerandaoController::class);
 
 Route::resource('pengelola/dataPetugas', PetugasController::class);
 Route::get('/pengelola/hapuspetugas', [PetugasController::class, 'hapuspetugas'])->name('hapuspetugas');

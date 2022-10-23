@@ -23,6 +23,13 @@
        Petugas Entry
    </div>
 
+   <!-- Nav Item - Dashboard -->
+   <li class="nav-item {{ Request::is('entry') ? 'active' : '' }}">
+    <a class="nav-link" href="{{ url('entry') }}">
+        <i class="bi bi-house-door-fill"></i>
+        <span>Beranda</span></a>
+    </li>
+
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item {{ Request::is('entry') ? 'active' : '' }}">
         <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true"

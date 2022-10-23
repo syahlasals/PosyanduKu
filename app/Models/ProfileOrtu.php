@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class ProfileOrtu extends Model
 {
     use HasFactory;
+    protected $primaryKey = 'no_kk';
     public $timestamps = false;
     protected $table = "tb_ortu";
     protected $fillable = [

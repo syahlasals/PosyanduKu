@@ -12,7 +12,7 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
     <!--sidebar-->
-       @include('template.sidepengelola')
+        @include('template.sidepengelola')
     <!--End Sidebar-->
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
