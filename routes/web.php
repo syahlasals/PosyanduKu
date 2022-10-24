@@ -51,6 +51,7 @@ Route::post('/pengelola/dataPetugas/update/{nip}',[PetugasController::class,'upd
 Route::resource('entry/vaksin', VaksinController::class);
 
 Route::resource('entry/vitamin', VitaminController::class);
+Route::get('entry/vitamin{nik_anak}', [VitaminController::class, 'index']);
 
 Route::resource('entry/pertumbuhan', PertumbuhanController::class);
 
