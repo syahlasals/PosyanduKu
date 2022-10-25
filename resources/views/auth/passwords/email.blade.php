@@ -9,6 +9,8 @@
                 <div class="card-header">{{ __('Reset Password') }}</div>
 
                 <div class="card-body">
+                    <img style="height: 30%; width: 30%; display:block; margin-left: auto; margin-right: auto;"
+                        src="{{ asset('template/img/posyandu-welcome.svg') }}" alt="logo"><br><br>
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
