@@ -38,11 +38,11 @@ Route::resource('pengelola/dataAnak', AnakController::class)->middleware('pengel
 
 Route::get('pengelola/dataPosyandu',[ProfileController::class,'index'])->middleware('pengelola');
 
-Route::get('/pengelola',[BerandapController::class,'index'])->middleware('pengelola');
+Route::get('/pengelola',[BerandapController::class,'index'])->name('pengelola')->middleware('pengelola');
 
-Route::get('/entry',[BerandaeController::class,'index'])->middleware('entry');
+Route::get('/entry',[BerandaeController::class,'index'])->name('entry')->middleware('entry');
 
-Route::resource('ortu', BerandaoController::class);
+Route::resource('ortu', BerandaoController::class)->middleware('ortu');
 
 Route::resource('pengelola/dataPetugas', PetugasController::class)->middleware('pengelola');
 Route::get('/pengelola/hapuspetugas', [PetugasController::class, 'hapuspetugas'])->name('hapuspetugas')->middleware('pengelola');
@@ -79,6 +79,10 @@ Route::middleware([
     })->name('dashboard');
 });
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('entry/sdidtkAnak', StuntingController::class)->middleware('entry');
 
 
