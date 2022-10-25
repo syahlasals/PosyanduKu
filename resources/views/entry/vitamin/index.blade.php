@@ -88,8 +88,6 @@
                                         <a href="vitamin" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
                                     </div>
                                 </div>
-                                {{-- <a href="{{ url('entry/InputImunisasi') }}" class="btn btn-main" type="submit">Simpan</a>
-                                <a href="{{ url('entry/InputImunisasi') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a> --}}
                             </form>
                         </div><br>
                     </div>

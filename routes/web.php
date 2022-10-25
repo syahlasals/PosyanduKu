@@ -52,6 +52,8 @@ Route::post('/pengelola/dataPetugas/update/{nip}',[PetugasController::class,'upd
 Route::resource('entry/vaksin', VaksinController::class)->middleware('entry');
 
 Route::resource('entry/vitamin', VitaminController::class)->middleware('entry');
+// Route::resource('entry/vitamin', VitaminController::class);
+Route::get('entry/vitamin{nik_anak}', [VitaminController::class, 'index']);
 
 Route::resource('entry/pertumbuhan', PertumbuhanController::class)->middleware('entry');
 
@@ -76,12 +78,13 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
-Route::resource('entry/sdidtkAnak', StuntingController::class);
 
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('entry/sdidtkAnak', StuntingController::class)->middleware('entry');
+
 
 Auth::routes();
 

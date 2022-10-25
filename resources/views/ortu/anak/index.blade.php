@@ -27,9 +27,9 @@
                                                 <div class="col-6"><input type="number" name="no_kk" id="no_kk" class="form-control"></div>
                                             </div>
                                             <div class="d-flex mb-3">
-                                                <div class="col-5"><b>alamat</b></div>
+                                                <div class="col-5"><b>Alamat</b></div>
                                                 <div class="col-1">:</div>
-                                                <div class="col-6"><input type="number" name="alamat_ortu" id="alamat_ortu" class="form-control"></div>
+                                                <div class="col-6"><input type="text" name="alamat_ortu" id="alamat_ortu" class="form-control"></div>
                                             </div>
                                             <div class="d-flex mb-3">
                                                 <div class="col-5"><b>RW</b></div>
@@ -66,14 +66,14 @@
                                             <div class="d-flex mb-3">
                                                 <div class="col-5"><b>Nama Ibu</b></div>
                                                 <div class="col-1">:</div>
-                                                <div class="col-6"> <input type="number" name="nama_ibu" id="nama_ibu" class="form-control"></div>
+                                                <div class="col-6"> <input type="text" name="nama_ibu" id="nama_ibu" class="form-control"></div>
                                             </div>
                                             <div class="d-flex mb-3">
                                                 <div class="col-5"><b>Pekerjaan Ibu</b></div>
                                                 <div class="col-1">:</div>
                                                 <div class="col-6"><input type="text" name="pekerjaan_ibu" id="pekerjaan_ibu" class="form-control"></div>
                                             </div>    
-                                       </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

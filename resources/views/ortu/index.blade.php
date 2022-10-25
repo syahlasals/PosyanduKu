@@ -6,6 +6,7 @@
 </head>
     <body>  
         @include('template.navortu')
+        @include('template.nav')
         <div class="container">
             <div class="wrapper my-5">
                 <div class="card greeting">
@@ -109,7 +110,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card">
+                            {{-- <div class="card">
                                 <div class="card-body">
                                     <div class="row my-3">
                                         <div class="col-12 col-lg-6 col-md-6 col-sm-6">
@@ -166,13 +167,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="{{ route('ortuEdit', $ortu->no_kk) }}" class="btn btn-warning">Ubah</a>
+                            <a href="{{ route('ortuEdit', $ortu->no_kk) }}" class="btn btn-warning">Ubah</a> --}}
                             <button type="button" class="btn btn-primary">Logout</button>
                         </div>
                     </div> 
                 </div>
             </div>
         </div>
+        @include('template.modalLogout')
         @include('template.script')
     </body>
 </html>
