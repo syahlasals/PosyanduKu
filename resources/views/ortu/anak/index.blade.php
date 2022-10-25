@@ -6,6 +6,7 @@
 </head>
     <body>  
         @include('template.navortu')
+        @include('template.nav')
         <div class="container my-5">
                 <div class="container-fluid">       
                     <div class="card">
@@ -81,6 +82,7 @@
                 </div>
             </div>
         </div>
+        @include('template.modalLogout')
         @include('template.script')
     </body>
 </html>
