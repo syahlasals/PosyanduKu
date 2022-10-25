@@ -96,9 +96,13 @@
         <!-- Logout Modal-->
         @include('template.modalLogout')
     
+<<<<<<< HEAD
         <!--Script-->
         @include('template.script2')
         <!-- End of Script-->    
+=======
+    
+>>>>>>> 37a09c0351b48236ab0cb881f95e0e242ed2a025
 </body>
 <script> $(document).ready( function () {
     $('#inputimunisasi').DataTable();
