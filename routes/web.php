@@ -1,6 +1,10 @@
 <?php
 
+<<<<<<< HEAD
+use App\Models\Vitamin;
+=======
 use Illuminate\Support\Facades\Auth;
+>>>>>>> 37a09c0351b48236ab0cb881f95e0e242ed2a025
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BioController;
 use App\Http\Controllers\AnakController;
@@ -49,11 +53,17 @@ Route::get('/pengelola/hapuspetugas', [PetugasController::class, 'hapuspetugas']
 Route::get('/pengelola/dataPetugas/edit/{nip}',[PetugasController::class,'edit'])->name('edit')->middleware('pengelola');
 Route::post('/pengelola/dataPetugas/update/{nip}',[PetugasController::class,'update'])->middleware('pengelola');
 
+<<<<<<< HEAD
+Route::resource('entry/vaksin', VaksinController::class);
+// Route::get('entry/vitamin/{nik_anak}', [VitaminController::class, 'index']);
+Route::resource('entry/vitamin', VitaminController::class);
+=======
 Route::resource('entry/vaksin', VaksinController::class)->middleware('entry');
 
 Route::resource('entry/vitamin', VitaminController::class)->middleware('entry');
 // Route::resource('entry/vitamin', VitaminController::class);
 Route::get('entry/vitamin{nik_anak}', [VitaminController::class, 'index']);
+>>>>>>> 37a09c0351b48236ab0cb881f95e0e242ed2a025
 
 Route::resource('entry/pertumbuhan', PertumbuhanController::class)->middleware('entry');
 
