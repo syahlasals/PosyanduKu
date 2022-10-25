@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Vitamin;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BioController;
 use App\Http\Controllers\AnakController;
@@ -49,7 +50,7 @@ Route::get('/pengelola/dataPetugas/edit/{nip}',[PetugasController::class,'edit']
 Route::post('/pengelola/dataPetugas/update/{nip}',[PetugasController::class,'update']);
 
 Route::resource('entry/vaksin', VaksinController::class);
-
+// Route::get('entry/vitamin/{nik_anak}', [VitaminController::class, 'index']);
 Route::resource('entry/vitamin', VitaminController::class);
 
 Route::resource('entry/pertumbuhan', PertumbuhanController::class);

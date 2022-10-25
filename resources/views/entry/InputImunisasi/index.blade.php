@@ -21,11 +21,8 @@
 
                 <!--Topbar-->
                 @include('template.nav')
-<<<<<<< HEAD
-=======
                 <!--End of Topbar-->
 
->>>>>>> d2f1e383ed27f217c6e37344c7a88a6add43ca19
     <div class="container">
         <h1 class="text-center mt-5 mb-5"><b>INPUT IMUNISASI</b></h1>
         
@@ -65,7 +62,7 @@
                         <a href="/entry/history"><button type="button" class="btn btn-primary"><i class="fa-solid fa-clock-rotate-left"></i></button>
                         <a href="/entry/pertumbuhan"><button type="button" class="btn btn-secondary"><i class="fa-solid fa-hands-holding-child"></i></button>
                         <a href="/entry/vaksin"><button type="button" class="btn btn-success"><i class="fa-solid fa-syringe"></i></button>
-                        <a href="/entry/vitamin"><button type="button" class="btn btn-danger"><i class="fa-solid fa-capsules"></i></button>
+                        <a href="/entry/vitamin/{{ $anak->nik_anak }}"><button type="button" class="btn btn-danger"><i class="fa-solid fa-capsules"></i></button>
                         <a href="/entry/sdidtkAnak"><button type="button" class="btn btn-danger" style="background-color: #FFD700; border-color: #FFD700;"><i class="fa-solid fa-person"></i></button>
                     </div>
                 </div>
@@ -100,20 +97,8 @@
         @include('template.modalLogout')
     
         <!--Script-->
-        {{-- @include('template.script') --}}
-        <!-- End of Script-->
-            <!-- Bootstrap core JavaScript-->
-        <script src="{{ asset('template/vendor/jquery/jquery.min.js') }}"></script>
-        <script src="{{ asset('template/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-
-        <!-- Core plugin JavaScript-->
-        <script src="{{ asset('template/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
-
-        <!-- Custom scripts for all pages-->
-        <script src="{{ asset('template/js/sb-admin-2.min.js') }}"></script>
-        <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-    
+        @include('template.script2')
+        <!-- End of Script-->    
 </body>
 <script> $(document).ready( function () {
     $('#inputimunisasi').DataTable();
