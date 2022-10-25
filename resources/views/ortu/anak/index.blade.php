@@ -72,7 +72,7 @@
                                                 <div class="col-1">:</div>
                                                 <div class="col-6"><input type="text" name="pekerjaan_ibu" id="pekerjaan_ibu" class="form-control"></div>
                                             </div>    
-                                       </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
