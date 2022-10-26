@@ -7,7 +7,7 @@
 </head>
 <body>
 <div id="wrapper">
-       @include('template.sidepengelola')
+       @include('template.sideentry')
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
                 @include('template.nav')
@@ -53,9 +53,9 @@
                 </tr>
             </thead>
 
-            @foreach ($sdidtks as $sdidtk)
+            @foreach ($sdidtks as $key => $sdidtk)
             <tr>
-                <th>0 Bulan</th>
+                <th>{{$key + 1}} Bulan</th>
                 <td>{{$sdidtk->kode_pertumbuhan}}</td>
                 <td>{{$sdidtk->bbdn_tbdn}}</td>
                 <td>{{$sdidtk->tb_u}}</td>
@@ -66,109 +66,6 @@
                 <td>{{$sdidtk->kmpe}}</td>
                 <td>{{$sdidtk->mchat}}</td>
                 <td>{{$sdidtk->gpph}}</td>
-            </tr>
-            <tr>
-                <th>3 Bulan</th>
-                <td>{{$sdidtk->kode_pertumbuhan}}</td>
-                <td>{{$sdidtk->bbdn_tbdn}}</td>
-                <td>{{$sdidtk->tb_u}}</td>
-                <td>{{$sdidtk->lk}}</td>
-                <td>{{$sdidtk->kpsp}}</td>
-                <td>{{$sdidtk->tdd}}</td>
-                <td>{{$sdidtk->tdl}}</td>
-                <td>{{$sdidtk->kmpe}}</td>
-                <td>{{$sdidtk->mchat}}</td>
-                <td>{{$sdidtk->gpph}}</td>
-            </tr>
-            <tr>
-                <th>6 Bulan</th>
-                <td>{{$sdidtk->kode_pertumbuhan}}</td>
-                <td>{{$sdidtk->bbdn_tbdn}}</td>
-                <td>{{$sdidtk->tb_u}}</td>
-                <td>{{$sdidtk->lk}}</td>
-                <td>{{$sdidtk->kpsp}}</td>
-                <td>{{$sdidtk->tdd}}</td>
-                <td>{{$sdidtk->tdl}}</td>
-                <td>{{$sdidtk->kmpe}}</td>
-                <td>{{$sdidtk->mchat}}</td>
-                <td>{{$sdidtk->gpph}}</td>
-            </tr>
-            <tr>
-                <th>9 Bulan</th>
-                <td>{{$sdidtk->kode_pertumbuhan}}</td>
-                <td>{{$sdidtk->bbdn_tbdn}}</td>
-                <td>{{$sdidtk->tb_u}}</td>
-                <td>{{$sdidtk->lk}}</td>
-                <td>{{$sdidtk->kpsp}}</td>
-                <td>{{$sdidtk->tdd}}</td>
-                <td>{{$sdidtk->tdl}}</td>
-                <td>{{$sdidtk->kmpe}}</td>
-                <td>{{$sdidtk->mchat}}</td>
-                <td>{{$sdidtk->gpph}}</td>
-            </tr>
-
-            <tr>
-                <th>12 Bulan</th>
-                <td>{{$sdidtk->kode_pertumbuhan}}</td>
-                <td>{{$sdidtk->bbdn_tbdn}}</td>
-                <td>{{$sdidtk->tb_u}}</td>
-                <td>{{$sdidtk->lk}}</td>
-                <td>{{$sdidtk->kpsp}}</td>
-                <td>{{$sdidtk->tdd}}</td>
-                <td>{{$sdidtk->tdl}}</td>
-                <td>{{$sdidtk->kmpe}}</td>
-                <td>{{$sdidtk->mchat}}</td>
-                <td>{{$sdidtk->gpph}}</td>
-            </tr>
-
-            <tr>
-                <th>15 Bulan</th>
-                <td>{{$sdidtk->kode_pertumbuhan}}</td>
-                <td>{{$sdidtk->bbdn_tbdn}}</td>
-                <td>{{$sdidtk->tb_u}}</td>
-                <td>{{$sdidtk->lk}}</td>
-                <td>{{$sdidtk->kpsp}}</td>
-                <td>{{$sdidtk->tdd}}</td>
-                <td>{{$sdidtk->tdl}}</td>
-                <td>{{$sdidtk->kmpe}}</td>
-                <td>{{$sdidtk->mchat}}</td>
-                <td>{{$sdidtk->gpph}}</td>
-            </tr>
-
-            <tr>
-                <th>18 Bulan</th>
-            </tr>
-
-            <tr>
-                <th>21 Bulan</th>
-            </tr>
-
-            <tr>
-                <th>24 Bulan</th>
-            </tr>
-
-            <tr>
-                <th>30 Bulan</th>
-            </tr>
-
-            <tr>
-                <th>36 Bulan</th>
-            </tr>
-
-            <tr>
-                <th>42 Bulan</th>
-            </tr>
-
-            <tr>
-                <th>48 Bulan</th>
-            </tr>
-
-            <tr>
-                <th>54 Bulan</th>
-            </tr>
-
-            <tr>
-                <th>60 Bulan-6 Tahun</th>
             </tr>
             @endforeach
         </table>

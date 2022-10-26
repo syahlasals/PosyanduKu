@@ -52,7 +52,7 @@ Route::resource('entry/vaksin', VaksinController::class)->middleware('entry');
 
 Route::resource('entry/vitamin', VitaminController::class)->middleware('entry');
 // Route::resource('entry/vitamin', VitaminController::class);
-Route::get('entry/vitamin{nik_anak}', [VitaminController::class, 'index']);
+// Route::get('entry/vitamin{nik_anak}', [VitaminController::class, 'index']);
 
 Route::resource('entry/pertumbuhan', PertumbuhanController::class)->middleware('entry');
 
@@ -65,6 +65,7 @@ Route::get('entry/pertumbuhan', [AnakController::class, 'pertumbuhan'])->middlew
 Route::resource('pengelola/dataImunisasi', ImunisasiController::class)->middleware('pengelola');
 Route::resource('pengelola/sdidtkAnak', StuntingController::class)->middleware('pengelola');
 
+Route::resource('entry/formSdidtk', StuntingController::class)->middleware('entry');
 Route::get('entry/formSdidtk', [StuntingController::class, 'tampilFormSdidtk'])->name('tampilFormSdidtk')->middleware('entry');
 
 Route::get('/redirects', [HomeController::class, 'index']);
