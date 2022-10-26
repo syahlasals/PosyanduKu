@@ -34,7 +34,7 @@ class Pengelola
         // role 0 = default user/ortu
         else
         {
-            return redirect()->route('ortu');
+            return view('ortu.anak.index');
         }
     }
 }

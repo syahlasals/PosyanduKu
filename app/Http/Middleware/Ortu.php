@@ -23,7 +23,7 @@ class Ortu
 
         // role 1 = entry
         if(Auth::user()->role == 1){
-            return redirect()->route('pengelola');
+            return redirect()->route('entry');
         }
 
         // role 2 = pengelola
@@ -34,7 +34,7 @@ class Ortu
         // role 0 = default user/ortu
         else
         {
-            return redirect()->route('ortu');
+            return view('ortu.anak.index');
         }
     }
 }
