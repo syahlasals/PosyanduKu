@@ -36,7 +36,7 @@ class Entry
         // role 0 = default user/ortu
         else
         {
-            return redirect()->route('ortu');
+            return redirect('/ortu');
         }
     }
 }
