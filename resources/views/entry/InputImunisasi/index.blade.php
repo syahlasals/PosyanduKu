@@ -63,7 +63,7 @@
                         <a href="/entry/pertumbuhan"><button type="button" class="btn btn-secondary"><i class="fa-solid fa-hands-holding-child"></i></button>
                         <a href="/entry/vaksin"><button type="button" class="btn btn-success"><i class="fa-solid fa-syringe"></i></button>
                         <a href="/entry/vitamin/{{ $anak->nik_anak }}"><button type="button" class="btn btn-danger"><i class="fa-solid fa-capsules"></i></button>
-                        <a href="/entry/sdidtkAnak"><button type="button" class="btn btn-danger" style="background-color: #FFD700; border-color: #FFD700;"><i class="fa-solid fa-person"></i></button>
+                        <a href="/entry/formSdidtk"><button type="button" class="btn btn-danger" style="background-color: #FFD700; border-color: #FFD700;"><i class="fa-solid fa-person"></i></button>
                     </div>
                 </div>
                 </td>               

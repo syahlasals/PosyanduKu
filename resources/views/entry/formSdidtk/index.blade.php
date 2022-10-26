@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,59 +40,220 @@
                                     </ul>
                                 </div>
                             @endif
-                            <form method="POST" action="/entry/vitamin" id="myform">
+                            <form method="POST" action="/entry/formSdidtk" id="myform" style="margin-top: 15px; margin-bottom: 15px;">
                                 @csrf
                                 <div class="row" style="margin-bottom: 15px;">
+                                    <div class="row" style="margin-bottom: 15px;">
+                                        <div class="col-3">
+                                            <label for="nik_anak"><b>NIK Anak</b></label>
+                                        </div>
+                                        <div class="col-1"><b>:</b></div>
+                                        <div class="col-8">
+                                            <input type="text" name="nik_anak" id="nik_anak" class="form-control">
+                                        </div>
+                                    </div>
                                     <div class="col-3">
-                                        <label for="kode_vitamin"><b>Kode Vitamin</b></label>
+                                        <label for="bb/tb"><b>BB/TB</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="text" name="kode_vitamin" id="kode_vitamin" class="form-control">
+                                        <div class="form-check">
+                                        <div class="row">
+                                            <div class="col">
+                                                <input type="radio" class="form-check-input" name="bb/tb" id="lakilaki"
+                                                value="1">
+                                                <label for="normal" class="form-check-label">Normal</label>
+                                            </div>
+                                            <div class="col-8">
+                                                <input type="radio" class="form-check-input" name="bb/tb" id="perempuan"
+                                                value="0">
+                                                <label for="tidaknormal" class="form-check-label">Tidak Normal</label>
+                                            </div>
+                                        </div>
+                                        </div>               
                                     </div>
-                                </div>
-                                <div class="row" style="margin-bottom: 15px;">
+
                                     <div class="col-3">
-                                        <label for="nip"><b>NIP</b></label>
-                                    </div>
-                                    <div class="col-1"><b>:</b></div>
-                                    <div class="col-8"> 
-                                        <input type="number" name="nip" id="nip" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="row" style="margin-bottom: 15px;">
-                                    <div class="col-3">
-                                        <label for="nik_anak"><b>NIK Anak</b></label>
-                                    </div>
-                                    <div class="col-1"><b>:</b></div>
-                                    <div class="col-8">
-                                        <input type="text" name="nik_anak" id="nik_anak" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="row" style="margin-bottom: 15px;">
-                                    <div class="col-3">
-                                        <label for="janis_vitamin"><b>Jenis Vitamin</b></label>
+                                        <label for="tb/u"><b>TB/U</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <select class="form-select" aria-label="Default select example" style="border-radius: 30px; width: 250px;" name="jenis_vitamin" id="jenis_vitamin">
-                                            <option value="Kapsul Merah">Kapsul Merah</option>
-                                            <option value="Kapsul Biru">Kapsul Biru</option>
-                                        </select>                                    
+                                        <div class="form-check">
+                                        <div class="row">
+                                            <div class="col">
+                                                <input type="radio" class="form-check-input" name="bb/tb" id="lakilaki"
+                                                value="1">
+                                                <label for="normal" class="form-check-label">Normal</label>
+                                            </div>
+                                            <div class="col-8">
+                                                <input type="radio" class="form-check-input" name="bb/tb" id="perempuan"
+                                                value="0">
+                                                <label for="tidaknormal" class="form-check-label">Tidak Normal</label>
+                                            </div>
+                                        </div>
+                                        </div>               
+                                    </div>
+
+                                    <div class="col-3">
+                                        <label for="lk"><b>LK</b></label>
+                                    </div>
+                                    <div class="col-1"><b>:</b></div>
+                                    <div class="col-8">
+                                        <div class="form-check">
+                                        <div class="row">
+                                            <div class="col">
+                                                <input type="radio" class="form-check-input" name="bb/tb" id="lakilaki"
+                                                value="1">
+                                                <label for="normal" class="form-check-label">Normal</label>
+                                            </div>
+                                            <div class="col-8">
+                                                <input type="radio" class="form-check-input" name="bb/tb" id="perempuan"
+                                                value="0">
+                                                <label for="tidaknormal" class="form-check-label">Tidak Normal</label>
+                                            </div>
+                                        </div>
+                                        </div>               
+                                    </div>
+
+                                    <div class="col-3">
+                                        <label for="kpsp"><b>KPSP</b></label>
+                                    </div>
+                                    <div class="col-1"><b>:</b></div>
+                                    <div class="col-8">
+                                        <div class="form-check">
+                                        <div class="row">
+                                            <div class="col">
+                                                <input type="radio" class="form-check-input" name="bb/tb" id="lakilaki"
+                                                value="1">
+                                                <label for="normal" class="form-check-label">Normal</label>
+                                            </div>
+                                            <div class="col-8">
+                                                <input type="radio" class="form-check-input" name="bb/tb" id="perempuan"
+                                                value="0">
+                                                <label for="tidaknormal" class="form-check-label">Tidak Normal</label>
+                                            </div>
+                                        </div>
+                                        </div>               
+                                    </div>
+
+                                    <div class="col-3">
+                                        <label for="tdd"><b>TDD</b></label>
+                                    </div>
+                                    <div class="col-1"><b>:</b></div>
+                                    <div class="col-8">
+                                        <div class="form-check">
+                                        <div class="row">
+                                            <div class="col">
+                                                <input type="radio" class="form-check-input" name="bb/tb" id="lakilaki"
+                                                value="1">
+                                                <label for="normal" class="form-check-label">Normal</label>
+                                            </div>
+                                            <div class="col-8">
+                                                <input type="radio" class="form-check-input" name="bb/tb" id="perempuan"
+                                                value="0">
+                                                <label for="tidaknormal" class="form-check-label">Tidak Normal</label>
+                                            </div>
+                                        </div>
+                                        </div>               
+                                    </div>
+
+                                    <div class="col-3">
+                                        <label for="tdl"><b>TDL</b></label>
+                                    </div>
+                                    <div class="col-1"><b>:</b></div>
+                                    <div class="col-8">
+                                        <div class="form-check">
+                                        <div class="row">
+                                            <div class="col">
+                                                <input type="radio" class="form-check-input" name="bb/tb" id="lakilaki"
+                                                value="1">
+                                                <label for="normal" class="form-check-label">Normal</label>
+                                            </div>
+                                            <div class="col-8">
+                                                <input type="radio" class="form-check-input" name="bb/tb" id="perempuan"
+                                                value="0">
+                                                <label for="tidaknormal" class="form-check-label">Tidak Normal</label>
+                                            </div>
+                                        </div>
+                                        </div>               
+                                    </div>
+
+                                    <div class="col-3">
+                                        <label for="kmpe"><b>KMPE</b></label>
+                                    </div>
+                                    <div class="col-1"><b>:</b></div>
+                                    <div class="col-8">
+                                        <div class="form-check">
+                                        <div class="row">
+                                            <div class="col">
+                                                <input type="radio" class="form-check-input" name="bb/tb" id="lakilaki"
+                                                value="1">
+                                                <label for="normal" class="form-check-label">Normal</label>
+                                            </div>
+                                            <div class="col-8">
+                                                <input type="radio" class="form-check-input" name="bb/tb" id="perempuan"
+                                                value="0">
+                                                <label for="tidaknormal" class="form-check-label">Tidak Normal</label>
+                                            </div>
+                                        </div>
+                                        </div>               
+                                    </div>
+
+                                    <div class="col-3">
+                                        <label for="m-chat"><b>M-CHAT</b></label>
+                                    </div>
+                                    <div class="col-1"><b>:</b></div>
+                                    <div class="col-8">
+                                        <div class="form-check">
+                                        <div class="row">
+                                            <div class="col">
+                                                <input type="radio" class="form-check-input" name="bb/tb" id="lakilaki"
+                                                value="1">
+                                                <label for="normal" class="form-check-label">Normal</label>
+                                            </div>
+                                            <div class="col-8">
+                                                <input type="radio" class="form-check-input" name="bb/tb" id="perempuan"
+                                                value="0">
+                                                <label for="tidaknormal" class="form-check-label">Tidak Normal</label>
+                                            </div>
+                                        </div>
+                                        </div>               
+                                    </div>
+
+                                    <div class="col-3">
+                                        <label for="gpph*"><b>GPPH*</b></label>
+                                    </div>
+                                    <div class="col-1"><b>:</b></div>
+                                    <div class="col-8">
+                                        <div class="form-check">
+                                        <div class="row">
+                                            <div class="col">
+                                                <input type="radio" class="form-check-input" name="bb/tb" id="lakilaki"
+                                                value="1">
+                                                <label for="normal" class="form-check-label">Normal</label>
+                                            </div>
+                                            <div class="col-8">
+                                                <input type="radio" class="form-check-input" name="bb/tb" id="perempuan"
+                                                value="0">
+                                                <label for="tidaknormal" class="form-check-label">Tidak Normal</label>
+                                            </div>
+                                        </div>
+                                        </div>               
                                     </div>
                                 </div>
                                 <br>
                                 <div class="row">
                                     <div class="col" colspan="3">
-                                        <button class="btn btn-main" type="submit" style="margin-left: 260px;">Simpan</button>
-                                        <a href="vitamin" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
+                                        <button class="btn btn-main" type="submit" style="margin-left: 260px;">Daftar</button>
+                                        <a href="{{ url('entry') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
                                     </div>
                                 </div>
-                            </form>
-                        </div><br>
+                                </form>
+                        </div>
                     </div>
                 </div>
-            </div>
+                </div>
+                
                 <!-- /.container-fluid -->
 
             </div>
@@ -114,11 +276,18 @@
 
     <!-- Logout Modal-->
     @include('template.modalLogout')
+
     <!--Script-->
     @include('template.script')
     <!-- End of Script-->
 
-
 </body>
 
 </html>
+
+
+
+
+
+
+
