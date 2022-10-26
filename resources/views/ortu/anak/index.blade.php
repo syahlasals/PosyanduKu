@@ -6,6 +6,7 @@
 </head>
     <body>  
         @include('template.navortu')
+        @include('template.nav')
         <div class="container my-5">
                 <div class="container-fluid">       
                     <div class="card">
@@ -38,7 +39,7 @@
                                                 <div class="col-6"><input type="number" name="no_kk" id="no_kk" class="form-control"></div>
                                             </div>
                                             <div class="d-flex mb-3">
-                                                <div class="col-5"><b>alamat</b></div>
+                                                <div class="col-5"><b>Alamat</b></div>
                                                 <div class="col-1">:</div>
                                                 <div class="col-6"><input type="text" name="alamat_ortu" id="alamat_ortu" class="form-control"></div>
                                             </div>
@@ -99,6 +100,7 @@
                 </div>
             </div>
         </div>
+        @include('template.modalLogout')
         @include('template.script')
     </body>
 </html>

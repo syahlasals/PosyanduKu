@@ -87,7 +87,9 @@
 <!-- Logout Modal-->
 @include('template.modalLogout')
 
-
+<!--Script-->
+@include('template.script2')
+<!-- End of Script-->
 </body>
 <script> $(document).ready( function () {
     $('#dataimunisasi').DataTable();

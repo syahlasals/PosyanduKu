@@ -13,6 +13,13 @@ class BerandaoController extends Controller
         $ortus = Ortu::all();
         return view('ortu.index', compact('ortus'));  
     }
+
+    public function show ()
+    {
+        $ortus = ProfileOrtu::all();
+        return view('ortu.index', compact('ortus'));  
+    }
+
     public function indexanak()
     {
         return view('ortu.anak.index');
