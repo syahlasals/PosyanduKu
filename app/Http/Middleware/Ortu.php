@@ -32,8 +32,7 @@ class Ortu
         }
 
         // role 0 = default user/ortu
-        else
-        {
+        if(Auth::user()->role == 0){
             return $next($request);
         }
     }
