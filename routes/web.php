@@ -42,7 +42,7 @@ Route::get('/pengelola',[BerandapController::class,'index'])->name('pengelola')-
 
 Route::get('/entry',[BerandaeController::class,'index'])->name('entry')->middleware('entry');
 
-Route::resource('ortu', BerandaoController::class);
+Route::resource('ortu', BerandaoController::class)->middleware('ortu');
 
 Route::resource('pengelola/dataPetugas', PetugasController::class)->middleware('pengelola');
 Route::get('/pengelola/hapuspetugas', [PetugasController::class, 'hapuspetugas'])->name('hapuspetugas')->middleware('pengelola');

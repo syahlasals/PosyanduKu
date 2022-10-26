@@ -62,7 +62,7 @@
                 <td>{{$sdidtk->lk}}</td>
                 <td>{{$sdidtk->kpsp}}</td>
                 <td>{{$sdidtk->tdd}}</td>
-                <td>{{$sdidtk->tdl}}</tsd>
+                <td>{{$sdidtk->tdl}}</td>
                 <td>{{$sdidtk->kmpe}}</td>
                 <td>{{$sdidtk->mchat}}</td>
                 <td>{{$sdidtk->gpph}}</td>
@@ -172,7 +172,7 @@
             </tr>
             @endforeach
         </table>
-        <a href="{{ url('entry/inputImunisasi') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
+        <a href="{{ url('entry/InputImunisasi') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
     </div>
     @include('template.footer')
         </div>

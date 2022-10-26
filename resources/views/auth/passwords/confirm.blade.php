@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+@include('template.head')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -8,6 +9,8 @@
                 <div class="card-header">{{ __('Confirm Password') }}</div>
 
                 <div class="card-body">
+                    <img style="height: 30%; width: 30%; display:block; margin-left: auto; margin-right: auto;"
+                        src="{{ asset('template/img/posyandu-welcome.svg') }}" alt="logo"><br><br>
                     {{ __('Please confirm your password before continuing.') }}
 
                     <form method="POST" action="{{ route('password.confirm') }}">

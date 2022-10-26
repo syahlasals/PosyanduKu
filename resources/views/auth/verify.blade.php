@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+@include('template.head')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -8,6 +9,8 @@
                 <div class="card-header">{{ __('Verify Your Email Address') }}</div>
 
                 <div class="card-body">
+                    <img style="height: 30%; width: 30%; display:block; margin-left: auto; margin-right: auto;"
+                        src="{{ asset('template/img/posyandu-welcome.svg') }}" alt="logo"><br><br>
                     @if (session('resent'))
                         <div class="alert alert-success" role="alert">
                             {{ __('A fresh verification link has been sent to your email address.') }}
