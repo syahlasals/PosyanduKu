@@ -11,6 +11,18 @@
                 <div class="container-fluid">       
                     <div class="card">
                         <div class="card-body">
+                        @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <strong>Waduh!</strong>Kesalahan input.<br><br>
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+                            <form method="POST" action="/ortu/anak" id="myform">
+                            @csrf
                             <div class="row">
                                 <h5 class="text-center my-3"><b>Masukan Data Diri Anda</b></h5>
                                 <div class="col-12 col-lg-12 col-md-12 col-sm-12 d-flex my-3 justify-content-center" style="height: 40%; width:40%;">
@@ -72,8 +84,14 @@
                                                 <div class="col-5"><b>Pekerjaan Ibu</b></div>
                                                 <div class="col-1">:</div>
                                                 <div class="col-6"><input type="text" name="pekerjaan_ibu" id="pekerjaan_ibu" class="form-control"></div>
-                                            </div>    
-                                        </div>
+                                            </div> 
+                                            <div class="row">
+                                            <div class="col" colspan="3">
+                                                <button class="btn btn-main" type="submit" style="margin-left: 260px;">Simpan</button>
+                                                <a href="{{ url('ortu') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
+                                            </div>
+                                        </div>   
+                                       </div>
                                     </div>
                                 </div>
                             </div>
