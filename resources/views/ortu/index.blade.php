@@ -83,6 +83,18 @@
                 <div id="menu1" class="container-fluid tab-pane fade"><br>         
                     <div class="card">
                         <div class="card-body">
+                        @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <strong>Waduh!</strong>Kesalahan input.<br><br>
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+                            <form method="POST" action="/ortu" id="myform">
+                            @csrf
                             <div class="row">
                                 <div class="col-12 col-lg-6 col-md-6 col-sm-6 d-flex mb-3 justify-content-center">
                                     <img src="{{ asset('template/img/picture_dasboard.svg') }}" alt="">
@@ -161,12 +173,18 @@
                                                 <div class="col-1">:</div>
                                                 <div class="col-6">{{ $ortu->nik_ibu }}</div>
                                             </div>
+                                            <div class="row">
+                                            <div class="col" colspan="3">
+                                                <button class="btn btn-main" type="submit" style="margin-left: 260px;">Daftar</button>
+                                                <a href="{{ url('entry') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
+                                            </div>
+                                            </div>
                                             @endforeach       
                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="{{ route('ortuEdit', $ortu->no_kk) }}" class="btn btn-warning">Ubah</a>
+                            <a href="{{ route('OrtuEdit', $ortu->no_kk) }}" class="btn btn-warning">Ubah</a>
                             <button type="button" class="btn btn-primary">Logout</button>
                         </div>
                     </div> 

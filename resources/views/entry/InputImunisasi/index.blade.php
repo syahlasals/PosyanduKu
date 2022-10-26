@@ -21,11 +21,8 @@
 
                 <!--Topbar-->
                 @include('template.nav')
-<<<<<<< HEAD
-=======
                 <!--End of Topbar-->
 
->>>>>>> d2f1e383ed27f217c6e37344c7a88a6add43ca19
     <div class="container">
         <h1 class="text-center mt-5 mb-5"><b>INPUT IMUNISASI</b></h1>
         

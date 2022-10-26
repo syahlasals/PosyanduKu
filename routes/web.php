@@ -41,7 +41,7 @@ Route::get('/pengelola',[BerandapController::class,'index']);
 
 Route::get('/entry',[BerandaeController::class,'index']);
 
-Route::resource('ortu', BerandaoController::class);
+Route::resource('/ortu', BerandaoController::class);
 
 Route::resource('pengelola/dataPetugas', PetugasController::class);
 Route::get('/pengelola/hapuspetugas', [PetugasController::class, 'hapuspetugas'])->name('hapuspetugas');
