@@ -58,12 +58,14 @@ Route::resource('entry/pertumbuhan', PertumbuhanController::class)->middleware('
 
 Route::resource('entry/pendaftaranAnak', DaftarAnakController::class)->middleware('entry');
 
-Route::get('entry/inputImunisasi', [AnakController::class, 'indexInputImunisasi'])->name('index-imunisasi')->middleware('entry');
+Route::get('entry/InputImunisasi', [AnakController::class, 'indexInputImunisasi'])->name('index-imunisasi')->middleware('entry');
 Route::get('entry/history', [AnakController::class, 'historyImunisasi'])->middleware('entry');
 Route::get('entry/pertumbuhan', [AnakController::class, 'pertumbuhan'])->middleware('entry');
 
 Route::resource('pengelola/dataImunisasi', ImunisasiController::class)->middleware('pengelola');
 Route::resource('pengelola/sdidtkAnak', StuntingController::class)->middleware('pengelola');
+
+Route::get('entry/formSdidtk', [StuntingController::class, 'tampilFormSdidtk'])->name('tampilFormSdidtk')->middleware('entry');
 
 Route::get('/redirects', [HomeController::class, 'index']);
 // Route::get('/redirects', [HomeController::class, 'logout']);

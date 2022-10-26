@@ -18,6 +18,13 @@ class StuntingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function tampilFormSdidtk()
+    {
+        $sdidtks = Stunting::all();
+        return view('entry.formSdidtk.index', compact('sdidtks'));
+    }
+
     public function create()
     {
         //
