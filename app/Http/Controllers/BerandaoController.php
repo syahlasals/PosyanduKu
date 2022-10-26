@@ -14,9 +14,9 @@ class BerandaoController extends Controller
         return view('ortu.index', compact('ortus'));  
     }
 
-    public function show ()
+    public function show()
     {
-        $ortus = ProfileOrtu::all();
+        $ortus = Ortu::all();
         return view('ortu.index', compact('ortus'));  
     }
 
@@ -53,6 +53,6 @@ class BerandaoController extends Controller
             'rw'=>$request->rw
         ]);
 
-        return redirect('/ortu/index')->with('success', 'Data berhasil di tambahkan');
+        return redirect('/ortu')->with('success', 'Data berhasil di tambahkan');
     }
 }

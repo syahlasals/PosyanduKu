@@ -21,7 +21,7 @@
                                     </ul>
                                 </div>
                             @endif
-                            <form method="POST" action="/ortu/anak" id="myform">
+                            <form method="POST" action="/ortu" id="myform">
                             @csrf
                             <div class="row">
                                 <h5 class="text-center my-3"><b>Masukan Data Diri Anda</b></h5>
