@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<< HEAD
-use App\Models\Vitamin;
-=======
 use Illuminate\Support\Facades\Auth;
->>>>>>> 37a09c0351b48236ab0cb881f95e0e242ed2a025
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BioController;
 use App\Http\Controllers\AnakController;
@@ -51,19 +47,13 @@ Route::resource('ortu', BerandaoController::class)->middleware('ortu');
 Route::resource('pengelola/dataPetugas', PetugasController::class)->middleware('pengelola');
 Route::get('/pengelola/hapuspetugas', [PetugasController::class, 'hapuspetugas'])->name('hapuspetugas')->middleware('pengelola');
 Route::get('/pengelola/dataPetugas/edit/{nip}',[PetugasController::class,'edit'])->name('edit')->middleware('pengelola');
-Route::post('/pengelola/dataPetugas/update/{nip}',[PetugasController::class,'update'])->middleware('pengelola');
+Route::post('/pengeloladataPetugas/update/{nip}',[PetugasController::class,'update'])->middleware('pengelola');
 
-<<<<<<< HEAD
-Route::resource('entry/vaksin', VaksinController::class);
-// Route::get('entry/vitamin/{nik_anak}', [VitaminController::class, 'index']);
-Route::resource('entry/vitamin', VitaminController::class);
-=======
 Route::resource('entry/vaksin', VaksinController::class)->middleware('entry');
 
 Route::resource('entry/vitamin', VitaminController::class)->middleware('entry');
 // Route::resource('entry/vitamin', VitaminController::class);
 Route::get('entry/vitamin{nik_anak}', [VitaminController::class, 'index']);
->>>>>>> 37a09c0351b48236ab0cb881f95e0e242ed2a025
 
 Route::resource('entry/pertumbuhan', PertumbuhanController::class)->middleware('entry');
 
@@ -74,6 +64,7 @@ Route::get('entry/history', [AnakController::class, 'historyImunisasi'])->middle
 Route::get('entry/pertumbuhan', [AnakController::class, 'pertumbuhan'])->middleware('entry');
 
 Route::resource('pengelola/dataImunisasi', ImunisasiController::class)->middleware('pengelola');
+Route::resource('pengelola/sdidtkAnak', StuntingController::class)->middleware('pengelola');
 
 Route::get('/redirects', [HomeController::class, 'index']);
 // Route::get('/redirects', [HomeController::class, 'logout']);
@@ -93,7 +84,7 @@ Route::middleware([
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::resource('entry/sdidtkAnak', StuntingController::class)->middleware('entry');
+
 
 
 Auth::routes();

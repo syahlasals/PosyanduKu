@@ -10,7 +10,7 @@ class StuntingController extends Controller
     public function index()
     {
         $sdidtks = Stunting::all();
-        return view('entry.sdidtkAnak.index', compact('sdidtks'));
+        return view('pengelola.sdidtkAnak.index', compact('sdidtks'));
     }
 
     /**
