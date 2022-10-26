@@ -41,9 +41,10 @@ Route::get('/pengelola',[BerandapController::class,'index'])->name('pengelola')-
 
 Route::get('/entry',[BerandaeController::class,'index'])->name('entry')->middleware('entry');
 
+// Route::resource('ortu', BerandaoController::class)->name('ortu');
 Route::get('/ortu',[BerandaoController::class,'index']);
-// Route::get('/ortu',[BerandaoController::class,'indexanak'])->name('ortu')->middleware('ortu');
-// Route::post('/ortu',[BerandaoController::class,'store'])->name('ortu')->middleware('ortu');
+// Route::get('/ortu/anak',[BerandaoController::class,'indexanak'])->name('ortu')->middleware('ortu');
+// Route::get('/ortu/edit',[BerandaoController::class,'index'])->name('ortu')->middleware('ortu');
 
 Route::resource('pengelola/dataPetugas', PetugasController::class)->middleware('pengelola');
 Route::get('/pengelola/hapuspetugas', [PetugasController::class, 'hapuspetugas'])->name('hapuspetugas')->middleware('pengelola');
@@ -54,7 +55,7 @@ Route::resource('entry/vaksin', VaksinController::class)->middleware('entry');
 
 Route::resource('entry/vitamin', VitaminController::class)->middleware('entry');
 // Route::resource('entry/vitamin', VitaminController::class);
-Route::get('entry/vitamin{nik_anak}', [VitaminController::class, 'index']);
+// Route::get('entry/vitamin{nik_anak}', [VitaminController::class, 'index']);
 
 Route::resource('entry/pertumbuhan', PertumbuhanController::class)->middleware('entry');
 
@@ -67,6 +68,7 @@ Route::get('entry/pertumbuhan', [AnakController::class, 'pertumbuhan'])->middlew
 Route::resource('pengelola/dataImunisasi', ImunisasiController::class)->middleware('pengelola');
 Route::resource('pengelola/sdidtkAnak', StuntingController::class)->middleware('pengelola');
 
+Route::resource('entry/formSdidtk', StuntingController::class)->middleware('entry');
 Route::get('entry/formSdidtk', [StuntingController::class, 'tampilFormSdidtk'])->name('tampilFormSdidtk')->middleware('entry');
 
 Route::get('/redirects', [HomeController::class, 'index']);

@@ -38,7 +38,31 @@ class StuntingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'kode_pertumbuhan'=>'required|in:1,0',
+            'bb_tb'=>'required|in:1,0',
+            'tb_u'=>'required|in:1,0',
+            'kpsp'=>'required|in:1,0',
+            'tdd'=>'required|in:1,0',
+            'tdl'=>'required|in:1,0',
+            'smpe'=>'required|in:1,0',
+            'mchat'=>'required|in:1,0',
+            'gpph'=>'required|in:1,0'
+        ]);
+
+        $anaks = Stunting::create([
+            'kode_pertumbuhan'=>$request->kode_pertumbuhan,
+            'bb_tb'=>$request->bb_tb,
+            'tb_u'=>$request->tb_u,
+            'kpsp'=>$request->kpsp,
+            'tdd'=>$request->tdd,
+            'tdl'=>$request->tdl,
+            'smpe'=>$request->smpe,
+            'mchat'=>$request->mchat,
+            'gpph'=>$request->gpph
+        ]);
+
+        return redirect('/entry/formSdidtk')->with('success', 'Data berhasil di tambahkan');
     }
 
     /**

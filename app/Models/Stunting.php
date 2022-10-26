@@ -9,8 +9,8 @@ class Stunting extends Model
 {
     use HasFactory;
     public $timestamps = false;
-    protected $primaryKey = "kode_pertumbuhan";
+    // protected $primaryKey = "kode_pertumbuhan";
     protected $table = "tb_sdidtk";
     protected $fillable = [
-       'kode_pertumbuhan','bbdn/tbdn','tb/u','kpsp', 'tdd', 'tdl', 'smpe', 'mchat', 'gpph'];
+       'kode_pertumbuhan','bb_tb','tb_u','kpsp', 'tdd', 'tdl', 'smpe', 'mchat', 'gpph'];
 }
