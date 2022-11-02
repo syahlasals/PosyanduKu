@@ -5,8 +5,8 @@
     @include('template.head')
 </head>
     <body>  
-        @include('template.navortu')
-        @include('template.nav')
+        @include('template.nav0')
+        {{-- @include('template.nav') --}}
         <div class="container">
             <div class="wrapper my-5">
                 <div class="card greeting">
@@ -122,70 +122,6 @@
                                     </div>
                                 </div>
                             </div>
-                            {{-- <div class="card">
-                                <div class="card-body">
-                                    <div class="row my-3">
-                                        <div class="col-12 col-lg-6 col-md-6 col-sm-6">
-                                            @foreach ($ortus as $key => $ortu)
-                                            <div class="d-flex mb-3">
-                                                <div class="col-5"><b>No. KK</b></div>
-                                                <div class="col-1">:</div>
-                                                <div class="col-6">{{ $ortu->no_kk }}</div>
-                                            </div>
-                                            <div class="d-flex mb-3">
-                                                <div class="col-5"><b>Alamat</b> </div>
-                                                <div class="col-1">:</div>
-                                                <div class="col-6">{{ $ortu->alamat_ortu }}</div>
-                                            </div>
-                                            <div class="d-flex mb-3">
-                                                <div class="col-5"><b>RT/RW</b></div>
-                                                <div class="col-1">:</div>
-                                                <div class="col-6">{{ $ortu->rt }}/{{ $ortu->rw }}</div>
-                                            </div>
-                                            <div class="d-flex mb-3">
-                                                <div class="col-5"><b>Nama Ayah</b></div>
-                                                <div class="col-1">:</div>
-                                                <div class="col-6">{{ $ortu->nama_ayah }}</div>
-                                            </div>
-                                            <div class="d-flex mb-3">
-                                                <div class="col-5"><b>Pekerjaan Ayah</b></div>
-                                                <div class="col-1">:</div>
-                                                <div class="col-6">{{ $ortu->pekerjaan_ayah }}</div>
-                                            </div>
-                                            <div class="d-flex mb-3">
-                                                <div class="col-5"><b>NIK Ayah</b></div>
-                                                <div class="col-1">:</div>
-                                                <div class="col-6">{{ $ortu->nik_ayah }}</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-lg-6 col-md-6 col-sm-6">
-                                            <div class="d-flex mb-3">
-                                                <div class="col-5"><b>Nama Ibu</b></div>
-                                                <div class="col-1">:</div>
-                                                <div class="col-6">{{ $ortu->nama_ibu }}</div>
-                                            </div>
-                                            <div class="d-flex mb-3">
-                                                <div class="col-5"><b>Pekerjaan Ibu</b></div>
-                                                <div class="col-1">:</div>
-                                                <div class="col-6">{{ $ortu->pekerjaan_ibu }}</div>
-                                            </div>
-                                            <div class="d-flex mb-3">
-                                                <div class="col-5"><b>NIK Ibu</b></div>
-                                                <div class="col-1">:</div>
-                                                <div class="col-6">{{ $ortu->nik_ibu }}</div>
-                                            </div>
-                                            <div class="row">
-                                            <div class="col" colspan="3">
-                                                <button class="btn btn-main" type="submit" style="margin-left: 260px;">Daftar</button>
-                                                <a href="{{ url('entry') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
-                                            </div>
-                                            </div>
-                                            @endforeach       
-                                       </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="{{ route('ortuEdit', $ortu->no_kk) }}" class="btn btn-warning">Ubah</a> --}}
                             <button type="button" class="btn btn-primary">Logout</button>
                         </div>
                     </div> 
