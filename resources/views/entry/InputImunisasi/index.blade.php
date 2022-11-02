@@ -66,7 +66,7 @@
                         <a href="/entry/formSdidtk"><button type="button" class="btn btn-danger" style="background-color: #FFD700; border-color: #FFD700;"><i class="fa-solid fa-person"></i></button>
                     </div>
                 </div>
-                </td>               
+                </td>
             </tr>
             @endforeach
         </table>
