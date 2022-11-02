@@ -29,7 +29,7 @@
             <div class="alert alert-success " role="alert">
                 <strong><p>{{ $message }}</p></strong>
                 <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"></button>
-              </div>
+            </div>
             @endif
         </div>
         <table id="dataimunisasi" class="table table-striped table-bordered text-center">

@@ -20,7 +20,7 @@ class BerandaoController extends Controller
     //     return view('ortu.index', compact('ortus'));  
     // }
 
-    public function indexanak()
+    public function create()
     {
         return view('ortu.anak.index');
     }

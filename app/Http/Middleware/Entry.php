@@ -38,5 +38,8 @@ class Entry
         {
             return redirect('/ortu');
         }
+        // if(Auth::user()->role == 0){
+        //     return redirect()->route('ortu');
+        // }
     }
 }

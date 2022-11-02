@@ -32,9 +32,12 @@ class Pengelola
         }
 
         // role 0 = default user/ortu
-        else
-        {
-            return redirect('/ortu');
+        // else
+        // {
+        //     return redirect()->route('ortu');
+        // }
+        if(Auth::user()->role == 0){
+            return redirect()->route('ortu');
         }
     }
 }
