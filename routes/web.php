@@ -42,9 +42,6 @@ Route::get('/pengelola',[BerandapController::class,'index'])->name('pengelola')-
 Route::get('/entry',[BerandaeController::class,'index'])->name('entry')->middleware('entry');
 
 Route::resource('ortu', BerandaoController::class)->middleware('ortu');
-Route::get('/ortu',[BerandaoController::class,'index'])->name('ortu')->middleware('ortu');
-// Route::get('/ortu/anak',[BerandaoController::class,'indexanak'])->name('ortu')->middleware('ortu');
-// Route::get('/ortu/edit',[BerandaoController::class,'index'])->name('ortu')->middleware('ortu');
 
 Route::resource('pengelola/dataPetugas', PetugasController::class)->middleware('pengelola');
 Route::get('/pengelola/hapuspetugas', [PetugasController::class, 'hapuspetugas'])->name('hapuspetugas')->middleware('pengelola');
@@ -54,8 +51,6 @@ Route::post('/pengeloladataPetugas/update/{nip}',[PetugasController::class,'upda
 Route::resource('entry/vaksin', VaksinController::class)->middleware('entry');
 
 Route::resource('entry/vitamin', VitaminController::class)->middleware('entry');
-// Route::resource('entry/vitamin', VitaminController::class);
-// Route::get('entry/vitamin{nik_anak}', [VitaminController::class, 'index']);
 
 Route::resource('entry/pertumbuhan', PertumbuhanController::class)->middleware('entry');
 
@@ -72,9 +67,6 @@ Route::resource('entry/formSdidtk', StuntingController::class)->middleware('entr
 Route::get('entry/formSdidtk', [StuntingController::class, 'tampilFormSdidtk'])->name('tampilFormSdidtk')->middleware('entry');
 
 Route::get('/redirects', [HomeController::class, 'index']);
-// Route::get('/redirects', [HomeController::class, 'logout']);
-
-// Route::resource('ortu/anak/index', BerandaoController::class)->middleware('ortu');
 
 
 Route::middleware([
