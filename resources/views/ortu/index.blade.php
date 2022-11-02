@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Beranda</title>
     @include('template.head')
 </head>
     <body>  

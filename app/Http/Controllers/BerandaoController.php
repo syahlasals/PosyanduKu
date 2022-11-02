@@ -41,9 +41,9 @@ class BerandaoController extends Controller
         ]);
 
         $ortus = Ortu::create([
-            'no_kk'=>$request->kode_vaksin,
-            'nik_ayah'=>$request->nip,
-            'nik_ibu'=>$request->nik_anak,
+            'no_kk'=>$request->no_kk,
+            'nik_ayah'=>$request->nik_ayah,
+            'nik_ibu'=>$request->nik_ibu,
             'nama_ayah'=>$request->nama_ayah,
             'nama_ibu'=>$request->nama_ibu,
             'pekerjaan_ayah'=>$request->pekerjaan_ayah,
