@@ -52,20 +52,29 @@
                                             <input type="text" name="nik_anak" id="nik_anak" class="form-control">
                                         </div>
                                     </div>
+                                    <div class="row" style="margin-bottom: 15px;">
+                                        <div class="col-3">
+                                            <label for="kode_pertumbuhan"><b>Kode Pertumbuhan</b></label>
+                                        </div>
+                                        <div class="col-1"><b>:</b></div>
+                                        <div class="col-8">
+                                            <input type="text" name="kode_pertumbuhan" id="kode_pertumbuhan" class="form-control">
+                                        </div>
+                                    </div>
                                     <div class="col-3">
-                                        <label for="bb/tb"><b>BB/TB</b></label>
+                                        <label for="bb_tb"><b>BB/TB</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
                                         <div class="form-check">
                                         <div class="row">
                                             <div class="col">
-                                                <input type="radio" class="form-check-input" name="bb/tb" id="normal"
+                                                <input type="radio" class="form-check-input" name="bb_tb" id="normal"
                                                 value="1">
                                                 <label for="normal" class="form-check-label">Normal</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="radio" class="form-check-input" name="bb/tb" id="tidaknormal"
+                                                <input type="radio" class="form-check-input" name="bb_tb" id="tidaknormal"
                                                 value="0">
                                                 <label for="tidaknormal" class="form-check-label">Tidak Normal</label>
                                             </div>
@@ -74,19 +83,19 @@
                                     </div>
 
                                     <div class="col-3">
-                                        <label for="tb/u"><b>TB/U</b></label>
+                                        <label for="tb_u"><b>TB/U</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
                                         <div class="form-check">
                                         <div class="row">
                                             <div class="col">
-                                                <input type="radio" class="form-check-input" name="tb/u" id="normal"
+                                                <input type="radio" class="form-check-input" name="tb_u" id="normal"
                                                 value="1">
                                                 <label for="normal" class="form-check-label">Normal</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="radio" class="form-check-input" name="tb/u" id="tidaknormal"
+                                                <input type="radio" class="form-check-input" name="tb_u" id="tidaknormal"
                                                 value="0">
                                                 <label for="tidaknormal" class="form-check-label">Tidak Normal</label>
                                             </div>
@@ -200,19 +209,19 @@
                                     </div>
 
                                     <div class="col-3">
-                                        <label for="m-chat"><b>M-CHAT</b></label>
+                                        <label for="mchat"><b>M-CHAT</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
                                         <div class="form-check">
                                         <div class="row">
                                             <div class="col">
-                                                <input type="radio" class="form-check-input" name="m-chat" id="normal"
+                                                <input type="radio" class="form-check-input" name="mchat" id="normal"
                                                 value="1">
                                                 <label for="normal" class="form-check-label">Normal</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="radio" class="form-check-input" name="m-chat" id="tidaknormal"
+                                                <input type="radio" class="form-check-input" name="mchat" id="tidaknormal"
                                                 value="0">
                                                 <label for="tidaknormal" class="form-check-label">Tidak Normal</label>
                                             </div>
@@ -221,19 +230,19 @@
                                     </div>
 
                                     <div class="col-3">
-                                        <label for="gpph*"><b>GPPH*</b></label>
+                                        <label for="gpph"><b>GPPH*</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
                                         <div class="form-check">
                                         <div class="row">
                                             <div class="col">
-                                                <input type="radio" class="form-check-input" name="gpph*" id="normal"
+                                                <input type="radio" class="form-check-input" name="gpph" id="normal"
                                                 value="1">
                                                 <label for="normal" class="form-check-label">Normal</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="radio" class="form-check-input" name="gpph*" id="tidaknormal"
+                                                <input type="radio" class="form-check-input" name="gpph" id="tidaknormal"
                                                 value="0">
                                                 <label for="tidaknormal" class="form-check-label">Tidak Normal</label>
                                             </div>
@@ -244,7 +253,7 @@
                                 <br>
                                 <div class="row">
                                     <div class="col" colspan="3">
-                                        <button class="btn btn-main" type="submit" style="margin-left: 260px;">Daftar</button>
+                                        <button class="btn btn-main" type="submit" style="margin-left: 260px;">Simpan</button>
                                         <a href="{{ url('entry/InputImunisasi') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
                                     </div>
                                 </div>

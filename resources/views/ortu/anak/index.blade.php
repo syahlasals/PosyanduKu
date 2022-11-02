@@ -5,8 +5,8 @@
     @include('template.head')
 </head>
     <body>  
-        @include('template.navortu')
-        @include('template.nav')
+        {{-- @include('template.navortu') --}}
+        @include('template.nav0')
         <div class="container my-5">
                 <div class="container-fluid">       
                     <div class="card">
