@@ -61,6 +61,7 @@
             </tr>
             @endforeach
         </table>
+        <a href="{{ url('pengelola') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
     </div>
 </div>
 </div>
