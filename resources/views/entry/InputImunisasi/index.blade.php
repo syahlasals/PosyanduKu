@@ -35,6 +35,24 @@
             @endif
         </div>
         <table id="inputimunisasi" class="table table-striped table-bordered text-center">
+            <div class="row" style="color:black; font-family: Poppins;">
+                <div class="col">
+                    <i class="fa-solid fa-clock-rotate-left"> : History Imunisasi </i>
+                </div>
+                <div class="col">
+                    <i class="fa-solid fa-hands-holding-child"> : Form Pertumbuhan</i>
+                </div>
+                <div class="col">
+                    <i class="fa-solid fa-syringe"> : Form Vaksin</i>
+                </div>
+                <div class="col">
+                    <i class="fa-solid fa-capsules"> : Form Vitamin</i>
+                </div>
+                <div class="col">
+                    <i class="fa-solid fa-person"> : Form SDIDTK</i>
+                </div>
+            </div>
+                <br>
             <thead>
                 <tr>
                     <th>No</th>

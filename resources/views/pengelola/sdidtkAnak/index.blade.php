@@ -72,12 +72,28 @@
         <a href="{{ url('entry/InputImunisasi') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
     </div>
     @include('template.footer')
-        </div>
+    <!-- End of Footer -->
+    
     </div>
+    <!-- End of Content Wrapper -->
+    
+    </div>
+    <!-- End of Page Wrapper -->
+    
+    <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
+    <i class="fas fa-angle-up"></i>
     </a>
+    
     <!-- Logout Modal-->
     @include('template.modalLogout')
-</body>
-</html>
+    
+    <!--Script-->
+    @include('template.script2')
+    <!-- End of Script-->
+    </body>
+    <script> $(document).ready( function () {
+        $('#datastunting').DataTable();
+    } );
+    </script>
+    </html>
