@@ -51,7 +51,7 @@
                                 <td>{{ $anak->no_kk }}</td>
                                 <td>{{ $anak->nik_anak }}</td>
                                 <td>{{ $anak->nama_anak }}</td>
-                                <td>{{ $anak->tmp_anak}}, {{ $anak->tgl_anak }}</td>
+                                <td>{{ $anak->tmp_anak}}, <br> {{ $anak->tgl_anak }}</td>
                                 <td>{{ $anak->jenkel_anak }}</td>
                                 <td>{{ $anak->golongan_darah }}</td>
                                 <td>

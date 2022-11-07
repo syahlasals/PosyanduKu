@@ -28,7 +28,7 @@ class VaksinController extends Controller
             'jenis_vaksin'=>$request->jenis_vaksin
         ]);
 
-        return redirect('/entry/vaksin')->with('success', 'Vaksin berhasil di tambahkan');
+        return redirect('/entry/InputImunisasi')->with('success', 'Vaksin berhasil di tambahkan');
     }
 
 }

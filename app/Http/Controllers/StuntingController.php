@@ -65,7 +65,7 @@ class StuntingController extends Controller
             'gpph'=>$request->gpph
         ]);
 
-        return redirect('/entry/formSdidtk')->with('success', 'Data berhasil di tambahkan');
+        return redirect('/entry/InputImunisasi')->with('success', 'Data berhasil di tambahkan');
     }
 
     /**
