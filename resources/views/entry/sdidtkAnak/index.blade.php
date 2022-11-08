@@ -15,8 +15,9 @@
     <div class="container"><br>
         <h2 class="text-center" >HASIL PELAYANAN
         <br>SIMULASI DETEKSI INTERVENSI DIDI TUMBUH KEMBANG (SDIDTK)</h2>
-        <h5 class="text-center">(dilaksanakan oleh dokter/perawat/bisan/tenaga terlatih)</h5>
+        <h5 class="text-center">(dilaksanakan oleh dokter/perawat/bidan/tenaga terlatih)</h5>
         <br>
+        <h5 class="text-center">Data An. Maulid</h5>
         <br><br>
         <div>
             @if ($message = Session::get('success'))
@@ -29,7 +30,7 @@
         <table id="datastunting" class="table table-striped table-bordered text-center">
             <thead>
                 <tr>
-                    <th rowspan="3" class="justify-content-center">Umur Anak</th>
+                    <th rowspan="3" class="justify-content-center">Umur Bayi</th>
                     <th colspan="10">Jenis Skrining/Deteksi Dini Penyimpangan Tumbuh Kembang</th>
                 </tr>
                 <tr>
@@ -57,27 +58,39 @@
             <tr>
                 <th>{{$key + 1}} Bulan</th>
                 <td>{{$sdidtk->kode_pertumbuhan}}</td>
-                <td>{{$sdidtk->bbdn_tbdn}}</td>
-                <td>{{$sdidtk->tb_u}}</td>
-                <td>{{$sdidtk->lk}}</td>
-                <td>{{$sdidtk->kpsp}}</td>
-                <td>{{$sdidtk->tdd}}</td>
-                <td>{{$sdidtk->tdl}}</td>
-                <td>{{$sdidtk->kmpe}}</td>
-                <td>{{$sdidtk->mchat}}</td>
-                <td>{{$sdidtk->gpph}}</td>
+                <td>{{$sdidtk->bb_tb == 1 ? 'Normal' : 'Tidak Normal'}}</td>
+                <td>{{$sdidtk->tb_u == 1 ? 'Normal' : 'Tidak Normal'}}</td>
+                <td>{{$sdidtk->lk == 1 ? 'Normal' : 'Tidak Normal'}}</td>
+                <td>{{$sdidtk->kpsp == 1 ? 'Normal' : 'Tidak Normal'}}</td>
+                <td>{{$sdidtk->tdd == 1 ? 'Normal' : 'Tidak Normal'}}</td>
+                <td>{{$sdidtk->tdl == 1 ? 'Normal' : 'Tidak Normal'}}</td>
+                <td>{{$sdidtk->kmpe == 1 ? 'Normal' : 'Tidak Normal'}}</td>
+                <td>{{$sdidtk->mchat == 1 ? 'Normal' : 'Tidak Normal'}}</td>
+                <td>{{$sdidtk->gpph == 1 ? 'Normal' : 'Tidak Normal'}}</td>
             </tr>
             @endforeach
         </table>
         <a href="{{ url('entry/InputImunisasi') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
     </div>
     @include('template.footer')
-        </div>
+    <!-- End of Footer -->
+    
     </div>
+    <!-- End of Content Wrapper -->
+    
+    </div>
+    <!-- End of Page Wrapper -->
+    
+    <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
+    <i class="fas fa-angle-up"></i>
     </a>
+    
     <!-- Logout Modal-->
     @include('template.modalLogout')
-</body>
-</html>
+    
+    <!--Script-->
+    @include('template.script2')
+    <!-- End of Script-->
+    </body>
+    </html>
