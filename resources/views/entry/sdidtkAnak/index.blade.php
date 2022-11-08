@@ -7,7 +7,7 @@
 </head>
 <body>
 <div id="wrapper">
-       @include('template.sidepengelola')
+       @include('template.sideentry')
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
                 @include('template.nav')
@@ -15,8 +15,9 @@
     <div class="container"><br>
         <h2 class="text-center" >HASIL PELAYANAN
         <br>SIMULASI DETEKSI INTERVENSI DIDI TUMBUH KEMBANG (SDIDTK)</h2>
-        <h5 class="text-center">(dilaksanakan oleh dokter/perawat/bisan/tenaga terlatih)</h5>
+        <h5 class="text-center">(dilaksanakan oleh dokter/perawat/bidan/tenaga terlatih)</h5>
         <br>
+        <h5 class="text-center">Data An. Maulid</h5>
         <br><br>
         <div>
             @if ($message = Session::get('success'))
@@ -29,7 +30,7 @@
         <table id="datastunting" class="table table-striped table-bordered text-center">
             <thead>
                 <tr>
-                    <th rowspan="3" class="justify-content-center">Umur Anak</th>
+                    <th rowspan="3" class="justify-content-center">Umur Bayi</th>
                     <th colspan="10">Jenis Skrining/Deteksi Dini Penyimpangan Tumbuh Kembang</th>
                 </tr>
                 <tr>
@@ -57,7 +58,7 @@
             <tr>
                 <th>{{$key + 1}} Bulan</th>
                 <td>{{$sdidtk->kode_pertumbuhan}}</td>
-                <td>{{$sdidtk->bbdn_tbdn}}</td>
+                <td>{{$sdidtk->bb_tb}}</td>
                 <td>{{$sdidtk->tb_u}}</td>
                 <td>{{$sdidtk->lk}}</td>
                 <td>{{$sdidtk->kpsp}}</td>
@@ -92,8 +93,4 @@
     @include('template.script2')
     <!-- End of Script-->
     </body>
-    <script> $(document).ready( function () {
-        $('#datastunting').DataTable();
-    } );
-    </script>
     </html>

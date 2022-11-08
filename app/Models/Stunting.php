@@ -12,5 +12,5 @@ class Stunting extends Model
     // protected $primaryKey = "kode_pertumbuhan";
     protected $table = "tb_sdidtk";
     protected $fillable = [
-       'kode_pertumbuhan','bb_tb','tb_u','kpsp', 'tdd', 'tdl', 'kmpe', 'mchat', 'gpph', 'nik_anak'];
+       'kode_pertumbuhan','bb_tb','tb_u','lk','kpsp', 'tdd', 'tdl', 'kmpe', 'mchat', 'gpph', 'nik_anak'];
 }

@@ -51,6 +51,9 @@
                 <div class="col">
                     <i class="fa-solid fa-person"> : Form SDIDTK</i>
                 </div>
+                <div class="col">
+                    <i class="fa-solid fa-calendar"> : Data SDIDTK</i>
+                </div>
             </div>
                 <br>
             <thead>
@@ -82,6 +85,7 @@
                         <a href="/entry/vaksin"><button type="button" class="btn btn-success"><i class="fa-solid fa-syringe"></i></button>
                         <a href="/entry/vitamin"><button type="button" class="btn btn-danger"><i class="fa-solid fa-capsules"></i></button>
                         <a href="/entry/formSdidtk"><button type="button" class="btn btn-danger" style="background-color: #FFD700; border-color: #FFD700;"><i class="fa-solid fa-person"></i></button>
+                        <a href="/entry/sdidtkAnak"><button type="button" class="btn btn-danger" style="background-color: #dc55d5; border-color: #dc55d5;"><i class="fa-solid fa-calendar"></i></button>
                     </div>
                 </div>
                 </td>
