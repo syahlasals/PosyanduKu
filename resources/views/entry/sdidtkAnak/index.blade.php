@@ -58,15 +58,15 @@
             <tr>
                 <th>{{$key + 1}} Bulan</th>
                 <td>{{$sdidtk->kode_pertumbuhan}}</td>
-                <td>{{$sdidtk->bb_tb}}</td>
-                <td>{{$sdidtk->tb_u}}</td>
-                <td>{{$sdidtk->lk}}</td>
-                <td>{{$sdidtk->kpsp}}</td>
-                <td>{{$sdidtk->tdd}}</td>
-                <td>{{$sdidtk->tdl}}</td>
-                <td>{{$sdidtk->kmpe}}</td>
-                <td>{{$sdidtk->mchat}}</td>
-                <td>{{$sdidtk->gpph}}</td>
+                <td>{{$sdidtk->bb_tb == 1 ? 'Normal' : 'Tidak Normal'}}</td>
+                <td>{{$sdidtk->tb_u == 1 ? 'Normal' : 'Tidak Normal'}}</td>
+                <td>{{$sdidtk->lk == 1 ? 'Normal' : 'Tidak Normal'}}</td>
+                <td>{{$sdidtk->kpsp == 1 ? 'Normal' : 'Tidak Normal'}}</td>
+                <td>{{$sdidtk->tdd == 1 ? 'Normal' : 'Tidak Normal'}}</td>
+                <td>{{$sdidtk->tdl == 1 ? 'Normal' : 'Tidak Normal'}}</td>
+                <td>{{$sdidtk->kmpe == 1 ? 'Normal' : 'Tidak Normal'}}</td>
+                <td>{{$sdidtk->mchat == 1 ? 'Normal' : 'Tidak Normal'}}</td>
+                <td>{{$sdidtk->gpph == 1 ? 'Normal' : 'Tidak Normal'}}</td>
             </tr>
             @endforeach
         </table>
