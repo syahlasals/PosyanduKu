@@ -84,7 +84,6 @@
                     <div class="col-12">
 
                         <a href="/entry/history"><button type="button" class="btn btn-primary"><i class="fa-solid fa-clock-rotate-left"></i></button>
-                        \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
                         <a href="/entry/pertumbuhan/{{$anak->nik_anak}}"><button type="button" class="btn btn-secondary"><i class="fa-solid fa-hands-holding-child"></i></button>
                         <a href="/entry/vaksin/{{$anak->nik_anak}}"><button type="button" class="btn btn-success"><i class="fa-solid fa-syringe"></i></button>
                         <a href="/entry/vitamin/{{$anak->nik_anak}}"><button type="button" class="btn btn-danger"><i class="fa-solid fa-capsules"></i></button>

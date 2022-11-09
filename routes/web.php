@@ -36,13 +36,15 @@ Route::get('/', function () {
 Route::prefix('pengelola')->middleware('pengelola')->group(function () {
     Route::get('/',[BerandapController::class,'index'])->name('pengelola');
     Route::resource('dataAnak', AnakController::class);
-    Route::get('pengelola/dataPosyandu',[ProfileController::class,'index']);
+    Route::get('dataPosyandu',[ProfileController::class,'index']);
     Route::resource('dataPetugas', PetugasController::class);
     Route::get('hapuspetugas', [PetugasController::class, 'hapuspetugas'])->name('hapuspetugas');
     Route::get('dataPetugas/edit/{nip}',[PetugasController::class,'edit'])->name('edit');
     Route::post('dataPetugas/update/{nip}',[PetugasController::class,'update']);
     Route::get('dataStunting', [StuntingController::class, 'tampilDataStunting'])->name('tampilDataStunting');
     Route::resource('dataImunisasi', ImunisasiController::class);
+    Route::get('dataImunisasi', [ImunisasiController::class, 'index']);
+    Route::resource('pengelola/sdidtkAnak', StuntingController::class);
 });
 
 Route::get('/entry',[BerandaeController::class,'index'])->name('entry')->middleware('entry');
@@ -56,9 +58,6 @@ Route::get('entry/vitamin/{nik_anak}', [VitaminController::class, 'index'])->mid
 Route::post('store/vitamin', [VitaminController::class, 'store'])->middleware('entry');
 Route::get('entry/pertumbuhan/{nik_anak}', [PertumbuhanController::class, 'index'])->middleware('entry');
 Route::post('store/pertumbuhan', [PertumbuhanController::class, 'store'])->middleware('entry');
-// Route::resource('entry/vaksin', VaksinController::class)->middleware('entry');
-// Route::resource('entry/vitamin', VitaminController::class)->middleware('entry');
-// Route::resource('entry/pertumbuhan', PertumbuhanController::class)->middleware('entry');
 Route::resource('entry/pendaftaranAnak', DaftarAnakController::class)->middleware('entry');
 Route::get('entry/InputImunisasi', [AnakController::class, 'indexInputImunisasi'])->name('index-imunisasi')->middleware('entry');
 Route::get('entry/history', [AnakController::class, 'historyImunisasi'])->middleware('entry');
@@ -95,16 +94,9 @@ Route::get('entry/formSdidtk', [StuntingController::class, 'tampilFormSdidtk'])-
 //     Route::get('formSdidtk', [StuntingController::class, 'tampilFormSdidtk'])->name('tampilFormSdidtk');
 // });
 
-Route::get('/pengelola/dataImunisasi', [ImunisasiController::class, 'index']);
-
-
-Route::resource('pengelola/sdidtkAnak', StuntingController::class)->middleware('pengelola');
-Route::prefix('ortu')->middleware('ortu')->group(function () {
-    Route::resource('ortu', BerandaoController::class);
-});
+Route::resource('ortu', BerandaoController::class)->middleware('ortu');;
 
 Route::get('/redirects', [HomeController::class, 'index']);
-
 
 Route::middleware([
     'auth:sanctum',
@@ -115,7 +107,6 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
-
 
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
