@@ -18,19 +18,16 @@ class VitaminController extends Controller
     {
         $this->validate($request, [
             'kode_vitamin'=>'required',
-            'nip'=>'required',
-            'nik_anak'=>'required',
             'jenis_vitamin'=>'required'
         ]);
 
         $vitamins = Vitamin::create([
             'kode_vitamin'=>$request->kode_vitamin,
-            'nip'=>$request->nip,
             'nik_anak'=>$request->nik_anak,
             'jenis_vitamin'=>$request->jenis_vitamin
         ]);
-
         return redirect('/entry/InputImunisasi')->with('success', 'Vitamin berhasil di tambahkan');
+
     }
     
 

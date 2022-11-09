@@ -14,29 +14,20 @@ class VaksinController extends Controller
         ]);
     }
 
-    public function create()
-    {
-        return view('entry.vaksin.create');
+        public function store(Request $request)
+        {
+            $this->validate($request, [
+                'kode_vaksin'=>'required',
+                'jenis_vaksin'=>'required'
+            ]);
+    
+            $vaksins = Vaksin::create([
+                'kode_vaksin'=>$request->kode_vaksin,
+                'nik_anak'=>$request->nik_anak,
+                'jenis_vaksin'=>$request->jenis_vaksin
+            ]);
+            return redirect('/entry/InputImunisasi')->with('success', 'Vitamin berhasil di tambahkan');
+    
+        }
     }
 
-    public function store(Request $request)
-    {
-        //validate form
-        $this->validate($request, [
-            'kode_vaksin'     => 'required',
-            'nik_anak'     => 'required',
-            'jenis_vaksin'   => 'required'
-        ]);
-
-        //create post
-        Vaksin::create([
-            'kode_vaksin'     => $request->kode_vaksin,
-            'nik_anak'     => $request->nik_anak,
-            'jenis_vaksin'   => $request->jenis_vaksin
-        ]);
-
-        //redirect to index
-        return redirect()->route('entry.vaksin.index')->with(['success' => 'Data Berhasil Disimpan!']);
-    }
-
-}

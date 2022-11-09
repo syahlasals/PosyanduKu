@@ -82,7 +82,9 @@
                 <td width="25%">
                 <div class="row d-flex">
                     <div class="col-12">
+
                         <a href="/entry/history"><button type="button" class="btn btn-primary"><i class="fa-solid fa-clock-rotate-left"></i></button>
+                        \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
                         <a href="/entry/pertumbuhan/{{$anak->nik_anak}}"><button type="button" class="btn btn-secondary"><i class="fa-solid fa-hands-holding-child"></i></button>
                         <a href="/entry/vaksin/{{$anak->nik_anak}}"><button type="button" class="btn btn-success"><i class="fa-solid fa-syringe"></i></button>
                         <a href="/entry/vitamin/{{$anak->nik_anak}}"><button type="button" class="btn btn-danger"><i class="fa-solid fa-capsules"></i></button>
@@ -100,7 +102,7 @@
                     <!-- /.container-fluid -->
 
                 </div>
-                <!-- End of Main Content -->
+                <!-- End of Main Cont
     
                 <!-- Footer -->
                 @include('template.footer')
@@ -120,12 +122,18 @@
         <!-- Logout Modal-->
         @include('template.modalLogout')
     
-        <!--Script-->
+        <!--Script--=
         @include('template.script2')
         <!-- End of Script-->    
 </body>
 <script> $(document).ready( function () {
     $('#inputimunisasi').DataTable();
 } );
+</script>
+
+<script>
+
+  $("[data-toggle='tooltip']").tooltip(); // Initialize Tooltip
+
 </script>
 </html>
