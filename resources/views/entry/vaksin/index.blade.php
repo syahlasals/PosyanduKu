@@ -87,12 +87,9 @@
                                 <div class="row">
                                     <div class="col" colspan="3">
                                     <a href="{{$nik_anak}}" class="btn btn-md btn-primary">SIMPAN</button>
-                                        <a href="vaksin" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
+                                        <a href="{{ url('entry/InputImunisasi') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
                                     </div>
                                 </div>
-
-                                <!-- {{-- <a href="{{ url('entry/vaksin') }}" class="btn btn-main" type="submit">Simpan</a> --}} -->
-                                <!-- {{-- <a href="{{ url('entry/InputImunisasi') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a> --}} -->
                             </form>
                         </div><br>
                     </div>

@@ -76,7 +76,7 @@
                                 <div class="row">
                                     <div class="col" colspan="3">
                                         <a href="{{$nik_anak}}" class="btn btn-main" type="submit" style="margin-left: 260px;">Simpan</button>
-                                        <a href="vitamin" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
+                                            <a href="{{ url('entry/InputImunisasi') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
                                     </div>
                                 </div>
                             </form>
