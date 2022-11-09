@@ -9,6 +9,7 @@ class Vaksin extends Model
 {
     use HasFactory;
     public $timestamps = false;
+    public $incrementing = true;
     protected $primaryKey = "kode_vaksin";
     protected $table = "tb_vaksin";
     protected $fillable = [
