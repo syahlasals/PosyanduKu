@@ -83,12 +83,11 @@
                                                 <div class="col-5"> <label for="pekerjaan_ibu"><b>Pekerjaan Ibu</b></label></div>
                                                 <div class="col-1">:</div>
                                                 <div class="col-6"><input type="text" name="pekerjaan_ibu" id="pekerjaan_ibu" class="form-control"></div>
-                                            </div> 
+                                            </div> <br>
                                             <div class="row">
                                                 <div class="row">
                                                     <div class="col" colspan="3">
                                                         <button class="btn btn-main" type="submit" style="margin-left: 260px;">Daftar</button>
-                                                        <a href="{{ url('ortu') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
                                                     </div>
                                                 </div>
                                             </div>   
@@ -96,7 +95,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div><br>
+                            Sudah daftar? <a href="{{ url('ortu') }}">Klik ini untuk masuk ke dashboard.</a><br>
                         </div>
                     </div> 
                 </div>

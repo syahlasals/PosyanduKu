@@ -14,4 +14,9 @@ class Vitamin extends Model
     protected $fillable = [
        'kode_vitamin', 'nip','nik_anak', 'jenis_vitamin'];
 
+       public function Anak()
+    {
+        return $this->hasOne(Anak::class, 'nik_anak');
+    }
+
 }

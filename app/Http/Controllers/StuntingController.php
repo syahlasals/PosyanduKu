@@ -11,7 +11,7 @@ class StuntingController extends Controller
     public function index()
     {
         $sdidtks = Stunting::all();
-        return view('pengelola.sdidtkAnak.index', compact('sdidtks'));
+        return view('entry.sdidtkAnak.index', compact('sdidtks'));
     }
 
     /**
@@ -24,6 +24,12 @@ class StuntingController extends Controller
     {
         $sdidtks = Stunting::all();
         return view('entry.formSdidtk.index', compact('sdidtks'));
+    }
+
+    public function tampilDataStunting()
+    {
+        $sdidtks = Stunting::all();
+        return view('pengelola.dataStunting.index', compact('sdidtks'));
     }
 
     public function create()
@@ -65,7 +71,7 @@ class StuntingController extends Controller
             'gpph'=>$request->gpph
         ]);
 
-        return redirect('/entry/formSdidtk')->with('success', 'Data berhasil di tambahkan');
+        return redirect('/entry/InputImunisasi')->with('success', 'Data berhasil di tambahkan');
     }
 
     /**
