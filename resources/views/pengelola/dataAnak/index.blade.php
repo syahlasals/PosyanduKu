@@ -5,6 +5,7 @@
     <title>Data Posyandu</title>
     @include('template.head')
 </head>
+<?php session_start(); ?>
 <body id="page-top">
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -24,14 +25,15 @@
         <div class="container-fluid">
                     <h1 class="text-center mt-5 mb-5"><b>DATA ANAK</b></h1>
                     <div class="container">
-                        <div>
+                        <!-- <div>
                         @if ($message = Session::get('success'))
-                            <div class="alert alert-success " role="alert">
+                            <div class="alert alert-success " role="alert" script="Berhasil, Data telah diubah, Success">
                                 <strong><p>{{ $message }}</p></strong>
+                                
                                 <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"></button>
                             </div>
                         @endif
-                        </div>
+                        </div> -->
                         <table id="dataanak" class="table table-striped table-bordered text-center">
                             <thead>
                                 <tr>
@@ -60,7 +62,9 @@
                                             <a href="dataAnak/{{ $anak->nik_anak }}" class="btn btn-warning d-flex"><iconify-icon icon="fa:eye" width="20px" height="20px"></iconify-icon></a>
                                         </div>
                                         <div class="col-4">
-                                            <a href="dataAnak/{{ $anak->nik_anak }}/edit" class="btn btn-info d-flex"><iconify-icon icon="akar-icons:edit" width="20px" height="20px"></iconify-icon></a>
+                                            <a href="dataAnak/{{ $anak->nik_anak }}/edit" class="btn btn-info d-flex"><iconify-icon icon="akar-icons:edit" width="20px" height="20px">
+                        
+                                            </iconify-icon></a>
                                         </div>
                                         <div class="col-4">
                                             <form id="delete-form" method="POST" action="dataAnak/{{ $anak->nik_anak }}">
@@ -109,6 +113,8 @@
 <!--Script-->
 @include('template.script2')
 <!-- End of Script-->
+
+@include('sweetalert::alert')
 
 
     </body>

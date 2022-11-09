@@ -23,15 +23,14 @@
 
     <div class="container">
         <h1 class="text-center mb-5 mt-5"><b>DATA PETUGAS</b></h1>
-        
-        <div>
+        <!-- <div>
             @if ($message = Session::get('success'))
             <div class="alert alert-success " role="alert">
                 <strong><p>{{ $message }}</p></strong>
                 <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"></button>
               </div>
             @endif
-        </div>
+        </div> -->
         <table id="datapetugas" class="table table-striped table-bordered text-center">
             <thead>
                 <tr>
@@ -91,6 +90,8 @@
 <!--Script-->
 @include('template.script2')
 <!-- End of Script-->
+
+@include('sweetalert::alert')
 
 </body>
 <script> $(document).ready( function () {

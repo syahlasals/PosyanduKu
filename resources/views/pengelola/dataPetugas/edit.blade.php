@@ -95,7 +95,7 @@
                                         <input type="text" name="alamat_petugas" id="alamat_petugas" class="form-control" value="{{ $ptgs->alamat_petugas }}" required="">
                                     </div>
                                 </div>
-                                <button class="btn btn-main" type="submit">Save</button>
+                                <button class="btn btn-main" type="submit">Simpan</button>
                                 {{-- <button class="btn btn-main" type="btn" href="{{ url('/pengelola/dataPetugas') }}">Kembali</button> --}}
                                 <a href="{{ url('/pengelola/dataPetugas') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
                             </form>
