@@ -31,46 +31,14 @@
                 <div class="container-fluid">
                     <div class="card card-welcomep mb-5">
                         <div class="card-body d-flex align-items-center justify-content-center">
-                        <h1 style="color: white;"><b>Selamat Datang, Petugas Entry</b></h1>
+                        <h1 style="color: white;"><b>Selamat Datang, {{ Auth::user()->name }}</b></h1>
                         </div>
                     </div>
-                    <div class="row mb-3">
-                        <div class="col d-flex justify-content-end">
+                    <div class="row">
+                        <div class="col d-flex justify-content-center">
                             <a href="/entry/pendaftaranAnak" class="card card-ap">
                                 <div class="card-body">
                                     <h4 class=" d-flex align-items-center justify-content-center mb-3"><b>Pendaftaran</b></h4> 
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col d-flex justify-content-start">
-                            <a href="#" class="card card-pv">
-                                <div class="card-body">
-                                    <h4 class=" d-flex align-items-center justify-content-center mb-3"><b>Pertumbuhan</b></h4>  
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col d-flex justify-content-end">
-                            <a href="/entry/vitamin" class="card card-pv ">
-                                <div class="card-body">
-                                    <h4 class=" d-flex align-items-center justify-content-center mb-3"><b>Vitamin</b></h4> 
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col d-flex justify-content-start">
-                            <a href="#" class="card card-pr">
-                                <div class="card-body">
-                                    <h4 class=" d-flex align-items-center justify-content-center mb-3"><b>Riwayat Penyakit</b></h4> 
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col d-flex justify-content-center">
-                            <a href="/entry/vaksin" class="card card-pv ">
-                                <div class="card-body">
-                                    <h4 class=" d-flex align-items-center justify-content-center mb-3"><b>Vaksin</b></h4> 
                                 </div>
                             </a>
                         </div>

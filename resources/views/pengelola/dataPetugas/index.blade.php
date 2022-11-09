@@ -50,7 +50,9 @@
                 <td>{{$key+1}}</td>
                 <td>{{$ptgs->nip}}</td>
                 <td>{{$ptgs->nama_petugas}}</td>
-                <td>{{$ptgs->jenkel_petugas}}</td>
+                <td>
+                    {{ $ptgs->jenkel_petugas == 'L' ? 'Laki-Laki' : 'Perempuan' }}
+                </td>
                 <td>{{$ptgs->jabatan}}</td>
                 <td>{{$ptgs->alamat_petugas}}</td>
                 <td>

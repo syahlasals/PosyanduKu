@@ -13,12 +13,5 @@ class Ortu extends Model
     protected $table = "tb_ortu";
     protected $primaryKey = 'no_kk';
     protected $fillable = [
-        'no_kk',
-        'nik_anak',
-        'nama_anak',
-        'jenkel_anak',
-        'tgl_anak',
-        'tmp_anak',
-        'golongan_darah'
-    ];
+        'no_kk', 'alamat_ortu', 'rt', 'rw', 'nama_ayah','pekerjaan_ayah', 'nik_ayah', 'nama_ibu', 'pekerjaan_ibu', 'nik_ibu'];
 }

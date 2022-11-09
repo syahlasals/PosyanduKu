@@ -32,58 +32,14 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item {{ Request::is('entry') ? 'active' : '' }}">
-        <!--
-        <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true"
-            aria-controls="collapsePages">
-            <i class="bi bi-pencil-fill"></i>
-            <span>Input Imunisasi</span>
-        </a>-->
         <li class="nav-item">
             <a class="nav-link {{ Request::is('entry/InputImunisasi') ? 'active' : '' }}" href="{{ url('entry/InputImunisasi') }}">
                 <i class="bi bi-pencil-fill"></i>
                 <span>Input Imunisasi</span>
             </a>
         </li>
-        <!--
-        <div id="collapsePages" class="collapse show" aria-labelledby="headingPages"
-            data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Form Input</h6>
-                <a class="collapse-item side-link {{ Request::is('entry/pendaftaranAnak') ? 'active' : '' }}" href="{{ url('entry/pendaftaranAnak') }}">Form Pendaftaran</a>
-                <a class="collapse-item {{ Request::is('entry/pertumbuhan') ? 'active' : '' }}" href="{{ url('entry/pertumbuhan') }}">Form Pertumbuhan</a>
-                <a class="collapse-item {{ Request::is('entry/InputImunisasi') ? 'active' : '' }}" href="{{ url('entry/InputImunisasi') }}">Input Imunisasi Anak</a>
-                <a class="collapse-item {{ Request::is('entry/vaksin') ? 'active' : '' }}" href="{{ url('entry/vaksin') }}">Form Vaksin</a>
-                <a class="collapse-item {{ Request::is('entry/vitamin') ? 'active' : '' }}" href="{{ url('entry/vitamin') }}">Form Vitamin</a>
-                <a class="collapse-item {{ Request::is('entry/riwayatPenyakit') ? 'active' : '' }}" href="#">Form Riwayat Penyakit</a>
-                <div class="collapse-divider"></div>
-            </div>
-        </div>-->
     </li>
 
-    <!-- Nav Item - Charts -->
-    <li class="nav-item">
-        <a class="nav-link" href="#">
-            <i class="fas fa-fw fa-chart-area"></i>
-            <span>Data Stunting</span>
-        </a>
-    </li>
-{{-- 
-    <!-- Nav Item - Charts -->
-    <li class="nav-item">
-        <a class="nav-link" href="#">
-            <i class="bi bi-person-lines-fill"></i>
-            <span>Antrian</span>
-        </a>
-    </li>
-
-    <!-- Nav Item - Charts -->
-    <li class="nav-item">
-        <a class="nav-link" href="#">
-            <i class="bi bi-upc-scan"></i>
-            <span>Scan QR</span>
-        </a>
-    </li>
- --}}
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 

@@ -36,7 +36,10 @@ class Entry
         // role 0 = default user/ortu
         else
         {
-            return redirect()->route('ortu');
+            return redirect('/ortu');
         }
+        // if(Auth::user()->role == 0){
+        //     return redirect()->route('ortu');
+        // }
     }
 }

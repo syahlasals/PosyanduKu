@@ -29,7 +29,7 @@
             <div class="alert alert-success " role="alert">
                 <strong><p>{{ $message }}</p></strong>
                 <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"></button>
-              </div>
+            </div>
             @endif
         </div>
         <table id="dataimunisasi" class="table table-striped table-bordered text-center" border="1">
@@ -58,6 +58,7 @@
             </tr>
             @endforeach
         </table>
+        <a href="{{ url('pengelola') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
     </div>
 </div>
 </div>

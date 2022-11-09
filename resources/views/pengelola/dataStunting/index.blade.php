@@ -11,7 +11,7 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
     <!--sidebar-->
-       @include('template.sideentry')
+       @include('template.sidepengelola')
     <!--End Sidebar-->
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -24,7 +24,7 @@
                 <!--End of Topbar-->
 
     <div class="container">
-        <h1 class="text-center mt-5 mb-5"><b>HISTORY IMUNISASI</b></h1>
+        <h1 class="text-center mt-5 mb-5"><b>DATA STUNTING</b></h1>
 
         <div class="row">
             <div class="col" colspan="3">

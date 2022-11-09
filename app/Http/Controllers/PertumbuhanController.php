@@ -7,9 +7,11 @@ use Illuminate\Http\Request;
 
 class PertumbuhanController extends Controller
 {
-    public function index()
+    public function index($nik_anak)
     {
-        return view('entry.pertumbuhan.index');
+        return view ('entry.pertumbuhan.index', [
+            "nik_anak" => $nik_anak
+          ]);
     }
 
     public function store(Request $request)
@@ -28,6 +30,6 @@ class PertumbuhanController extends Controller
             'lingkar_kepala'=>$request->lingkar_kepala
         ]);
 
-        return redirect('/entry/pertumbuhan')->with('success', 'Data Pertumbuhan berhasil di tambahkan');
+        return redirect('/entry/InputImunisasi')->with('success', 'Data Pertumbuhan berhasil di tambahkan');
     }
 }

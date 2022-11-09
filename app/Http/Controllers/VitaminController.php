@@ -7,9 +7,11 @@ use App\Models\Vitamin;
 
 class VitaminController extends Controller
 {
-    public function index()
+    public function index($nik_anak)
     {
-        return view('entry.vitamin.index');
+        return view ('entry.vitamin.index', [
+            "nik_anak" => $nik_anak
+          ]);
     }
 
     public function store(Request $request)
@@ -28,7 +30,7 @@ class VitaminController extends Controller
             'jenis_vitamin'=>$request->jenis_vitamin
         ]);
 
-        return redirect('/entry/vitamin')->with('success', 'Vitamin berhasil di tambahkan');
+        return redirect('/entry/InputImunisasi')->with('success', 'Vitamin berhasil di tambahkan');
     }
     
 

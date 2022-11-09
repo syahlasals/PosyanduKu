@@ -10,7 +10,7 @@ class BioController extends Controller
     //
     public function index()
     {
-        return view('ortu.biodata.index');
+        return view('ortu.index');
     }
 
     public function store(Request $request)
