@@ -62,8 +62,7 @@
             @endforeach
         </table>
         <a href="{{ url('pengelola') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
-    </div>
-</div>
+
 </div>
 <!-- /.container-fluid -->
 
@@ -84,13 +83,6 @@
 <a class="scroll-to-top rounded" href="#page-top">
 <i class="fas fa-angle-up"></i>
 </a>
-
-<!-- Logout Modal-->
-@include('template.modalLogout')
-
-<!--Script-->
-@include('template.script2')
-<!-- End of Script-->
 </body>
 <script> $(document).ready( function () {
     $('#dataimunisasi').DataTable();

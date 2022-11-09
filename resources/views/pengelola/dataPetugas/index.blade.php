@@ -72,10 +72,9 @@
             @endforeach
         </table>
         <a href="{{ url('pengelola') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
-        </div>
     </div>
-</div>
-<!-- End of Main Content -->
+    <!-- /.container-fluid -->
+
 </div>
 <!-- End of Main Content -->
 
@@ -87,13 +86,12 @@
 <!-- End of Content Wrapper -->
 
 </div>
-<!-- Logout Modal-->
-@include('template.modalLogout')
+<!-- End of Page Wrapper -->
 
-<!--Script-->
-@include('template.script2')
-<!-- End of Script-->
-
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+<i class="fas fa-angle-up"></i>
+</a>
 </body>
 <script> $(document).ready( function () {
     $('#datapetugas').DataTable();

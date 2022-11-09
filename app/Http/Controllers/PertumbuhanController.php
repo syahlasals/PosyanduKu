@@ -7,9 +7,11 @@ use Illuminate\Http\Request;
 
 class PertumbuhanController extends Controller
 {
-    public function index()
+    public function index($nik_anak)
     {
-        return view('entry.pertumbuhan.index');
+        return view ('entry.pertumbuhan.index', [
+            "nik_anak" => $nik_anak
+          ]);
     }
 
     public function store(Request $request)

@@ -13,4 +13,9 @@ class Vaksin extends Model
     protected $table = "tb_vaksin";
     protected $fillable = [
        'kode_vaksin', 'nip','nik_anak', 'jenis_vaksin'];
+
+       public function Anak()
+    {
+        return $this->hasOne(Anak::class, 'nik_anak');
+    }
 }
