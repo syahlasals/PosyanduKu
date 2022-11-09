@@ -25,15 +25,6 @@
         <div class="container-fluid">
                     <h1 class="text-center mt-5 mb-5"><b>DATA ANAK</b></h1>
                     <div class="container">
-                        <!-- <div>
-                        @if ($message = Session::get('success'))
-                            <div class="alert alert-success " role="alert" script="Berhasil, Data telah diubah, Success">
-                                <strong><p>{{ $message }}</p></strong>
-                                
-                                <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"></button>
-                            </div>
-                        @endif
-                        </div> -->
                         <table id="dataanak" class="table table-striped table-bordered text-center">
                             <thead>
                                 <tr>

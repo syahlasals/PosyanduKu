@@ -101,7 +101,7 @@
                     <!-- /.container-fluid -->
 
                 </div>
-                <!-- End of Main Content -->
+                <!-- End of Main Cont
     
                 <!-- Footer -->
                 @include('template.footer')
@@ -121,7 +121,7 @@
         <!-- Logout Modal-->
         @include('template.modalLogout')
     
-        <!--Script-->
+        <!--Script--=
         @include('template.script2')
         <!-- End of Script-->    
 </body>
