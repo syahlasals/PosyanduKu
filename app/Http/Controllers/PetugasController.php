@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\petugas;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
+use RealRashid\SweetAlert\Facades\Alert;
 
 class PetugasController extends Controller
 {
@@ -17,9 +17,8 @@ class PetugasController extends Controller
     public function hapuspetugas(Request $request){
     
     
-        $petugass = petugas::where('nip', $request->nip)->delete();    
-
-        return redirect("/pengelola/dataPetugas")->with('success', 'Data Petugas Berhasil Di Hapus');
+        $petugass = petugas::where('nip', $request->nip)->delete(); 
+        return redirect("/pengelola/dataPetugas")->with('success', 'Data Berhasil Dihapus!');
     }
 
     /**
@@ -53,8 +52,7 @@ class PetugasController extends Controller
                 'jabatan'=>$request->jabatan,
                 'alamat_petugas'=>$request->alamat_petugas,
         ]);
-        
-        return redirect('/pengelola/dataPetugas')->with('success', 'Data berhasil Di Update');
+        return redirect('/pengelola/dataPetugas')->with('success', 'Data Berhasil Diubah!');
         // return redirect()->route('pengelola.dataPetugas.index')->with('success', 'Data Berhasil Diedit!');
     }
 
