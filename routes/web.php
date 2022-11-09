@@ -48,12 +48,14 @@ Route::get('/pengelola/hapuspetugas', [PetugasController::class, 'hapuspetugas']
 Route::get('/pengelola/dataPetugas/edit/{nip}',[PetugasController::class,'edit'])->name('edit');
 Route::post('/pengelola/dataPetugas/update/{nip}',[PetugasController::class,'update']);
 
-Route::resource('entry/vaksin', VaksinController::class);
+Route::get('entry/vaksin/{nik_anak}', [VaksinController::class, 'index']);
+Route::post('/entry/vaksin/create', [VaksinController::class, 'create']);
 
-Route::resource('entry/vitamin', VitaminController::class);
-Route::get('entry/vitamin{nik_anak}', [VitaminController::class, 'index']);
+Route::get('entry/vitamin/{nik_anak}', [VitaminController::class, 'index']);
+// Route::get('entry/vitamin{nik_anak}', [VitaminController::class, 'index']);
 
-Route::resource('entry/pertumbuhan', PertumbuhanController::class);
+Route::get('entry/pertumbuhan/{nik_anak}', [PertumbuhanController::class, 'index']);
+// Route::resource('entry/pertumbuhan', PertumbuhanController::class);
 
 Route::resource('entry/pendaftaranAnak', DaftarAnakController::class);
 

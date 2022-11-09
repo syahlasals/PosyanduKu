@@ -101,7 +101,7 @@
     <!--Script-->
     @include('template.script')
     <!-- End of Script-->
-
+ 
 </body>
 
 </html>
