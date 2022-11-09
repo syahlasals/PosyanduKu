@@ -48,23 +48,24 @@ Route::prefix('pengelola')->middleware('pengelola')->group(function () {
 });
 
 Route::get('/entry',[BerandaeController::class,'index'])->name('entry')->middleware('entry');
+
 Route::get('entry/vaksin/{nik_anak}', [VaksinController::class, 'index'])->middleware('entry');
-Route::post('/entry/vaksin/create', [VaksinController::class, 'create'])->middleware('entry');
-Route::post('/entry/vaksin/store', [VaksinController::class, 'store'])->middleware('entry');
-Route::get('entry/vitamin/{nik_anak}', [VitaminController::class, 'index'])->middleware('entry');
-Route::get('entry/pertumbuhan/{nik_anak}', [PertumbuhanController::class, 'index'])->middleware('entry');   
 Route::post('store/vaksin', [VaksinController::class, 'store'])->middleware('entry');
-Route::get('entry/vitamin/{nik_anak}', [VitaminController::class, 'index'])->middleware('entry');
+
+Route::get('entry/vitamin/{nik_anak}', [VitaminController::class, 'index'])->middleware('entry'); 
 Route::post('store/vitamin', [VitaminController::class, 'store'])->middleware('entry');
+
 Route::get('entry/pertumbuhan/{nik_anak}', [PertumbuhanController::class, 'index'])->middleware('entry');
 Route::post('store/pertumbuhan', [PertumbuhanController::class, 'store'])->middleware('entry');
+
+Route::get('entry/formSdidtk/{nik_anak}', [StuntingController::class, 'tampilFormSdidtk'])->middleware('entry');
+Route::post('store/formSdidtk', [StuntingController::class, 'store'])->middleware('entry');
+
 Route::resource('entry/pendaftaranAnak', DaftarAnakController::class)->middleware('entry');
 Route::get('entry/InputImunisasi', [AnakController::class, 'indexInputImunisasi'])->name('index-imunisasi')->middleware('entry');
 Route::get('entry/history', [AnakController::class, 'historyImunisasi'])->middleware('entry');
-Route::get('entry/pertumbuhan', [AnakController::class, 'pertumbuhan'])->middleware('entry');
 Route::resource('entry/sdidtkAnak', StuntingController::class)->middleware('entry');
-Route::resource('entry/formSdidtk', StuntingController::class)->middleware('entry');
-Route::get('entry/formSdidtk', [StuntingController::class, 'tampilFormSdidtk'])->name('tampilFormSdidtk')->middleware('entry');
+
 
 // Route::prefix('entry')->middleware('entry')->group(function () {
 //     Route::get('/',[BerandaeController::class,'index'])->name('entry');

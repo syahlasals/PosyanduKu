@@ -20,10 +20,11 @@ class StuntingController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function tampilFormSdidtk()
+    public function tampilFormSdidtk($nik_anak)
     {
-        $sdidtks = Stunting::all();
-        return view('entry.formSdidtk.index', compact('sdidtks'));
+        return view('entry.formSdidtk.index',[
+            "nik_anak" => $nik_anak
+        ]);
     }
 
     public function tampilDataStunting()
