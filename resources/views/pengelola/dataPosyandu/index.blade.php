@@ -34,7 +34,7 @@
                         <img  src="{{ asset('template/img/logo_posyandu.svg') }}" alt="logo posyandu">
                     </div>
 
-                    @foreach ($profiles as $key => $prfl)
+                    @foreach ($profilesList as $key => $prfl)
                     <div class="main-content">
                         <div class="d-flex align-items-center justify-content-center mb-5">
                             <h3><b>{{ $prfl->nama_posyandu }}</b></h3>

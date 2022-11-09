@@ -40,7 +40,7 @@
                                     </ul>
                                 </div>
                             @endif
-                            <form method="POST" action="/entry/vaksin/" id="myform">
+                            <form method="POST" action="/store/vaksin" id="myform">
 
                                 @csrf
                                 
@@ -61,6 +61,7 @@
                                     <div class="col-8">
                                         <input type="number" name="nik_anak" id="nik_anak" class="form-control"value="{{$nik_anak}}" disabled>
                                     </div>
+                                    <input type="hidden" name="nik_anak" id="nik_anak" class="form-control" value={{$nik_anak}}>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
@@ -86,8 +87,8 @@
                                 <br>
                                 <div class="row">
                                     <div class="col" colspan="3">
-                                    <a href="{{$nik_anak}}" class="btn btn-md btn-primary">SIMPAN</button>
-                                        <a href="{{ url('entry/InputImunisasi') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
+                                    <button class="btn btn-main" type="submit" style="margin-left: 260px;">Simpan</button>
+                                    <a href="{{ url('entry/InputImunisasi') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
                                     </div>
                                 </div>
                             </form>
