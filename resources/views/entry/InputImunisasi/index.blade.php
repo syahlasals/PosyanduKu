@@ -36,23 +36,23 @@
         </div>
         <table id="inputimunisasi" class="table table-striped table-bordered text-center">
             <div class="row" style="color:black; font-family: Poppins;">
-                <div class="col">
-                    <i class="fa-solid fa-clock-rotate-left"> : History Imunisasi </i>
+                <div class="col"><p style="font-weight: bold; text-transform:uppercase">
+                    <i class="fa-solid fa-clock-rotate-left"></i> : History Imunisasi</p>
                 </div>
-                <div class="col">
-                    <i class="fa-solid fa-hands-holding-child"> : Form Pertumbuhan</i>
+                <div class="col"><p style="font-weight: bold; text-transform:uppercase">
+                    <i class="fa-solid fa-hands-holding-child"></i> : Form Pertumbuhan</p>
                 </div>
-                <div class="col">
-                    <i class="fa-solid fa-syringe"> : Form Vaksin</i>
+                <div class="col"><p style="font-weight: bold; text-transform:uppercase">
+                    <i class="fa-solid fa-syringe"></i> : Form Vaksin</p>
                 </div>
-                <div class="col">
-                    <i class="fa-solid fa-capsules"> : Form Vitamin</i>
+                <div class="col"><p style="font-weight: bold; text-transform:uppercase">
+                    <i class="fa-solid fa-capsules"></i> : Form Vitamin</p>
                 </div>
-                <div class="col">
-                    <i class="fa-solid fa-person"> : Form SDIDTK</i>
+                <div class="col"><p style="font-weight: bold; text-transform:uppercase">
+                    <i class="fa-solid fa-person"></i> : Form SDIDTK</p>
                 </div>
-                <div class="col">
-                    <i class="fa-solid fa-calendar"> : Data SDIDTK</i>
+                <div class="col"><p style="font-weight: bold; text-transform:uppercase">
+                    <i class="fa-solid fa-calendar"></i> : Data SDIDTK</p>
                 </div>
             </div>
                 <br>
@@ -86,7 +86,8 @@
                         <a href="/entry/pertumbuhan/{{$anak->nik_anak}}"><button type="button" class="btn btn-secondary"><i class="fa-solid fa-hands-holding-child"></i></button>
                         <a href="/entry/vaksin/{{$anak->nik_anak}}"><button type="button" class="btn btn-success"><i class="fa-solid fa-syringe"></i></button>
                         <a href="/entry/vitamin/{{$anak->nik_anak}}"><button type="button" class="btn btn-danger"><i class="fa-solid fa-capsules"></i></button>
-                        <a href="/entry/sdidtkAnak"><button type="button" class="btn btn-danger" style="background-color: #FFD700; border-color: #FFD700;"><i class="fa-solid fa-person"></i></button>
+                        <a href="/entry/formSdidtk"><button type="button" class="btn btn-danger" style="background-color: #FFD700; border-color: #FFD700;"><i class="fa-solid fa-person"></i></button>
+                        <a href="/entry/sdidtkAnak"><button type="button" class="btn btn-danger" style="background-color: #dc55d5; border-color: #dc55d5;"><i class="fa-solid fa-calendar"></i></button>
                     </div>
                 </div>
                 </td>

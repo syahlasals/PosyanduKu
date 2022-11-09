@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -113,7 +112,7 @@
                                         <input type="text" name="golongan_darah" id="golongan_darah" class="form-control" value="{{ $anak->golongan_darah }}" required="">                        
                                     </div>
                                 </div>
-                                <button class="btn btn-main" type="submit">Save</button>
+                                <button class="btn btn-main" type="submit">Simpan</button>
                                 {{-- <button class="btn btn-main" type="btn" href="{{ url('pengelola/dataAnak') }}">Kembali</button> --}}
                                 <a href="{{ url('/pengelola/dataAnak') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
                             </form>
