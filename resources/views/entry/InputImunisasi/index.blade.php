@@ -36,23 +36,23 @@
         </div>
         <table id="inputimunisasi" class="table table-striped table-bordered text-center">
             <div class="row" style="color:black; font-family: Poppins;">
-                <div class="col">
-                    <i class="fa-solid fa-clock-rotate-left"> : History Imunisasi </i>
+                <div class="col"><p style="font-weight: bold; text-transform:uppercase">
+                    <i class="fa-solid fa-clock-rotate-left"></i> : History Imunisasi</p>
                 </div>
-                <div class="col">
-                    <i class="fa-solid fa-hands-holding-child"> : Form Pertumbuhan</i>
+                <div class="col"><p style="font-weight: bold; text-transform:uppercase">
+                    <i class="fa-solid fa-hands-holding-child"></i> : Form Pertumbuhan</p>
                 </div>
-                <div class="col">
-                    <i class="fa-solid fa-syringe"> : Form Vaksin</i>
+                <div class="col"><p style="font-weight: bold; text-transform:uppercase">
+                    <i class="fa-solid fa-syringe"></i> : Form Vaksin</p>
                 </div>
-                <div class="col">
-                    <i class="fa-solid fa-capsules"> : Form Vitamin</i>
+                <div class="col"><p style="font-weight: bold; text-transform:uppercase">
+                    <i class="fa-solid fa-capsules"></i> : Form Vitamin</p>
                 </div>
-                <div class="col">
-                    <i class="fa-solid fa-person"> : Form SDIDTK</i>
+                <div class="col"><p style="font-weight: bold; text-transform:uppercase">
+                    <i class="fa-solid fa-person"></i> : Form SDIDTK</p>
                 </div>
-                <div class="col">
-                    <i class="fa-solid fa-calendar"> : Data SDIDTK</i>
+                <div class="col"><p style="font-weight: bold; text-transform:uppercase">
+                    <i class="fa-solid fa-calendar"></i> : Data SDIDTK</p>
                 </div>
             </div>
                 <br>

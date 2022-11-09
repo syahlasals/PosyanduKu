@@ -77,7 +77,7 @@
                                 </div>
                                 <div class="col-1"><b>:</b></div>
                                 <div class="col-6">
-                                    {{ $anak->jenkel_anak }}
+                                    {{ $anak->jenkel_anak == 'L' ? 'Laki-Laki' : 'Perempuan'}}
                                 </div>
                             </div>
                             <div class="row">
