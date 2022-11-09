@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Pertumbuhan;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class PertumbuhanController extends Controller
 {
@@ -31,6 +33,6 @@ class PertumbuhanController extends Controller
             'lingkar_kepala'=>$request->lingkar_kepala
         ]);
 
-        return redirect('/entry/InputImunisasi')->with('success', 'Data Pertumbuhan berhasil di tambahkan');
+        return redirect('/entry/InputImunisasi')->with('success', 'Data Pertumbuhan Berhasil di Tambahkan');
     }
 }
