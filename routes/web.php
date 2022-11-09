@@ -36,7 +36,7 @@ Route::get('/', function () {
 Route::prefix('pengelola')->middleware('pengelola')->group(function () {
     Route::get('/',[BerandapController::class,'index'])->name('pengelola');
     Route::resource('dataAnak', AnakController::class);
-    Route::get('dataPosyandu',[ProfileController::class,'index']);
+    Route::get('pengelola/dataPosyandu',[ProfileController::class,'index']);
     Route::resource('dataPetugas', PetugasController::class);
     Route::get('hapuspetugas', [PetugasController::class, 'hapuspetugas'])->name('hapuspetugas');
     Route::get('dataPetugas/edit/{nip}',[PetugasController::class,'edit'])->name('edit');
@@ -59,16 +59,13 @@ Route::prefix('entry')->middleware('entry')->group(function () {
     Route::get('formSdidtk', [StuntingController::class, 'tampilFormSdidtk'])->name('tampilFormSdidtk');
 });
 
-<<<<<<< HEAD
 Route::get('/pengelola/dataImunisasi', [ImunisasiController::class, 'index']);
 
 
 Route::resource('pengelola/sdidtkAnak', StuntingController::class)->middleware('pengelola');
-=======
 Route::prefix('ortu')->middleware('ortu')->group(function () {
     Route::resource('ortu', BerandaoController::class);
 });
->>>>>>> 33adf499926aa126efb31941cf80a4f73be04c26
 
 Route::get('/redirects', [HomeController::class, 'index']);
 
