@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\profile;
+use App\Models\Profile;
 use Illuminate\Support\Facades\DB;
 
 use Illuminate\Http\Request;
@@ -10,7 +10,7 @@ class ProfileController extends Controller
 {
     public function index()
     {
-        $profiles = profile::all();
-        return view('pengelola.dataPosyandu.index', compact('profiles'));
+        $profiles = Profile::with('imunisasis')->get();
+        return view('pengelola.dataPosyandu.index', ['profilesList'=>$profiles]);
     }
 }

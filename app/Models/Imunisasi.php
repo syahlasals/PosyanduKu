@@ -9,8 +9,27 @@ class Imunisasi extends Model
 {
     use HasFactory;
     public $timestamps = false;
-    protected $primaryKey = "kode_imunisasi";
     protected $table = "tb_imunisasi";
-    protected $fillable = [
-       'kode_imunisasi','id_posyandu','kode_vaksin','kode_vitamin', 'nip', 'nik_anak', 'kode_pertumbuhan', 'tgl_imunisasi'];
+    public function profiles()
+    {
+        return $this->belongsTo(Profile::class, 'id_posyandu');
+    }
+    public function anaks()
+    {
+        return $this->belongsTo(Anak::class, 'nik_anak');
+    }
+    public function pertumbuhans()
+    {
+        return $this->belongsTo(Pertumbuhan::class, 'kode_pertumbuhan');
+    }
+    public function vaksins()
+    {
+        return $this->belongsTo(Vaksin::class, 'kode_vaksin');
+    }
+    public function vitamins()
+    {
+        return $this->belongsTo(Vitamin::class, 'kode_vitamin');
+    }
+  
+
 }

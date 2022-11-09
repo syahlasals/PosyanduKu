@@ -77,9 +77,16 @@ Route::get('entry/formSdidtk', [StuntingController::class, 'tampilFormSdidtk'])-
 //     Route::get('formSdidtk', [StuntingController::class, 'tampilFormSdidtk'])->name('tampilFormSdidtk');
 // });
 
+<<<<<<< HEAD
+Route::get('/pengelola/dataImunisasi', [ImunisasiController::class, 'index']);
+
+
+Route::resource('pengelola/sdidtkAnak', StuntingController::class)->middleware('pengelola');
+=======
 Route::prefix('ortu')->middleware('ortu')->group(function () {
     Route::resource('ortu', BerandaoController::class);
 });
+>>>>>>> 33adf499926aa126efb31941cf80a4f73be04c26
 
 Route::get('/redirects', [HomeController::class, 'index']);
 
