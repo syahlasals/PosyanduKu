@@ -48,7 +48,7 @@ Route::get('entry/vaksin/{nik_anak}', [VaksinController::class, 'index'])->middl
 Route::post('/entry/vaksin/create', [VaksinController::class, 'create'])->middleware('entry');
 Route::post('/entry/vaksin/store', [VaksinController::class, 'store'])->middleware('entry');
 Route::get('entry/vitamin/{nik_anak}', [VitaminController::class, 'index'])->middleware('entry');
-Route::get('entry/pertumbuhan/{nik_anak}', [PertumbuhanController::class, 'index'])->middleware('entry');
+Route::get('entry/pertumbuhan/{nik_anak}', [PertumbuhanController::class, 'index'])->middleware('entry');   
 // Route::resource('entry/vaksin', VaksinController::class)->middleware('entry');
 // Route::resource('entry/vitamin', VitaminController::class)->middleware('entry');
 // Route::resource('entry/pertumbuhan', PertumbuhanController::class)->middleware('entry');
