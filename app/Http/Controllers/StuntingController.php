@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Stunting;
+use App\Models\Anak;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -18,6 +19,19 @@ class StuntingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function tampilFormSdidtk()
+    {
+        $sdidtks = Stunting::all();
+        return view('entry.formSdidtk.index', compact('sdidtks'));
+    }
+
+    public function tampilDataStunting()
+    {
+        $sdidtks = Stunting::all();
+        return view('pengelola.dataStunting.index', compact('sdidtks'));
+    }
+
     public function create()
     {
         //
@@ -31,7 +45,33 @@ class StuntingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'kode_pertumbuhan'=>'required',
+            'nik_anak'=>'required',
+            'bb_tb'=>'required|in:1,0',
+            'tb_u'=>'required|in:1,0',
+            'kpsp'=>'required|in:1,0',
+            'tdd'=>'required|in:1,0',
+            'tdl'=>'required|in:1,0',
+            'kmpe'=>'required|in:1,0',
+            'mchat'=>'required|in:1,0',
+            'gpph'=>'required|in:1,0'
+        ]);
+
+        $sdidtks = Stunting::create([
+            'kode_pertumbuhan'=>$request->kode_pertumbuhan,
+            'nik_anak'=>$request->nik_anak,
+            'bb_tb'=>$request->bb_tb,
+            'tb_u'=>$request->tb_u,
+            'kpsp'=>$request->kpsp,
+            'tdd'=>$request->tdd,
+            'tdl'=>$request->tdl,
+            'kmpe'=>$request->kmpe,
+            'mchat'=>$request->mchat,
+            'gpph'=>$request->gpph
+        ]);
+
+        return redirect('/entry/InputImunisasi')->with('success', 'Data berhasil di tambahkan');
     }
 
     /**

@@ -21,11 +21,8 @@
 
                 <!--Topbar-->
                 @include('template.nav')
-<<<<<<< HEAD
-=======
                 <!--End of Topbar-->
 
->>>>>>> d2f1e383ed27f217c6e37344c7a88a6add43ca19
     <div class="container">
         <h1 class="text-center mt-5 mb-5"><b>INPUT IMUNISASI</b></h1>
         
@@ -38,6 +35,27 @@
             @endif
         </div>
         <table id="inputimunisasi" class="table table-striped table-bordered text-center">
+            <div class="row" style="color:black; font-family: Poppins;">
+                <div class="col">
+                    <i class="fa-solid fa-clock-rotate-left"> : History Imunisasi </i>
+                </div>
+                <div class="col">
+                    <i class="fa-solid fa-hands-holding-child"> : Form Pertumbuhan</i>
+                </div>
+                <div class="col">
+                    <i class="fa-solid fa-syringe"> : Form Vaksin</i>
+                </div>
+                <div class="col">
+                    <i class="fa-solid fa-capsules"> : Form Vitamin</i>
+                </div>
+                <div class="col">
+                    <i class="fa-solid fa-person"> : Form SDIDTK</i>
+                </div>
+                <div class="col">
+                    <i class="fa-solid fa-calendar"> : Data SDIDTK</i>
+                </div>
+            </div>
+                <br>
             <thead>
                 <tr>
                     <th>No</th>
@@ -56,8 +74,10 @@
                 <td>{{ $anak->no_kk }}</td>
                 <td>{{ $anak->nik_anak }}</td>
                 <td>{{ $anak->nama_anak }}</td>
-                <td>{{ $anak->tmp_anak}}, {{ $anak->tgl_anak }}</td>
-                <td>{{ $anak->jenkel_anak }}</td>
+                <td>{{ $anak->tmp_anak}}, <br> {{ $anak->tgl_anak }}</td>
+                <td>
+                    {{ $anak->jenkel_anak == 'L' ? 'Laki-Laki' : 'Perempuan' }}
+                </td>
                 <td>{{ $anak->golongan_darah }}</td>
                 <td width="25%">
                 <div class="row d-flex">
@@ -69,7 +89,7 @@
                         <a href="/entry/sdidtkAnak"><button type="button" class="btn btn-danger" style="background-color: #FFD700; border-color: #FFD700;"><i class="fa-solid fa-person"></i></button>
                     </div>
                 </div>
-                </td>               
+                </td>
             </tr>
             @endforeach
         </table>
@@ -99,7 +119,9 @@
         <!-- Logout Modal-->
         @include('template.modalLogout')
     
-    
+        <!--Script-->
+        @include('template.script2')
+        <!-- End of Script-->    
 </body>
 <script> $(document).ready( function () {
     $('#inputimunisasi').DataTable();

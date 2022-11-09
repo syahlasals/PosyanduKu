@@ -30,6 +30,6 @@ class PertumbuhanController extends Controller
             'lingkar_kepala'=>$request->lingkar_kepala
         ]);
 
-        return redirect('/entry/pertumbuhan')->with('success', 'Data Pertumbuhan berhasil di tambahkan');
+        return redirect('/entry/InputImunisasi')->with('success', 'Data Pertumbuhan berhasil di tambahkan');
     }
 }

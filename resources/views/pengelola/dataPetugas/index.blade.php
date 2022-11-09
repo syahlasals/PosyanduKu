@@ -50,7 +50,9 @@
                 <td>{{$key+1}}</td>
                 <td>{{$ptgs->nip}}</td>
                 <td>{{$ptgs->nama_petugas}}</td>
-                <td>{{$ptgs->jenkel_petugas}}</td>
+                <td>
+                    {{ $ptgs->jenkel_petugas == 'L' ? 'Laki-Laki' : 'Perempuan' }}
+                </td>
                 <td>{{$ptgs->jabatan}}</td>
                 <td>{{$ptgs->alamat_petugas}}</td>
                 <td>
@@ -71,9 +73,9 @@
         </table>
         <a href="{{ url('pengelola') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
         </div>
-        </div>
     </div>
-    
+</div>
+<!-- End of Main Content -->
 </div>
 <!-- End of Main Content -->
 
@@ -85,15 +87,12 @@
 <!-- End of Content Wrapper -->
 
 </div>
-<!-- End of Page Wrapper -->
-
-<!-- Scroll to Top Button-->
-<a class="scroll-to-top rounded" href="#page-top">
-<i class="fas fa-angle-up"></i>
-</a>
-
 <!-- Logout Modal-->
 @include('template.modalLogout')
+
+<!--Script-->
+@include('template.script2')
+<!-- End of Script-->
 
 </body>
 <script> $(document).ready( function () {

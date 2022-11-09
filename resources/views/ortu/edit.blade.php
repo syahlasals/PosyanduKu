@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Beranda</title>
     @include('template.head')
 </head>
     <body>  
@@ -113,8 +112,10 @@
                                 <input type="text" name="nik_ibu" id="nik_ibu" class="form-control" value="{{ $ortu->nik_ibu }}" required="">
                             </div>
                         </div>
-                        <button class="btn btn-main" type="submit">Save</button>
+                        <button class="btn btn-main" type="submit">Simpan</button>
                         <a href="{{ url('ortu') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
+                        </div>
+                        </div>
                     </form>
                 </div><br>
             </div>

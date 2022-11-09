@@ -30,7 +30,7 @@ class VitaminController extends Controller
             'jenis_vitamin'=>$request->jenis_vitamin
         ]);
 
-        return redirect('/entry/vitamin')->with('success', 'Vitamin berhasil di tambahkan');
+        return redirect('/entry/InputImunisasi')->with('success', 'Vitamin berhasil di tambahkan');
     }
     
 
