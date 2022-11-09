@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -32,32 +32,29 @@
               </div>
             @endif
         </div>
-        <table id="dataimunisasi" class="table table-striped table-bordered text-center">
+        <table id="dataimunisasi" class="table table-striped table-bordered text-center" border="1">
             <thead>
                 <tr>
-                    <th>NOMOR</th>
-                    <th>KODE IMUNISASI</th>
-                    <th>ID POSYANDU</th>
-                    <th>KODE VAKSIN</th>
-                    <th>KODE VITAMIN</th>
-                    <th>NIP</th>
-                    <th>NIK ANAK</th>
-                    <th>KODE PERTUMBUHAN</th>
-                    <th>TANGGAL IMUNISASI</th>
-
+                    <th>Nomor</th>
+                    <th>Nama Posyandu</th>
+                    <th>NIK Anak</th>
+                    <th>Nama Anak</th>
+                    <th>Tanggal Imunisasi</th>
+                    <th>Vaksin</th>
+                    <th>Vitamin</th>
+                    <th>Status Pertumbuhan</th>  
                 </tr>
             </thead>
-            @foreach ($imunisasis as $key => $imns)
+            @foreach ($imunisasiList as $data)
             <tr>
-                <td>{{$key+1}}</td>
-                <td>{{$imns->kode_imunisasi}}</td>
-                <td>{{$imns->id_posyandu}}</td>
-                <td>{{$imns->kode_vaksin}}</td>
-                <td>{{$imns->kode_vitamin}}</td>
-                <td>{{$imns->nip}}</td>
-                <td>{{$imns->nik_anak}}</td>
-                <td>{{$imns->kode_pertumbuhan}}</td>
-                <td>{{$imns->tgl_imunisasi}}</td>
+                <td>{{ $loop->iteration }}</td>
+                <td>{{ $data->profiles->nama_posyandu }}</td>
+                <td>{{ $data->anaks->nik_anak }}</td>
+                <td>{{ $data->anaks->nama_anak }}</td>
+                <td></td>
+                <td>{{ $data->vaksins->jenis_vaksin }}</td>
+                <td>{{ $data->vitamins->jenis_vitamin }}</td>
+                <td></td>
             </tr>
             @endforeach
         </table>
@@ -91,7 +88,8 @@
 @include('template.script2')
 <!-- End of Script-->
 </body>
-<script> $(document).ready( function () {
+<script> 
+$(document).ready( function () {
     $('#dataimunisasi').DataTable();
 } );
 </script>

@@ -63,7 +63,9 @@ Route::get('entry/inputImunisasi', [AnakController::class, 'indexInputImunisasi'
 Route::get('entry/history', [AnakController::class, 'historyImunisasi'])->middleware('entry');
 Route::get('entry/pertumbuhan', [AnakController::class, 'pertumbuhan'])->middleware('entry');
 
-Route::resource('pengelola/dataImunisasi', ImunisasiController::class)->middleware('pengelola');
+Route::get('/pengelola/dataImunisasi', [ImunisasiController::class, 'index']);
+
+
 Route::resource('pengelola/sdidtkAnak', StuntingController::class)->middleware('pengelola');
 
 Route::get('/redirects', [HomeController::class, 'index']);
