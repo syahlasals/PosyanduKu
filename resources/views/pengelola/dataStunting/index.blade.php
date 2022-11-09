@@ -26,6 +26,58 @@
     <div class="container">
         <h1 class="text-center mt-5 mb-5"><b>DATA STUNTING</b></h1>
 
+        <table id="datastunting" class="table table-striped table-bordered text-center" border="1">
+            <thead>
+                <tr>
+                    <th>NO</th>
+                    <th>RW</th>
+                    <th>RT</th>
+                    <th>Sasaran</th>
+                    <th>Jumlah Balita Diukur</th>
+                    <th>Balita Stunting</th>
+                    <th>Prevalensi Balita Diukur (%)</th>
+                    <th>Prevalensi Balita Stunting (%)</th>  
+                </tr>
+            </thead>
+            <tr>
+                <td>1</td>
+                <td>01</td>
+                <td>02</td>
+                <td>Balita</td>
+                <td>122</td>
+                <td>1122</td>
+                <td>20%</td>
+                <td>50%</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>02</td>
+                <td>05</td>
+                <td>Balita</td>
+                <td>12</td>
+                <td>102</td>
+                <td>55%</td>
+                <td>90%</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>02</td>
+                <td>05</td>
+                <td>Balita</td>
+                <td>5</td>
+                <td>62</td>
+                <td>35%</td>
+                <td>89%</td>
+            </tr>
+            <tr>
+                <td colspan="4"><b>Total</b></td>
+                <td>139</td>
+                <td>1286</td>
+                <td>36,7%</td>
+                <td>76,3%</td>
+            </tr>
+        </table>
+
         <div class="row">
             <div class="col" colspan="3">
                 {{-- <button class="btn btn-main" type="submit" style="margin-left: 260px;">Simpan</button> --}}
@@ -62,4 +114,9 @@
 <!-- End of Script-->
 
 </body>
+<script> 
+    $(document).ready( function () {
+        $('#datastunting').DataTable();
+    } );
+    </script>
 </html>
