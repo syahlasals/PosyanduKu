@@ -52,6 +52,15 @@
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
+                                        <label for="nik_anak"><b>NIK Anak</b></label>
+                                    </div>
+                                    <div class="col-1"><b>:</b></div>
+                                    <div class="col-8">
+                                        <input type="number" name="nik_anak" id="nik_anak" class="form-control" value="{{$nik_anak}}" disabled>
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <div class="col-3">
                                         <label for="tinggi"><b>Tinggi</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>

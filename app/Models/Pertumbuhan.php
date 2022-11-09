@@ -13,4 +13,11 @@ class Pertumbuhan extends Model
     protected $table = "tb_detailpertumbuhan";
     protected $fillable = [
        'kode_pertumbuhan', 'tinggi','berat', 'lingkar_kepala'];
+       
+       public function Anak()
+    {
+        return $this->hasOne(Anak::class, 'nik_anak');
+    }
+
 }
+    
