@@ -92,14 +92,9 @@
 <a class="scroll-to-top rounded" href="#page-top">
 <i class="fas fa-angle-up"></i>
 </a>
-
-<!-- Logout Modal-->
-@include('template.modalLogout')
-
-<!--Script-->
-@include('template.script')
-<!-- End of Script-->
-
 </body>
-
+<script> $(document).ready( function () {
+    $('#datapetugas').DataTable();
+} );
+</script>
 </html>
