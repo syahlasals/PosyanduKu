@@ -5,13 +5,14 @@ namespace App\Http\Controllers;
 use App\Models\Anak;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class AnakController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Response/
      */
     public function index()
     {
@@ -92,7 +93,7 @@ class AnakController extends Controller
         // ]);
         $anaks = Anak::find($nik_anak);
         $anaks->update($request->all());
-        return redirect('/pengelola/dataAnak')->with('success', 'Data berhasil Di Update');
+        return redirect('/pengelola/dataAnak')->with('success', 'Data Berhasil Diubah!');
     }
 
     /**
@@ -107,7 +108,7 @@ class AnakController extends Controller
 
         $anak = Anak::findOrFail($nik_anak);
         $anak->delete();
-        return redirect('/pengelola/dataAnak')->with('success', 'data berhasil dihapus');
+        return redirect('/pengelola/dataAnak')->with('success', 'Data Berhasil Dihapus!');
     }
 
     // PETUGAS ENTRY
