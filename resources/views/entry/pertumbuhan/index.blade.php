@@ -39,11 +39,11 @@
                                     </ul>
                                 </div>
                             @endif
-                            <form method="POST" action="/entry/pertumbuhan" id="myform" style="margin-top: 15px; margin-bottom: 15px;">
+                            <form method="POST" action="/store/pertumbuhan" id="myform">
                                 @csrf
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
-                                        <label for="kode_pertumnuhan"><b>Kode Pertumbuhan</b></label>
+                                        <label for="kode_pertumbuhan"><b>Kode Pertumbuhan</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
@@ -58,6 +58,7 @@
                                     <div class="col-8">
                                         <input type="number" name="nik_anak" id="nik_anak" class="form-control" value="{{$nik_anak}}" disabled>
                                     </div>
+                                    <input type="hidden" name="nik_anak" id="nik_anak" class="form-control" value={{$nik_anak}}>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">

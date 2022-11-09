@@ -25,6 +25,7 @@ class PertumbuhanController extends Controller
 
         $pertumbuhans = Pertumbuhan::create([
             'kode_pertumbuhan'=>$request->kode_pertumbuhan,
+            'nik_anak'=>$request->nik_anak,
             'tinggi'=>$request->tinggi,
             'berat'=>$request->berat,
             'lingkar_kepala'=>$request->lingkar_kepala
