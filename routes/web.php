@@ -15,6 +15,7 @@ use App\Http\Controllers\BerandapController;
 use App\Http\Controllers\StuntingController;
 use App\Http\Controllers\ImunisasiController;
 use App\Http\Controllers\DaftarAnakController;
+use App\Http\Controllers\Auth\OutController;
 use App\Http\Controllers\PertumbuhanController;
 
 
@@ -29,110 +30,51 @@ use App\Http\Controllers\PertumbuhanController;
 |
 */
 
-Route::get('/', function () {
-    return view('auth/login');
+Route::group(['middleware' => 'prevent-back-history'],function(){
+	Auth::routes();
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::post('/logout', [OutController::class, 'logout'])->name('logo');
+
+    Route::get('/', function () {
+        return view('auth/login');
+    });
+    
+    Route::prefix('pengelola')->middleware('pengelola')->group(function () {
+        Route::get('/',[BerandapController::class,'index'])->name('pengelola');
+        Route::resource('dataAnak', AnakController::class);
+        Route::get('dataPosyandu',[ProfileController::class,'index']);
+        Route::resource('dataPetugas', PetugasController::class);
+        Route::get('hapuspetugas', [PetugasController::class, 'hapuspetugas'])->name('hapuspetugas');
+        Route::get('dataPetugas/edit/{nip}',[PetugasController::class,'edit'])->name('edit');
+        Route::post('dataPetugas/update/{nip}',[PetugasController::class,'update']);
+        Route::get('dataStunting', [StuntingController::class, 'tampilDataStunting'])->name('tampilDataStunting');
+        Route::resource('dataImunisasi', ImunisasiController::class);
+        Route::get('dataImunisasi', [ImunisasiController::class, 'index']);
+        Route::resource('pengelola/sdidtkAnak', StuntingController::class);
+    });
+    
+    
+    Route::prefix('entry')->middleware('entry')->group(function () {
+        Route::get('/',[BerandaeController::class,'index'])->name('entry');
+        Route::get('vaksin/{nik_anak}', [VaksinController::class, 'index']);
+        Route::post('store/vaksin', [VaksinController::class, 'store']);
+        Route::get('vitamin/{nik_anak}', [VitaminController::class, 'index']); 
+        Route::post('store/vitamin', [VitaminController::class, 'store']);
+        Route::get('pertumbuhan/{nik_anak}', [PertumbuhanController::class, 'index']);
+        Route::post('store/pertumbuhan', [PertumbuhanController::class, 'store']);
+        Route::get('formSdidtk/{nik_anak}', [StuntingController::class, 'tampilFormSdidtk']);
+        Route::post('store/formSdidtk', [StuntingController::class, 'store']);
+        Route::resource('pendaftaranAnak', DaftarAnakController::class);
+        Route::get('InputImunisasi', [AnakController::class, 'indexInputImunisasi'])->name('index-imunisasi');
+        Route::get('history', [AnakController::class, 'historyImunisasi']);
+        Route::resource('sdidtkAnak', StuntingController::class);
+    });
+    
+    
+    Route::prefix('ortu')->middleware('ortu')->group(function () {
+        Route::resource('ortu', BerandaoController::class);
+        Route::get('/redirects', [HomeController::class, 'index']);
+    });
 });
 
-Route::prefix('pengelola')->middleware('pengelola')->group(function () {
-    Route::get('/',[BerandapController::class,'index'])->name('pengelola');
-    Route::resource('dataAnak', AnakController::class);
-    Route::get('dataPosyandu',[ProfileController::class,'index']);
-    Route::resource('dataPetugas', PetugasController::class);
-    Route::get('hapuspetugas', [PetugasController::class, 'hapuspetugas'])->name('hapuspetugas');
-    Route::get('dataPetugas/edit/{nip}',[PetugasController::class,'edit'])->name('edit');
-    Route::post('dataPetugas/update/{nip}',[PetugasController::class,'update']);
-    Route::get('dataStunting', [StuntingController::class, 'tampilDataStunting'])->name('tampilDataStunting');
-    Route::resource('dataImunisasi', ImunisasiController::class);
-    Route::get('dataImunisasi', [ImunisasiController::class, 'index']);
-    Route::resource('pengelola/sdidtkAnak', StuntingController::class);
-});
 
-Route::get('/entry',[BerandaeController::class,'index'])->name('entry')->middleware('entry');
-
-Route::get('entry/vaksin/{nik_anak}', [VaksinController::class, 'index'])->middleware('entry');
-Route::post('store/vaksin', [VaksinController::class, 'store'])->middleware('entry');
-
-Route::get('entry/vitamin/{nik_anak}', [VitaminController::class, 'index'])->middleware('entry'); 
-Route::post('store/vitamin', [VitaminController::class, 'store'])->middleware('entry');
-
-Route::get('entry/pertumbuhan/{nik_anak}', [PertumbuhanController::class, 'index'])->middleware('entry');
-Route::post('store/pertumbuhan', [PertumbuhanController::class, 'store'])->middleware('entry');
-
-Route::get('entry/formSdidtk/{nik_anak}', [StuntingController::class, 'tampilFormSdidtk'])->middleware('entry');
-Route::post('store/formSdidtk', [StuntingController::class, 'store'])->middleware('entry');
-
-Route::resource('entry/pendaftaranAnak', DaftarAnakController::class)->middleware('entry');
-Route::get('entry/InputImunisasi', [AnakController::class, 'indexInputImunisasi'])->name('index-imunisasi')->middleware('entry');
-Route::get('entry/history', [AnakController::class, 'historyImunisasi'])->middleware('entry');
-Route::resource('entry/sdidtkAnak', StuntingController::class)->middleware('entry');
-
-
-// Route::prefix('entry')->middleware('entry')->group(function () {
-//     Route::get('/',[BerandaeController::class,'index'])->name('entry');
-//     Route::resource('vaksin', VaksinController::class);
-//     Route::resource('vitamin', VitaminController::class);
-//     Route::resource('pertumbuhan', PertumbuhanController::class);
-//     Route::resource('pendaftaranAnak', DaftarAnakController::class);
-//     Route::get('InputImunisasi', [AnakController::class, 'indexInputImunisasi'])->name('index-imunisasi');
-//     Route::get('history', [AnakController::class, 'historyImunisasi']);
-//     Route::get('pertumbuhan', [AnakController::class, 'pertumbuhan']);
-//     Route::resource('sdidtkAnak', StuntingController::class);
-//     Route::resource('formSdidtk', StuntingController::class);
-//     Route::get('formSdidtk', [StuntingController::class, 'tampilFormSdidtk'])->name('tampilFormSdidtk');
-// });
-
-// Route::prefix('entry')->middleware('entry')->group(function () {
-//     Route::get('/',[BerandaeController::class,'index'])->name('entry');
-//     Route::resource('vaksin', VaksinController::class);
-//     Route::resource('vitamin', VitaminController::class);
-//     Route::resource('pertumbuhan', PertumbuhanController::class);
-//     Route::resource('pendaftaranAnak', DaftarAnakController::class);
-//     Route::get('InputImunisasi', [AnakController::class, 'indexInputImunisasi'])->name('index-imunisasi');
-//     Route::get('history', [AnakController::class, 'historyImunisasi']);
-//     Route::get('pertumbuhan', [AnakController::class, 'pertumbuhan']);
-//     Route::resource('sdidtkAnak', StuntingController::class);
-//     Route::resource('formSdidtk', StuntingController::class);
-//     Route::get('formSdidtk', [StuntingController::class, 'tampilFormSdidtk'])->name('tampilFormSdidtk');
-// });
-
-Route::resource('ortu', BerandaoController::class)->middleware('ortu');;
-
-Route::get('/redirects', [HomeController::class, 'index']);
-
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});
-
-Auth::routes();
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-// Route::resource('pengelola/dataAnak', AnakController::class)->middleware('pengelola');
-// Route::get('pengelola/dataPosyandu',[ProfileController::class,'index'])->middleware('pengelola');
-// Route::get('/pengelola',[BerandapController::class,'index'])->name('pengelola')->middleware('pengelola');
-// Route::resource('pengelola/dataPetugas', PetugasController::class)->middleware('pengelola');
-// Route::get('/pengelola/hapuspetugas', [PetugasController::class, 'hapuspetugas'])->name('hapuspetugas')->middleware('pengelola');
-// Route::get('/pengelola/dataPetugas/edit/{nip}',[PetugasController::class,'edit'])->name('edit')->middleware('pengelola');
-// Route::post('/pengeloladataPetugas/update/{nip}',[PetugasController::class,'update'])->middleware('pengelola');
-// Route::get('pengelola/dataStunting', [StuntingController::class, 'tampilDataStunting'])->name('tampilDataStunting')->middleware('pengelola');
-// Route::resource('pengelola/dataImunisasi', ImunisasiController::class)->middleware('pengelola');
-
-// Route::get('/',[BerandaeController::class,'index'])->name('entry')->middleware('entry');
-// Route::resource('entry/vaksin', VaksinController::class)->middleware('entry');
-// Route::resource('entry/vitamin', VitaminController::class)->middleware('entry');
-// Route::resource('entry/pertumbuhan', PertumbuhanController::class)->middleware('entry');
-// Route::resource('entry/pendaftaranAnak', DaftarAnakController::class)->middleware('entry');
-// Route::get('entry/InputImunisasi', [AnakController::class, 'indexInputImunisasi'])->name('index-imunisasi')->middleware('entry');
-// Route::get('entry/history', [AnakController::class, 'historyImunisasi'])->middleware('entry');
-// Route::get('entry/pertumbuhan', [AnakController::class, 'pertumbuhan'])->middleware('entry');
-// Route::resource('entry/sdidtkAnak', StuntingController::class)->middleware('entry');
-// Route::resource('entry/formSdidtk', StuntingController::class)->middleware('entry');
-// Route::get('entry/formSdidtk', [StuntingController::class, 'tampilFormSdidtk'])->name('tampilFormSdidtk')->middleware('entry');
