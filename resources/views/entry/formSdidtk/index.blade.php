@@ -40,7 +40,7 @@
                                     </ul>
                                 </div>
                             @endif
-                            <form method="POST" action="/entry/formSdidtk" id="myform" style="margin-top: 15px; margin-bottom: 15px;">
+                            <form method="POST" action="/store/formSdidtk" id="myform" style="margin-top: 15px; margin-bottom: 15px;">
                                 @csrf
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="row" style="margin-bottom: 15px;">
@@ -49,8 +49,9 @@
                                         </div>
                                         <div class="col-1"><b>:</b></div>
                                         <div class="col-8">
-                                            <input type="text" name="nik_anak" id="nik_anak" class="form-control">
+                                            <input type="number" name="nik_anak" id="nik_anak" class="form-control"value="{{$nik_anak}}" disabled>
                                         </div>
+                                        <input type="hidden" name="nik_anak" id="nik_anak" class="form-control" value={{$nik_anak}}>
                                     </div>
                                     <div class="row" style="margin-bottom: 15px;">
                                         <div class="col-3">

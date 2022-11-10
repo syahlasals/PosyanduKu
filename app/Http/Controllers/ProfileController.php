@@ -10,7 +10,7 @@ class ProfileController extends Controller
 {
     public function index()
     {
-        $profiles = Profile::with('imunisasis')->get();
+        $profiles = Profile::all();
         return view('pengelola.dataPosyandu.index', ['profilesList'=>$profiles]);
     }
 }

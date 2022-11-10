@@ -36,12 +36,11 @@
         <div class="modal-body">Klik tombol <b>Keluar</b>, jika anda yakin ingin keluar dari program ini</div>
         <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-            <form method="POST" action="{{ route('logout') }}" x-data>
+            <form method="POST" action="{{ route('logo') }}" x-data>
                 @csrf
                 <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#logoutModal">
                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i> Keluar
                     </button>
-            {{-- <a class="btn btn-primary">Logout</a> --}}
             </form>
         </div>
     </div>

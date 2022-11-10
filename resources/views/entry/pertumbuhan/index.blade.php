@@ -5,7 +5,7 @@
     <title>Petugas Entry</title>
     @include('template.head')
 </head>
-
+<?php session_start(); ?>
 <body id="page-top">
 
     <!-- Page Wrapper -->

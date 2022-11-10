@@ -69,5 +69,6 @@ class Kernel extends HttpKernel
         'pengelola' => \App\Http\Middleware\Pengelola::class,
         'entry' => \App\Http\Middleware\Entry::class,
         'ortu' => \App\Http\Middleware\Ortu::class,
+        'prevent-back-history' => \App\Http\Middleware\PreventBackHistory::class,
     ];
 }
