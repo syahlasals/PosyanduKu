@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Anak;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class AnakController extends Controller
@@ -48,7 +47,7 @@ class AnakController extends Controller
             'golongan_darah'=>'required',
         ]);
 
-        return redirect('/pengelola/dataAnak')->with('success', 'Data berhasil di tambahkan');
+        return redirect('/pengelola/dataAnak')->with('success', 'Data Berhasil di Tambahkan');
     }
 
     /**

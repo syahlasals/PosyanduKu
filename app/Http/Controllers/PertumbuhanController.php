@@ -25,6 +25,8 @@ class PertumbuhanController extends Controller
             'lingkar_kepala'=>'required'
         ]);
 
+        return redirect('/entry/InputImunisasi')->with('success', 'Data Pertumbuhan Berhasil Ditambahkan!');
+
         $pertumbuhans = Pertumbuhan::create([
             'kode_pertumbuhan'=>$request->kode_pertumbuhan,
             'nik_anak'=>$request->nik_anak,
@@ -33,6 +35,6 @@ class PertumbuhanController extends Controller
             'lingkar_kepala'=>$request->lingkar_kepala
         ]);
 
-        return redirect('/entry/InputImunisasi')->with('success', 'Data Pertumbuhan Berhasil di Tambahkan');
+        // return redirect('/entry/InputImunisasi')->with('success', 'Data Pertumbuhan Berhasil di Tambahkan');
     }
 }

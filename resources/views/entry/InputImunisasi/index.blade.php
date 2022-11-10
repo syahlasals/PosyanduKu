@@ -27,12 +27,12 @@
         <h1 class="text-center mt-5 mb-5"><b>INPUT IMUNISASI</b></h1>
         
         <div>
-            @if ($message = Session::get('success'))
+            <!-- @if ($message = Session::get('success'))
             <div class="alert alert-success " role="alert">
                 <strong><p>{{ $message }}</p></strong>
                 <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"></button>
               </div>
-            @endif
+            @endif -->
         </div>
         <table id="inputimunisasi" class="table table-striped table-bordered text-center">
             <div class="row" style="color:black; font-family: Poppins;">
@@ -101,7 +101,7 @@
                     <!-- /.container-fluid -->
 
                 </div>
-                <!-- End of Main Cont
+                <!-- End of Main Content -->
     
                 <!-- Footer -->
                 @include('template.footer')
@@ -121,10 +121,13 @@
         <!-- Logout Modal-->
         @include('template.modalLogout')
     
-        <!--Script--=
+        <!-- Script-->   
         @include('template.script2')
+
+
         <!-- End of Script-->    
 </body>
+@include('sweetalert::alert')
 <script> $(document).ready( function () {
     $('#inputimunisasi').DataTable();
 } );

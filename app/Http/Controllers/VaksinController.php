@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Vaksin;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class VaksinController extends Controller
 {
@@ -26,7 +27,7 @@ class VaksinController extends Controller
                 'nik_anak'=>$request->nik_anak,
                 'jenis_vaksin'=>$request->jenis_vaksin
             ]);
-            return redirect('/entry/InputImunisasi')->with('success', 'Vitamin berhasil di tambahkan');
+            return redirect('/entry/InputImunisasi')->with('success', 'Data Vaksin Berhasil Ditambahkan!');
     
         }
     }

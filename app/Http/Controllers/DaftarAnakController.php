@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Anak;
 use Illuminate\Http\Request;
-
+use RealRashid\SweetAlert\Facades\Alert;
 
 class DaftarAnakController extends Controller
 {
@@ -35,6 +35,6 @@ class DaftarAnakController extends Controller
             'golongan_darah'=>$request->golongan_darah
         ]);
 
-        return redirect('/entry/pendaftaranAnak')->with('success', 'Data berhasil di tambahkan');
+        return redirect('/entry/pendaftaranAnak')->with('success', 'Berhasil Mendaftar');
     }
 }
