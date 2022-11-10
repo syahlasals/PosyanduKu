@@ -5,6 +5,7 @@ use App\Models\Stunting;
 use App\Models\Anak;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class StuntingController extends Controller
 {
@@ -71,7 +72,7 @@ class StuntingController extends Controller
             'gpph'=>$request->gpph
         ]);
 
-        return redirect('/entry/InputImunisasi')->with('success', 'Data berhasil di tambahkan');
+        return redirect('/entry/InputImunisasi')->with('success', 'Data SDIDTK berhasil di tambahkan');
     }
 
     /**

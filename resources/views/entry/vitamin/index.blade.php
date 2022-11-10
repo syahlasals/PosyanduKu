@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,7 +31,7 @@
                     <div class="container d-flex justify-item-center justify-content-center"><br>
                         <div class="card card-form">
                             <div class="card-body">
-                            @if ($errors->any())
+                            <!-- @if ($errors->any())
                                 <div class="alert alert-danger">
                                     <strong>Waduh!</strong>Kesalahan input.<br><br>
                                     <ul>
@@ -39,7 +40,7 @@
                                         @endforeach
                                     </ul>
                                 </div>
-                            @endif
+                            @endif -->
                             <form method="POST" action="/store/vitamin" id="myform">
                                 @csrf
                                 <div class="row" style="margin-bottom: 15px;">
@@ -109,6 +110,8 @@
     @include('template.modalLogout')
     <!--Script-->
     @include('template.script')
+
+    @include('sweetalert::alert')
     <!-- End of Script-->
 
 
