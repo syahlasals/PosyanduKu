@@ -56,19 +56,20 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
     
     Route::prefix('entry')->middleware('entry')->group(function () {
         Route::get('/',[BerandaeController::class,'index'])->name('entry');
-        Route::get('vaksin/{nik_anak}', [VaksinController::class, 'index']);
-        Route::post('store/vaksin', [VaksinController::class, 'store']);
-        Route::get('vitamin/{nik_anak}', [VitaminController::class, 'index']); 
-        Route::post('store/vitamin', [VitaminController::class, 'store']);
-        Route::get('pertumbuhan/{nik_anak}', [PertumbuhanController::class, 'index']);
-        Route::post('store/pertumbuhan', [PertumbuhanController::class, 'store']);
-        Route::get('formSdidtk/{nik_anak}', [StuntingController::class, 'tampilFormSdidtk']);
-        Route::post('store/formSdidtk', [StuntingController::class, 'store']);
         Route::resource('pendaftaranAnak', DaftarAnakController::class);
         Route::get('InputImunisasi', [AnakController::class, 'indexInputImunisasi'])->name('index-imunisasi');
         Route::get('history', [AnakController::class, 'historyImunisasi']);
         Route::resource('sdidtkAnak', StuntingController::class);
     });
+
+        Route::get('entry/vaksin/{nik_anak}', [VaksinController::class, 'index'])->middleware('entry');
+        Route::post('store/vaksin', [VaksinController::class, 'store'])->middleware('entry');
+        Route::get('entry/vitamin/{nik_anak}', [VitaminController::class, 'index'])->middleware('entry'); 
+        Route::post('store/vitamin', [VitaminController::class, 'store'])->middleware('entry');
+        Route::get('entry/pertumbuhan/{nik_anak}', [PertumbuhanController::class, 'index'])->middleware('entry');
+        Route::post('store/pertumbuhan', [PertumbuhanController::class, 'store'])->middleware('entry');
+        Route::get('entry/formSdidtk/{nik_anak}', [StuntingController::class, 'tampilFormSdidtk'])->middleware('entry');
+        Route::post('store/formSdidtk', [StuntingController::class, 'store'])->middleware('entry');
     
     
     Route::prefix('ortu')->middleware('ortu')->group(function () {
