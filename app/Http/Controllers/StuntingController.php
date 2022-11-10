@@ -60,7 +60,7 @@ class StuntingController extends Controller
             'gpph'=>'required|in:1,0'
         ]);
 
-        return redirect('/entry/InputImunisasi')->with('success', 'Data SDIDTK berhasil di tambahkan');
+        // return redirect('/entry/InputImunisasi')->with('success', 'Data SDIDTK berhasil di tambahkan');
 
         $sdidtks = Stunting::create([
             'kode_pertumbuhan'=>$request->kode_pertumbuhan,
