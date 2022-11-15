@@ -12,7 +12,7 @@ class Vitamin extends Model
     protected $primaryKey = "kode_vitamin";
     protected $table = "tb_vitamin";
     protected $fillable = [
-       'kode_vitamin', 'nip','nik_anak', 'jenis_vitamin'];
+       'kode_vitamin','nik_anak', 'jenis_vitamin'];
 
        public function Anak()
     {
