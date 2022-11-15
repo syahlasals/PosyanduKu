@@ -54,13 +54,13 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
     });
     
     
-    Route::prefix('entry')->middleware('entry')->group(function () {
-        Route::get('/',[BerandaeController::class,'index'])->name('entry');
-        Route::resource('pendaftaranAnak', DaftarAnakController::class);
-        Route::get('InputImunisasi', [AnakController::class, 'indexInputImunisasi'])->name('index-imunisasi');
-        Route::get('history', [AnakController::class, 'historyImunisasi']);
-        Route::resource('sdidtkAnak', StuntingController::class);
-    });
+    // Route::prefix('entry')->middleware('entry')->group(function () {
+        Route::get('/entry',[BerandaeController::class,'index'])->name('entry')->middleware('entry');
+        Route::resource('entry/pendaftaranAnak', DaftarAnakController::class)->middleware('entry');
+        Route::get('entry/InputImunisasi', [AnakController::class, 'indexInputImunisasi'])->name('index-imunisasi')->middleware('entry');
+        Route::get('entry/history', [AnakController::class, 'historyImunisasi'])->middleware('entry');
+        Route::resource('entry/sdidtkAnak', StuntingController::class)->middleware('entry');
+    // });
 
         Route::get('entry/vaksin/{nik_anak}', [VaksinController::class, 'index'])->middleware('entry');
         Route::post('store/vaksin', [VaksinController::class, 'store'])->middleware('entry');
