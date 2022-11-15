@@ -33,7 +33,7 @@ use App\Http\Controllers\PertumbuhanController;
 Route::group(['middleware' => 'prevent-back-history'],function(){
 	Auth::routes();
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    Route::post('/logout', [OutController::class, 'logout'])->name('logo');
+    Route::post('/logout', [OutController::class, 'logout'])->name('logout');
 
     Route::get('/', function () {
         return view('auth/login');
