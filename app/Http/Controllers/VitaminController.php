@@ -22,7 +22,6 @@ class VitaminController extends Controller
             'jenis_vitamin'=>'required'
         ]);
 
-        return redirect('/entry/InputImunisasi')->with('success', 'Data Vitamin Berhasil Ditambahkan!');
 
         $vitamins = Vitamin::create([
             'kode_vitamin'=>$request->kode_vitamin,
@@ -30,8 +29,7 @@ class VitaminController extends Controller
             'jenis_vitamin'=>$request->jenis_vitamin
         ]);
 
-                // // Alert::success('Success Title', 'Success Message');
-                // alert()->success('SuccessAlert','Lorem ipsum dolor sit amet.'); 
+        return redirect('/entry/InputImunisasi')->with('success', 'Data Vitamin Berhasil Ditambahkan!');
 
     }
     

@@ -27,6 +27,7 @@ class VaksinController extends Controller
                 'nik_anak'=>$request->nik_anak,
                 'jenis_vaksin'=>$request->jenis_vaksin
             ]);
+            
             return redirect('/entry/InputImunisasi')->with('success', 'Data Vaksin Berhasil Ditambahkan!');
     
         }
