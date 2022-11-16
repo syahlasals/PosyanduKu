@@ -35,8 +35,8 @@
                     <th>Sasaran</th>
                     <th>Jumlah Balita Diukur</th>
                     <th>Balita Stunting</th>
-                    <th>Prevalensi Balita Diukur (%)</th>
-                    <th>Prevalensi Balita Stunting (%)</th>  
+                    {{-- <th>Prevalensi Balita Diukur (%)</th>
+                    <th>Prevalensi Balita Stunting (%)</th>   --}}
                 </tr>
             </thead>
             <tr>
@@ -46,41 +46,40 @@
                 <td>Balita</td>
                 <td>122</td>
                 <td>1122</td>
-                <td>20%</td>
-                <td>50%</td>
+                {{-- <td>20%</td>
+                <td>50%</td> --}}
             </tr>
             <tr>
                 <td>2</td>
-                <td>02</td>
+                <td>01</td>
                 <td>05</td>
                 <td>Balita</td>
                 <td>12</td>
                 <td>102</td>
-                <td>55%</td>
-                <td>90%</td>
+                {{-- <td>55%</td>
+                <td>90%</td> --}}
             </tr>
             <tr>
                 <td>3</td>
-                <td>02</td>
+                <td>01</td>
                 <td>05</td>
                 <td>Balita</td>
                 <td>5</td>
                 <td>62</td>
-                <td>35%</td>
-                <td>89%</td>
+                {{-- <td>35%</td>
+                <td>89%</td> --}}
             </tr>
             <tr>
                 <td colspan="4"><b>Total</b></td>
                 <td>139</td>
                 <td>1286</td>
-                <td>36,7%</td>
-                <td>76,3%</td>
+                {{-- <td>36,7%</td>
+                <td>76,3%</td> --}}
             </tr>
         </table>
 
         <div class="row">
             <div class="col" colspan="3">
-                {{-- <button class="btn btn-main" type="submit" style="margin-left: 260px;">Simpan</button> --}}
                 <a href="{{ url('entry/InputImunisasi') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
             </div>
         </div>
