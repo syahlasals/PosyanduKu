@@ -25,7 +25,26 @@
 
     <div class="container">
         <h1 class="text-center mt-5 mb-5"><b>INPUT IMUNISASI</b></h1>
-        
+        <div class="row" style="color:black; font-family: Poppins;">
+            <div class="col"><p style="font-weight: bold; text-transform:uppercase">
+                <i class="fa-solid fa-clock-rotate-left"></i> : History Imunisasi</p>
+            </div>
+            <div class="col"><p style="font-weight: bold; text-transform:uppercase">
+                <i class="fa-solid fa-hands-holding-child"></i> : Form Pertumbuhan</p>
+            </div>
+            <div class="col"><p style="font-weight: bold; text-transform:uppercase">
+                <i class="fa-solid fa-syringe"></i> : Form Vaksin</p>
+            </div>
+            <div class="col"><p style="font-weight: bold; text-transform:uppercase">
+                <i class="fa-solid fa-capsules"></i> : Form Vitamin</p>
+            </div>
+            <div class="col"><p style="font-weight: bold; text-transform:uppercase">
+                <i class="fa-solid fa-person"></i> : Form SDIDTK</p>
+            </div>
+            <div class="col"><p style="font-weight: bold; text-transform:uppercase">
+                <i class="fa-solid fa-calendar"></i> : Data SDIDTK</p>
+            </div>
+        </div>
         <div>
             <!-- @if ($message = Session::get('success'))
             <div class="alert alert-success " role="alert">
@@ -35,26 +54,6 @@
             @endif -->
         </div>
         <table id="inputimunisasi" class="table table-striped table-bordered text-center">
-            <div class="row" style="color:black; font-family: Poppins;">
-                <div class="col"><p style="font-weight: bold; text-transform:uppercase">
-                    <i class="fa-solid fa-clock-rotate-left"></i> : History Imunisasi</p>
-                </div>
-                <div class="col"><p style="font-weight: bold; text-transform:uppercase">
-                    <i class="fa-solid fa-hands-holding-child"></i> : Form Pertumbuhan</p>
-                </div>
-                <div class="col"><p style="font-weight: bold; text-transform:uppercase">
-                    <i class="fa-solid fa-syringe"></i> : Form Vaksin</p>
-                </div>
-                <div class="col"><p style="font-weight: bold; text-transform:uppercase">
-                    <i class="fa-solid fa-capsules"></i> : Form Vitamin</p>
-                </div>
-                <div class="col"><p style="font-weight: bold; text-transform:uppercase">
-                    <i class="fa-solid fa-person"></i> : Form SDIDTK</p>
-                </div>
-                <div class="col"><p style="font-weight: bold; text-transform:uppercase">
-                    <i class="fa-solid fa-calendar"></i> : Data SDIDTK</p>
-                </div>
-            </div>
                 <br>
             <thead>
                 <tr>
@@ -79,16 +78,16 @@
                     {{ $anak->jenkel_anak == 'L' ? 'Laki-Laki' : 'Perempuan' }}
                 </td>
                 <td>{{ $anak->golongan_darah }}</td>
-                <td width="25%">
+                <td width="30%">
                 <div class="row d-flex">
                     <div class="col-12">
-
-                        <a href="/entry/history"><button type="button" class="btn btn-primary"><i class="fa-solid fa-clock-rotate-left"></i></button>
-                        <a href="/entry/pertumbuhan/{{$anak->nik_anak}}"><button type="button" class="btn btn-secondary"><i class="fa-solid fa-hands-holding-child"></i></button>
-                        <a href="/entry/vaksin/{{$anak->nik_anak}}"><button type="button" class="btn btn-success"><i class="fa-solid fa-syringe"></i></button>
-                        <a href="/entry/vitamin/{{$anak->nik_anak}}"><button type="button" class="btn btn-danger"><i class="fa-solid fa-capsules"></i></button>
-                        <a href="/entry/formSdidtk/{{$anak->nik_anak}}"><button type="button" class="btn btn-danger" style="background-color: #FFD700; border-color: #FFD700;"><i class="fa-solid fa-person"></i></button>
-                        <a href="/entry/sdidtkAnak"><button type="button" class="btn btn-danger" style="background-color: #dc55d5; border-color: #dc55d5;"><i class="fa-solid fa-calendar"></i></button>
+                        
+                <a href="/entry/history"><button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="History"><i class="fa-solid fa-clock-rotate-left"></i></button></a>
+                        <a href="/entry/pertumbuhan/{{$anak->nik_anak}}"><button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Form Pertumbuhan"><i class="fa-solid fa-hands-holding-child"></i></button></a>
+                        <a href="/entry/vaksin/{{$anak->nik_anak}}"><button type="button" class="btn btn-success" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Form Vaksin"><i class="fa-solid fa-syringe"></i></button></a>
+                        <a href="/entry/vitamin/{{$anak->nik_anak}}"><button type="button" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Form Vitamin"><i class="fa-solid fa-capsules"></i></button></a>
+                        <a href="/entry/formSdidtk/{{$anak->nik_anak}}"><button type="button" class="btn btn-danger" style="background-color: #dc55d5; border-color: #dc55d5;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Form SDIDTK"><i class="fa-solid fa-person"></i></button></a>
+                        <a href="/entry/sdidtkAnak"><button type="button" class="btn btn-danger" style="background-color: #FFD700; border-color: #FFD700;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Data SDIDTK"><i class="fa-solid fa-calendar"></i></button></a>
                     </div>
                 </div>
                 </td>
@@ -131,11 +130,5 @@
 <script> $(document).ready( function () {
     $('#inputimunisasi').DataTable();
 } );
-</script>
-
-<script>
-
-  $("[data-toggle='tooltip']").tooltip(); // Initialize Tooltip
-
 </script>
 </html>
