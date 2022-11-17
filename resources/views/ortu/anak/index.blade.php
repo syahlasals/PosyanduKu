@@ -53,7 +53,7 @@
                                                 <div class="col-6"><input type="number" name="rt" id="rt" class="form-control"></div>
                                             </div>
                                             <div class="d-flex mb-3">
-                                                <div class="col-5"> <label for="nik_ayah"><b>Nik Ayah</b></label></div>
+                                                <div class="col-5"> <label for="nik_ayah"><b>NIK Ayah</b></label></div>
                                                 <div class="col-1">:</div>
                                                 <div class="col-6"><input type="number" name="nik_ayah" id="nik_ayah" class="form-control"></div>
                                             </div>                                            
@@ -70,7 +70,7 @@
                                                 <div class="col-6"><input type="text" name="pekerjaan_ayah" id="pekerjaan_ayah" class="form-control"></div>
                                             </div>
                                             <div class="d-flex mb-3">
-                                                <div class="col-5"> <label for="nik_ibu"><b>Nik Ibu</b></label></div>
+                                                <div class="col-5"> <label for="nik_ibu"><b>NIK Ibu</b></label></div>
                                                 <div class="col-1">:</div>
                                                 <div class="col-6"><input type="number" name="nik_ibu" id="nik_ibu" class="form-control"></div>
                                             </div>

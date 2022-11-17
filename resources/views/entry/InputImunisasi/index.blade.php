@@ -25,34 +25,6 @@
 
     <div class="container">
         <h1 class="text-center mt-5 mb-5"><b>INPUT IMUNISASI</b></h1>
-        <div class="row" style="color:black; font-family: Poppins;">
-            <div class="col"><p style="font-weight: bold; text-transform:uppercase">
-                <i class="fa-solid fa-clock-rotate-left"></i> : History Imunisasi</p>
-            </div>
-            <div class="col"><p style="font-weight: bold; text-transform:uppercase">
-                <i class="fa-solid fa-hands-holding-child"></i> : Form Pertumbuhan</p>
-            </div>
-            <div class="col"><p style="font-weight: bold; text-transform:uppercase">
-                <i class="fa-solid fa-syringe"></i> : Form Vaksin</p>
-            </div>
-            <div class="col"><p style="font-weight: bold; text-transform:uppercase">
-                <i class="fa-solid fa-capsules"></i> : Form Vitamin</p>
-            </div>
-            <div class="col"><p style="font-weight: bold; text-transform:uppercase">
-                <i class="fa-solid fa-person"></i> : Form SDIDTK</p>
-            </div>
-            <div class="col"><p style="font-weight: bold; text-transform:uppercase">
-                <i class="fa-solid fa-calendar"></i> : Data SDIDTK</p>
-            </div>
-        </div>
-        <div>
-            <!-- @if ($message = Session::get('success'))
-            <div class="alert alert-success " role="alert">
-                <strong><p>{{ $message }}</p></strong>
-                <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"></button>
-              </div>
-            @endif -->
-        </div>
         <table id="inputimunisasi" class="table table-striped table-bordered text-center">
                 <br>
             <thead>
