@@ -15,7 +15,6 @@ use App\Http\Controllers\BerandapController;
 use App\Http\Controllers\StuntingController;
 use App\Http\Controllers\ImunisasiController;
 use App\Http\Controllers\DaftarAnakController;
-use App\Http\Controllers\Auth\OutController;
 use App\Http\Controllers\PertumbuhanController;
 
 
@@ -33,7 +32,6 @@ use App\Http\Controllers\PertumbuhanController;
 Route::group(['middleware' => 'prevent-back-history'],function(){
 	Auth::routes();
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    Route::post('/logout', [OutController::class, 'logout'])->name('logout');
 
     Route::get('/', function () {
         return view('auth/login');
