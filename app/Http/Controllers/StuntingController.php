@@ -33,6 +33,12 @@ class StuntingController extends Controller
         $sdidtks = Stunting::all();
         return view('pengelola.dataStunting.index', compact('sdidtks'));
     }
+    
+    public function hitungAnak()
+    {
+        $anaks = Anak::count();
+        return view('pengelola.dataStunting.index', compact('anaks'));
+    }
 
     public function create()
     {
@@ -78,17 +84,6 @@ class StuntingController extends Controller
         return redirect('/entry/InputImunisasi')->with('success', 'Data SDIDTK berhasil di tambahkan');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function hitungAnak($id)
-    {
-        $anaks = Anak::count();
-        return view('hitung-anak', compact('anaks'));
-    }
 
     /**
      * Show the form for editing the specified resource.
