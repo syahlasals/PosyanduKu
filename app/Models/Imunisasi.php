@@ -22,6 +22,10 @@ class Imunisasi extends Model
     {
         return $this->belongsTo(Pertumbuhan::class, 'kode_pertumbuhan');
     }
+    public function pertumbuhanstatuss()
+    {
+        return $this->belongsTo(PertumbuhanStatus::class, 'kode_pertumbuhan');
+    }
     public function vaksins()
     {
         return $this->belongsTo(Vaksin::class, 'kode_vaksin');

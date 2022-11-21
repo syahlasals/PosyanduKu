@@ -54,7 +54,7 @@
                 <td></td>
                 <td>{{ $data->vaksins->jenis_vaksin }}</td>
                 <td>{{ $data->vitamins->jenis_vitamin }}</td>
-                <td></td>
+                <td>{{ $data->pertumbuhanstatuss->status_penyimpangan }}</td>
             </tr>
             @endforeach
         </table>
