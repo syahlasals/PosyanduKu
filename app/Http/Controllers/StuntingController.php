@@ -6,6 +6,7 @@ use App\Models\Anak;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use RealRashid\SweetAlert\Facades\Alert;
+use ConsoleTVs\Charts\Classes\Chartjs\Chart;
 
 class StuntingController extends Controller
 {
@@ -38,6 +39,25 @@ class StuntingController extends Controller
     {
         $anaks = Anak::count();
         return view('pengelola.dataStunting.index', compact('anaks'));
+    }
+
+    public function charts()
+    {
+        $groups = DB::table('tb_anak')
+                            ->select('tmp_anak', DB::raw('count(*) as total'))
+                            ->groupBy('tmp_anak')
+                            ->pluck('total', 'tmp_anak')->all();
+        for ($i=0; $i<=count($groups); $i++) {
+            $colours[] = '#' . substr(str_shuffle('ABCDEF0123456789'), 0, 6);
+        }
+
+        $chart = new Chart;
+        $chart->labels = (array_keys($groups));
+        $chart->dataset = (array_values($groups));
+        $chart->colours = $colours;
+
+        return view('pengelola.index', compact('chart'));
+    
     }
 
     public function create()
