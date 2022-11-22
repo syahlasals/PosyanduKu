@@ -51,10 +51,10 @@
                 <td>{{ $data->profiles->nama_posyandu }}</td>
                 <td>{{ $data->anaks->nik_anak }}</td>
                 <td>{{ $data->anaks->nama_anak }}</td>
-                <td></td>
+                <td>{{ $data->tgl_imunisasi }}</td>
                 <td>{{ $data->vaksins->jenis_vaksin }}</td>
                 <td>{{ $data->vitamins->jenis_vitamin }}</td>
-                <td></td>
+                <td>{{ $data->pertumbuhanstatuss->status_penyimpangan }}</td>
             </tr>
             @endforeach
         </table>

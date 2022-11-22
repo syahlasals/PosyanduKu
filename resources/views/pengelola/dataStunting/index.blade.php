@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Petugas Entry</title>
+    <title>Petugas Pengelola</title>
     @include('template.head')
 </head>
 
@@ -26,7 +26,7 @@
     <div class="container">
         <h1 class="text-center mt-5 mb-5"><b>DATA STUNTING</b></h1>
 
-        <table id="datastunting" class="table table-striped table-bordered text-center" border="1">
+        <table id="datastunting" class="table table-striped table-bordered text-center">
             <thead>
                 <tr>
                     <th>RW</th>
