@@ -34,9 +34,9 @@
                     </div>
                     <div class="row mb-3">
 
-                        <div class="row sm-1">
+                        <div class="row">
                             <div class="col d-flex justify-content-center mb-5">
-                                <canvas id="userChart" class="rounded shadow" style="width:50%;max-width:500px;height:50%;max-height:500px"></canvas>
+                                <canvas id="userChart" class="rounded shadow" style="width:100%;max-width:1500px;height:100%;max-height:500px"></canvas>
                             </div>
                         </div>
                         <div class="col d-flex justify-content-end">
@@ -115,7 +115,7 @@
     var ctx = document.getElementById('userChart').getContext('2d');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
-        type: 'pie',
+        type: 'line',
 // The data for our dataset
         data: {
             labels:  {!!json_encode($chart->labels)!!} ,
