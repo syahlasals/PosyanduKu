@@ -20,6 +20,7 @@ class PertumbuhanController extends Controller
     {
         $this->validate($request, [
             'kode_pertumbuhan'=>'required',
+            'nik_anak'=>'required',
             'tinggi'=>'required',
             'berat'=>'required',
             'lingkar_kepala'=>'required'

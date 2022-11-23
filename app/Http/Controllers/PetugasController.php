@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\petugas;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use RealRashid\SweetAlert\Facades\Alert;
+// use RealRashid\SweetAlert\Facades\Alert;
 
 class PetugasController extends Controller
 {
@@ -14,11 +15,10 @@ class PetugasController extends Controller
         return view('pengelola.dataPetugas.index', compact('petugass'));
     }
     
-    public function hapuspetugas(Request $request){
-    
-    
+    public function hapuspetugas(Request $request)
+    {
         $petugass = petugas::where('nip', $request->nip)->delete(); 
-        return redirect("/pengelola/dataPetugas")->with('success', 'Data Berhasil Dihapus!');
+        return redirect("/pengelola/dataPetugas");
     }
 
     /**
@@ -56,43 +56,10 @@ class PetugasController extends Controller
         // return redirect()->route('pengelola.dataPetugas.index')->with('success', 'Data Berhasil Diedit!');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $nip
-     * @return \Illuminate\Http\Response
-     */
-    public function show($nip)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-  
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(petugas $petugas)
-    {
-        $petugas->delete();
-        return redirect()->route('dataPetugas.index')
-        ->with('success', 'sipp');
-    }
+    // public function destroy($id)
+    // {
+    //     $petugas = petugas::find($id);
+    //     $petugas->detele();
+    //     return redirect('/pengelola/dataPetugas')->with('success', 'Data Berhasil Dihapus!');
+    // }
 }

@@ -101,13 +101,13 @@ class AnakController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($nik_anak)
+    public function destroy($id)
     {    
         // return redirect('/admin/users');
 
-        $anak = Anak::findOrFail($nik_anak);
+        $anak = Anak::find($id);
         $anak->delete();
-        return redirect('/pengelola/dataAnak')->with('success', 'Data Berhasil Dihapus!');
+        return redirect('/pengelola/dataAnak');
     }
 
     // PETUGAS ENTRY

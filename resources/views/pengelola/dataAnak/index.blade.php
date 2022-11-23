@@ -60,15 +60,15 @@
                                             </iconify-icon></a>
                                         </div>
                                         <div class="col-4">
-                                            <form id="delete-form" method="POST" action="dataAnak/{{ $anak->nik_anak }}">
-                                                @csrf
-                                                @method('delete')
+                                            <!-- <form id="delete-form" method="POST"> -->
+                                                <!-- @csrf
+                                                @method('delete') -->
                                                 <div class="form-group">
-                                                    <button class="btn btn-danger border-0 d-flex" onclick="return confirm('Are you sure you want to delete this post?')">
+                                                    <button class="delete btn btn-danger" data-id="{{ $anak->nik_anak }}">
                                                         <span data-feather="x-circle"></span><iconify-icon icon="fluent:delete-24-filled" width="20px" height="20px"></iconify-icon>
                                                     </button>
                                                 </div>
-                                            </form>
+                                            <!-- </form> -->
                                         </div>
                                     </div>
                                 </td>
@@ -104,12 +104,43 @@
 <!--Script-->
 @include('template.script2')
 <!-- End of Script-->
-
+ 
 @include('sweetalert::alert')
 
+<script scr="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     </body>
-    <script> $(document).ready( function () {
+    <script>
+        $('.delete').click( function(){
+            var anak = $(this).attr('data-id');
+            swal({
+            title: "Yakin?",
+            text: "Kamu akan kehilangan data!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+            })
+            .then((willDelete) => {
+                
+            if (willDelete) {
+                $.ajax({
+                    type: 'GET',
+                    url: '/pengelola/delete/dataAnak/'+ $(this).attr('data-id'),
+                    success: swal("Data berhasil di hapus", {
+                icon: "success",
+                }) ,
+                })
+                window.location.reload();
+            } else {
+                swal("Data tidak jadi dihapus");
+            }
+    });
+        });
+    </script>
+
+    <script> 
+    $(document).ready( function () {
         $('#dataanak').DataTable();
     } );
     </script>
