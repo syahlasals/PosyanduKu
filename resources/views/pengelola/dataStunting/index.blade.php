@@ -29,26 +29,17 @@
         <table id="datastunting" class="table table-striped table-bordered text-center">
             <thead>
                 <tr>
-                    <th>RW</th>
-                    <th>RT</th>
                     <th>Jumlah Balita Terdaftar</th>
+                    <th>Jumlah Balita Normal</th>
+                    <th>Jumlah Balita Gejala Stunting</th>
                     <th>Jumlah Balita Stunting</th>
-                    {{-- <th>Prevalensi Balita Diukur (%)</th>
-                    <th>Prevalensi Balita Stunting (%)</th>   --}}
                 </tr>
             </thead>
             <tr>
-                <td>01</td>
-                <td>02</td>
-                <td>{{ $anaks }}</td>
-                <td>3</td>
-                {{-- <td>20%</td>
-                <td>50%</td> --}}
-            </tr>
-            <tr>
-                <td colspan="4"><b>Total : {{ $anaks }}</b></td>
-                {{-- <td>36,7%</td>
-                <td>76,3%</td> --}}
+                <td>{{ $semua }}</td>
+                <td>{{ $normal }}</td>
+                <td>{{ $gejalastunting }}</td>
+                <td>{{ $stunting }}</td>
             </tr>
         </table>
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Anak;
 use App\Models\Stunting;
 use App\Models\Penyimpangan;
+use App\Models\Pertumbuhan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -34,8 +35,16 @@ class StuntingController extends Controller
 
     public function tampilDataStunting()
     {
-        $sdidtks = Stunting::all();
-        return view('pengelola.dataStunting.index', compact('sdidtks'));
+        $semua = Anak::count();
+        $normal = Penyimpangan::where('status_penyimpangan','Normal')->count();
+        $gejalastunting = Penyimpangan::where('status_penyimpangan','Gejala Stunting')->count();
+        $stunting = Penyimpangan::where('status_penyimpangan','Stunting')->count();
+        return view('pengelola.dataStunting.index', [
+            'semua' => $semua,
+            'normal' => $normal,
+            'gejalastunting' => $gejalastunting,
+            'stunting' => $stunting,
+        ]);
     }
     
     public function hitungAnak()
@@ -46,10 +55,10 @@ class StuntingController extends Controller
 
     public function charts()
     {
-        $groups = DB::table('tb_anak')
-                            ->select('tmp_anak', DB::raw('count(*) as total'))
-                            ->groupBy('tmp_anak')
-                            ->pluck('total', 'tmp_anak')->all();
+        $groups = DB::table('tb_pertumbuhan')
+                            ->select('status_penyimpangan', DB::raw('count(*) as total'))
+                            ->groupBy('status_penyimpangan')
+                            ->pluck('total', 'status_penyimpangan')->all();
         for ($i=0; $i<=count($groups); $i++) {
             $colours[] = '#' . substr(str_shuffle('ABCDEF0123456789'), 0, 6);
         }

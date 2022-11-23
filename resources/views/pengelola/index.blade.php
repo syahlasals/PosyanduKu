@@ -123,13 +123,13 @@
     var ctx = document.getElementById('userChart').getContext('2d');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
-        type: 'line',
+        type: 'bar',
 // The data for our dataset
         data: {
             labels:  {!!json_encode($chart->labels)!!} ,
             datasets: [
                 {
-                    label: 'Tempat Lahir Anak',
+                    label: 'Status Pertumbuhan per Anak',
                     // backgroundColor: {!! json_encode($chart->colours)!!} ,
                     backgroundColor: ["#647BB1", "#CCB2E0", "#DDA0DD", "#9370D8", "#87CEFA"] ,
                     data:  {!! json_encode($chart->dataset)!!} ,
