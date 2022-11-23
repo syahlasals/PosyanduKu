@@ -1,11 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Stunting;
 use App\Models\Anak;
+use App\Models\Stunting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use RealRashid\SweetAlert\Facades\Alert;
+use ConsoleTVs\Charts\Classes\Chartjs\Chart;
 
 class StuntingController extends Controller
 {
@@ -32,6 +33,31 @@ class StuntingController extends Controller
     {
         $sdidtks = Stunting::all();
         return view('pengelola.dataStunting.index', compact('sdidtks'));
+    }
+    
+    public function hitungAnak()
+    {
+        $anaks = Anak::count();
+        return view('pengelola.dataStunting.index', compact('anaks'));
+    }
+
+    public function charts()
+    {
+        $groups = DB::table('tb_anak')
+                            ->select('tmp_anak', DB::raw('count(*) as total'))
+                            ->groupBy('tmp_anak')
+                            ->pluck('total', 'tmp_anak')->all();
+        for ($i=0; $i<=count($groups); $i++) {
+            $colours[] = '#' . substr(str_shuffle('ABCDEF0123456789'), 0, 6);
+        }
+
+        $chart = new Chart;
+        $chart->labels = (array_keys($groups));
+        $chart->dataset = (array_values($groups));
+        $chart->colours = $colours;
+
+        return view('pengelola.index', compact('chart'));
+    
     }
 
     public function create()
@@ -78,16 +104,6 @@ class StuntingController extends Controller
         return redirect('/entry/InputImunisasi')->with('success', 'Data SDIDTK berhasil di tambahkan');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.

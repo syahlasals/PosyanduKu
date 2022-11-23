@@ -25,34 +25,6 @@
 
     <div class="container">
         <h1 class="text-center mt-5 mb-5"><b>INPUT IMUNISASI</b></h1>
-        <div class="row" style="color:black; font-family: Poppins;">
-            <div class="col"><p style="font-weight: bold; text-transform:uppercase">
-                <i class="fa-solid fa-clock-rotate-left"></i> : History Imunisasi</p>
-            </div>
-            <div class="col"><p style="font-weight: bold; text-transform:uppercase">
-                <i class="fa-solid fa-hands-holding-child"></i> : Form Pertumbuhan</p>
-            </div>
-            <div class="col"><p style="font-weight: bold; text-transform:uppercase">
-                <i class="fa-solid fa-syringe"></i> : Form Vaksin</p>
-            </div>
-            <div class="col"><p style="font-weight: bold; text-transform:uppercase">
-                <i class="fa-solid fa-capsules"></i> : Form Vitamin</p>
-            </div>
-            <div class="col"><p style="font-weight: bold; text-transform:uppercase">
-                <i class="fa-solid fa-person"></i> : Form SDIDTK</p>
-            </div>
-            <div class="col"><p style="font-weight: bold; text-transform:uppercase">
-                <i class="fa-solid fa-calendar"></i> : Data SDIDTK</p>
-            </div>
-        </div>
-        <div>
-            <!-- @if ($message = Session::get('success'))
-            <div class="alert alert-success " role="alert">
-                <strong><p>{{ $message }}</p></strong>
-                <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"></button>
-              </div>
-            @endif -->
-        </div>
         <table id="inputimunisasi" class="table table-striped table-bordered text-center">
                 <br>
             <thead>
@@ -61,7 +33,6 @@
                     <th>No KK</th>
                     <th>NIK Anak</th>
                     <th>Nama Anak</th>
-                    <th>Tempat, Tanggal Lahir</th>
                     <th>Jenis Kelamin</th>
                     <th>Golongan Darah</th>
                     <th>Aksi</th>
@@ -73,7 +44,6 @@
                 <td>{{ $anak->no_kk }}</td>
                 <td>{{ $anak->nik_anak }}</td>
                 <td>{{ $anak->nama_anak }}</td>
-                <td>{{ $anak->tmp_anak}}, <br> {{ $anak->tgl_anak }}</td>
                 <td>
                     {{ $anak->jenkel_anak == 'L' ? 'Laki-Laki' : 'Perempuan' }}
                 </td>
@@ -82,7 +52,7 @@
                 <div class="row d-flex">
                     <div class="col-12">
                         
-                <a href="/entry/history"><button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="History"><i class="fa-solid fa-clock-rotate-left"></i></button></a>
+                        {{-- <a href="/entry/history"><button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="History"><i class="fa-solid fa-clock-rotate-left"></i></button></a> --}}
                         <a href="/entry/pertumbuhan/{{$anak->nik_anak}}"><button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Form Pertumbuhan"><i class="fa-solid fa-hands-holding-child"></i></button></a>
                         <a href="/entry/vaksin/{{$anak->nik_anak}}"><button type="button" class="btn btn-success" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Form Vaksin"><i class="fa-solid fa-syringe"></i></button></a>
                         <a href="/entry/vitamin/{{$anak->nik_anak}}"><button type="button" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Form Vitamin"><i class="fa-solid fa-capsules"></i></button></a>

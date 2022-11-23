@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Anak;
+use App\Models\Stunting;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -126,6 +127,14 @@ class AnakController extends Controller
     {
         return view('entry.pertumbuhan.index');
     }
+
+    // public function stunting($nik_anak)
+    // {
+    //     $sdidtks = Stunting::find($nik_anak);
+    //         return view('entry.sdidtkAnak.index',[
+    //             "sdidtk" => $sdidtks
+    //     ]);
+    // }
 
     // public function vaksin()
     // {

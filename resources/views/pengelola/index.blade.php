@@ -33,6 +33,12 @@
                         </div>
                     </div>
                     <div class="row mb-3">
+
+                        <div class="row">
+                            <div class="col d-flex justify-content-center mb-5">
+                                <canvas id="userChart" class="rounded shadow" style="width:100%;max-width:1500px;height:100%;max-height:500px"></canvas>
+                            </div>
+                        </div>
                         <div class="col d-flex justify-content-end">
                             <a href="{{ url('pengelola/dataAnak') }}"class="card card-ap">
                                 <div class="card-body">
@@ -103,6 +109,58 @@
     <!--Script-->
     @include('template.script')
     <!-- End of Script-->
+
+    <!-- CHARTS -->
+<script>
+    var ctx = document.getElementById('userChart').getContext('2d');
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'line',
+// The data for our dataset
+        data: {
+            labels:  {!!json_encode($chart->labels)!!} ,
+            datasets: [
+                {
+                    label: 'Tempat Lahir Anak',
+                    backgroundColor: {!! json_encode($chart->colours)!!} ,
+                    data:  {!! json_encode($chart->dataset)!!} ,
+                },
+            ]
+        },
+// Configuration options go here
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true,
+                        callback: function(value) {if (value % 1 === 0) {return value;}}
+                    },
+                    scaleLabel: {
+                        display: false
+                    }
+                }]
+            },
+            legend: {
+                labels: {
+                    // This more specific font property overrides the global property
+                    fontColor: '#122C4B',
+                    fontFamily: "'Muli', sans-serif",
+                    padding: 5,
+                    boxWidth: 5,
+                    fontSize: 16,
+                }
+            },
+            layout: {
+                padding: {
+                    left: 5,
+                    right: 5,
+                    top: 0,
+                    bottom: 5
+                }
+            }
+        }
+    });
+</script>
 
 </body>
 

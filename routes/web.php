@@ -15,7 +15,6 @@ use App\Http\Controllers\BerandapController;
 use App\Http\Controllers\StuntingController;
 use App\Http\Controllers\ImunisasiController;
 use App\Http\Controllers\DaftarAnakController;
-use App\Http\Controllers\Auth\OutController;
 use App\Http\Controllers\PertumbuhanController;
 
 
@@ -33,7 +32,6 @@ use App\Http\Controllers\PertumbuhanController;
 Route::group(['middleware' => 'prevent-back-history'],function(){
 	Auth::routes();
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    Route::post('/logout', [OutController::class, 'logout'])->name('logout');
 
     Route::get('/', function () {
         return view('auth/login');
@@ -49,11 +47,14 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
         Route::get('dataPetugas/edit/{nip}',[PetugasController::class,'edit'])->name('edit');
         Route::post('dataPetugas/update/{nip}',[PetugasController::class,'update']);
         Route::get('dataStunting', [StuntingController::class, 'tampilDataStunting'])->name('tampilDataStunting');
+        Route::get('dataStunting', [StuntingController::class, 'hitungAnak']);
         Route::resource('dataImunisasi', ImunisasiController::class);
         Route::get('dataImunisasi', [ImunisasiController::class, 'index']);
         Route::resource('pengelola/sdidtkAnak', StuntingController::class);
     });
     
+    Route::get('pengelola', [StuntingController::class, 'charts'])->name('charts');
+
     
     // Route::prefix('entry')->middleware('entry')->group(function () {
         Route::get('/entry',[BerandaeController::class,'index'])->name('entry')->middleware('entry');
