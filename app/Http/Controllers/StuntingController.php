@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Anak;
 use App\Models\Stunting;
+use App\Models\Penyimpangan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -24,8 +25,10 @@ class StuntingController extends Controller
 
     public function tampilFormSdidtk($nik_anak)
     {
+        $kode_pertumbuhan = Penyimpangan::where('nik_anak', $nik_anak)->first();
         return view('entry.formSdidtk.index',[
-            "nik_anak" => $nik_anak
+            "nik_anak" => $nik_anak,
+            "kode_pertumbuhan" =>  $kode_pertumbuhan
         ]);
     }
 
