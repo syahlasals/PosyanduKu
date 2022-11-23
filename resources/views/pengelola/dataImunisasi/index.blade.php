@@ -32,6 +32,44 @@
             </div>
             @endif
         </div>
+
+        <div class="row">
+            <div class="col">
+                <a href=""class="card card-ap">
+                    <div class="card-body">
+                        <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita Terdaftar</b></span> 
+                        <h1 class="text-center">{{ $semua }}</h1>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="" class="card card-ip">
+                    <div class="card-body">
+                        <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita Normal</b></span> 
+                        <h1 class="text-center">{{ $normal }}</h1>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="" class="card card-ap ">
+                    <div class="card-body">
+                        <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita Gejala Stunting</b></span> 
+                        <h1 class="text-center">{{ $gejalastunting }}</h1>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="" class="card card-ip">
+                    <div class="card-body">
+                        <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita Stunting</b></span> 
+                        <h1 class="text-center">{{ $stunting }}</h1>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <br><br>
+
         <table id="dataimunisasi" class="table table-striped table-bordered text-center" border="1">
         <thead>
             <tr>

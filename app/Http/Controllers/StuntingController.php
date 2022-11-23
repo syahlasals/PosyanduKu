@@ -39,7 +39,7 @@ class StuntingController extends Controller
         $normal = Penyimpangan::where('status_penyimpangan','Normal')->count();
         $gejalastunting = Penyimpangan::where('status_penyimpangan','Gejala Stunting')->count();
         $stunting = Penyimpangan::where('status_penyimpangan','Stunting')->count();
-        return view('pengelola.dataStunting.index', [
+        return view('pengelola.dataImunisasi.index', [
             'semua' => $semua,
             'normal' => $normal,
             'gejalastunting' => $gejalastunting,
@@ -47,11 +47,11 @@ class StuntingController extends Controller
         ]);
     }
     
-    public function hitungAnak()
-    {
-        $anaks = Anak::count();
-        return view('pengelola.dataStunting.index', compact('anaks'));
-    }
+    // public function hitungAnak()
+    // {
+    //     $anaks = Anak::count();
+    //     return view('pengelola.dataStunting.index', compact('anaks'));
+    // }
 
     public function charts()
     {

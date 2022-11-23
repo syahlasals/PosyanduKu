@@ -46,8 +46,6 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
         Route::get('hapuspetugas/dataPetugas', [PetugasController::class,'hapuspetugas'])->name('hapuspetugas');
         Route::get('dataPetugas/edit/{nip}',[PetugasController::class,'edit'])->name('edit');
         Route::post('dataPetugas/update/{nip}',[PetugasController::class,'update']);
-        Route::get('dataStunting', [StuntingController::class, 'tampilDataStunting'])->name('tampilDataStunting');
-      /*   Route::get('dataStunting', [StuntingController::class, 'hitungAnak']); */
         Route::resource('dataImunisasi', ImunisasiController::class);
         Route::get('dataImunisasi', [ImunisasiController::class, 'index']);
         Route::resource('pengelola/sdidtkAnak', StuntingController::class);

@@ -25,7 +25,7 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <h1 class="text-center"><b>Masukan Data Pertumbuhan</b></h1><br>
+                    <h1 class="text-center"><b>Data Pertumbuhan</b></h1><br>
                     <div class="container d-flex justify-item-center justify-content-center"><br>
                         <div class="card card-form">
                             <div class="card-body">
@@ -43,22 +43,23 @@
                                 @csrf
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
-                                        <label for="kode_pertumbuhan"><b>Kode Pengukuran</b></label>
-                                    </div>
-                                    <div class="col-1"><b>:</b></div>
-                                    <div class="col-8">
-                                        <input type="text" name="kode_pertumbuhan" id="kode_pertumbuhan" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="row" style="margin-bottom: 15px;">
-                                    <div class="col-3">
                                         <label for="nik_anak"><b>NIK Anak</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="number" name="nik_anak" id="nik_anak" class="form-control" value="{{$nik_anak}}" disabled>
+                                        <input type="number" name="nik_anak" id="nik_anak" class="form-control"value="{{$nik_anak}}" disabled>
                                     </div>
                                     <input type="hidden" name="nik_anak" id="nik_anak" class="form-control" value={{$nik_anak}}>
+                                </div>
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <div class="col-3">
+                                        <label for="kode_pertumbuhan"><b>Kode Pertumbuhan</b></label>
+                                    </div>
+                                    <div class="col-1"><b>:</b></div>
+                                    <div class="col-8">
+                                        <input type="text" name="kode_pertumbuhan" id="kode_pertumbuhan" value="{{ $kode_pertumbuhan->kode_pertumbuhan }}" class="form-control" disabled>
+                                        <input type="hidden" name="kode_pertumbuhan" id="kode_pertumbuhan" value="{{ $kode_pertumbuhan->kode_pertumbuhan }}" class="form-control">
+                                    </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">

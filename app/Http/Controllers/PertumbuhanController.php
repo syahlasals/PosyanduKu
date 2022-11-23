@@ -12,8 +12,10 @@ class PertumbuhanController extends Controller
 {
     public function index($nik_anak)
     {
+        $kode_pertumbuhan = Penyimpangan::where('nik_anak', $nik_anak)->first();
         return view ('entry.pertumbuhan.index', [
-            "nik_anak" => $nik_anak
+            "nik_anak" => $nik_anak,
+            "kode_pertumbuhan" =>  $kode_pertumbuhan
           ]);
     }
 
