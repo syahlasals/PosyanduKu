@@ -33,21 +33,24 @@
             @endif
         </div>
         <table id="dataimunisasi" class="table table-striped table-bordered text-center" border="1">
-            <thead>
-                    <th>Nomor</th>
-                    <!--<th>Nama Posyandu</th>-->
-                    <th>NIK Anak</th>
-                    <th>Nama Anak</th>
-                    <th>Tanggal Imunisasi</th>
-                    <th>Vaksin</th>
-                    <th>Vitamin</th>
-                    <th>Status Pertumbuhan</th>  
-            </thead>
+        <thead>
+            <tr>
+                <th>Nomor</th>
+                <!--<th>Nama Posyandu</th>-->
+                <th>NIK Anak</th>
+                <th>Nama Anak</th>
+                <th>Tanggal Imunisasi</th>
+                <th>Vaksin</th>
+                <th>Vitamin</th>
+                <th>Status Pertumbuhan</th>
+            </tr>
+        </thead>
+        <tbody>
             @foreach ($anakList as $data)
             <tr>
                 <td>{{ $loop->iteration }}</td>
-                <!--<td>{{ $data->profiles->nama_posyandu }}</td>-->
-                <td>{{ $data->anik_anak }}</td>
+                <!--<td></td>-->
+                <td>{{ $data->nik_anak }}</td>
                 <td>{{ $data->nama_anak }}</td>
                 <td>
                     @foreach ($data->vaksins as $item)
@@ -61,18 +64,18 @@
                 </td>
                 <td>
                     @foreach ($data->vitamins as $item)
-                    {{ $item->jenis_vitamin}}
+                    {{ $item->jenis_vitamin }}
                     @endforeach
-                <td>
-                   
                 </td>
-                    @foreach ($data->tumbuhs as $item)
+                <td>@foreach ($data->tumbuhs as $item)
                     {{ $item->status_penyimpangan }}
                     @endforeach
                 </td>
             </tr>
             @endforeach
-        </table>
+        </tbody>
+    </table>
+
         <a href="{{ url('pengelola') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
 
 </div>

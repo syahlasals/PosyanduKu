@@ -122,7 +122,8 @@
             datasets: [
                 {
                     label: 'Tempat Lahir Anak',
-                    backgroundColor: {!! json_encode($chart->colours)!!} ,
+                    // backgroundColor: {!! json_encode($chart->colours)!!} ,
+                    backgroundColor: ["#647BB1", "#CCB2E0", "#DDA0DD", "#9370D8", "#87CEFA"] ,
                     data:  {!! json_encode($chart->dataset)!!} ,
                 },
             ]
@@ -144,7 +145,7 @@
                 labels: {
                     // This more specific font property overrides the global property
                     fontColor: '#122C4B',
-                    fontFamily: "'Muli', sans-serif",
+                    fontFamily: "Poppins",
                     padding: 5,
                     boxWidth: 5,
                     fontSize: 16,

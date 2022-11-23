@@ -48,11 +48,16 @@
                 <td>{{$ptgs->alamat_petugas}}</td>
                 <td>
                 <div class="row justify-content">
-                <div class="col-3">         
-                <form action="{{ route('hapuspetugas') }}">
+                <div class="col-3">
+                <div class="form-group">
+                    <button class="delete btn btn-danger" data-id="{{ $ptgs->nip }}">
+                    <span data-feather="x-circle"></span><iconify-icon icon="fluent:delete-24-filled" width="20px" height="20px"></iconify-icon>
+                    </button>
+                    </div>         
+                <!-- <form action="{{ route('hapuspetugas') }}">
                     <input type="hidden" name= "nip" value="{{ $ptgs->nip }}">
-                    <button type="submit" class="btn btn-danger" style="color:#000000;"><i class="fas fa-trash-alt"></i></button>
-                </form>
+                    <button class="delete btn btn-danger" data-id="{{ $ptgs->nip }}" style="color:#000000;"><i class="fas fa-trash-alt"></i></button>
+                </form> -->
                 </div>
                 <div class="col-3">
                 <a href="{{ route('edit', $ptgs->nip) }}" class="btn btn-warning" style="color:#000000;"><i class="fas fa-pencil-alt"></i></a>
@@ -86,6 +91,40 @@
 <i class="fas fa-angle-up"></i>
 </a>
 </body>
+
+<script scr="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    </body>
+    <script>
+        $('.delete').click( function(){
+            var ptgs = $(this).attr('data-id');
+            swal({
+            title: "Yakin?",
+            text: "Kamu akan kehilangan data!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+            })
+            .then((willDelete) => {
+                
+            if (willDelete) {
+                $.ajax({
+                    type: 'GET',
+                    url: '/pengelola/hapuspetugas/dataPetugas?nip='+$(this).attr('data-id'),
+                    success: swal("Data berhasil di hapus", {
+                icon: "success",
+                })
+                })
+                console.log( "nip=" + $(this).attr('data-id'))
+                window.location.reload();
+            } else {
+                swal("Data tidak jadi dihapus");
+            }
+    });
+        });
+    </script>
+
 <script> $(document).ready( function () {
     $('#datapetugas').DataTable();
 } );
