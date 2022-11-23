@@ -34,27 +34,42 @@
         </div>
         <table id="dataimunisasi" class="table table-striped table-bordered text-center" border="1">
             <thead>
-                <tr>
                     <th>Nomor</th>
-                    <th>Nama Posyandu</th>
+                    <!--<th>Nama Posyandu</th>-->
                     <th>NIK Anak</th>
                     <th>Nama Anak</th>
                     <th>Tanggal Imunisasi</th>
                     <th>Vaksin</th>
                     <th>Vitamin</th>
                     <th>Status Pertumbuhan</th>  
-                </tr>
             </thead>
-            @foreach ($imunisasiList as $data)
+            @foreach ($anakList as $data)
             <tr>
                 <td>{{ $loop->iteration }}</td>
-                <td>{{ $data->profiles->nama_posyandu }}</td>
-                <td>{{ $data->anaks->nik_anak }}</td>
-                <td>{{ $data->anaks->nama_anak }}</td>
-                <td>{{ $data->tgl_imunisasi }}</td>
-                <td>{{ $data->vaksins->jenis_vaksin }}</td>
-                <td>{{ $data->vitamins->jenis_vitamin }}</td>
-                <td>{{ $data->pertumbuhanstatuss->status_penyimpangan }}</td>
+                <!--<td>{{ $data->profiles->nama_posyandu }}</td>-->
+                <td>{{ $data->anik_anak }}</td>
+                <td>{{ $data->nama_anak }}</td>
+                <td>
+                    @foreach ($data->vaksins as $item)
+                    {{ $item->tgl_vaksin }}
+                    @endforeach
+                </td>
+                <td>
+                    @foreach ($data->vaksins as $item)
+                    {{ $item->jenis_vaksin }}
+                    @endforeach
+                </td>
+                <td>
+                    @foreach ($data->vitamins as $item)
+                    {{ $item->jenis_vitamin}}
+                    @endforeach
+                <td>
+                   
+                </td>
+                    @foreach ($data->tumbuhs as $item)
+                    {{ $item->status_penyimpangan }}
+                    @endforeach
+                </td>
             </tr>
             @endforeach
         </table>
