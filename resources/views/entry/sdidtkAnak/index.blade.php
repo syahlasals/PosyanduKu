@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <title>Data Anak</title>
     @include('template.head')
 </head>
 <body>
