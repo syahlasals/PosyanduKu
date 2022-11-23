@@ -21,4 +21,16 @@ class Anak extends Model
         'tmp_anak',
         'golongan_darah'
     ];
+        public function vaksins()
+    {
+        return $this->hasMany(Vaksin::class, 'nik_anak');
+    }
+    public function vitamins()
+    {
+        return $this->hasMany(Vitamin::class, 'nik_anak');
+    }
+    public function tumbuhs()
+    {
+        return $this->hasMany(PertumbuhanStatus::class, 'nik_anak');
+    }
 }
