@@ -33,7 +33,6 @@
                     <th>No KK</th>
                     <th>NIK Anak</th>
                     <th>Nama Anak</th>
-                    <th>Tempat, Tanggal Lahir</th>
                     <th>Jenis Kelamin</th>
                     <th>Golongan Darah</th>
                     <th>Aksi</th>
@@ -45,7 +44,6 @@
                 <td>{{ $anak->no_kk }}</td>
                 <td>{{ $anak->nik_anak }}</td>
                 <td>{{ $anak->nama_anak }}</td>
-                <td>{{ $anak->tmp_anak}}, <br> {{ $anak->tgl_anak }}</td>
                 <td>
                     {{ $anak->jenkel_anak == 'L' ? 'Laki-Laki' : 'Perempuan' }}
                 </td>
