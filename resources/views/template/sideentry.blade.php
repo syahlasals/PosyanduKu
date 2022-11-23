@@ -19,20 +19,25 @@
       <hr class="sidebar-divider">
 
    <!-- Nav Item - Dashboard -->
-   <li class="nav-item {{ Request::is('entry') ? 'active' : '' }}">
+    <li class="nav-item {{ Request::is('entry') ? 'active' : '' }}">
     <a class="nav-link" href="{{ url('entry') }}">
         <i class="bi bi-house-door-fill"></i>
-        <span>Beranda</span></a>
+        <span>Beranda</span>
+    </a>
     </li>
 
     <!-- Nav Item - Pages Collapse Menu -->
-    <li class="nav-item {{ Request::is('entry') ? 'active' : '' }}">
-        <li class="nav-item">
-            <a class="nav-link {{ Request::is('entry/InputImunisasi') ? 'active' : '' }}" href="{{ url('entry/InputImunisasi') }}">
-                <i class="bi bi-pencil-fill"></i>
-                <span>Input Imunisasi</span>
-            </a>
-        </li>
+    <li class="nav-item {{ Request::is('entry/pendaftaranAnak') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ url('entry/pendaftaranAnak') }}">
+            <i class="fa-solid fa-child"></i>
+            <span>Daftar Anak</span>
+        </a>
+    </li>
+    <li class="nav-item {{ Request::is('entry/InputImunisasi') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ url('entry/InputImunisasi') }}">
+            <i class="bi bi-pencil-fill"></i>
+            <span>Input Imunisasi</span>
+        </a>
     </li>
 
     <!-- Divider -->

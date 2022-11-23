@@ -21,12 +21,12 @@ class StuntingController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Response 
      */
 
     public function tampilFormSdidtk($nik_anak)
     {
-        $kode_pertumbuhan = Penyimpangan::where('nik_anak', $nik_anak)->first();
+        $kode_pertumbuhan = Pertumbuhan::where('nik_anak', $nik_anak)->first();
         return view('entry.formSdidtk.index',[
             "nik_anak" => $nik_anak,
             "kode_pertumbuhan" =>  $kode_pertumbuhan
