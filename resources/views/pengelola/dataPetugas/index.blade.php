@@ -51,7 +51,7 @@
                 <div class="col-3">
                 <div class="form-group">
                     <button class="delete btn btn-danger" data-id="{{ $ptgs->nip }}">
-                    <span data-feather="x-circle"></span><iconify-icon icon="fluent:delete-24-filled" width="20px" height="20px"></iconify-icon>
+                    <i class="fas fa-trash-alt"></i>
                     </button>
                     </div>         
                 <!-- <form action="{{ route('hapuspetugas') }}">

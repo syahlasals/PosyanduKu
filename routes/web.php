@@ -72,6 +72,8 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
         Route::post('store/pertumbuhan', [PertumbuhanController::class, 'store'])->middleware('entry');
         Route::get('entry/formSdidtk/{nik_anak}', [StuntingController::class, 'tampilFormSdidtk'])->middleware('entry');
         Route::post('store/formSdidtk', [StuntingController::class, 'store'])->middleware('entry');
+        Route::get('entry/statusPenyimpangan/{nik_anak}', [PertumbuhanController::class, 'indexs'])->middleware('entry');
+        Route::post('stores/statusPenyimpangan', [PertumbuhanController::class, 'stores'])->middleware('entry');
     
     
     // Route::prefix('ortu')->middleware('ortu')->group(function () {

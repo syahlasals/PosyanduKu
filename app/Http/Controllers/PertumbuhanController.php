@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Penyimpangan;
 use App\Models\Pertumbuhan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -35,5 +36,30 @@ class PertumbuhanController extends Controller
         ]);
 
         return redirect('/entry/InputImunisasi')->with('success', 'Data Pertumbuhan Berhasil Ditambahkan!');
+    }
+
+    public function indexs($nik_anak)
+    {
+        return view ('entry.statusPenyimpangan.index', [
+            "nik_anak" => $nik_anak
+          ]);
+    }
+
+    public function stores(Request $request)
+    {
+        $this->validate($request, [
+            'kode_pertumbuhan'=>'required',
+            'nik_anak' =>'required',
+            'status_penyimpangan' => 'required',
+            
+        ]);
+
+        $penyimpangans = Penyimpangan::create([
+            'kode_pertumbuhan'=>$request->kode_pertumbuhan,
+            'nik_anak'=>$request->nik_anak,
+            'status_penyimpangan'=>$request->status_penyimpangan
+        ]);
+
+        return redirect('/entry/InputImunisasi')->with('success', 'Data Penyimpangan Berhasil Ditambahkan!');
     }
 }
