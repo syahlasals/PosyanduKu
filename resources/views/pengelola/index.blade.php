@@ -27,59 +27,67 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <div class="card card-welcomep mb-5">
-                        <div class="card-body d-flex align-items-center justify-content-center">
-                        <h1 style="color: white;"><b>Selamat Datang, {{ Auth::user()->name }}</b></h1>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-
+                    <div class="container">
                         <div class="row">
-                            <div class="col d-flex justify-content-center mb-5">
-                                <canvas id="userChart" class="rounded shadow" style="width:100%;max-width:1500px;height:100%;max-height:500px"></canvas>
+                            <div class="col-6 my-5">
+                                <img src="{{ asset('template/img/Group_82bg.svg') }}" alt="">
+                            </div>
+                            <div class="col-6 my-5 d-flex">
+                                <div class="d-flex align-items-center justify-content-center text-center">
+                                <h1><b>Selamat Datang, {{ Auth::user()->name }}</b></h1>
+                                </div>
                             </div>
                         </div>
-                        <div class="col d-flex justify-content-end">
-                            <a href="{{ url('pengelola/dataAnak') }}"class="card card-ap">
-                                <div class="card-body">
-                                    <h3 class=" d-flex align-items-center justify-content-center mb-3"><b>Data Anak</b></h3> 
-                                    <div class="baby d-flex align-items-center justify-content-center">
-                                        <iconify-icon icon="cil:baby" style="color: white;" width="125" height="106"></iconify-icon>
-                                    </div> 
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col d-flex justify-content-start">
-                            <a href="{{ url('pengelola/dataImunisasi') }}" class="card card-ip">
-                                <div class="card-body">
-                                    <h3 class=" d-flex align-items-center justify-content-center mb-3"><b>Data Imunisasi</b></h3> 
-                                    <div class="baby d-flex align-items-center justify-content-center">
-                                        <iconify-icon icon="fontisto:injection-syringe" style="color: white;" width="125" height="106"></iconify-icon>
-                                    </div> 
-                                </div>
-                            </a>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <a href="{{ url('pengelola/dataAnak') }}"class="card card-ap">
+                                    <div class="card-body">
+                                        <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Data Anak</b></span> 
+                                        <div class="baby d-flex align-items-center justify-content-center">
+                                            <iconify-icon icon="cil:baby" style="color:white;" width="30" height="30"></iconify-icon>
+                                        </div> 
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="{{ url('pengelola/dataImunisasi') }}" class="card card-ip">
+                                    <div class="card-body">
+                                        <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Data Imunisasi</b></span> 
+                                        <div class="baby d-flex align-items-center justify-content-center">
+                                            <iconify-icon icon="fontisto:injection-syringe" style="color: black;" width="30" height="30"></iconify-icon>
+                                        </div> 
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="{{ url('pengelola/dataPetugas') }}" class="card card-ap ">
+                                    <div class="card-body">
+                                        <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Data Petugas</b></span> 
+                                        <div class="baby d-flex align-items-center justify-content-center">
+                                            <iconify-icon icon="healthicons:doctor-female-outline" style="color: white;"width="30" height="30"></iconify-icon>
+                                        </div> 
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="{{ url('pengelola/dataPosyandu') }}" class="card card-ip">
+                                    <div class="card-body">
+                                        <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Profile Posyandu</b></span> 
+                                        <div class="baby d-flex align-items-center justify-content-center">
+                                            <iconify-icon icon="icon-park-solid:hospital-three" style="color: black;"width="30" height="30"></iconify-icon>
+                                        </div> 
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <div class="col d-flex justify-content-end">
-                            <a href="{{ url('pengelola/dataPetugas') }}" class="card card-ip ">
-                                <div class="card-body">
-                                    <h3 class=" d-flex align-items-center justify-content-center mb-3"><b>Data Petugas</b></h3> 
-                                    <div class="baby d-flex align-items-center justify-content-center">
-                                        <iconify-icon icon="healthicons:doctor-female-outline" style="color: white;" width="125" height="106"></iconify-icon>
-                                    </div> 
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col d-flex justify-content-start">
-                            <a href="{{ url('pengelola/dataPosyandu') }}" class="card card-ap">
-                                <div class="card-body">
-                                    <h3 class=" d-flex align-items-center justify-content-center mb-3"><b>Profile Posyandu</b></h3> 
-                                    <div class="baby d-flex align-items-center justify-content-center">
-                                        <iconify-icon icon="icon-park-solid:hospital-three" style="color: white;" width="125" height="106"></iconify-icon>
-                                    </div> 
-                                </div>
-                            </a>
+                        <div class="row">
+                            <div class="col d-flex justify-content-center my-5">
+                                <canvas id="userChart" class="rounded shadow" style="width:100%;max-width:1500px;height:100%;max-height:500px"></canvas>
+                            </div>
                         </div>
                     </div>
                 </div>

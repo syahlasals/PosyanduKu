@@ -39,7 +39,11 @@
                 <!--<th>Nama Posyandu</th>-->
                 <th>NIK Anak</th>
                 <th>Nama Anak</th>
+<<<<<<< HEAD
                 {{-- <th>Tanggal Imunisasi</th> --}}
+=======
+                <!--<th>Tanggal Imunisasi</th>-->
+>>>>>>> eb087895dd3c25eea24629f4ac59c897fce2729a
                 <th>Vaksin</th>
                 <th>Vitamin</th>
                 <th>Status Pertumbuhan</th>

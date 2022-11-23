@@ -3,25 +3,20 @@
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center">
-        <div class="sidebar-brand-icon">
-            <img style="width: 100%; height:100%;" src="{{ asset('template/img/minilogo_posyandu.svg') }}" alt="logo">
-        </div>
+    <div class="pictureposyandu d-flex align-items-center justify-content-center">
+        <img src="{{ asset('template/img/minilogo_posyandu.svg') }}" alt="img dasboard" style="margin:10px; height:70%; width:70%;">
+    </div>
         <div class="sidebar-brand-text mx-3"><i>Posyanduku</i></div>
     </a>
-
-    <!-- Divider -->
-    <hr class="sidebar-divider my-0">
-    <div class="pictureposyandu d-flex align-items-center justify-content-center">
-        <img src="{{ asset('template/img/picture_dasboard.svg') }}" alt="img dasboard" style="margin:10px; height:70%; width:70%;">
-    </div>
     
-   <!-- Divider -->
-   <hr class="sidebar-divider">
 
-   <!-- Heading -->
+
+   <!-- Heading 
    <div class="sidebar-heading">
        Petugas Entry
-   </div>
+   </div>-->
+      <!-- Divider -->
+      <hr class="sidebar-divider">
 
    <!-- Nav Item - Dashboard -->
    <li class="nav-item {{ Request::is('entry') ? 'active' : '' }}">
