@@ -83,8 +83,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row mb-3">
-                        <div class="row">
+                    <div class="container">
+                        <div class="row mb-3">
                             <div class="col d-flex justify-content-center my-5">
                                 <canvas id="userChart" class="rounded shadow" style="width:100%;max-width:1500px;height:100%;max-height:500px"></canvas>
                             </div>
