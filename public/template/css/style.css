@@ -2,6 +2,15 @@ body{
     color:black;
     font-family: Poppins;
 }
+.card-registrasi{
+    padding-top: 70px;
+    border: none;
+    background-color: #f8f9fc;
+}
+.card-daftar{
+    border-radius: 5px;
+    height: 50px;
+}
 .garis_verikal{
     border-left: 10px black solid;
     height: 40px;
@@ -33,14 +42,12 @@ body{
 .card-ap{
     background: #647BB1;
     color: #ffffff;
-    width: 50%;
     transition: transform .5s;
 }
 
 .card-ip{
-    background: #CCB2E0;
-    color: #ffffff;
-    width: 50%;
+    background: #C8C8C8;
+    color: #000000;
     transition: transform .5s;
 }
 .card-pv{
@@ -58,6 +65,11 @@ body{
 .card-ip:hover, .card-ap:hover, .card-pr:hover, .card-pv:hover{
     transform: scale(1.05);
     color: #ffffff;
+    text-decoration: none;
+}
+.card-ip:hover, .card-pr:hover, .card-pv:hover{
+    transform: scale(1.05);
+    color: #000000;
     text-decoration: none;
 }
 
