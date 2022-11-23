@@ -41,7 +41,7 @@
                 <td>01</td>
                 <td>02</td>
                 <td>{{ $anaks }}</td>
-                <td>1122</td>
+                <td>3</td>
                 {{-- <td>20%</td>
                 <td>50%</td> --}}
             </tr>
@@ -54,7 +54,7 @@
 
         <div class="row">
             <div class="col" colspan="3">
-                <a href="{{ url('entry/InputImunisasi') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
+                <a href="{{ url('pengelola') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
             </div>
         </div>
 

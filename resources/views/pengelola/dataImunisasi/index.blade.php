@@ -22,7 +22,7 @@
                 <!--End of Topbar-->
 
     <div class="container-fluid">
-        <h1 class="text-center mt-5 mb-5"><b>DATA IMUNISASI</b></h1>
+        <h1 class="text-center mt-5 mb-5"><b>Rekap Anak</b></h1>
         
         <div>
             @if ($message = Session::get('success'))

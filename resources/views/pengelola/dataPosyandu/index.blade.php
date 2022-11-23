@@ -78,9 +78,42 @@
                                 <p class="d-flex align-items-center justify-content-center">{{ $prfl->bendahara }}</p>
                             </div>
                         </div>
-                   
- </div>
+                   </div><br><br>
                     @endforeach
+
+                    <div class="row">
+                        <div class="col d-flex justify-content-end">
+                            <div class="card" style="border-radius: 25px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25); width: 70%;">
+                            <div class="card-body">
+                                <h5 class="card-title text-center"><b>Visi</b></h5>
+                                <p class="card-text text-justify">
+                                    <li>Mampu mendeteksi dan memantau perkembangan kesehatan masyarakat setempat demi terciptanya peningkatan kesehatan masyarakat.</li><br>
+                                    <li>Melaksanakan kegiatan keposyanduaan secara bertanggung jawab untuk mencapai masa depan keluarga yang lebih baik.</li></p>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-flex justify-content-start">
+                        <div class="card" style="border-radius: 25px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25); width: 70%;">
+                        <div class="card-body">
+                            <h5 class="card-title text-center"><b>Misi</b></h5>
+                            <p class="card-text text-justify">
+                                <li>Menjadi organisasi kesehatan yang dapat mendorong seluruh masyarakat untuk peduli terhadap kesehatan lingkungan hidup.</li><br>
+                                <li>Menjadi kader yang berkualitas dengan memiliki dedikasi tinggi dan kepeduli terhadap lingkungannya.</li></p><br>
+                            </div>
+                        </div>
+                    </div>
+                </div><br>
+                
+                <!-- <div class="row">
+                    <div class="col d-flex justify-content-center">
+                        <div class="card text-center d-flex mt-4" style="box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25); width:80%;">
+                            <div class="card-body">Jl. Nanjung Kp. Mekar Bakti RT 04 RW 05 Desa Lagadar Kecamatan Margaasih Kabupaten Bandung</div>
+                        </div>
+                    </div>
+                </div>
+                <br><br> -->
+
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-3">
                         <a href="{{ url('pengelola') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
                       </div>

@@ -39,10 +39,11 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
     
     Route::prefix('pengelola')->middleware('pengelola')->group(function () {
         Route::get('/',[BerandapController::class,'index'])->name('pengelola');
-        Route::resource('dataAnak', AnakController::class);
+        Route::resource('/dataAnak', AnakController::class);
+        Route::get('/delete/dataAnak/{id}', [AnakController::class,'destroy']);
         Route::get('dataPosyandu',[ProfileController::class,'index']);
         Route::resource('dataPetugas', PetugasController::class);
-        Route::get('hapuspetugas', [PetugasController::class, 'hapuspetugas'])->name('hapuspetugas');
+        Route::get('hapuspetugas/dataPetugas', [PetugasController::class,'hapuspetugas'])->name('hapuspetugas');
         Route::get('dataPetugas/edit/{nip}',[PetugasController::class,'edit'])->name('edit');
         Route::post('dataPetugas/update/{nip}',[PetugasController::class,'update']);
         Route::get('dataStunting', [StuntingController::class, 'tampilDataStunting'])->name('tampilDataStunting');
@@ -52,6 +53,8 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
         Route::resource('pengelola/sdidtkAnak', StuntingController::class);
     });
     
+    Route::get('pengelola', [StuntingController::class, 'charts'])->name('charts');
+
     
     // Route::prefix('entry')->middleware('entry')->group(function () {
         Route::get('/entry',[BerandaeController::class,'index'])->name('entry')->middleware('entry');

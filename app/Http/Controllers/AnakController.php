@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Anak;
+use App\Models\Stunting;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -101,13 +102,13 @@ class AnakController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($nik_anak)
+    public function destroy($id)
     {    
         // return redirect('/admin/users');
 
-        $anak = Anak::findOrFail($nik_anak);
+        $anak = Anak::find($id);
         $anak->delete();
-        return redirect('/pengelola/dataAnak')->with('success', 'Data Berhasil Dihapus!');
+        return redirect('/pengelola/dataAnak');
     }
 
     // PETUGAS ENTRY
@@ -126,6 +127,14 @@ class AnakController extends Controller
     {
         return view('entry.pertumbuhan.index');
     }
+
+    // public function stunting($nik_anak)
+    // {
+    //     $sdidtks = Stunting::find($nik_anak);
+    //         return view('entry.sdidtkAnak.index',[
+    //             "sdidtk" => $sdidtks
+    //     ]);
+    // }
 
     // public function vaksin()
     // {
