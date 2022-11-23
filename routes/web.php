@@ -38,7 +38,7 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
     });
     
     Route::prefix('pengelola')->middleware('pengelola')->group(function () {
-        Route::get('/',[BerandapController::class,'index'])->name('pengelola');
+        Route::get('/', [BerandapController::class,'index'])->name('pengelola');
         Route::resource('dataAnak', AnakController::class);
         Route::get('dataPosyandu',[ProfileController::class,'index']);
         Route::resource('dataPetugas', PetugasController::class);
@@ -46,11 +46,14 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
         Route::get('dataPetugas/edit/{nip}',[PetugasController::class,'edit'])->name('edit');
         Route::post('dataPetugas/update/{nip}',[PetugasController::class,'update']);
         Route::get('dataStunting', [StuntingController::class, 'tampilDataStunting'])->name('tampilDataStunting');
+        Route::get('dataStunting', [StuntingController::class, 'hitungAnak']);
         Route::resource('dataImunisasi', ImunisasiController::class);
         Route::get('dataImunisasi', [ImunisasiController::class, 'index']);
         Route::resource('pengelola/sdidtkAnak', StuntingController::class);
     });
     
+    Route::get('pengelola', [StuntingController::class, 'charts'])->name('charts');
+
     
     // Route::prefix('entry')->middleware('entry')->group(function () {
         Route::get('/entry',[BerandaeController::class,'index'])->name('entry')->middleware('entry');

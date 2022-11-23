@@ -22,7 +22,7 @@
                 <!--End of Topbar-->
 
     <div class="container-fluid">
-        <h1 class="text-center mt-5 mb-5"><b>DATA IMUNISASI</b></h1>
+        <h1 class="text-center mt-5 mb-5"><b>Rekap Anak</b></h1>
         
         <div>
             @if ($message = Session::get('success'))
@@ -51,10 +51,10 @@
                 <td>{{ $data->profiles->nama_posyandu }}</td>
                 <td>{{ $data->anaks->nik_anak }}</td>
                 <td>{{ $data->anaks->nama_anak }}</td>
-                <td></td>
+                <td>{{ $data->tgl_imunisasi }}</td>
                 <td>{{ $data->vaksins->jenis_vaksin }}</td>
                 <td>{{ $data->vitamins->jenis_vitamin }}</td>
-                <td></td>
+                <td>{{ $data->pertumbuhanstatuss->status_penyimpangan }}</td>
             </tr>
             @endforeach
         </table>

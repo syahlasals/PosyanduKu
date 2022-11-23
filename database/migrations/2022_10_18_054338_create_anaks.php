@@ -17,7 +17,7 @@ return new class extends Migration
             $table->integer('nik_anak')->primary();
             $table->foreignId('no_kk');
             $table->string('nama_anak');
-            $table->enum('jenis_kelamin', ['L', 'P']);
+            $table->enum('jenkel_anak', ['L', 'P']);
             $table->date('tgl_anak')->format('d-m-y');
             $table->string('tmp_anak');
             $table->char('golongan_darah');

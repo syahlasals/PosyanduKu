@@ -29,28 +29,22 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>No KK</th>
                                     <th>NIK Anak</th>
                                     <th>Nama Anak</th>
-                                    <th>Tempat, Tanggal Lahir</th>
                                     <th>Jenis Kelamin</th>
-                                    <th>Golongan Darah</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
                             @foreach ($anaks as $key => $anak)
                             <tr>
                                 <td>{{ $key + 1 }}</td>
-                                <td>{{ $anak->no_kk }}</td>
                                 <td>{{ $anak->nik_anak }}</td>
                                 <td>{{ $anak->nama_anak }}</td>
-                                <td>{{ $anak->tmp_anak}}, <br> {{ $anak->tgl_anak }}</td>
                                 <td>
                                     {{ $anak->jenkel_anak == 'L' ? 'Laki-Laki' : 'Perempuan' }}
                                 </td>
-                                <td>{{ $anak->golongan_darah }}</td>
-                                <td>
-                                    <div class="row">
+                                <td width="20%">
+                                    <div class="row d-flex">
                                         <div class="col-4">
                                             <a href="dataAnak/{{ $anak->nik_anak }}" class="btn btn-warning d-flex"><iconify-icon icon="fa:eye" width="20px" height="20px"></iconify-icon></a>
                                         </div>
@@ -64,7 +58,7 @@
                                                 @csrf
                                                 @method('delete')
                                                 <div class="form-group">
-                                                    <button class="btn btn-danger border-0 d-flex" onclick="return confirm('Are you sure you want to delete this post?')">
+                                                    <button class="btn btn-danger border-0 d-flex" onclick="return confirm('Are you sure you want to delete this data?')">
                                                         <span data-feather="x-circle"></span><iconify-icon icon="fluent:delete-24-filled" width="20px" height="20px"></iconify-icon>
                                                     </button>
                                                 </div>

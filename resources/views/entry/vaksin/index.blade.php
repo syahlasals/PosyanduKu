@@ -46,7 +46,7 @@
                                 
                                 <div class="row" style="margin-bottom: 15px;">
                                      <div class="col-3">
-                                        <label for="kode_vaksin"><b>Kode Vaksin</b></label>
+                                        <label for="kode_vaksin"><b>Kode Pemberian</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
