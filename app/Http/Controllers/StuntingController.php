@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\Models\Anak;
 use App\Models\Stunting;
+use App\Models\Penyimpangan;
+use App\Models\Pertumbuhan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -19,34 +21,44 @@ class StuntingController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Response 
      */
 
     public function tampilFormSdidtk($nik_anak)
     {
+        $kode_pertumbuhan = Pertumbuhan::where('nik_anak', $nik_anak)->first();
         return view('entry.formSdidtk.index',[
-            "nik_anak" => $nik_anak
+            "nik_anak" => $nik_anak,
+            "kode_pertumbuhan" =>  $kode_pertumbuhan
         ]);
     }
 
     public function tampilDataStunting()
     {
-        $sdidtks = Stunting::all();
-        return view('pengelola.dataStunting.index', compact('sdidtks'));
+        $semua = Anak::count();
+        $normal = Penyimpangan::where('status_penyimpangan','Normal')->count();
+        $gejalastunting = Penyimpangan::where('status_penyimpangan','Gejala Stunting')->count();
+        $stunting = Penyimpangan::where('status_penyimpangan','Stunting')->count();
+        return view('pengelola.dataImunisasi.index', [
+            'semua' => $semua,
+            'normal' => $normal,
+            'gejalastunting' => $gejalastunting,
+            'stunting' => $stunting,
+        ]);
     }
     
-    public function hitungAnak()
-    {
-        $anaks = Anak::count();
-        return view('pengelola.dataStunting.index', compact('anaks'));
-    }
+    // public function hitungAnak()
+    // {
+    //     $anaks = Anak::count();
+    //     return view('pengelola.dataStunting.index', compact('anaks'));
+    // }
 
     public function charts()
     {
-        $groups = DB::table('tb_anak')
-                            ->select('tmp_anak', DB::raw('count(*) as total'))
-                            ->groupBy('tmp_anak')
-                            ->pluck('total', 'tmp_anak')->all();
+        $groups = DB::table('tb_pertumbuhan')
+                            ->select('status_penyimpangan', DB::raw('count(*) as total'))
+                            ->groupBy('status_penyimpangan')
+                            ->pluck('total', 'status_penyimpangan')->all();
         for ($i=0; $i<=count($groups); $i++) {
             $colours[] = '#' . substr(str_shuffle('ABCDEF0123456789'), 0, 6);
         }
@@ -75,7 +87,8 @@ class StuntingController extends Controller
     {
         $this->validate($request, [
             'kode_pertumbuhan'=>'required',
-            'nik_anak'=>'required',
+            // 'nik_anak'=>'required',
+            'nama_anak'=>'required',
             'bb_tb'=>'required|in:1,0',
             'tb_u'=>'required|in:1,0',
             'kpsp'=>'required|in:1,0',
@@ -90,7 +103,8 @@ class StuntingController extends Controller
 
         $sdidtks = Stunting::create([
             'kode_pertumbuhan'=>$request->kode_pertumbuhan,
-            'nik_anak'=>$request->nik_anak,
+            // 'nik_anak'=>$request->nik_anak,
+            'nama_anak'=>$request->nama_anak,
             'bb_tb'=>$request->bb_tb,
             'tb_u'=>$request->tb_u,
             'kpsp'=>$request->kpsp,

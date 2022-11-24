@@ -43,28 +43,16 @@
                                 <td>
                                     {{ $anak->jenkel_anak == 'L' ? 'Laki-Laki' : 'Perempuan' }}
                                 </td>
-                                <td width="20%">
-                                    <div class="row d-flex">
-                                        <div class="col-4">
-                                            <a href="dataAnak/{{ $anak->nik_anak }}" class="btn btn-warning d-flex"><iconify-icon icon="fa:eye" width="20px" height="20px"></iconify-icon></a>
-                                        </div>
-                                        <div class="col-4">
-                                            <a href="dataAnak/{{ $anak->nik_anak }}/edit" class="btn btn-info d-flex"><iconify-icon icon="akar-icons:edit" width="20px" height="20px">
-                        
-                                            </iconify-icon></a>
-                                        </div>
-                                        <div class="col-4">
-                                            <!-- <form id="delete-form" method="POST"> -->
-                                                <!-- @csrf
-                                                @method('delete') -->
-                                                <div class="form-group">
-                                                    <button class="delete btn btn-danger" data-id="{{ $anak->nik_anak }}">
-                                                        <span data-feather="x-circle"></span><iconify-icon icon="fluent:delete-24-filled" width="20px" height="20px"></iconify-icon>
-                                                    </button>
-                                                </div>
-                                            <!-- </form> -->
-                                        </div>
+                                <td>
+                                <div class="row d-flex">
+                                    <div class="col-16">
+                                        <a href="dataAnak/{{ $anak->nik_anak }}"><button type="button" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Show Detail"><iconify-icon icon="fa:eye" width="20px" height="20px"></iconify-icon></button></a>
+                                        <a href="dataAnak/{{ $anak->nik_anak }}/edit"><button type="button" class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><iconify-icon icon="akar-icons:edit" width="20px" height="20px"></iconify-icon></button></a>
+                                        @csrf
+                                        @method('delete')
+                                            <button type="button" class="delete btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete" data-id="{{ $anak->nik_anak }}"><iconify-icon icon="fluent:delete-24-filled" width="20px" height="20px"></iconify-icon></button>
                                     </div>
+                                </div>
                                 </td>
                             </tr>
                             @endforeach

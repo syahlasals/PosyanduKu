@@ -26,29 +26,55 @@
     <div class="container">
         <h1 class="text-center mt-5 mb-5"><b>DATA STUNTING</b></h1>
 
+        <div class="row">
+            <div class="col">
+                <a href=""class="card card-ap">
+                    <div class="card-body">
+                        <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita Terdaftar</b></span> 
+                        <h1 class="justify-content-center">{{ $semua }}</h1>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="" class="card card-ip">
+                    <div class="card-body">
+                        <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita Normal</b></span> 
+                        <h1 class="justify-content-center">{{ $normal }}</h1>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="" class="card card-ap ">
+                    <div class="card-body">
+                        <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita Gejala Stunting</b></span> 
+                        <h1 class="justify-content-center">{{ $gejalastunting }}</h1>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="" class="card card-ip">
+                    <div class="card-body">
+                        <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita Stunting</b></span> 
+                        <h1 class="justify-content-center">{{ $stunting }}</h1>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <br>
         <table id="datastunting" class="table table-striped table-bordered text-center">
             <thead>
                 <tr>
-                    <th>RW</th>
-                    <th>RT</th>
                     <th>Jumlah Balita Terdaftar</th>
+                    <th>Jumlah Balita Normal</th>
+                    <th>Jumlah Balita Gejala Stunting</th>
                     <th>Jumlah Balita Stunting</th>
-                    {{-- <th>Prevalensi Balita Diukur (%)</th>
-                    <th>Prevalensi Balita Stunting (%)</th>   --}}
                 </tr>
             </thead>
             <tr>
-                <td>01</td>
-                <td>02</td>
-                <td>{{ $anaks }}</td>
-                <td>3</td>
-                {{-- <td>20%</td>
-                <td>50%</td> --}}
-            </tr>
-            <tr>
-                <td colspan="4"><b>Total : {{ $anaks }}</b></td>
-                {{-- <td>36,7%</td>
-                <td>76,3%</td> --}}
+                <td>{{ $semua }}</td>
+                <td>{{ $normal }}</td>
+                <td>{{ $gejalastunting }}</td>
+                <td>{{ $stunting }}</td>
             </tr>
         </table>
 

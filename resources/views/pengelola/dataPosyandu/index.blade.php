@@ -45,35 +45,35 @@
                         </div>
                         <div class="row mb-3">
                             <div class="col"></div>
-                            <div class="col">
+                            <div class="col-3">
                                 <h5 class="d-flex align-items-center justify-content-center"><b>Nama RT</b></h5>
                                 <p class="d-flex align-items-center justify-content-center">{{ $prfl->nama_rt }}</p>
                             </div>
-                            <div class="col d-flex align-items-center justify-content-center">
+                            <div class="col-1 d-flex align-items-center justify-content-center">
                                 <div class="garis_verikal"></div>
                             </div>
-                            <div class="col">
+                            <div class="col-3">
                                 <h5 class="d-flex align-items-center justify-content-center"><b>Nama RW</b></h5>
                                 <p class="d-flex align-items-center justify-content-center">{{ $prfl->nama_rw }}</p>
                             </div>
                             <div class="col"></div>
                         </div>
                         <div class="row mb-3">
-                            <div class="col">
+                            <div class="col-3">
                                 <h5 class="d-flex align-items-center justify-content-center"><b>Ketua Posyandu</b></h5>
                                 <p class="d-flex align-items-center justify-content-center">{{ $prfl->ketua }}</p>
                             </div>
-                            <div class="col d-flex align-items-center justify-content-center">
+                            <div class="col-1 d-flex align-items-center justify-content-center">
                                 <div class="garis_verikal"></div>
                             </div>
-                            <div class="col">
+                            <div class="col-4">
                                 <h5 class="d-flex align-items-center justify-content-center"><b>Sekretaris Posyandu</b></h5>
                                 <p class="d-flex align-items-center justify-content-center">{{ $prfl->sekretaris }}</p>
                             </div>
-                            <div class="col d-flex align-items-center justify-content-center">
+                            <div class="col-1 d-flex align-items-center justify-content-center">
                                 <div class="garis_verikal"></div>
                             </div>
-                            <div class="col">
+                            <div class="col-3">
                                 <h5 class="d-flex align-items-center justify-content-center"><b>Bendahara Posyandu</b></h5>
                                 <p class="d-flex align-items-center justify-content-center">{{ $prfl->bendahara }}</p>
                             </div>
@@ -81,39 +81,44 @@
                    </div><br><br>
                     @endforeach
 
-                    <div class="row">
-                        <div class="col d-flex justify-content-end">
-                            <div class="card" style="border-radius: 25px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25); width: 70%;">
-                            <div class="card-body">
-                                <h5 class="card-title text-center"><b>Visi</b></h5>
-                                <p class="card-text text-justify">
-                                    <li>Mampu mendeteksi dan memantau perkembangan kesehatan masyarakat setempat demi terciptanya peningkatan kesehatan masyarakat.</li><br>
-                                    <li>Melaksanakan kegiatan keposyanduaan secara bertanggung jawab untuk mencapai masa depan keluarga yang lebih baik.</li></p>
-                                </li>
+                    <div class="accordion accordion-flush profile-acor my-5" id="accordionFlushExample">
+                        <div class="accordion-item" style="background-color: #edf0f2;">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                    VISI
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">                                
+                                    <li>Mampu mendeteksi dan memantau perkembangan kesehatan masyarakat setempat demi terciptanya peningkatan kesehatan masyarakat.</li>
+                                    <li>Melaksanakan kegiatan keposyanduaan secara bertanggung jawab untuk mencapai masa depan keluarga yang lebih baik.</li>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" style="background-color: #edf0f2;">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                    MISI
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <li>Menjadi organisasi kesehatan yang dapat mendorong seluruh masyarakat untuk peduli terhadap kesehatan lingkungan hidup.</li>
+                                    <li>Menjadi kader yang berkualitas dengan memiliki dedikasi tinggi dan kepeduli terhadap lingkungannya.</li>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" style="background-color: #edf0f2;">
+                            <h2 class="accordion-header" id="flush-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    Alamat Lengkap
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Jl. Nanjung Kp. Mekar Bakti RT 02 RW 05 Desa Lagadar Kecamatan Margaasih Kabupaten Bandung</div>
                             </div>
                         </div>
                     </div>
-                    <div class="col d-flex justify-content-start">
-                        <div class="card" style="border-radius: 25px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25); width: 70%;">
-                        <div class="card-body">
-                            <h5 class="card-title text-center"><b>Misi</b></h5>
-                            <p class="card-text text-justify">
-                                <li>Menjadi organisasi kesehatan yang dapat mendorong seluruh masyarakat untuk peduli terhadap kesehatan lingkungan hidup.</li><br>
-                                <li>Menjadi kader yang berkualitas dengan memiliki dedikasi tinggi dan kepeduli terhadap lingkungannya.</li></p><br>
-                            </div>
-                        </div>
-                    </div>
-                </div><br>
-                
-                <!-- <div class="row">
-                    <div class="col d-flex justify-content-center">
-                        <div class="card text-center d-flex mt-4" style="box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25); width:80%;">
-                            <div class="card-body">Jl. Nanjung Kp. Mekar Bakti RT 04 RW 05 Desa Lagadar Kecamatan Margaasih Kabupaten Bandung</div>
-                        </div>
-                    </div>
-                </div>
-                <br><br> -->
-
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-3">
                         <a href="{{ url('pengelola') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
                       </div>
