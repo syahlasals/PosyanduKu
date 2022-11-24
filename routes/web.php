@@ -58,7 +58,7 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
         Route::resource('entry/pendaftaranAnak', DaftarAnakController::class)->middleware('entry');
         Route::get('entry/InputImunisasi', [AnakController::class, 'indexInputImunisasi'])->name('index-imunisasi')->middleware('entry');
         Route::get('entry/history', [AnakController::class, 'historyImunisasi'])->middleware('entry');
-        Route::resource('entry/sdidtkAnak', StuntingController::class)->middleware('entry');
+        Route::get('entry/sdidtkAnak/{id}', [StuntingController::class, 'index'])->middleware('entry');
     // });
 
         Route::get('entry/vaksin/{nik_anak}', [VaksinController::class, 'index'])->middleware('entry');
