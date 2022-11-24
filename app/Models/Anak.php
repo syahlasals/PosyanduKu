@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use PDF;
 
 class Anak extends Model
 {
@@ -21,14 +22,17 @@ class Anak extends Model
         'tmp_anak',
         'golongan_darah'
     ];
-        public function vaksins()
+    
+    public function vaksins()
     {
         return $this->hasMany(Vaksin::class, 'nik_anak');
     }
+    
     public function vitamins()
     {
         return $this->hasMany(Vitamin::class, 'nik_anak');
     }
+    
     public function tumbuhs()
     {
         return $this->hasMany(PertumbuhanStatus::class, 'nik_anak');

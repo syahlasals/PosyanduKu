@@ -16,7 +16,7 @@
         <br>SIMULASI DETEKSI INTERVENSI DINI TUMBUH KEMBANG (SDIDTK)</h2>
         <h5 class="text-center">(dilaksanakan oleh dokter/perawat/bidan/tenaga terlatih)</h5>
         <br>
-        <h5 class="text-center">Data An. {{$anak->nama_anak}}</h5>
+        <h5 class="text-center">Data a.n Maulid</h5>
         <br><br>
         <div>
             @if ($message = Session::get('success'))

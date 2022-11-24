@@ -16,7 +16,7 @@ class StuntingController extends Controller
     {
         $sdidtks = Stunting::where('nik_anak', $nik_anak)->get();
         $anak = Anak::where('nik_anak', $nik_anak)->first();
-        return view('entry.sdidtkAnak.index', compact('sdidtks', 'anak'));
+        return view('entry.sdidtkAnak.index', compact('sdidtks','anak'));
     }
 
     /**
