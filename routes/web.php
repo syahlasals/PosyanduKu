@@ -46,14 +46,11 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
         Route::get('hapuspetugas/dataPetugas', [PetugasController::class,'hapuspetugas'])->name('hapuspetugas');
         Route::get('dataPetugas/edit/{nip}',[PetugasController::class,'edit'])->name('edit');
         Route::post('dataPetugas/update/{nip}',[PetugasController::class,'update']);
-        Route::get('dataStunting', [StuntingController::class, 'tampilDataStunting'])->name('tampilDataStunting');
-        Route::get('dataStunting', [StuntingController::class, 'hitungAnak']);
         Route::resource('dataImunisasi', ImunisasiController::class);
         Route::get('dataImunisasi', [ImunisasiController::class, 'index']);
-        Route::resource('pengelola/sdidtkAnak', StuntingController::class);
+        Route::resource('sdidtkAnak', StuntingController::class);
+        Route::get('/', [StuntingController::class, 'charts'])->name('charts');
     });
-    
-    Route::get('pengelola', [StuntingController::class, 'charts'])->name('charts');
 
     
     // Route::prefix('entry')->middleware('entry')->group(function () {
@@ -72,6 +69,8 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
         Route::post('store/pertumbuhan', [PertumbuhanController::class, 'store'])->middleware('entry');
         Route::get('entry/formSdidtk/{nik_anak}', [StuntingController::class, 'tampilFormSdidtk'])->middleware('entry');
         Route::post('store/formSdidtk', [StuntingController::class, 'store'])->middleware('entry');
+        Route::get('entry/statusPenyimpangan/{nik_anak}', [PertumbuhanController::class, 'indexs'])->middleware('entry');
+        Route::post('stores/statusPenyimpangan', [PertumbuhanController::class, 'stores'])->middleware('entry');
     
     
     // Route::prefix('ortu')->middleware('ortu')->group(function () {

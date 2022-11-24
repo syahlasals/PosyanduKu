@@ -53,13 +53,26 @@
                                         </div>
                                         <input type="hidden" name="nik_anak" id="nik_anak" class="form-control" value={{$nik_anak}}>
                                     </div>
-                                    <div class="row" style="margin-bottom: 15px;">
+
+                                    <!-- <div class="row" style="margin-bottom: 15px;">
                                         <div class="col-3">
-                                            <label for="kode_pertumbuhan"><b>Kode Pengecekan</b></label>
+                                            <label for="nama_anak"><b>Nama Anak</b></label>
                                         </div>
                                         <div class="col-1"><b>:</b></div>
                                         <div class="col-8">
-                                            <input type="text" name="kode_pertumbuhan" id="kode_pertumbuhan" class="form-control">
+                                            <input type="text" name="nama_anak" id="nama_anak" class="form-control"value="{{$nama_anak}}" disabled>
+                                        </div>
+                                        <input type="hidden" name="nama_anak" id="nama_anak" class="form-control" value={{$nama_anak}}>
+                                    </div> -->
+
+                                    <div class="row" style="margin-bottom: 15px;">
+                                        <div class="col-3">
+                                            <label for="kode_pertumbuhan"><b>Kode Pertumbuhan</b></label>
+                                        </div>
+                                        <div class="col-1"><b>:</b></div>
+                                        <div class="col-8">
+                                            <input type="text" name="kode_pertumbuhan" id="kode_pertumbuhan" value="{{ $kode_pertumbuhan->kode_pertumbuhan }}" class="form-control" disabled>
+                                            <input type="hidden" name="kode_pertumbuhan" id="kode_pertumbuhan" value="{{ $kode_pertumbuhan->kode_pertumbuhan }}" class="form-control">
                                         </div>
                                     </div>
                                     <div class="col-3">

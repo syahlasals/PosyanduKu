@@ -22,7 +22,7 @@
                 <!--End of Topbar-->
 
     <div class="container-fluid">
-        <h1 class="text-center mt-5 mb-5"><b>Rekap Anak</b></h1>
+        <h1 class="text-center mt-5 mb-5"><b>REKAP ANAK</b></h1>
         
         <div>
             @if ($message = Session::get('success'))
@@ -32,6 +32,44 @@
             </div>
             @endif
         </div>
+
+        <div class="row">
+            <div class="col">
+                <a href=""class="card card-ap">
+                    <div class="card-body">
+                        <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita Terdaftar</b></span> 
+                        <h1 class="text-center">{{ $semua }}</h1>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="" class="card card-ip">
+                    <div class="card-body">
+                        <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita Normal</b></span> 
+                        <h1 class="text-center">{{ $normal }}</h1>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="" class="card card-ap ">
+                    <div class="card-body">
+                        <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita Gejala Stunting</b></span> 
+                        <h1 class="text-center">{{ $gejalastunting }}</h1>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="" class="card card-ip">
+                    <div class="card-body">
+                        <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita Stunting</b></span> 
+                        <h1 class="text-center">{{ $stunting }}</h1>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <br><br>
+
         <table id="dataimunisasi" class="table table-striped table-bordered text-center" border="1">
         <thead>
             <tr>
@@ -39,7 +77,7 @@
                 <!--<th>Nama Posyandu</th>-->
                 <th>NIK Anak</th>
                 <th>Nama Anak</th>
-                <th>Tanggal Imunisasi</th>
+                <!--<th>Tanggal Imunisasi</th>-->
                 <th>Vaksin</th>
                 <th>Vitamin</th>
                 <th>Status Pertumbuhan</th>
@@ -52,11 +90,11 @@
                 <!--<td></td>-->
                 <td>{{ $data->nik_anak }}</td>
                 <td>{{ $data->nama_anak }}</td>
-                <td>
+                {{-- <td>
                     @foreach ($data->vaksins as $item)
                     {{ $item->tgl_vaksin }}
                     @endforeach
-                </td>
+                </td> --}}
                 <td>
                     @foreach ($data->vaksins as $item)
                     {{ $item->jenis_vaksin }}

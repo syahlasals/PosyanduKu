@@ -22,25 +22,28 @@
 
                 <!--Topbar-->
                 @include('template.nav')
-                {{-- <x-app-layout>
-                </x-app-layout> --}}
 
                 <!--End of Topbar-->
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <div class="card card-welcomep mb-5">
-                        <div class="card-body d-flex align-items-center justify-content-center">
-                        <h1 style="color: white;"><b>Selamat Datang, {{ Auth::user()->name }}</b></h1>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col d-flex justify-content-center">
-                            <a href="/entry/pendaftaranAnak" class="card card-ap">
-                                <div class="card-body">
-                                    <h4 class=" d-flex align-items-center justify-content-center mb-3"><b>Pendaftaran</b></h4> 
+                    <div class="container">
+                        <div class="row">
+                            <div class="col my-5">
+                                <img src="{{ asset('template/img/Group_90bg.svg') }}" alt="">
+                            </div>
+                            <div class="col my-5 d-flex card card-registrasi">
+                                <div class="d-flex align-items-center justify-content-center text-center">
+                                    <h1><b>Selamat Datang, {{ Auth::user()->name }}</b></h1>
                                 </div>
-                            </a>
+                                <a href="/entry/pendaftaranAnak">
+                                    <div class="card-body">
+                                        <div class="card-ap card-daftar">
+                                            <h4 class=" d-flex align-items-center justify-content-center py-2 text-center"><b>Pendaftaran</b></h4> 
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

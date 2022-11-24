@@ -3,25 +3,19 @@
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center">
-        <div class="sidebar-brand-icon">
-            <img style="width: 100%; height:100%;" src="{{ asset('template/img/minilogo_posyandu.svg') }}" alt="logo">
-        </div>
+    <div class="pictureposyandu d-flex align-items-center justify-content-center">
+        <img src="{{ asset('template/img/minilogo_posyandu.svg') }}" alt="img dasboard" style="margin:10px; height:70%; width:70%;">
+    </div>
         <div class="sidebar-brand-text mx-3"><i>Posyanduku</i></div>
     </a>
 
-    <!-- Divider -->
-    <hr class="sidebar-divider my-0">
-    <div class="pictureposyandu d-flex align-items-center justify-content-center">
-        <img src="{{ asset('template/img/picture_dasboard.svg') }}" alt="img dasboard" style="margin:10px; height:70%; width:70%;">
-    </div>
 
+    <!-- Heading 
+    <div class="sidebar-heading text-center">
+        <b>Petugas Pengelola</b>
+    </div>-->
     <!-- Divider -->
     <hr class="sidebar-divider">
-
-    <!-- Heading -->
-    <div class="sidebar-heading">
-        Petugas Pengelola
-    </div>
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item {{ Request::is('pengelola') ? 'active' : '' }}">
@@ -42,7 +36,7 @@
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Data Status:</h6>
                 <a class="collapse-item {{ Request::is('pengelola/dataImunisasi') ? 'active' : '' }}" href="{{ url('pengelola/dataImunisasi') }}">Rekap Anak</a>
-                <a class="collapse-item {{ Request::is('pengelola/dataStunting') ? 'active' : '' }}" href="{{ url('pengelola/dataStunting') }}">Data Stunting</a>
+                {{-- <a class="collapse-item {{ Request::is('pengelola/dataStunting') ? 'active' : '' }}" href="{{ url('pengelola/dataStunting') }}">Data Stunting</a> --}}
                 <div class="collapse-divider"></div>
                 <h6 class="collapse-header">Data Umum:</h6>
                 <a class="collapse-item {{ Request::is('pengelola/dataAnak') ? 'active' : '' }}" href="{{ url('pengelola/dataAnak') }}">Data Anak</a>

@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <title>Data Anak</title>
     @include('template.head')
 </head>
 <body>
@@ -17,7 +16,7 @@
         <br>SIMULASI DETEKSI INTERVENSI DINI TUMBUH KEMBANG (SDIDTK)</h2>
         <h5 class="text-center">(dilaksanakan oleh dokter/perawat/bidan/tenaga terlatih)</h5>
         <br>
-        <h5 class="text-center">Data a.n Maulid</h5>
+        <!-- <h5 class="text-center">Data a.n Maulid</h5> -->
         <br><br>
         <div>
             @if ($message = Session::get('success'))
@@ -30,7 +29,7 @@
         <table id="datastunting" class="table table-striped table-bordered text-center">
             <thead>
                 <tr>
-                    <th rowspan="3" class="justify-content-center">Umur Bayi</th>
+                    <th rowspan="3" class="justify-content-center">No</th>
                     <th colspan="10">Jenis Skrining/Deteksi Dini Penyimpangan Tumbuh Kembang</th>
                 </tr>
                 <tr>
@@ -40,7 +39,8 @@
                     <th colspan="3">Deteksi Dini Penyimpangan Perilaku Emosional</th>
                 </tr>
                 <tr>
-                    <th>KODE PERTUMBUHAN</th>
+                    <th>NIK Anak</th>
+                    <!-- <th>Nama Anak</th> -->
                     <th>BB/TB</th>
                     <th>TB/U</th>
                     <th>LK</th>
@@ -56,8 +56,9 @@
 
             @foreach ($sdidtks as $key => $sdidtk)
             <tr>
-                <th>{{$key + 1}} Bulan</th>
-                <td>{{$sdidtk->kode_pertumbuhan}}</td>
+                <th>{{$key + 1}}</th>
+                <td>{{$sdidtk->nik_anak}}</td>
+                <!-- <td>{{$sdidtk->nama_anak}}</td> -->
                 <td>{{$sdidtk->bb_tb == 1 ? 'Normal' : 'Tidak Normal'}}</td>
                 <td>{{$sdidtk->tb_u == 1 ? 'Normal' : 'Tidak Normal'}}</td>
                 <td>{{$sdidtk->lk == 1 ? 'Normal' : 'Tidak Normal'}}</td>
