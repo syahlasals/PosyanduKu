@@ -70,7 +70,7 @@
 
         <br><br>
 
-        <a href="dataImunisasi/print" class="btn btn-primary" target="_blank">Print Rekap Anak</a><br><br>
+        <a href="dataImunisasi/print" class="btn btn-primary" target="_blank">Print Rekap Anak <i class="fa-sharp fa-solid fa-print"></i></a><br><br>
         <table id="dataimunisasi" class="table table-striped table-bordered text-center" border="1">
         <thead>
             <tr>
