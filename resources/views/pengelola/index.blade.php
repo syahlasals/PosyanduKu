@@ -85,7 +85,7 @@
                     </div>
                     <div class="container">
                         <div class="row mb-3">
-                            <div class="col d-flex justify-content-center my-5">
+                            <div class="col d-flex justify-content-center my-5" style="height: 400px">
                                 <canvas id="userChart" class="rounded shadow" style="width:100%;max-width:1500px;height:100%;max-height:500px"></canvas>
                             </div>
                         </div>
@@ -131,7 +131,7 @@
                 {
                     label: 'Status Pertumbuhan per Anak',
                     // backgroundColor: {!! json_encode($chart->colours)!!} ,
-                    backgroundColor: ["#647BB1", "#CCB2E0", "#DDA0DD", "#9370D8", "#87CEFA"] ,
+                    backgroundColor: ["#647BB1", "#CCB2E0", "#C8C8C8", "#9370D8", "#87CEFA", ] ,
                     data:  {!! json_encode($chart->dataset)!!} ,
                 },
             ]
@@ -166,7 +166,9 @@
                     top: 0,
                     bottom: 5
                 }
-            }
+            },
+            maintainAspectRatio: false,
+            responsive: true,
         }
     });
 </script>
