@@ -9,7 +9,7 @@ class Pertumbuhan extends Model
 {
     use HasFactory;
     public $timestamps = false;
-    // protected $primaryKey = "kode_pertumbuhan";
+    protected $primaryKey = "kode_pertumbuhan";
     protected $table = "tb_detailpertumbuhan";
     protected $fillable = [
        'kode_pertumbuhan', 'nik_anak', 'tinggi','berat', 'lingkar_kepala'];

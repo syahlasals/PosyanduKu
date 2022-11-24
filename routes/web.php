@@ -48,10 +48,9 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
         Route::post('dataPetugas/update/{nip}',[PetugasController::class,'update']);
         Route::resource('dataImunisasi', ImunisasiController::class);
         Route::get('dataImunisasi', [ImunisasiController::class, 'index']);
-        Route::resource('pengelola/sdidtkAnak', StuntingController::class);
+        Route::resource('sdidtkAnak', StuntingController::class);
+        Route::get('/', [StuntingController::class, 'charts'])->name('charts');
     });
-    
-    Route::get('pengelola', [StuntingController::class, 'charts'])->name('charts');
 
     
     // Route::prefix('entry')->middleware('entry')->group(function () {

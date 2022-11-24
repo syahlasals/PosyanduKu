@@ -51,13 +51,12 @@
                 <td width="35%">
                 <div class="row d-flex">
                     <div class="col-14">
-                        
                         {{-- <a href="/entry/history"><button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="History"><i class="fa-solid fa-clock-rotate-left"></i></button></a> --}}
                         <a href="/entry/pertumbuhan/{{$anak->nik_anak}}"><button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Form Pertumbuhan"><i class="fa-solid fa-hands-holding-child"></i></button></a>
                         <a href="/entry/vaksin/{{$anak->nik_anak}}"><button type="button" class="btn btn-success" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Form Vaksin"><i class="fa-solid fa-syringe"></i></button></a>
                         <a href="/entry/vitamin/{{$anak->nik_anak}}"><button type="button" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Form Vitamin"><i class="fa-solid fa-capsules"></i></button></a>
-                        <a href="/entry/statusPenyimpangan/{{$anak->nik_anak}}"><button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Status Penyimpangan"><i class="fa-solid fa-baby"></i></button></a>
                         <a href="/entry/formSdidtk/{{$anak->nik_anak}}"><button type="button" class="btn btn-danger" style="background-color: #dc55d5; border-color: #dc55d5;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Form SDIDTK"><i class="fa-solid fa-person"></i></button></a>
+                        <a href="/entry/statusPenyimpangan/{{$anak->nik_anak}}"><button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Status Penyimpangan"><i class="fa-solid fa-baby"></i></button></a>
                         <a href="/entry/sdidtkAnak"><button type="button" class="btn btn-danger" style="background-color: #FFD700; border-color: #FFD700;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Data SDIDTK"><i class="fa-solid fa-calendar"></i></button></a>
                     </div>
                 </div>

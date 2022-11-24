@@ -12,11 +12,9 @@ class PertumbuhanController extends Controller
 {
     public function index($nik_anak)
     {
-        $kode_pertumbuhan = Penyimpangan::where('nik_anak', $nik_anak)->first();
         return view ('entry.pertumbuhan.index', [
-            "nik_anak" => $nik_anak,
-            "kode_pertumbuhan" =>  $kode_pertumbuhan
-          ]);
+            "nik_anak" => $nik_anak
+        ]);
     }
 
     public function store(Request $request)
@@ -42,8 +40,10 @@ class PertumbuhanController extends Controller
 
     public function indexs($nik_anak)
     {
+        $kode_pertumbuhan = Pertumbuhan::where('nik_anak', $nik_anak)->first();
         return view ('entry.statusPenyimpangan.index', [
-            "nik_anak" => $nik_anak
+            "nik_anak" => $nik_anak,
+            "kode_pertumbuhan" =>  $kode_pertumbuhan
           ]);
     }
 

@@ -47,23 +47,12 @@
                 <td>{{$ptgs->jabatan}}</td>
                 <td>{{$ptgs->alamat_petugas}}</td>
                 <td>
-                <div class="row justify-content">
-                <div class="col-3">
-                <div class="form-group">
-                    <button class="delete btn btn-danger" data-id="{{ $ptgs->nip }}">
-                    <i class="fas fa-trash-alt"></i>
-                    </button>
-                    </div>         
-                <!-- <form action="{{ route('hapuspetugas') }}">
-                    <input type="hidden" name= "nip" value="{{ $ptgs->nip }}">
-                    <button class="delete btn btn-danger" data-id="{{ $ptgs->nip }}" style="color:#000000;"><i class="fas fa-trash-alt"></i></button>
-                </form> -->
-                </div>
-                <div class="col-3">
-                <a href="{{ route('edit', $ptgs->nip) }}" class="btn btn-warning" style="color:#000000;"><i class="fas fa-pencil-alt"></i></a>
-                </div>
+                    <div class="row d-flex">
+                        <div class="col-16">
+                            <a href="{{ route('edit', $ptgs->nip) }}"><button type="button" class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><i class="fas fa-pencil-alt"></i></button></a>
+                            <button type="button" class="delete btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete" data-id="{{ $ptgs->nip }}"><i class="fas fa-trash-alt"></i></button>
+                    </div>
                 </td>
-                </div>
             </tr>
             @endforeach
         </table>
