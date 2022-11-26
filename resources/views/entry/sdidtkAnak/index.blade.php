@@ -39,7 +39,8 @@
                     <th colspan="3">Deteksi Dini Penyimpangan Perilaku Emosional</th>
                 </tr>
                 <tr>
-                    <th>NIK Anak</th>
+                    <!-- <th>NIK Anak</th>
+                    <th>Bulan</th> -->
                     <th>BB/TB</th>
                     <th>TB/U</th>
                     <th>LK</th>
@@ -56,7 +57,8 @@
             @foreach ($sdidtks as $key => $sdidtk)
             <tr>
                 <th>{{$key + 1}}</th>
-                <td>{{$sdidtk->nik_anak}}</td>
+                <!-- <td>{{$sdidtk->nik_anak}}</td>
+                <td>{{$sdidtk->bulan}}</td> -->
                 <td>{{$sdidtk->bb_tb == 1 ? 'Normal' : 'Tidak Normal'}}</td>
                 <td>{{$sdidtk->tb_u == 1 ? 'Normal' : 'Tidak Normal'}}</td>
                 <td>{{$sdidtk->lk == 1 ? 'Normal' : 'Tidak Normal'}}</td>
