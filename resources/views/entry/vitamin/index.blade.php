@@ -64,6 +64,15 @@
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
+                                        <label for="tgl_vitamin"><b>Tanggal Imunisasi</b></label>
+                                    </div>
+                                    <div class="col-1"><b>:</b></div>
+                                    <div class="col-8"> 
+                                        <input type="date" name="tgl_vitamin" id="tgl_vitamin" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <div class="col-3">
                                         <label for="janis_vitamin"><b>Jenis Vitamin</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>

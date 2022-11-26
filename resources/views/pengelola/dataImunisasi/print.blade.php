@@ -117,9 +117,4 @@
 <i class="fas fa-angle-up"></i>
 </a>
 </body>
-<script> 
-$(document).ready( function () {
-    $('#dataimunisasi').DataTable();
-} );
-</script>
 </html>

@@ -63,6 +63,16 @@
                                             <input type="hidden" name="kode_pertumbuhan" id="kode_pertumbuhan" value="{{ $kode_pertumbuhan->kode_pertumbuhan }}" class="form-control">
                                         </div>
                                     </div>
+                                    <div class="row" style="margin-bottom: 15px;">
+                                        <div class="col-3">
+                                            <label for="tgl_hitung"><b>Tanggal Imunisasi</b></label>
+                                        </div>
+                                        <div class="col-1"><b>:</b></div>
+                                        <div class="col-8"> 
+                                            <input type="date" name="tgl_hitung" id="tgl_hitung" value="{{ $tgl_hitung->tgl_hitung }}" class="form-control" disabled>
+                                            <input type="hidden" name="tgl_hitung" id="tgl_hitung" value="{{ $tgl_hitung->tgl_hitung }}" class="form-control">
+                                        </div>
+                                    </div>
                                     <div class="col-3">
                                         <label for="bb_tb"><b>BB/TB</b></label>
                                     </div>
