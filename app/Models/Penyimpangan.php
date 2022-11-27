@@ -13,7 +13,7 @@ class Penyimpangan extends Model
     // protected $primaryKey = "kode_pertumbuhan";
     protected $table = "tb_pertumbuhan";
     protected $fillable = [
-       'kode_pertumbuhan','nik_anak','hasil_imt','riwayat_penyakit','status_penyimpangan'];
+       'kode_pertumbuhan','nik_anak','hasil_imt','riwayat_penyakit','status_penyimpangan','tgl_hitung'];
 
     public function Anak()
     {
