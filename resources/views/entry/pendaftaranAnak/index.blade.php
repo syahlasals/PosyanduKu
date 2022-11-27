@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,6 +39,9 @@
                                     </ul>
                                 </div>
                             @endif
+                            @if (Session::has('msg'))
+                                <div class="alert alert-danger">{{ Session::get('msg') }}</div>
+                            @endif
                             <form method="POST" action="/entry/pendaftaranAnak" id="myform" style="margin-top: 15px; margin-bottom: 15px;">
                                 @csrf
                                 <div class="row" style="margin-bottom: 15px;">
@@ -51,6 +53,7 @@
                                         <input type="number" name="no_kk" id="no_kk" class="form-control">
                                     </div>
                                 </div>
+                                        
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
                                         <label for="nik_anak"><b>NIK Anak</b></label>
@@ -159,10 +162,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
