@@ -66,7 +66,10 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8"> 
-                                        <input type="number" name="tinggi" id="tinggi" class="form-control">
+                                    <p class="form-control">
+                                        <input type="number" name="tinggi" id="tinggi" style="border: none;" >
+                                        <span style="margin-left: 43%;">cm</span>
+                                    </p>
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
@@ -75,7 +78,10 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="number" name="berat" id="berat" class="form-control">
+                                        <p class="form-control">
+                                            <input type="number" name="berat" id="berat" style="border: none;">
+                                            <span style="margin-left: 45%;">kg</span>                     
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
@@ -84,7 +90,10 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="number" name="lingkar_kepala" id="lingkar_kepala" class="form-control">                                
+                                        <p class="form-control">
+                                            <input type="number" name="lingkar_kepala" id="lingkar_kepala" style="border: none;">
+                                            <span style="margin-left: 43%;">cm</span>            
+                                        </p>                   
                                     </div>
                                 </div>
                                 <br>
