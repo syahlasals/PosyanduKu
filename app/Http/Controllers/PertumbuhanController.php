@@ -24,7 +24,8 @@ class PertumbuhanController extends Controller
             'nik_anak' =>'required',
             'tinggi'=>'required',
             'berat'=>'required',
-            'lingkar_kepala'=>'required'
+            'lingkar_kepala'=>'required',
+            'tgl_hitung'=>'required'
         ]);
 
         $pertumbuhans = Pertumbuhan::create([
@@ -32,7 +33,8 @@ class PertumbuhanController extends Controller
             'nik_anak'=>$request->nik_anak,
             'tinggi'=>$request->tinggi,
             'berat'=>$request->berat,
-            'lingkar_kepala'=>$request->lingkar_kepala
+            'lingkar_kepala'=>$request->lingkar_kepala,
+            'tgl_hitung'=>$request->tgl_hitung
         ]);
 
         return redirect('/entry/InputImunisasi')->with('success', 'Data Pertumbuhan Berhasil Ditambahkan!');
@@ -41,9 +43,11 @@ class PertumbuhanController extends Controller
     public function indexs($nik_anak)
     {
         $kode_pertumbuhan = Pertumbuhan::where('nik_anak', $nik_anak)->first();
+        $tgl_hitung = Pertumbuhan::where('nik_anak', $nik_anak)->first();
         return view ('entry.statusPenyimpangan.index', [
             "nik_anak" => $nik_anak,
-            "kode_pertumbuhan" =>  $kode_pertumbuhan
+            "kode_pertumbuhan" =>  $kode_pertumbuhan,
+            "tgl_hitung" =>  $tgl_hitung,
           ]);
     }
 
@@ -53,13 +57,14 @@ class PertumbuhanController extends Controller
             'kode_pertumbuhan'=>'required',
             'nik_anak' =>'required',
             'status_penyimpangan' => 'required',
-            
+            'tgl_hitung'=>'required'
         ]);
 
         $penyimpangans = Penyimpangan::create([
             'kode_pertumbuhan'=>$request->kode_pertumbuhan,
             'nik_anak'=>$request->nik_anak,
-            'status_penyimpangan'=>$request->status_penyimpangan
+            'status_penyimpangan'=>$request->status_penyimpangan,
+            'tgl_hitung'=>$request->tgl_hitung
         ]);
 
         return redirect('/entry/InputImunisasi')->with('success', 'Data Penyimpangan Berhasil Ditambahkan!');

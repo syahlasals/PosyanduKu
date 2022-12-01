@@ -12,7 +12,7 @@ class Pertumbuhan extends Model
     protected $primaryKey = "kode_pertumbuhan";
     protected $table = "tb_detailpertumbuhan";
     protected $fillable = [
-       'kode_pertumbuhan', 'nik_anak', 'tinggi','berat', 'lingkar_kepala'];
+       'kode_pertumbuhan', 'nik_anak', 'tinggi','berat', 'lingkar_kepala','tgl_hitung'];
        
        public function Anak()
     {

@@ -25,7 +25,7 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <h1 class="text-center"><b>Data Pertumbuhan</b></h1><br>
+                    <h1 class="text-center"><b>Form Pertumbuhan</b></h1><br>
                     <div class="container d-flex justify-item-center justify-content-center"><br>
                         <div class="card card-form">
                             <div class="card-body">
@@ -58,6 +58,15 @@
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
                                         <input type="text" name="kode_pertumbuhan" id="kode_pertumbuhan" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <div class="col-3">
+                                        <label for="tgl_hitung"><b>Tanggal Imunisasi</b></label>
+                                    </div>
+                                    <div class="col-1"><b>:</b></div>
+                                    <div class="col-8"> 
+                                        <input type="date" name="tgl_hitung" id="tgl_hitung" class="form-control">
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">

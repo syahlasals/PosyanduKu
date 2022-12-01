@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Anak;
+use App\Models\Ortu;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -25,6 +26,13 @@ class DaftarAnakController extends Controller
             'golongan_darah'=>'required',
         ]);
 
+        $ortu = Ortu::where('no_kk', $request->no_kk)->first();
+
+        if($ortu == null){
+        return back()->with('msg','No Kartu Keluarga belum terdaftar!');
+        }else{
+
+
         $anaks = Anak::create([
             'no_kk'=>$request->no_kk,
             'nik_anak'=>$request->nik_anak,
@@ -36,5 +44,6 @@ class DaftarAnakController extends Controller
         ]);
 
         return redirect('/entry/pendaftaranAnak')->with('success', 'Berhasil Mendaftar');
+    };
     }
 }
