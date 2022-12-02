@@ -24,8 +24,8 @@
                 <!--End of Topbar-->
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
-                    <h1 class="text-center"><b>Form Pertumbuhan</b></h1><br>
+                <div class="container-fluid"><br>
+                    <h1 class="text-center"><b>Masukan Data Pertumbuhan</b></h1><br><br>
                     <div class="container d-flex justify-item-center justify-content-center"><br>
                         <div class="card card-form">
                             <div class="card-body">
@@ -50,7 +50,8 @@
                                         <input type="number" name="nik_anak" id="nik_anak" class="form-control"value="{{$nik_anak}}" disabled>
                                     </div>
                                     <input type="hidden" name="nik_anak" id="nik_anak" class="form-control" value={{$nik_anak}}>
-                                <div class="row" style="margin-bottom: 15px;">
+                                </div>
+                                    <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
                                         <label for="tgl_hitung"><b>Tanggal Imunisasi</b></label>
                                     </div>

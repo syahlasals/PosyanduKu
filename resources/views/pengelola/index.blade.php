@@ -54,7 +54,7 @@
                             <div class="col">
                                 <a href="{{ url('pengelola/dataImunisasi') }}" class="card card-ip">
                                     <div class="card-body">
-                                        <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Data Imunisasi</b></span> 
+                                        <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Rekap Anak</b></span> 
                                         <div class="baby d-flex align-items-center justify-content-center">
                                             <iconify-icon icon="fontisto:injection-syringe" style="color: black;" width="30" height="30"></iconify-icon>
                                         </div> 

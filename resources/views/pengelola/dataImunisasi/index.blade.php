@@ -98,15 +98,24 @@
                 </td> --}}
                 <td>
                     @foreach ($data->vaksins as $item)
-                    {{ $item->jenis_vaksin }}
+                    {{ $item->tgl_vaksin }}
                     @endforeach
+                    <br>
+                    @foreach ($data->vaksins as $item)
+                    {{ $item->jenis_vaksin }}
+                    @endforeach                  
                 </td>
                 <td>
+                    @foreach ($data->vitamins as $item)
+                    {{ $item->tgl_vitamin }}
+                    @endforeach
+                    <br>
                     @foreach ($data->vitamins as $item)
                     {{ $item->jenis_vitamin }}
                     @endforeach
                 </td>
-                <td>@foreach ($data->tumbuhs as $item)
+                <td>
+                    @foreach ($data->tumbuhs as $item)
                     {{ $item->status_penyimpangan }}
                     @endforeach
                 </td>

@@ -23,6 +23,7 @@
                 <!--Topbar-->
                 @include('template.nav')
                 <!--End of Topbar-->
+                <br><h1 class="text-center"><b>Detail Data Anak</b></h1><br><br>
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
