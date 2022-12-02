@@ -89,7 +89,6 @@ class StuntingController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'kode_pertumbuhan'=>'required',
             'nik_anak'=>'required',
             'bb_tb'=>'required|in:1,0',
             'tb_u'=>'required|in:1,0',
@@ -105,7 +104,6 @@ class StuntingController extends Controller
         // return redirect('/entry/InputImunisasi')->with('success', 'Data SDIDTK berhasil di tambahkan');
 
         $sdidtks = Stunting::create([
-            'kode_pertumbuhan'=>$request->kode_pertumbuhan,
             'nik_anak'=>$request->nik_anak,
             'bb_tb'=>$request->bb_tb,
             'tb_u'=>$request->tb_u,

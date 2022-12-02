@@ -18,14 +18,12 @@ class VitaminController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'kode_vitamin'=>'required',
             'jenis_vitamin'=>'required',
             'tgl_vitamin'=>'required',
         ]);
 
 
         $vitamins = Vitamin::create([
-            'kode_vitamin'=>$request->kode_vitamin,
             'nik_anak'=>$request->nik_anak,
             'jenis_vitamin'=>$request->jenis_vitamin,
             'tgl_vitamin'=>$request->tgl_vitamin,
