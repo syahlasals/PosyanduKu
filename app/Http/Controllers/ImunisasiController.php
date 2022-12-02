@@ -28,6 +28,7 @@ class ImunisasiController extends Controller
 
     public function print()
     {
+        $tanggal = date('d F y');
         $anaks = Anak::all();
         $semua = Anak::count();
         $normal = Penyimpangan::where('status_penyimpangan','Normal')->count();
@@ -39,6 +40,7 @@ class ImunisasiController extends Controller
             'normal' => $normal,
             'gejalastunting' => $gejalastunting,
             'stunting' => $stunting,
+            'tanggal' => $tanggal
         ]);
     }
 }
