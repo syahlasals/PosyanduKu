@@ -20,7 +20,6 @@ class PertumbuhanController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'kode_pertumbuhan'=>'required',
             'nik_anak' =>'required',
             'tinggi'=>'required',
             'berat'=>'required',
@@ -29,7 +28,6 @@ class PertumbuhanController extends Controller
         ]);
 
         $pertumbuhans = Pertumbuhan::create([
-            'kode_pertumbuhan'=>$request->kode_pertumbuhan,
             'nik_anak'=>$request->nik_anak,
             'tinggi'=>$request->tinggi,
             'berat'=>$request->berat,
@@ -54,14 +52,12 @@ class PertumbuhanController extends Controller
     public function stores(Request $request)
     {
         $this->validate($request, [
-            'kode_pertumbuhan'=>'required',
             'nik_anak' =>'required',
             'status_penyimpangan' => 'required',
             'tgl_hitung'=>'required'
         ]);
 
         $penyimpangans = Penyimpangan::create([
-            'kode_pertumbuhan'=>$request->kode_pertumbuhan,
             'nik_anak'=>$request->nik_anak,
             'status_penyimpangan'=>$request->status_penyimpangan,
             'tgl_hitung'=>$request->tgl_hitung

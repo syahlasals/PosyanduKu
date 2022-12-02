@@ -43,15 +43,7 @@
                             @endif -->
                             <form method="POST" action="/store/vitamin" id="myform">
                                 @csrf
-                                <div class="row" style="margin-bottom: 15px;">
-                                    <div class="col-3">
-                                        <label for="kode_vitamin"><b>Kode Pemberian</b></label>
-                                    </div>
-                                    <div class="col-1"><b>:</b></div>
-                                    <div class="col-8">
-                                        <input type="text" name="kode_vitamin" id="kode_vitamin" class="form-control">
-                                    </div>
-                                </div>
+                               
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
                                         <label for="nik_anak"><b>NIK Anak</b></label>
