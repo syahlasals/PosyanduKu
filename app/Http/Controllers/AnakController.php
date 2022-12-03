@@ -118,10 +118,7 @@ class AnakController extends Controller
         return view('entry.inputImunisasi.index', compact('anaks'));
     }
 
-    public function historyImunisasi()
-    {
-        return view('entry.historyImunisasi.index');
-    }
+
 
     public function pertumbuhan()
     {

@@ -37,7 +37,7 @@
             <div class="col">
                 <div class="card card-ap">
                     <div class="card-body">
-                        <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita <br> Terdaftar</b></span> 
+                        <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Batita <br> Terdaftar</b></span> 
                         <h1 class="text-center">{{ $semua }}</h1>
                     </div>
                 </div>
@@ -45,7 +45,7 @@
             <div class="col">
                 <div class="card card-ip">
                     <div class="card-body">
-                        <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita <br> Normal</b></span> 
+                        <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Batita <br> Normal</b></span> 
                         <h1 class="text-center">{{ $normal }}</h1>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
             <div class="col">
                 <div class="card card-ap ">
                     <div class="card-body">
-                        <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita Gejala <br> Stunting</b></span> 
+                        <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Batita Gejala <br> Stunting</b></span> 
                         <h1 class="text-center">{{ $gejalastunting }}</h1>
                     </div>
                 </div>
@@ -61,7 +61,7 @@
             <div class="col">
                 <div class="card card-ip">
                     <div class="card-body">
-                        <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita <br> Stunting</b></span> 
+                        <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Batita <br> Stunting</b></span> 
                         <h1 class="text-center">{{ $stunting }}</h1>
                     </div>
                 </div>
