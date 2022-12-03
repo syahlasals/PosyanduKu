@@ -41,8 +41,8 @@
                 <tr>
                     <!-- <th>NIK Anak</th>
                     <th>Bulan</th> -->
-                    <th>BB/TB</th>
-                    <th>TB/U</th>
+                    <th>BB</th>
+                    <th>TB</th>
                     <th>LK</th>
                     <th>KPSP</th>
                     <th>TDD</th>
@@ -59,8 +59,8 @@
                 <th>{{$key + 1}}</th>
                 <!-- <td>{{$sdidtk->nik_anak}}</td>
                 <td>{{$sdidtk->bulan}}</td> -->
-                <td>{{$sdidtk->bb_tb == 1 ? 'Normal' : 'Tidak Normal'}}</td>
-                <td>{{$sdidtk->tb_u == 1 ? 'Normal' : 'Tidak Normal'}}</td>
+                <td>{{$sdidtk->bb == 1 ? 'Normal' : 'Tidak Normal'}}</td>
+                <td>{{$sdidtk->tb == 1 ? 'Normal' : 'Tidak Normal'}}</td>
                 <td>{{$sdidtk->lk == 1 ? 'Normal' : 'Tidak Normal'}}</td>
                 <td>{{$sdidtk->kpsp == 1 ? 'Normal' : 'Tidak Normal'}}</td>
                 <td>{{$sdidtk->tdd == 1 ? 'Normal' : 'Tidak Normal'}}</td>
