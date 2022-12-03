@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Petugas Entry</title>
+    <title>Petugas Pengelola</title>
     @include('template.head')
 </head>
 
@@ -11,7 +11,7 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
     <!--sidebar-->
-       @include('template.sideentry')
+       @include('template.sidepengelola')
     <!--End Sidebar-->
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -37,21 +37,21 @@
     <div class="container">
         <div class="card my-5">
             <div class="card-body">
-                <h5 class="text-center">{{$anak->nama_anak}}</h5>
+                <h5 class="text-center">Data An. {{$anak->nama_anak}}</h5>
                 <hr>
                 <div class="row">
                     <div class="col card text-center mx-2">
                         <h6 class="text-center my-3"><b>Riwayat Vaksin</b></h6>
                         <div class="row mb-3">
                             <div class="col">
-                                <span><h6>Tanggal</h6>
+                                <span><h6><u>Tanggal</u></h6>
                                     @foreach ($vaksins as $key => $vaksin)
                                         {{ $vaksin->tgl_vaksin }} <br>
                                     @endforeach
                                 </span>
                             </div>
                             <div class="col">
-                                <span><h6>jenis_vaksin</h6>
+                                <span><h6><u>Jenis Vaksin</u></h6>
                                     @foreach ($vaksins as $key => $vaksin)
                                         {{ $vaksin->jenis_vaksin }} <br>
                                     @endforeach
@@ -63,14 +63,14 @@
                         <h5 class="text-center my-3"><b>Riwayat Vitamin</b></h5>
                         <div class="row mb-3">
                             <div class="col">
-                                <span><h6>Tanggal</h6>
+                                <span><h6><u>Tanggal</u></h6>
                                     @foreach ($vitamins as $key => $vitamin)
                                     {{ $vitamin->tgl_vitamin }}    <br>                                
                                     @endforeach
                                 </span>
                             </div>
                             <div class="col">
-                                <span><h6>jenis_vaksin</h6>
+                                <span><h6><u>Jenis Vaksin</u></h6>
                                     @foreach ($vitamins as $key => $vitamin)
                                     {{ $vitamin->jenis_vitamin }}    <br>                                
                                     @endforeach
@@ -114,7 +114,7 @@
         <div class="row">
             <div class="col" colspan="3">
                 {{-- <button class="btn btn-main" type="submit" style="margin-left: 260px;">Simpan</button> --}}
-                <a href="{{ url('entry/InputImunisasi') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
+                <a href="{{ url('/pengelola/dataAnak') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
             </div>
         </div>
 

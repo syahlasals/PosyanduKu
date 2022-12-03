@@ -54,7 +54,7 @@
                             <div class="col">
                                 <a href="{{ url('pengelola/dataImunisasi') }}" class="card card-ip">
                                     <div class="card-body">
-                                        <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Data Imunisasi</b></span> 
+                                        <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Rekap Anak</b></span> 
                                         <div class="baby d-flex align-items-center justify-content-center">
                                             <iconify-icon icon="fontisto:injection-syringe" style="color: black;" width="30" height="30"></iconify-icon>
                                         </div> 
@@ -86,7 +86,7 @@
                     <div class="container">
                         <div class="row mb-3">
                             <div class="col d-flex justify-content-center my-5" style="height: 400px">
-                                <canvas id="userChart" class="rounded shadow" style="width:100%;max-width:1500px;height:100%;max-height:500px"></canvas>
+                                <canvas id="userChart" class="rounded shadow" style="width:100%;max-width:500px;height:100%;max-height:500px"></canvas>
                             </div>
                         </div>
                     </div>
@@ -123,7 +123,7 @@
     var ctx = document.getElementById('userChart').getContext('2d');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
-        type: 'bar',
+        type: 'pie',
 // The data for our dataset
         data: {
             labels:  {!!json_encode($chart->labels)!!} ,

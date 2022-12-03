@@ -26,8 +26,8 @@
                 <!--End of Topbar-->
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
-                    <h1 class="text-center"><b>Form Vitamin</b></h1><br>
+                <div class="container-fluid"><br>
+                    <h1 class="text-center"><b>Masukan Data Vitamin</b></h1><br><br>
                     <div class="container d-flex justify-item-center justify-content-center"><br>
                         <div class="card card-form">
                             <div class="card-body">

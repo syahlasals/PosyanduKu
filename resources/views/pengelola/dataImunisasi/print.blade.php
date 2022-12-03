@@ -21,9 +21,16 @@
         <h6 class="text-center mb-5">Jl. Nanjung Kp. Mekar Bakti RT 02 RW 05 Desa Lagadar Kecamatan Margaasih Kabupaten Bandung
         </h6>
 <div class="card" style="background-color: black; height:5px;"></div><br><br>
+<div class="row justify-content-center">
+    <div class="col">
+    <h5 class="text-center">
+        Tanggal : {{ $tanggal }} <br>
+    </h5>
+    </div>
+</div>
         <div class="row">
             <div class="col">
-                <h5>Tanggal : {{ date('Y-m-d') }} <br>
+                <h5 style="    margin-left: 9%;">
                     Jumlah Balita Terdaftar : {{ $semua }} <br>
                     Jumlah Balita Normal : {{ $normal }} <br>
                 </h5>
@@ -35,7 +42,7 @@
                 </div> -->
             </div>
             <div class="col">
-                <h5>Jumlah Balita Gejala Stunting : {{ $gejalastunting }} <br>
+                <h5 style="margin-left: 29%;">Jumlah Balita Gejala Stunting : {{ $gejalastunting }} <br>
                    Jumlah Balita Stunting : {{ $stunting }}
                 </h5>
                 <!-- <div class="card card-ip">
@@ -65,7 +72,7 @@
 
         <br><br>
 
-        <table id="dataimunisasi" class="table table-striped table-bordered text-center" border="1">
+        <table id="dataimunisasi" class="table table-bordered text-center" border="1">
         <thead>
             <tr>
                 <th>Nomor</th>
