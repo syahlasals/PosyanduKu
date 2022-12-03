@@ -59,6 +59,8 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
         Route::get('entry/InputImunisasi', [AnakController::class, 'indexInputImunisasi'])->name('index-imunisasi')->middleware('entry');
         Route::get('entry/history', [AnakController::class, 'historyImunisasi'])->middleware('entry');
         Route::get('entry/sdidtkAnak/{id}', [StuntingController::class, 'index'])->middleware('entry');
+        Route::get('entry/daftarOrtu', [BerandaoController::class, 'create'])->middleware('entry');
+
     // });
 
         Route::get('entry/vaksin/{nik_anak}', [VaksinController::class, 'index'])->middleware('entry');
