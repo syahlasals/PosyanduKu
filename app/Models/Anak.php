@@ -20,6 +20,9 @@ class Anak extends Model
         'jenkel_anak',
         'tgl_anak',
         'tmp_anak',
+        'tahun',
+        'bulan',
+        'hari',
         'golongan_darah'
     ];
     

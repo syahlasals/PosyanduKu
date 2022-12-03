@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use DateTime;
+use Carbon\Carbon;
 use App\Models\Anak;
 use App\Models\Ortu;
 use Illuminate\Http\Request;
@@ -25,9 +27,12 @@ class DaftarAnakController extends Controller
             'tmp_anak'=>'required',
             'golongan_darah'=>'required',
         ]);
-
+        
         $ortu = Ortu::where('no_kk', $request->no_kk)->first();
-
+        $lahir = Carbon::createFromFormat('Y-m-d', $request->tgl_anak);
+        $date = Carbon::parse($lahir)->diff(Carbon::now())->format('%y,%m,%d');
+        $umur = explode(',', $date);
+    
         if($ortu == null){
         return back()->with('msg','No Kartu Keluarga belum terdaftar!');
         }else{
@@ -40,6 +45,9 @@ class DaftarAnakController extends Controller
             'jenkel_anak'=>$request->jenkel_anak,
             'tgl_anak'=>$request->tgl_anak,
             'tmp_anak'=>$request->tmp_anak,
+            'tahun' => $umur[0],
+            'bulan' => $umur[1],
+            'hari' => $umur[2],
             'golongan_darah'=>$request->golongan_darah
         ]);
 
