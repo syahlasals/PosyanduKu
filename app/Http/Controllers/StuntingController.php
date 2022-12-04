@@ -28,9 +28,11 @@ class StuntingController extends Controller
     public function tampilFormSdidtk($nik_anak)
     {
         $kode_pertumbuhan = Pertumbuhan::where('nik_anak', $nik_anak)->first();
+        $tgl_hitung = Pertumbuhan::where('nik_anak', $nik_anak)->first();
         return view('entry.formSdidtk.index',[
             "nik_anak" => $nik_anak,
-            "kode_pertumbuhan" =>  $kode_pertumbuhan
+            "kode_pertumbuhan" =>  $kode_pertumbuhan,
+            "tgl_hitung" =>  $tgl_hitung,
         ]);
     }
 
@@ -87,22 +89,21 @@ class StuntingController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'kode_pertumbuhan'=>'required',
             'nik_anak'=>'required',
             'bb_tb'=>'required|in:1,0',
             'tb_u'=>'required|in:1,0',
-            'kpsp'=>'required|in:1,0',
-            'tdd'=>'required|in:1,0',
-            'tdl'=>'required|in:1,0',
-            'kmpe'=>'required|in:1,0',
-            'mchat'=>'required|in:1,0',
-            'gpph'=>'required|in:1,0'
+            'kpsp',
+            'tdd',
+            'tdl',
+            'kmpe',
+            'mchat',
+            'gpph',
+            'tgl_hitung'=>'required',
         ]);
 
         // return redirect('/entry/InputImunisasi')->with('success', 'Data SDIDTK berhasil di tambahkan');
 
         $sdidtks = Stunting::create([
-            'kode_pertumbuhan'=>$request->kode_pertumbuhan,
             'nik_anak'=>$request->nik_anak,
             'bb_tb'=>$request->bb_tb,
             'tb_u'=>$request->tb_u,
@@ -111,7 +112,8 @@ class StuntingController extends Controller
             'tdl'=>$request->tdl,
             'kmpe'=>$request->kmpe,
             'mchat'=>$request->mchat,
-            'gpph'=>$request->gpph
+            'gpph'=>$request->gpph,
+            'tgl_hitung'=>$request->tgl_hitung,
         ]);
 
         return redirect('/entry/InputImunisasi')->with('success', 'Data SDIDTK berhasil di tambahkan');

@@ -25,8 +25,8 @@
                 <!--End of Topbar-->
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
-                    <h1 class="text-center"><b>Status Penyimpangan</b></h1><br>
+                <div class="container-fluid"><br>
+                    <h1 class="text-center"><b>Status Penyimpangan</b></h1><br><br>
                     <div class="container d-flex justify-item-center justify-content-center"><br>
                         <div class="card card-form">
                             <div class="card-body">
@@ -55,12 +55,12 @@
                                     </div>
                                     <div class="row" style="margin-bottom: 15px;">
                                         <div class="col-3">
-                                            <label for="kode_pertumbuhan"><b>Kode Pertumbuhan</b></label>
+                                            <label for="tgl_hitung"><b>Tanggal Imunisasi</b></label>
                                         </div>
                                         <div class="col-1"><b>:</b></div>
-                                        <div class="col-8">
-                                            <input type="text" name="kode_pertumbuhan" id="kode_pertumbuhan" value="{{ $kode_pertumbuhan->kode_pertumbuhan }}" class="form-control" disabled>
-                                            <input type="hidden" name="kode_pertumbuhan" id="kode_pertumbuhan" value="{{ $kode_pertumbuhan->kode_pertumbuhan }}" class="form-control">
+                                        <div class="col-8"> 
+                                            <input type="date" name="tgl_hitung" id="tgl_hitung" value="{{ $tgl_hitung->tgl_hitung }}" class="form-control" disabled>
+                                            <input type="hidden" name="tgl_hitung" id="tgl_hitung" value="{{ $tgl_hitung->tgl_hitung }}" class="form-control">
                                         </div>
                                     </div>
                                     <div class="row" style="margin-bottom: 15px;">

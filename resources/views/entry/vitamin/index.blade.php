@@ -26,8 +26,8 @@
                 <!--End of Topbar-->
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
-                    <h1 class="text-center"><b>Form Vitamin</b></h1><br>
+                <div class="container-fluid"><br>
+                    <h1 class="text-center"><b>Masukan Data Vitamin</b></h1><br><br>
                     <div class="container d-flex justify-item-center justify-content-center"><br>
                         <div class="card card-form">
                             <div class="card-body">
@@ -43,15 +43,7 @@
                             @endif -->
                             <form method="POST" action="/store/vitamin" id="myform">
                                 @csrf
-                                <div class="row" style="margin-bottom: 15px;">
-                                    <div class="col-3">
-                                        <label for="kode_vitamin"><b>Kode Pemberian</b></label>
-                                    </div>
-                                    <div class="col-1"><b>:</b></div>
-                                    <div class="col-8">
-                                        <input type="text" name="kode_vitamin" id="kode_vitamin" class="form-control">
-                                    </div>
-                                </div>
+                               
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
                                         <label for="nik_anak"><b>NIK Anak</b></label>
@@ -61,6 +53,15 @@
                                         <input type="text" name="nik_anak" id="nik_anak" class="form-control" value={{$nik_anak}} disabled>
                                     </div>
                                     <input type="hidden" name="nik_anak" id="nik_anak" class="form-control" value={{$nik_anak}}>
+                                </div>
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <div class="col-3">
+                                        <label for="tgl_vitamin"><b>Tanggal Imunisasi</b></label>
+                                    </div>
+                                    <div class="col-1"><b>:</b></div>
+                                    <div class="col-8"> 
+                                        <input type="date" name="tgl_vitamin" id="tgl_vitamin" class="form-control">
+                                    </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">

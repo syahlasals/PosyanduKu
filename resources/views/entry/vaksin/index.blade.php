@@ -25,8 +25,8 @@
                 <!--End of Topbar-->
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
-                    <h1 class="text-center"><b>Masukan Data Vaksin</b></h1><br>
+                <div class="container-fluid"><br>
+                    <h1 class="text-center"><b>Masukan Data Vaksin</b></h1><br><br>
                     <div class="container d-flex justify-item-center justify-content-center"><br>
                         <div class="card card-form">
                             <div class="card-body">
@@ -44,15 +44,7 @@
 
                                 @csrf
                                 
-                                <div class="row" style="margin-bottom: 15px;">
-                                     <div class="col-3">
-                                        <label for="kode_vaksin"><b>Kode Pemberian</b></label>
-                                    </div>
-                                    <div class="col-1"><b>:</b></div>
-                                    <div class="col-8">
-                                        <input type="text" name="kode_vaksin" id="kode_vaksin" class="form-control">
-                                    </div>
-                                </div>
+                                
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
                                         <label for="nik_anak"><b>NIK Anak</b></label>
@@ -62,6 +54,15 @@
                                         <input type="number" name="nik_anak" id="nik_anak" class="form-control"value="{{$nik_anak}}" disabled>
                                     </div>
                                     <input type="hidden" name="nik_anak" id="nik_anak" class="form-control" value={{$nik_anak}}>
+                                </div>
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <div class="col-3">
+                                        <label for="tgl_vaksin"><b>Tanggal Imunisasi</b></label>
+                                    </div>
+                                    <div class="col-1"><b>:</b></div>
+                                    <div class="col-8"> 
+                                        <input type="date" name="tgl_vaksin" id="tgl_vaksin" class="form-control">
+                                    </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">

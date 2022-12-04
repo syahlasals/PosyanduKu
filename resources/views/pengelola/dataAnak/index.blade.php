@@ -32,17 +32,19 @@
                                     <th>NIK Anak</th>
                                     <th>Nama Anak</th>
                                     <th>Jenis Kelamin</th>
+                                    <th>Usia (Bulan)</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
-                            @foreach ($anaks as $key => $anak)
+                            @foreach ($anak as $key => $anak)
                             <tr>
-                                <td>{{ $key + 1 }}</td>
+                                <td>{{ $loop->iteration }}</td>
                                 <td>{{ $anak->nik_anak }}</td>
                                 <td>{{ $anak->nama_anak }}</td>
                                 <td>
                                     {{ $anak->jenkel_anak == 'L' ? 'Laki-Laki' : 'Perempuan' }}
                                 </td>
+                                <td>{{ $anak->usia }}</td>
                                 <td>
                                 <div class="row d-flex">
                                     <div class="col-16">

@@ -30,28 +30,30 @@
             <thead>
                 <tr>
                     <th>No</th>
-                    <th>No KK</th>
+                    {{-- <th>No KK</th> --}}
                     <th>NIK Anak</th>
                     <th>Nama Anak</th>
                     <th>Jenis Kelamin</th>
                     <th>Golongan Darah</th>
+                    <th>Usia (Bulan)</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
-            @foreach ($anaks as $key => $anak)
+            @foreach ($anak as $key => $anak)
             <tr>
-                <td>{{$key+1}}</td>
-                <td>{{ $anak->no_kk }}</td>
+                <td>{{ $loop->iteration }}</td>
+                {{-- <td>{{ $anak->no_kk }}</td> --}}
                 <td>{{ $anak->nik_anak }}</td>
                 <td>{{ $anak->nama_anak }}</td>
                 <td>
                     {{ $anak->jenkel_anak == 'L' ? 'Laki-Laki' : 'Perempuan' }}
                 </td>
                 <td>{{ $anak->golongan_darah }}</td>
+                <td>{{ $anak->usia }}</td>
                 <td width="35%">
                 <div class="row d-flex">
                     <div class="col-14">
-                        {{-- <a href="/entry/history"><button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="History"><i class="fa-solid fa-clock-rotate-left"></i></button></a> --}}
+                        <a href="/entry/history/{{$anak->nik_anak}}"><button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="History"><i class="fa-solid fa-clock-rotate-left"></i></button></a>
                         <a href="/entry/pertumbuhan/{{$anak->nik_anak}}"><button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Form Pertumbuhan"><i class="fa-solid fa-hands-holding-child"></i></button></a>
                         <a href="/entry/vaksin/{{$anak->nik_anak}}"><button type="button" class="btn btn-success" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Form Vaksin"><i class="fa-solid fa-syringe"></i></button></a>
                         <a href="/entry/vitamin/{{$anak->nik_anak}}"><button type="button" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Form Vitamin"><i class="fa-solid fa-capsules"></i></button></a>

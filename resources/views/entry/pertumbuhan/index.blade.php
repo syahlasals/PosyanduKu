@@ -24,8 +24,8 @@
                 <!--End of Topbar-->
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
-                    <h1 class="text-center"><b>Data Pertumbuhan</b></h1><br>
+                <div class="container-fluid"><br>
+                    <h1 class="text-center"><b>Masukan Data Pertumbuhan</b></h1><br><br>
                     <div class="container d-flex justify-item-center justify-content-center"><br>
                         <div class="card card-form">
                             <div class="card-body">
@@ -51,13 +51,13 @@
                                     </div>
                                     <input type="hidden" name="nik_anak" id="nik_anak" class="form-control" value={{$nik_anak}}>
                                 </div>
-                                <div class="row" style="margin-bottom: 15px;">
+                                    <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
-                                        <label for="kode_pertumbuhan"><b>Kode Pertumbuhan</b></label>
+                                        <label for="tgl_hitung"><b>Tanggal Imunisasi</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
-                                    <div class="col-8">
-                                        <input type="text" name="kode_pertumbuhan" id="kode_pertumbuhan" class="form-control">
+                                    <div class="col-8"> 
+                                        <input type="date" name="tgl_hitung" id="tgl_hitung" class="form-control">
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
@@ -66,7 +66,10 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8"> 
-                                        <input type="number" name="tinggi" id="tinggi" class="form-control">
+                                    <p class="form-control">
+                                        <input type="number" name="tinggi" id="tinggi" style="border: none;" >
+                                        <span style="margin-left: 43%;">cm</span>
+                                    </p>
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
@@ -75,7 +78,10 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="number" name="berat" id="berat" class="form-control">
+                                        <p class="form-control">
+                                            <input type="number" name="berat" id="berat" style="border: none;">
+                                            <span style="margin-left: 45%;">kg</span>                     
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
@@ -84,7 +90,10 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="number" name="lingkar_kepala" id="lingkar_kepala" class="form-control">                                
+                                        <p class="form-control">
+                                            <input type="number" name="lingkar_kepala" id="lingkar_kepala" style="border: none;">
+                                            <span style="margin-left: 43%;">cm</span>            
+                                        </p>                   
                                     </div>
                                 </div>
                                 <br>

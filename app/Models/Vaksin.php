@@ -13,7 +13,7 @@ class Vaksin extends Model
     protected $primaryKey = "kode_vaksin";
     protected $table = "tb_vaksin";
     protected $fillable = [
-       'kode_vaksin','nik_anak', 'jenis_vaksin'];
+       'nik_anak', 'jenis_vaksin', 'tgl_vaksin'];
 
        public function Anak()
     {

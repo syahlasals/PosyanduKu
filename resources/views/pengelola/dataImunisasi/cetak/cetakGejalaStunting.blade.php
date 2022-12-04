@@ -14,50 +14,65 @@
             <div id="content">
 
                 <!--Topbar-->
-                @include('template.nav')
                 <!--End of Topbar-->
 
-    <div class="container-fluid">
-        <h1 class="text-center mt-5 mb-5"><b>REKAP ANAK</b></h1>
-
+    <div class="container">
+        <h2 class="text-center mt-5 mb-3"><b>LAPORAN HASIL KEGIATAN POSYANDU RW 05<br>DESA LAGADAR KECAMATAN MARGAASIH KABUPATEN BANDUNG</b></h2>
+        <h6 class="text-center mb-5">Jl. Nanjung Kp. Mekar Bakti RT 02 RW 05 Desa Lagadar Kecamatan Margaasih Kabupaten Bandung
+        </h6>
+<div class="card" style="background-color: black; height:5px;"></div><br><br>
+<div class="row justify-content-center">
+    <div class="col">
+    <h5 class="text-center">
+        Tanggal : {{ $tanggal }} <br>
+    </h5>
+    </div>
+</div>
         <div class="row">
             <div class="col">
-                <div class="card card-ap">
+                <h5 style="    margin-left: 9%;">
+                    Jumlah Balita Terdaftar : {{ $semua }} <br>
+                    Jumlah Balita Normal : {{ $normal }} <br>
+                </h5>
+                <!-- <div class="card card-ap">
                     <div class="card-body">
                         <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita <br> Terdaftar</b></span> 
                         <h1 class="text-center">{{ $semua }}</h1>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="col">
-                <div class="card card-ip">
+                <h5 style="margin-left: 29%;">Jumlah Balita Gejala Stunting : {{ $gejalastunting }} <br>
+                   Jumlah Balita Stunting : {{ $stunting }}
+                </h5>
+                <!-- <div class="card card-ip">
                     <div class="card-body">
                         <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita <br> Normal</b></span> 
                         <h1 class="text-center">{{ $normal }}</h1>
                     </div>
-                </div>
+                </div> -->
             </div>
-            <div class="col">
+            <!-- <div class="col">
                 <div class="card card-ap ">
                     <div class="card-body">
                         <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita Gejala <br> Stunting</b></span> 
                         <h1 class="text-center">{{ $gejalastunting }}</h1>
                     </div>
                 </div>
-            </div>
-            <div class="col">
+            </div> -->
+            <!-- <div class="col">
                 <div class="card card-ip">
                     <div class="card-body">
                         <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita <br> Stunting</b></span> 
                         <h1 class="text-center">{{ $stunting }}</h1>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
 
         <br><br>
 
-        <table id="dataimunisasi" class="table table-striped table-bordered text-center" border="1">
+        <table id="dataimunisasi" class="table table-bordered text-center" border="1">
         <thead>
             <tr>
                 <th>Nomor</th>
@@ -117,9 +132,9 @@
 <i class="fas fa-angle-up"></i>
 </a>
 </body>
-<script> 
+<!-- <script> 
 $(document).ready( function () {
     $('#dataimunisasi').DataTable();
 } );
-</script>
+</script> -->
 </html>

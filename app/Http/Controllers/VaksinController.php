@@ -18,14 +18,14 @@ class VaksinController extends Controller
         public function store(Request $request)
         {
             $this->validate($request, [
-                'kode_vaksin'=>'required',
-                'jenis_vaksin'=>'required'
+                'jenis_vaksin'=>'required',
+                'tgl_vaksin'=>'required',
             ]);
     
             $vaksins = Vaksin::create([
-                'kode_vaksin'=>$request->kode_vaksin,
                 'nik_anak'=>$request->nik_anak,
-                'jenis_vaksin'=>$request->jenis_vaksin
+                'jenis_vaksin'=>$request->jenis_vaksin,
+                'tgl_vaksin'=>$request->tgl_vaksin,
             ]);
             
             return redirect('/entry/InputImunisasi')->with('success', 'Data Vaksin Berhasil Ditambahkan!');
