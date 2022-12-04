@@ -3,6 +3,7 @@
 <html lang="en">
 
 <head>
+    <title>Petugas Entry</title>
     @include('template.head')
 </head>
 
@@ -58,7 +59,8 @@
                                         </div>
                                         <div class="col-1"><b>:</b></div>
                                         <div class="col-8"> 
-                                            <input type="date" name="tgl_hitung" id="tgl_hitung" class="form-control">
+                                            <input type="date" name="tgl_hitung" id="tgl_hitung" value="{{ $tgl_hitung->tgl_hitung }}" class="form-control" disabled>
+                                            <input type="hidden" name="tgl_hitung" id="tgl_hitung" value="{{ $tgl_hitung->tgl_hitung }}" class="form-control">
                                         </div>
                                     </div>
                                     <div class="row" style="margin-bottom: 15px;">
