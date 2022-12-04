@@ -53,7 +53,7 @@
             <div class="col">
                 <a href="{{ url('pengelola/dataImunisasi/giziBuruk') }}" class="card card-ap">
                 <div class="card-body">
-                    <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita Gizi <br> Buruk</b></span> 
+                    <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita <br> Gizi Buruk</b></span> 
                     <h1 class="text-center">{{ $giziBuruk }}</h1>
                 </div>
                 </a>
@@ -67,7 +67,7 @@
                 </a>
             </div>
             <div class="col">
-                <a href="{{ url('pengelola/dataImunisasi/stunting') }}" class="card card-ip">
+                <a href="{{ url('pengelola/dataImunisasi/stunting') }}" class="card card-ap">
                 <div class="card-body">
                     <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita <br> Stunting</b></span> 
                     <h1 class="text-center">{{ $stunting }}</h1>
