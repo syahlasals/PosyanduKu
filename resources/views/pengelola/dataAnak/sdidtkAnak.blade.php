@@ -64,12 +64,12 @@
                 <td>{{$sdidtk->bb == 1 ? 'Normal' : 'Tidak Normal'}}</td>
                 <td>{{$sdidtk->tb == 1 ? 'Normal' : 'Tidak Normal'}}</td>
                 <td>{{$sdidtk->lk == 1 ? 'Normal' : 'Tidak Normal'}}</td>
-                <td>{{$sdidtk->kpsp ? $sdidtk->tb == 1 ? "Normal" : "Tidak Normal" : ""}}</td>
-                <td>{{$sdidtk->tdd ? $sdidtk->tb == 1 ? "Normal" : "Tidak Normal" : ""}}</td>
-                <td>{{$sdidtk->tdl ? $sdidtk->tb == 1 ? "Normal" : "Tidak Normal" : ""}}</td>
-                <td>{{$sdidtk->smpe ? $sdidtk->tb == 1 ? "Normal" : "Tidak Normal" : ""}}</td>
-                <td>{{$sdidtk->mchat ? $sdidtk->tb == 1 ? "Normal" : "Tidak Normal" : ""}}</td>
-                <td>{{$sdidtk->gpphe ? $sdidtk->tb == 1 ? "Normal" : "Tidak Normal" : ""}}</td>
+                <td>{{$sdidtk->kpsp ? $sdidtk->kpsp == 1 ? "Normal" : "Tidak Normal" : ""}}</td>
+                <td>{{$sdidtk->tdd ? $sdidtk->tdd == 1 ? "Normal" : "Tidak Normal" : ""}}</td>
+                <td>{{$sdidtk->tdl ? $sdidtk->tdl == 1 ? "Normal" : "Tidak Normal" : ""}}</td>
+                <td>{{$sdidtk->kmpe ? $sdidtk->kmpe == 1 ? "Normal" : "Tidak Normal" : ""}}</td>
+                <td>{{$sdidtk->mchat ? $sdidtk->mchat == 1 ? "Normal" : "Tidak Normal" : ""}}</td>
+                <td>{{$sdidtk->gpph ? $sdidtk->gpph == 1 ? "Normal" : "Tidak Normal" : ""}}</td>
             </tr>
             @endforeach
         </table>
