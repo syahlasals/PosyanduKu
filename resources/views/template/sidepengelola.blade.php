@@ -35,13 +35,13 @@
             data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Data Status:</h6>
-                <a class="collapse-item {{ Request::is('pengelola/dataImunisasi') ? 'active' : '' }}" href="{{ url('pengelola/dataImunisasi') }}">Rekap Anak</a>
+                <a class="collapse-item {{ Request::is('pengelola/dataImunisasi*') ? 'active' : '' }}" href="{{ url('pengelola/dataImunisasi') }}">Rekap Anak</a>
                 {{-- <a class="collapse-item {{ Request::is('pengelola/dataStunting') ? 'active' : '' }}" href="{{ url('pengelola/dataStunting') }}">Data Stunting</a> --}}
                 <div class="collapse-divider"></div>
                 <h6 class="collapse-header">Data Umum:</h6>
-                <a class="collapse-item {{ Request::is('pengelola/dataAnak') ? 'active' : '' }}" href="{{ url('pengelola/dataAnak') }}">Data Anak</a>
-                <a class="collapse-item {{ Request::is('pengelola/dataPetugas') ? 'active' : '' }}" href="{{ url('pengelola/dataPetugas') }}">Data Petugas</a>
-                <a class="collapse-item {{ Request::is('pengelola/dataPosyandu') ? 'active' : '' }}" href="{{ url('pengelola/dataPosyandu') }}">Profile Posyandu</a>
+                <a class="collapse-item {{ Request::is('pengelola/dataAnak*') ? 'active' : '' }}" href="{{ url('pengelola/dataAnak') }}">Data Anak</a>
+                <a class="collapse-item {{ Request::is('pengelola/dataPetugas*') ? 'active' : '' }}" href="{{ url('pengelola/dataPetugas') }}">Data Petugas</a>
+                <a class="collapse-item {{ Request::is('pengelola/dataPosyandu*') ? 'active' : '' }}" href="{{ url('pengelola/dataPosyandu') }}">Profile Posyandu</a>
             </div>
         </div>
     </li>

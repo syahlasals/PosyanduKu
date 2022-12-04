@@ -85,7 +85,7 @@
                                 </a>
                             </div>
                             <div class="col">
-                                <a href="{{ url('/entry/daftarOrtu') }}" class="card card-ip">
+                                <a href="{{ url('entry/daftarOrtu') }}" class="card card-ip">
                                     <div class="card-body">
                                         <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Pendaftaran Orangtua</b></span> 
                                         <div class="baby d-flex align-items-center justify-content-center">

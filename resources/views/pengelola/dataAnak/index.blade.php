@@ -32,21 +32,22 @@
                                     <th>NIK Anak</th>
                                     <th>Nama Anak</th>
                                     <th>Jenis Kelamin</th>
+                                    <th>Usia (Bulan)</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
-                            @foreach ($anaks as $key => $anak)
+                            @foreach ($anak as $key => $anak)
                             <tr>
-                                <td>{{ $key + 1 }}</td>
+                                <td>{{ $loop->iteration }}</td>
                                 <td>{{ $anak->nik_anak }}</td>
                                 <td>{{ $anak->nama_anak }}</td>
                                 <td>
                                     {{ $anak->jenkel_anak == 'L' ? 'Laki-Laki' : 'Perempuan' }}
                                 </td>
+                                <td>{{ $anak->usia }}</td>
                                 <td>
                                 <div class="row d-flex">
                                     <div class="col-16">
-                                        <a href="dataAnak/history/{{$anak->nik_anak}}"><button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="History"><i class="fa-solid fa-clock-rotate-left"></i></button></a>
                                         <a href="dataAnak/{{ $anak->nik_anak }}"><button type="button" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Show Detail"><iconify-icon icon="fa:eye" width="20px" height="20px"></iconify-icon></button></a>
                                         <a href="dataAnak/{{ $anak->nik_anak }}/edit"><button type="button" class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><iconify-icon icon="akar-icons:edit" width="20px" height="20px"></iconify-icon></button></a>
                                         @csrf
