@@ -48,6 +48,7 @@
                                 <td>
                                 <div class="row d-flex">
                                     <div class="col-16">
+                                        <a href="dataAnak/history/{{$anak->nik_anak}}"><button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="History"><i class="fa-solid fa-clock-rotate-left"></i></button></a>
                                         <a href="dataAnak/{{ $anak->nik_anak }}"><button type="button" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Show Detail"><iconify-icon icon="fa:eye" width="20px" height="20px"></iconify-icon></button></a>
                                         <a href="dataAnak/{{ $anak->nik_anak }}/edit"><button type="button" class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><iconify-icon icon="akar-icons:edit" width="20px" height="20px"></iconify-icon></button></a>
                                         @csrf

@@ -18,6 +18,5 @@ class HistoryController extends Controller
         $pertumbuhans= Pertumbuhan::where('nik_anak', $nik_anak)->get();
         $penyimpangans= Penyimpangan::where('nik_anak', $nik_anak)->get();
         $anak = Anak::where('nik_anak', $nik_anak)->first();
-        return view('entry.historyImunisasi.index', compact('vaksins','anak', 'vitamins', 'pertumbuhans', 'penyimpangans'));
-    }
+        return view('pengelola.dataAnak.history', compact('vaksins','anak', 'vitamins', 'pertumbuhans', 'penyimpangans'));    }
 }
