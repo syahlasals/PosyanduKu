@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Anak;
 use App\Models\Stunting;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class AnakController extends Controller
@@ -15,12 +14,10 @@ class AnakController extends Controller
      *
      * @return \Illuminate\Http\Response/
      */
-    public function index(){
-        $anaks = DB::table('tb_anak')
-            ->select('nik_anak', 'tgl_anak', 'nama_anak', 'jenkel_anak')
-            ->selectRaw("TIMESTAMPDIFF (MONTH, tgl_anak, NOW()) AS usia")
-            ->get();
-        return view('pengelola.dataAnak.index')->with('anak', $anaks);
+    public function index()
+    {
+        $anaks = Anak::all();
+        return view('pengelola.dataAnak.index', compact('anaks'));
     }
 
     /**
@@ -117,16 +114,13 @@ class AnakController extends Controller
     // PETUGAS ENTRY
     public function indexInputImunisasi()
     {
-        $anaks = DB::table('tb_anak')
-            ->select('nik_anak', 
-            'tgl_anak', 
-            'nama_anak', 
-            'jenkel_anak', 
-            'no_kk',
-            'golongan_darah')
-            ->selectRaw("TIMESTAMPDIFF (MONTH, tgl_anak, NOW()) AS usia")
-            ->get();
-        return view('entry.inputImunisasi.index')->with('anak', $anaks);
+        $anaks = Anak::all();
+        return view('entry.inputImunisasi.index', compact('anaks'));
+    }
+
+    public function historyImunisasi()
+    {
+        return view('entry.historyImunisasi.index');
     }
 
     public function pertumbuhan()
