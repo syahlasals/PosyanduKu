@@ -82,7 +82,7 @@
                 <table id="datahistory" class="table table-striped table-bordered text-center my-3">
                     <tbody>
                         <tr>
-                            <td colspan="2"><b>pertumbuhan</b></td>
+                            <td colspan="2"><b>Pertumbuhan Anak</b></td>
                         </tr>
                         @foreach ($pertumbuhans as $key => $ptm)
                         <tr style="background-color: white;">

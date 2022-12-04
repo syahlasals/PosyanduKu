@@ -68,7 +68,7 @@
                                     <div class="col-8"> 
                                     <p class="form-control">
                                         <input type="number" name="tinggi" id="tinggi" style="border: none;" >
-                                        <span style="margin-left: 43%;">cm</span>
+                                        <span style="margin-left: 90%;">cm</span>
                                     </p>
                                     </div>
                                 </div>
@@ -80,7 +80,7 @@
                                     <div class="col-8">
                                         <p class="form-control">
                                             <input type="number" name="berat" id="berat" style="border: none;">
-                                            <span style="margin-left: 45%;">kg</span>                     
+                                            <span style="margin-left: 90%;">kg</span>                     
                                         </p>
                                     </div>
                                 </div>
@@ -92,7 +92,7 @@
                                     <div class="col-8">
                                         <p class="form-control">
                                             <input type="number" name="lingkar_kepala" id="lingkar_kepala" style="border: none;">
-                                            <span style="margin-left: 43%;">cm</span>            
+                                            <span style="margin-left: 90%;">cm</span>            
                                         </p>                   
                                     </div>
                                 </div>
