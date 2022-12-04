@@ -26,39 +26,39 @@ class PertumbuhanController extends Controller
         $tahun = $umur->tahun;
         $bulan = $umur->bulan;
 
-        if($bulan == 0){
-            $result = 3;
+        // if($bulan == 0){
+        //     $result = 3;
+        //     if($request->berat == $result){
+        //         $berat = 1;
+        //     }else{
+        //         $berat = 0;
+        //     }
+        // }else{
+        //     if($bulan == 1){
+        //         $result = 4;
+        //         if($request->berat == $result){
+        //             $berat = 1;
+        //         }else{
+        //             $berat = 0;
+        //         }
+        //     }
+        // }
+
+        if($tahun != 0){
+            $result = 2*$tahun + 8;
             if($request->berat == $result){
                 $berat = 1;
             }else{
-                $berat = 0;
+                $berat = '0';
             }
         }else{
-            if($bulan == 1){
-                $result = 4;
-                if($request->berat == $result){
-                    $berat = 1;
-                }else{
-                    $berat = 0;
-                }
+            $result = $bulan/2 + 4;
+            if($request->berat == $result){
+                $berat = 1;
+            }else{
+                $berat = '0';
             }
         }
-
-        // if($tahun != 0){
-        //     $result = 2*$tahun + 8;
-        //     if($request->berat == $result){
-        //         $berat = 1;
-        //     }else{
-        //         $berat = '0';
-        //     }
-        // }else{
-        //     $result = $bulan/2 + 4;
-        //     if($request->berat == $result){
-        //         $berat = 1;
-        //     }else{
-        //         $berat = '0';
-        //     }
-        // }
 
         $this->validate($request, [
             'nik_anak' =>'required',
