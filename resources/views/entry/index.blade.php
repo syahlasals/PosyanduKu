@@ -12,6 +12,7 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
     <!--sidebar-->
+    @include('template.sideentry')
 
     <!--End Sidebar-->
         <!-- Content Wrapper -->
