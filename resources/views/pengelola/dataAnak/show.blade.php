@@ -69,7 +69,7 @@
                                 </div>
                                 <div class="col-1"><b>:</b></div>
                                 <div class="col-6">
-                                    {{ $anak->bulan }} bulan
+                                    {{ $anak->bulan }}
                                 </div>
                             </div>
                             <div class="row">
