@@ -40,4 +40,9 @@ class Anak extends Model
     {
         return $this->hasMany(PertumbuhanStatus::class, 'nik_anak');
     }
+
+    public function penyimpangans()
+    {
+        return $this->hasMany(Penyimpangan::class, 'nik_anak');
+    }
 }
