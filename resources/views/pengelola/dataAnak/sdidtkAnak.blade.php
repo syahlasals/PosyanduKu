@@ -41,6 +41,7 @@
                 <tr>
                     <!-- <th>NIK Anak</th>
                     <th>Bulan</th> -->
+                    <th>Tanggal</th>
                     <th>BB</th>
                     <th>TB</th>
                     <th>LK</th>
@@ -59,15 +60,16 @@
                 <th>{{$key + 1}}</th>
                 <!-- <td>{{$sdidtk->nik_anak}}</td>
                 <td>{{$sdidtk->bulan}}</td> -->
+                <td>{{$sdidtk->tgl_hitung }}</td>
                 <td>{{$sdidtk->bb == 1 ? 'Normal' : 'Tidak Normal'}}</td>
                 <td>{{$sdidtk->tb == 1 ? 'Normal' : 'Tidak Normal'}}</td>
                 <td>{{$sdidtk->lk == 1 ? 'Normal' : 'Tidak Normal'}}</td>
-                <td>{{$sdidtk->kpsp == 1 ? 'Normal' : 'Tidak Normal'}}</td>
-                <td>{{$sdidtk->tdd == 1 ? 'Normal' : 'Tidak Normal'}}</td>
-                <td>{{$sdidtk->tdl == 1 ? 'Normal' : 'Tidak Normal'}}</td>
-                <td>{{$sdidtk->kmpe == 1 ? 'Normal' : 'Tidak Normal'}}</td>
-                <td>{{$sdidtk->mchat == 1 ? 'Normal' : 'Tidak Normal'}}</td>
-                <td>{{$sdidtk->gpph == 1 ? 'Normal' : 'Tidak Normal'}}</td>
+                <td>{{$sdidtk->kpsp ? $sdidtk->tb == 1 ? "Normal" : "Tidak Normal" : ""}}</td>
+                <td>{{$sdidtk->tdd ? $sdidtk->tb == 1 ? "Normal" : "Tidak Normal" : ""}}</td>
+                <td>{{$sdidtk->tdl ? $sdidtk->tb == 1 ? "Normal" : "Tidak Normal" : ""}}</td>
+                <td>{{$sdidtk->smpe ? $sdidtk->tb == 1 ? "Normal" : "Tidak Normal" : ""}}</td>
+                <td>{{$sdidtk->mchat ? $sdidtk->tb == 1 ? "Normal" : "Tidak Normal" : ""}}</td>
+                <td>{{$sdidtk->gpphe ? $sdidtk->tb == 1 ? "Normal" : "Tidak Normal" : ""}}</td>
             </tr>
             @endforeach
         </table>

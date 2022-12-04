@@ -111,7 +111,7 @@
                                         </div>
                                         <div class="col-8">
                                             <input type="radio" class="form-check-input" name="kpsp" id="tidaknormal"
-                                            value="0">
+                                            value="2">
                                             <label for="tidaknormal" class="form-check-label">Tidak Normal</label>
                                         </div>
                                     </div>
@@ -133,7 +133,7 @@
                                         </div>
                                         <div class="col-8">
                                             <input type="radio" class="form-check-input" name="tdd" id="tidaknormal"
-                                            value="0">
+                                            value="2">
                                             <label for="tidaknormal" class="form-check-label">Tidak Normal</label>
                                         </div>
                                     </div>
@@ -155,7 +155,7 @@
                                         </div>
                                         <div class="col-8">
                                             <input type="radio" class="form-check-input" name="tdl" id="tidaknormal"
-                                            value="0">
+                                            value="2">
                                             <label for="tidaknormal" class="form-check-label">Tidak Normal</label>
                                         </div>
                                     </div>
@@ -177,7 +177,7 @@
                                         </div>
                                         <div class="col-8">
                                             <input type="radio" class="form-check-input" name="kmpe" id="tidaknormal"
-                                            value="0">
+                                            value="2">
                                             <label for="tidaknormal" class="form-check-label">Tidak Normal</label>
                                         </div>
                                     </div>
@@ -199,7 +199,7 @@
                                         </div>
                                         <div class="col-8">
                                             <input type="radio" class="form-check-input" name="mchat" id="tidaknormal"
-                                            value="0">
+                                            value="2">
                                             <label for="tidaknormal" class="form-check-label">Tidak Normal</label>
                                         </div>
                                     </div>
@@ -221,7 +221,7 @@
                                         </div>
                                         <div class="col-8">
                                             <input type="radio" class="form-check-input" name="gpph" id="tidaknormal"
-                                            value="0">
+                                            value="2">
                                             <label for="tidaknormal" class="form-check-label">Tidak Normal</label>
                                         </div>
                                     </div>

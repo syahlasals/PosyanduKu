@@ -27,6 +27,12 @@
     </li>
 
     <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item {{ Request::is('entry/daftarOrtu') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ url('entry/daftarOrtu') }}">
+            <i class="fa-solid fa-user-plus"></i> 
+            <span>Daftar Orangtua</span>
+        </a>
+    </li>
     <li class="nav-item {{ Request::is('entry/pendaftaranAnak') ? 'active' : '' }}">
         <a class="nav-link" href="{{ url('entry/pendaftaranAnak') }}">
             <i class="fa-solid fa-child"></i>
@@ -39,12 +45,7 @@
             <span>Input Imunisasi</span>
         </a>
     </li>
-    <li class="nav-item {{ Request::is('entry/daftarOrtu') ? 'active' : '' }}">
-        <a class="nav-link" href="{{ url('entry/daftarOrtu') }}">
-            <i class="fa-solid fa-user-plus"></i> 
-            <span>Daftar Orangtua</span>
-        </a>
-    </li>
+    
 
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">

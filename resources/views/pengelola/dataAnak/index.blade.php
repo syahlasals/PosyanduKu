@@ -48,13 +48,13 @@
                                 <td>
                                 <div class="row d-flex">
                                     <div class="col-16">
-                                        <a href="dataAnak/history/{{$anak->nik_anak}}"><button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="History"><i class="fa-solid fa-clock-rotate-left"></i></button></a>
-                                        <a href="dataAnak/{{ $anak->nik_anak }}"><button type="button" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Show Detail"><iconify-icon icon="fa:eye" width="20px" height="20px"></iconify-icon></button></a>
-                                        <a href="dataAnak/sdidtkAnak/{{$anak->nik_anak}}"><button type="button" class="btn btn-danger" style="background-color: #FFD700; border-color: #FFD700;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Data SDIDTK"><i class="fa-solid fa-calendar"></i></button></a>
-                                        <a href="dataAnak/{{ $anak->nik_anak }}/edit"><button type="button" class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><iconify-icon icon="akar-icons:edit" width="20px" height="20px"></iconify-icon></button></a>
+                                        <a href="dataAnak/{{ $anak->nik_anak }}"><button type="button" class="btn btn-info" style="background-color: #C7BCA1; border-color: #C7BCA1;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Detail"><i class="fa-solid fa-eye"></i></button></a>
+                                        <a href="dataAnak/sdidtkAnak/{{$anak->nik_anak}}"><button type="button" class="btn btn-danger" style="background-color: #68B984; border-color: #68B984;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Data SDIDTK"><i class="fa-solid fa-calendar"></i></button></a>
+                                        <a href="dataAnak/history/{{$anak->nik_anak}}"><button type="button" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Riwayat"><i class="fa-solid fa-clock-rotate-left"></i></button></a>
+                                        <a href="dataAnak/{{ $anak->nik_anak }}/edit"><button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><i class="fa-solid fa-pen-to-square"></i></button></a>
                                         @csrf
                                         @method('delete')
-                                            <button type="button" class="delete btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete" data-id="{{ $anak->nik_anak }}"><iconify-icon icon="fluent:delete-24-filled" width="20px" height="20px"></iconify-icon></button>
+                                            <button type="button" class="delete btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus" data-id="{{ $anak->nik_anak }}"><i class="fa-solid fa-trash"></i></button>
                                     </div>
                                 </div>
                                 </td>
