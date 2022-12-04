@@ -41,6 +41,7 @@
                 <tr>
                     <!-- <th>NIK Anak</th>
                     <th>Bulan</th> -->
+                    <th>Tanggal</th>
                     <th>BB</th>
                     <th>TB</th>
                     <th>LK</th>
@@ -59,6 +60,7 @@
                 <th>{{$key + 1}}</th>
                 <!-- <td>{{$sdidtk->nik_anak}}</td>
                 <td>{{$sdidtk->bulan}}</td> -->
+                <td>{{$sdidtk->tgl_hitung }}</td>
                 <td>{{$sdidtk->bb == 1 ? 'Normal' : 'Tidak Normal'}}</td>
                 <td>{{$sdidtk->tb == 1 ? 'Normal' : 'Tidak Normal'}}</td>
                 <td>{{$sdidtk->lk == 1 ? 'Normal' : 'Tidak Normal'}}</td>
