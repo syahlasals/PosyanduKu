@@ -27,14 +27,18 @@ class DaftarAnakController extends Controller
             'tmp_anak'=>'required',
             'golongan_darah'=>'required',
         ]);
-        
+
+        $anak = Anak::where('nik_anak', $request->nik_anak)->first();
         $ortu = Ortu::where('no_kk', $request->no_kk)->first();
         $lahir = Carbon::createFromFormat('Y-m-d', $request->tgl_anak);
         $date = Carbon::parse($lahir)->diff(Carbon::now())->format('%y,%m,%d');
         $umur = explode(',', $date);
     
-        if($ortu == null){
-        return back()->with('msg','No Kartu Keluarga belum terdaftar!');
+        if($ortu == null || $anak != null){
+        return back()->with([
+            'msg' => 'No KK belum terdaftar!',
+            'anak' => 'NIK anak sudah terdaftar!'
+         ]);
         }else{
 
 

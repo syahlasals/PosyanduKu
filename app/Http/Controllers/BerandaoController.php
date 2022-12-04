@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Ortu;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class BerandaoController extends Controller
 {
@@ -90,6 +91,6 @@ class BerandaoController extends Controller
             'rw'=>$request->rw
         ]);
 
-        return redirect('/entry/daftarOrtu')->with('success', 'Data berhasil di tambahkan');
+        return redirect('/entry')->with('success', 'Data Berhasil di Tambahkan');
     }
 }

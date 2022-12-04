@@ -119,8 +119,7 @@
                     @endforeach
                 </td>
                 <td>
-                        <a href="dataImunisasi/history/{{$data->nik_anak}}"><button type="button" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Riwayat"><i class="fa-solid fa-clock-rotate-left"></i></button></a>
-
+                    <a href="dataImunisasi/history/{{$data->nik_anak}}"><button type="button" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Riwayat"><i class="fa-solid fa-clock-rotate-left"></i></button></a>
                 </td>
             </tr>
             @endforeach

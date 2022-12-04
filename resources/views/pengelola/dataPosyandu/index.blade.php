@@ -45,14 +45,14 @@
                         <div class="row mb-3">
                             <div class="col"></div>
                             <div class="col-3">
-                                <h5 class="d-flex align-items-center justify-content-center"><b>Nama RT</b></h5>
+                                <h5 class="d-flex align-items-center justify-content-center"><b>Nama Ketua RT</b></h5>
                                 <p class="d-flex align-items-center justify-content-center">{{ $prfl->nama_rt }}</p>
                             </div>
                             <div class="col-1 d-flex align-items-center justify-content-center">
                                 <div class="garis_verikal"></div>
                             </div>
                             <div class="col-3">
-                                <h5 class="d-flex align-items-center justify-content-center"><b>Nama RW</b></h5>
+                                <h5 class="d-flex align-items-center justify-content-center"><b>Nama Ketua RW</b></h5>
                                 <p class="d-flex align-items-center justify-content-center">{{ $prfl->nama_rw }}</p>
                             </div>
                             <div class="col"></div>

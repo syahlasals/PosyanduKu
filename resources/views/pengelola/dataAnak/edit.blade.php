@@ -106,11 +106,16 @@
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
-                                        <label for="tgl_anak"><b>Golongan Darah</b></label>
+                                        <label for="golongan_darah"><b>Golongan Darah</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="text" name="golongan_darah" id="golongan_darah" class="form-control" value="{{ $anak->golongan_darah }}" required="">                        
+                                        <select class="form-select" aria-label="Default select example" style="border-radius: 30px; width: 250px;" name="golongan_darah" id="golongan_darah">
+                                            <option value="A">A</option>
+                                            <option value="B">B</option>
+                                            <option value="AB">AB</option>
+                                            <option value="O">O</option>
+                                        </select>                                    
                                     </div>
                                 </div>
                                 <button class="btn btn-main" type="submit">Simpan</button>

@@ -89,6 +89,7 @@
                 <th>Vaksin</th>
                 <th>Vitamin</th>
                 <th>Status Pertumbuhan</th>
+                <th>Aksi</th>
             </tr>
         </thead>
         <tbody>
@@ -116,6 +117,9 @@
                 <td>@foreach ($data->tumbuhs as $item)
                     {{ $item->status_penyimpangan }} <br>
                     @endforeach
+                </td>
+                <td>
+                    <a href="history/{{$data->nik_anak}}"><button type="button" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Riwayat"><i class="fa-solid fa-clock-rotate-left"></i></button></a>
                 </td>
             </tr>
             @endforeach

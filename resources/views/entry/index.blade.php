@@ -125,6 +125,7 @@
     <!--Script-->
     @include('template.script')
     <!-- End of Script-->
+    @include('sweetalert::alert')
  
 </body>
 
