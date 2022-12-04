@@ -36,7 +36,7 @@
                 </h5>
             </div>
             <div class="col">
-                <h5 style="margin-left: 29%;">Jumlah Balita Gejala Stunting : {{ $gejalastunting }} <br>
+                <h5 style="margin-left: 29%;">Jumlah Balita Gizi Buruk : {{ $giziBuruk }} <br>
                     Jumlah Balita Stunting : {{ $stunting }}
                 </h5>
             </div>

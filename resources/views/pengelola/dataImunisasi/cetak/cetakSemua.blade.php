@@ -24,19 +24,20 @@
         <div class="row justify-content-center">
             <div class="col">
                 <h5 class="text-center">
-                    Tanggal : {{ $tanggal }} <br>
+                    Tanggal : {{ $tanggal }} <br><br>
+                    Balita Terdaftar : {{ $semua }}
                 </h5>
             </div>
         </div>
         <div class="row">
             <div class="col">
                 <h5 style="margin-left: 9%;">
-                    Jumlah Balita Terdaftar : {{ $semua }} <br>
                     Jumlah Balita Normal : {{ $normal }} <br>
+                    Jumlah Balita Obesitas : {{ $obesitas }}
                 </h5>
             </div>
             <div class="col">
-                <h5 style="margin-left: 29%;">Jumlah Balita Gejala Stunting : {{ $gejalastunting }} <br>
+                <h5 style="margin-left: 29%;">Jumlah Balita Gizi Buruk : {{ $giziBuruk }} <br>
                     Jumlah Balita Stunting : {{ $stunting }}
                 </h5>
             </div>

@@ -51,10 +51,18 @@
                 </a>
             </div>
             <div class="col">
-                <a href="{{ url('pengelola/dataImunisasi/gejalaStunting') }}" class="card card-ap">
+                <a href="{{ url('pengelola/dataImunisasi/giziBuruk') }}" class="card card-ap">
                 <div class="card-body">
-                    <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita Gejala <br> Stunting</b></span> 
-                    <h1 class="text-center">{{ $gejalastunting }}</h1>
+                    <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita Gizi <br> Buruk</b></span> 
+                    <h1 class="text-center">{{ $giziBuruk }}</h1>
+                </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="{{ url('pengelola/dataImunisasi/obesitas') }}" class="card card-ip">
+                <div class="card-body">
+                    <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita <br> Obesitas</b></span> 
+                    <h1 class="text-center">{{ $obesitas }}</h1>
                 </div>
                 </a>
             </div>

@@ -73,8 +73,8 @@
                                                 <option value="Normal">Normal</option>
                                                 <option value="Obesitas">Obesitas</option>
                                                 <option value="Stunting">Stunting</option>
-                                                <option value="Gejala Stunting">Gejala Stunting</option>
-                                            </select>                                    
+                                                <option value="Gizi Buruk">Gizi Buruk</option>
+                                            </select>
                                         </div>
                                 </div>
                                 <br>
