@@ -36,7 +36,7 @@
     <div class="container">
         <div class="card my-5">
             <div class="card-body">
-                <h5 class="text-center">Data An. {{$anak->nama_anak}}</h5>
+                <h4 class="text-center">Data An. {{$anak->nama_anak}}</h4>
                 <hr>
                 <div class="row">
                     <div class="col card text-center mx-2">
@@ -59,7 +59,7 @@
                         </div>
                     </div>
                     <div class="col card text-center mx-2">
-                        <h5 class="text-center my-3"><b>Riwayat Vitamin</b></h5>
+                        <h6 class="text-center my-3"><b>Riwayat Vitamin</b></h6>
                         <div class="row mb-3">
                             <div class="col">
                                 <span><h6><u>Tanggal</u></h6>

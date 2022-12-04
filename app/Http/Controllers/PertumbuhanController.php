@@ -419,6 +419,7 @@ class PertumbuhanController extends Controller
             'gpph'=>$request->gpph,
             'tgl_hitung'=>$request->tgl_hitung,
         ]);
+        
         return redirect('/entry/InputImunisasi')->with('success', 'Data Pertumbuhan Berhasil Ditambahkan!');
     }
 

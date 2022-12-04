@@ -25,13 +25,13 @@
         <table id="datapetugas" class="table table-striped table-bordered text-center">
             <thead>
                 <tr>
-                    <th>NOMOR</th>
+                    <th>No</th>
                     <th>NIP</th>
-                    <th>NAMA</th>
-                    <th>JENIS KELAMIN</th>
-                    <th>JABATAN</th>
-                    <th>ALAMAT</th>
-                    <th>AKSI</th>
+                    <th>Nama Petugas</th>
+                    <th>Jenis Kelamin</th>
+                    <th>Jabatan</th>
+                    <th>Alamat</th>
+                    <th>Aksi</th>
 
                 </tr>
             </thead>
