@@ -106,16 +106,16 @@
                 </td> --}}
                 <td>
                     @foreach ($data->vaksins as $item)
-                    {{ $item->jenis_vaksin }}
+                    {{ $item->jenis_vaksin }},
                     @endforeach
                 </td>
                 <td>
                     @foreach ($data->vitamins as $item)
-                    {{ $item->jenis_vitamin }}
+                    {{ $item->jenis_vitamin }},
                     @endforeach
                 </td>
                 <td>@foreach ($data->tumbuhs as $item)
-                    {{ $item->status_penyimpangan }}
+                    {{ $item->status_penyimpangan }},
                     @endforeach
                 </td>
             </tr>
