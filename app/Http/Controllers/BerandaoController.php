@@ -77,7 +77,7 @@ class BerandaoController extends Controller
             'rw'=>'required'
         ]);
 
-        $ortus = Ortu::create2([
+        $ortus = Ortu::create([
             'no_kk'=>$request->no_kk,
             'nik_ayah'=>$request->nik_ayah,
             'nik_ibu'=>$request->nik_ibu,

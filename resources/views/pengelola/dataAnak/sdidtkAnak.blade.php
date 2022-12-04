@@ -69,7 +69,7 @@
                 <td>{{$sdidtk->tdl ? $sdidtk->tb == 1 ? "Normal" : "Tidak Normal" : ""}}</td>
                 <td>{{$sdidtk->smpe ? $sdidtk->tb == 1 ? "Normal" : "Tidak Normal" : ""}}</td>
                 <td>{{$sdidtk->mchat ? $sdidtk->tb == 1 ? "Normal" : "Tidak Normal" : ""}}</td>
-                <td>{{$sdidtk->gpph ? $sdidtk->tb == 1 ? "Normal" : "Tidak Normal" : ""}}</td>
+                <td>{{$sdidtk->gpphe ? $sdidtk->tb == 1 ? "Normal" : "Tidak Normal" : ""}}</td>
             </tr>
             @endforeach
         </table>
