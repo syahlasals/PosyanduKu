@@ -42,8 +42,7 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
         Route::get('/',[BerandapController::class,'index'])->name('pengelola');
         Route::resource('/dataAnak', AnakController::class);
         Route::get('/delete/dataAnak/{id}', [AnakController::class,'destroy']);
-        //Route::get('dataAnak/history/{id}', [HistoryController::class, 'historyImunisasi'])->middleware('pengelola');
-        Route::get('dataPosyandu',[ProfileController::class,'index']);
+        Route::get('dataAnak/history/{id}', [HistoryController::class, 'historyImunisasi'])->middleware('pengelola');        Route::get('dataPosyandu',[ProfileController::class,'index']);
         Route::resource('dataPetugas', PetugasController::class);
         Route::get('hapuspetugas/dataPetugas', [PetugasController::class,'hapuspetugas'])->name('hapuspetugas');
         Route::get('dataPetugas/edit/{nip}',[PetugasController::class,'edit'])->name('edit');
@@ -65,7 +64,7 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
         Route::get('/entry',[BerandaeController::class,'index'])->name('entry')->middleware('entry');
         Route::resource('entry/pendaftaranAnak', DaftarAnakController::class)->middleware('entry');
         Route::get('entry/InputImunisasi', [AnakController::class, 'indexInputImunisasi'])->name('index-imunisasi')->middleware('entry');
-        Route::get('entry/history/{id}', [HistoryController::class, 'historyImunisasi'])->middleware('entry');
+        // Route::get('entry/history/{id}', [HistoryController::class, 'historyImunisasi'])->middleware('entry');
         Route::get('entry/sdidtkAnak/{id}', [StuntingController::class, 'index'])->middleware('entry');
         Route::get('entry/daftarOrtu', [BerandaoController::class, 'index2'])->middleware('entry');
         Route::post('entry/daftarOrtu', [BerandaoController::class, 'store2'])->middleware('entry');
