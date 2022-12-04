@@ -61,8 +61,8 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
         Route::get('entry/InputImunisasi', [AnakController::class, 'indexInputImunisasi'])->name('index-imunisasi')->middleware('entry');
         // Route::get('entry/history/{id}', [HistoryController::class, 'historyImunisasi'])->middleware('entry');
         Route::get('entry/sdidtkAnak/{id}', [StuntingController::class, 'index'])->middleware('entry');
-        Route::get('entry/daftarOrtu', [BerandaoController::class, 'create'])->middleware('entry');
-
+        Route::get('entry/daftarOrtu', [BerandaoController::class, 'index2'])->middleware('entry');
+        Route::post('entry/daftarOrtu', [BerandaoController::class, 'store2'])->middleware('entry');
     // });
 
         Route::get('entry/vaksin/{nik_anak}', [VaksinController::class, 'index'])->middleware('entry');
@@ -78,7 +78,9 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
     
     
     // Route::prefix('ortu')->middleware('ortu')->group(function () {
-        Route::resource('ortu', BerandaoController::class)->middleware('ortu');
+        Route::get('ortu', [BerandaoController::class, 'index'])->middleware('ortu');
+        Route::post('ortu', [BerandaoController::class, 'store'])->middleware('ortu');
+        // Route::resource('ortu', BerandaoController::class)->middleware('ortu');
         Route::get('/redirects', [HomeController::class, 'index'])->middleware('ortu');
     });
 // });
