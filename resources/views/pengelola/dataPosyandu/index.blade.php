@@ -78,7 +78,7 @@
                                 <p class="d-flex align-items-center justify-content-center">{{ $prfl->bendahara }}</p>
                             </div>
                         </div>
-                   </div><br><br>
+                   </div>
                     @endforeach
 
                     <div class="accordion accordion-flush profile-acor my-5" id="accordionFlushExample">

@@ -118,8 +118,6 @@ class AnakController extends Controller
         return view('entry.inputImunisasi.index', compact('anaks'));
     }
 
-
-
     public function pertumbuhan()
     {
         return view('entry.pertumbuhan.index');
