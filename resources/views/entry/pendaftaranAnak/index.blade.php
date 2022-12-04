@@ -42,6 +42,9 @@
                             @if (Session::has('msg'))
                                 <div class="alert alert-danger">{{ Session::get('msg') }}</div>
                             @endif
+                            @if (Session::has('anak'))
+                                <div class="alert alert-danger">{{ Session::get('anak') }}</div>
+                            @endif
                             <form method="POST" action="/entry/pendaftaranAnak" id="myform" style="margin-top: 15px; margin-bottom: 15px;">
                                 @csrf
                                 <div class="row" style="margin-bottom: 15px;">
@@ -114,7 +117,12 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="text" name="golongan_darah" id="golongan_darah" class="form-control">
+                                        <select class="form-select" aria-label="Default select example" style="border-radius: 30px; width: 250px;" name="golongan_darah" id="golongan_darah">
+                                            <option value="A">A</option>
+                                            <option value="B">B</option>
+                                            <option value="AB">AB</option>
+                                            <option value="O">O</option>
+                                        </select>                                    
                                     </div>
                                 </div>
                                 <br>
