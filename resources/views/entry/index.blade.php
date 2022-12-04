@@ -13,6 +13,7 @@
     <div id="wrapper">
     <!--sidebar-->
     @include('template.sideentry')
+
     <!--End Sidebar-->
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">

@@ -65,6 +65,15 @@
                             </div>
                             <div class="row">
                                 <div class="col-5">
+                                    <label for="nokk"><b>Usia</b></label>
+                                </div>
+                                <div class="col-1"><b>:</b></div>
+                                <div class="col-6">
+                                    {{ $anak->bulan }} bulan
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-5">
                                     <label for="nokk"><b>Tempat, Tanggal Lahir</b></label>
                                 </div>
                                 <div class="col-1"><b>:</b></div>
