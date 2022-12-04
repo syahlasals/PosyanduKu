@@ -44,7 +44,7 @@
                                 <td>
                                     {{ $anak->jenkel_anak == 'L' ? 'Laki-Laki' : 'Perempuan' }}
                                 </td>
-                                <td>{{ $anak->bulan }}</td>
+                                <td>{{ $anak->usia }}</td>
                                 <td>
                                 <div class="row d-flex">
                                     <div class="col-16">
