@@ -21,11 +21,27 @@ class PertumbuhanController extends Controller
 
     public function store(Request $request)
     {
-        
+
         $umur = Anak::where('nik_anak', $request->nik_anak)->first();
         $tahun = $umur->tahun;
         $bulan = $umur->bulan;
 
+        
+        if($tahun != 0){
+            $result = 2*$tahun + 8;
+            if($request->berat == $result){
+                $berat = '1';
+            }else{
+                $berat = '0';
+            }
+        }else{
+            $result = $bulan/2 + 4;
+            if($request->berat == $result){
+                $berat = '1';
+            }else{
+                $berat = '0';
+            }
+        }
         // if($bulan == 0){
         //     $result = 3;
         //     if($request->berat == $result){
@@ -44,21 +60,6 @@ class PertumbuhanController extends Controller
         //     }
         // }
 
-        if($tahun != 0){
-            $result = 2*$tahun + 8;
-            if($request->berat == $result){
-                $berat = 1;
-            }else{
-                $berat = '0';
-            }
-        }else{
-            $result = $bulan/2 + 4;
-            if($request->berat == $result){
-                $berat = 1;
-            }else{
-                $berat = '0';
-            }
-        }
 
         $this->validate($request, [
             'nik_anak' =>'required',
@@ -76,17 +77,20 @@ class PertumbuhanController extends Controller
             'tgl_hitung'=>$request->tgl_hitung
         ]);
         
+      
+
         $sdidtks = Stunting::create([
+            'kode_pertumbuhan' =>  $pertumbuhans->kode_pertumbuhan,
             'nik_anak'=>$request->nik_anak,
-            'bb_tb'=>$berat,
+            'bb_tb'=> $berat,
             'tb_u'=>null,
-            'kpsp'=>null,
-            'tdd'=>null,
-            'tdl'=>null,
-            'kmpe'=>null,
-            'mchat'=>null,
-            'gpph'=>null,
-            'tgl_hitung'=>'2022-12-02',
+            'kpsp'=>$request->kpsp,
+            'tdd'=>$request->tdd,
+            'tdl'=>$request->tdl,
+            'kmpe'=>$request->kmpe,
+            'mchat'=>$request->mchat,
+            'gpph'=>$request->gpph,
+            'tgl_hitung'=>$request->tgl_hitung,
         ]);
         return redirect('/entry/InputImunisasi')->with('success', 'Data Pertumbuhan Berhasil Ditambahkan!');
     }
