@@ -42,13 +42,13 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
         Route::get('/',[BerandapController::class,'index'])->name('pengelola');
         Route::resource('/dataAnak', AnakController::class);
         Route::get('/delete/dataAnak/{id}', [AnakController::class,'destroy']);
-        Route::get('dataAnak/history/{id}', [HistoryController::class, 'historyImunisasi'])->middleware('pengelola');
         Route::get('dataAnak/sdidtkAnak/{id}', [StuntingController::class, 'index'])->middleware('pengelola');
         Route::get('dataPosyandu',[ProfileController::class,'index']);
         Route::resource('dataPetugas', PetugasController::class);
         Route::get('hapuspetugas/dataPetugas', [PetugasController::class,'hapuspetugas'])->name('hapuspetugas');
         Route::get('dataPetugas/edit/{nip}',[PetugasController::class,'edit'])->name('edit');
         Route::post('dataPetugas/update/{nip}',[PetugasController::class,'update']);
+        Route::get('dataImunisasi/history/{id}', [HistoryController::class, 'historyImunisasi'])->middleware('pengelola');
         Route::get('dataImunisasi', [ImunisasiController::class, 'index']);
         Route::get('dataImunisasi/normal', [ImunisasiController::class, 'normal']);
         Route::get('dataImunisasi/giziBuruk', [ImunisasiController::class, 'giziBuruk']);
