@@ -277,10 +277,10 @@ class PertumbuhanController extends Controller
         }else{
             if($bulan == 1){
                 $result = 37;
-                if($request->tinggi == $result){
-                    $tinggi = 1;
+                if($request->lingkar_kepala == $result){
+                    $lingkar_kepala = 1;
                 }else{
-                    $tinggi = '0';
+                    $lingkar_kepala = '0';
                 }
             }
         }if($bulan == 2){
@@ -293,10 +293,10 @@ class PertumbuhanController extends Controller
         }else{
             if($bulan == 3){
                 $result = 41;
-                if($request->tinggi == $result){
-                    $tinggi = 1;
+                if($request->lingkar_kepala == $result){
+                    $lingkar_kepala = 1;
                 }else{
-                    $tinggi = '0';
+                    $lingkar_kepala = '0';
                 }
             }
         }if($bulan == 4){
@@ -309,10 +309,10 @@ class PertumbuhanController extends Controller
         }else{
             if($bulan == 5){
                 $result = 43;
-                if($request->tinggi == $result){
-                    $tinggi = 1;
+                if($request->lingkar_kepala == $result){
+                    $lingkar_kepala = 1;
                 }else{
-                    $tinggi = '0';
+                    $lingkar_kepala = '0';
                 }
             }
         }if($bulan == 6){
@@ -325,10 +325,10 @@ class PertumbuhanController extends Controller
         }else{
             if($bulan == 7){
                 $result = 45;
-                if($request->tinggi == $result){
-                    $tinggi = 1;
+                if($request->lingkar_kepala == $result){
+                    $lingkar_kepala = 1;
                 }else{
-                    $tinggi = '0';
+                    $lingkar_kepala = '0';
                 }
             }
         }if($bulan == 8){
@@ -341,10 +341,10 @@ class PertumbuhanController extends Controller
         }else{
             if($bulan == 9){
                 $result = 46;
-                if($request->tinggi == $result){
-                    $tinggi = 1;
+                if($request->lingkar_kepala == $result){
+                    $lingkar_kepala = 1;
                 }else{
-                    $tinggi = '0';
+                    $lingkar_kepala = '0';
                 }
             }
         }if($bulan == 10){
@@ -357,10 +357,10 @@ class PertumbuhanController extends Controller
         }else{
             if($bulan == 11){
                 $result = 46;
-                if($request->tinggi == $result){
-                    $tinggi = 1;
+                if($request->lingkar_kepala == $result){
+                    $lingkar_kepala = 1;
                 }else{
-                    $tinggi = '0';
+                    $lingkar_kepala = '0';
                 }
             }
         }if($bulan == 12){
@@ -373,10 +373,10 @@ class PertumbuhanController extends Controller
         }else{
             if($tahun == 1){
                 $result = 48;
-                if($request->tinggi == $result){
-                    $tinggi = 1;
+                if($request->lingkar_kepala == $result){
+                    $lingkar_kepala = 1;
                 }else{
-                    $tinggi = '0';
+                    $lingkar_kepala = '0';
                 }
             }
         }if($tahun == 2){
@@ -387,6 +387,7 @@ class PertumbuhanController extends Controller
                 $lingkar_kepala = '0';
             }
         }
+
 
         $this->validate($request, [
             'nik_anak' =>'required',
@@ -403,8 +404,6 @@ class PertumbuhanController extends Controller
             'lingkar_kepala'=>$request->lingkar_kepala,
             'tgl_hitung'=>$request->tgl_hitung
         ]);
-        
-      
 
         $sdidtks = Stunting::create([
             'kode_pertumbuhan' =>  $pertumbuhans->kode_pertumbuhan,
