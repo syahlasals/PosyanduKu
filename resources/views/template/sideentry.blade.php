@@ -35,8 +35,14 @@
     </li>
     <li class="nav-item {{ Request::is('entry/InputImunisasi') || Request::is('entry/pertumbuhan*') || Request::is('entry/vaksin*') || Request::is('entry/vitamin*') || Request::is('entry/formSdidtk*') || Request::is('entry/statusPenyimpangan*') || Request::is('entry/sdidtkAnsk*') ? 'active' : '' }}">
         <a class="nav-link" href="{{ url('entry/InputImunisasi') }}">
-            <i class="bi bi-pencil-fill"></i>
+            <i class="fa-solid fa-pen-to-square"></i> 
             <span>Input Imunisasi</span>
+        </a>
+    </li>
+    <li class="nav-item {{ Request::is('entry/daftarOrtu') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ url('entry/daftarOrtu') }}">
+            <i class="fa-solid fa-user-plus"></i> 
+            <span>Daftar Orangtua</span>
         </a>
     </li>
 
