@@ -90,8 +90,9 @@ class StuntingController extends Controller
     {
         $this->validate($request, [
             'nik_anak'=>'required',
-            'bb_tb'=>'required|in:1,0',
-            'tb_u'=>'required|in:1,0',
+            'bb'=>'required|in:1,0',
+            'tb'=>'required|in:1,0',
+            'lk'=>'required|in:1,0',
             'kpsp',
             'tdd',
             'tdl',
@@ -105,8 +106,9 @@ class StuntingController extends Controller
 
         $sdidtks = Stunting::create([
             'nik_anak'=>$request->nik_anak,
-            'bb_tb'=>$request->bb_tb,
-            'tb_u'=>$request->tb_u,
+            'bb'=>$request->bb,
+            'tb'=>$request->tb,
+            'lk'=>$request->lk,
             'kpsp'=>$request->kpsp,
             'tdd'=>$request->tdd,
             'tdl'=>$request->tdl,
