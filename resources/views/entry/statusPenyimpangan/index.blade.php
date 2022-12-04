@@ -71,6 +71,7 @@
                                         <div class="col-8">
                                             <select class="form-select" aria-label="Default select example" style="border-radius: 30px; width: 250px;" name="status_penyimpangan" id="status_penyimpangan">
                                                 <option value="Normal">Normal</option>
+                                                <option value="Obesitas">Obesitas</option>
                                                 <option value="Stunting">Stunting</option>
                                                 <option value="Gejala Stunting">Gejala Stunting</option>
                                             </select>                                    
