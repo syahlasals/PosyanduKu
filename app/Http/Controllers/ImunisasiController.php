@@ -109,6 +109,7 @@ class ImunisasiController extends Controller
 
     public function cetakNormal()
     {
+        $tanggal = date('d F y');
         $anaks = Anak::join('tb_vaksin', 'tb_vaksin.nik_anak', '=', 'tb_anak.nik_anak')
                 ->join('tb_vitamin', 'tb_vitamin.nik_anak', '=', 'tb_anak.nik_anak')
                 ->join('tb_pertumbuhan', 'tb_pertumbuhan.nik_anak', '=', 'tb_anak.nik_anak')
@@ -125,11 +126,13 @@ class ImunisasiController extends Controller
             'gejalastunting' => $gejalastunting,
             'normal' => $normal,
             'stunting' => $stunting,
+            'tanggal' => $tanggal
         ]);
     }
 
     public function cetakGejalaStunting()
     {
+        $tanggal = date('d F y');
         $anaks = Anak::join('tb_vaksin', 'tb_vaksin.nik_anak', '=', 'tb_anak.nik_anak')
                 ->join('tb_vitamin', 'tb_vitamin.nik_anak', '=', 'tb_anak.nik_anak')
                 ->join('tb_pertumbuhan', 'tb_pertumbuhan.nik_anak', '=', 'tb_anak.nik_anak')
@@ -146,11 +149,13 @@ class ImunisasiController extends Controller
             'gejalastunting' => $gejalastunting,
             'normal' => $normal,
             'stunting' => $stunting,
+            'tanggal' => $tanggal
         ]);
     }
 
     public function cetakStunting()
     {
+        $tanggal = date('d F y');
         $anaks = Anak::join('tb_vaksin', 'tb_vaksin.nik_anak', '=', 'tb_anak.nik_anak')
                 ->join('tb_vitamin', 'tb_vitamin.nik_anak', '=', 'tb_anak.nik_anak')
                 ->join('tb_pertumbuhan', 'tb_pertumbuhan.nik_anak', '=', 'tb_anak.nik_anak')
@@ -167,6 +172,7 @@ class ImunisasiController extends Controller
             'gejalastunting' => $gejalastunting,
             'normal' => $normal,
             'stunting' => $stunting,
+            'tanggal' => $tanggal
         ]);
     }
 }
