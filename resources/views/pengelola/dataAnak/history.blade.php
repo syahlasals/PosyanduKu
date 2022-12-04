@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <title>Petugas Pengelola</title>
     @include('template.head')
 </head>
 
@@ -87,7 +86,7 @@
                         @foreach ($pertumbuhans as $key => $ptm)
                         <tr style="background-color: white;">
                             <td>{{ $ptm->tgl_hitung }}</td>
-                            <td>bb : {{ $ptm->berat }}<br> tb : {{ $ptm->tinggi }}<br> lk : {{ $ptm->lingkar_kepala }} <br></td>
+                            <td>Berat Badan : {{ $ptm->berat }}<br> Tinggi Badan : {{ $ptm->tinggi }}<br> Lingkar Kepala : {{ $ptm->lingkar_kepala }} <br></td>
                         </tr>
                         @endforeach
                     </tbody>

@@ -435,7 +435,6 @@ class PertumbuhanController extends Controller
 
     public function stores(Request $request)
     {
-        
         $this->validate($request, [
             'nik_anak' =>'required',
             'status_penyimpangan' => 'required',

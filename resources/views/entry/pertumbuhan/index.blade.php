@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <title>Petugas Entry</title>
     @include('template.head')
 </head>
 <?php session_start(); ?>
@@ -51,7 +50,7 @@
                                     </div>
                                     <input type="hidden" name="nik_anak" id="nik_anak" class="form-control" value={{$nik_anak}}>
                                 </div>
-                                    <div class="row" style="margin-bottom: 15px;">
+                                <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
                                         <label for="tgl_hitung"><b>Tanggal Imunisasi</b></label>
                                     </div>
