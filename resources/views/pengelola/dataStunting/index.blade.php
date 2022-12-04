@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <title>Petugas Pengelola</title>
     @include('template.head')
 </head>
 
@@ -47,7 +46,7 @@
                 <a href="" class="card card-ap ">
                     <div class="card-body">
                         <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita Gejala Stunting</b></span> 
-                        <h1 class="justify-content-center">{{ $gejalastunting }}</h1>
+                        <h1 class="justify-content-center">{{ $giziBuruk }}</h1>
                     </div>
                 </a>
             </div>
@@ -73,7 +72,7 @@
             <tr>
                 <td>{{ $semua }}</td>
                 <td>{{ $normal }}</td>
-                <td>{{ $gejalastunting }}</td>
+                <td>{{ $giziBuruk }}</td>
                 <td>{{ $stunting }}</td>
             </tr>
         </table>

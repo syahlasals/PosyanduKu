@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Models\Anak;
 use App\Models\Stunting;
 use Illuminate\Http\Request;
@@ -86,13 +87,22 @@ class AnakController extends Controller
      */
     public function update(Request $request, $nik_anak)
     {
-        // $this->validate($request, [
-        //     'nik_anak' => 'required|max:16',
-        //     'no_kk' => 'required|max:16',
-        //     'nama' => 'required',
-        // ]);
+        $lahir = Carbon::createFromFormat('Y-m-d', $request->tgl_anak);
+        $date = Carbon::parse($lahir)->diff(Carbon::now())->format('%y,%m,%d');
+        $umur = explode(',', $date);
+
         $anaks = Anak::find($nik_anak);
-        $anaks->update($request->all());
+        
+        $anaks->update(['no_kk'=>$request->no_kk,
+        'nik_anak'=>$request->nik_anak,
+        'nama_anak'=>$request->nama_anak,
+        'jenkel_anak'=>$request->jenkel_anak,
+        'tgl_anak'=>$request->tgl_anak,
+        'tmp_anak'=>$request->tmp_anak,
+        'tahun' => $umur[0],
+        'bulan' => $umur[1],
+        'hari' => $umur[2],
+        'golongan_darah'=>$request->golongan_darah]);
         return redirect('/pengelola/dataAnak')->with('success', 'Data Berhasil Diubah!');
     }
 

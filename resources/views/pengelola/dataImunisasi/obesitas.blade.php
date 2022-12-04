@@ -77,7 +77,7 @@
 
         <br><br>
 
-        <a href="{{ url('pengelola/dataImunisasi/print') }}" class="btn btn-primary" target="_blank">Print Rekap Anak</a><br><br>
+        <a href="{{ url('pengelola/dataImunisasi/obesitas/print') }}" class="btn btn-primary" target="_blank">Print Rekap Anak</a><br><br>
         <table id="dataimunisasi" class="table table-striped table-bordered text-center" border="1">
         <thead>
             <tr>
@@ -89,7 +89,6 @@
                 <th>Vaksin</th>
                 <th>Vitamin</th>
                 <th>Status Pertumbuhan</th>
-                <th>Aksi</th>
             </tr>
         </thead>
         <tbody>
@@ -117,10 +116,6 @@
                 <td>@foreach ($data->tumbuhs as $item)
                     {{ $item->status_penyimpangan }},
                     @endforeach
-                </td>
-                <td>
-                        <a href="dataImunisasi/history/{{$data->nik_anak}}"><button type="button" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Riwayat"><i class="fa-solid fa-clock-rotate-left"></i></button></a>
-
                 </td>
             </tr>
             @endforeach

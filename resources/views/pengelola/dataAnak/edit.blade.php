@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <title>Petugas Pengelola</title>
     @include('template.head')
 </head>
 
@@ -49,6 +48,7 @@
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
                                         <input type="integer" name="no_kk" id="no_kk" class="form-control" value="{{ $anak->no_kk }}" disabled>
+                                        <input type="hidden" name="no_kk" id="no_kk" class="form-control" value="{{ $anak->no_kk }}">
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
@@ -58,6 +58,7 @@
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8"> 
                                         <input type="text" name="nik_anak" id="nik_anak" class="form-control" value="{{ $anak->nik_anak }}" disabled>
+                                        <input type="hidden" name="nik_anak" id="nik_anak" class="form-control" value="{{ $anak->nik_anak }}" >
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">

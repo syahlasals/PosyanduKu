@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <title>Petugas Entry</title>
     @include('template.head')
 </head>
 <?php session_start(); ?>
@@ -51,7 +50,7 @@
                                     </div>
                                     <input type="hidden" name="nik_anak" id="nik_anak" class="form-control" value={{$nik_anak}}>
                                 </div>
-                                    <div class="row" style="margin-bottom: 15px;">
+                                <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
                                         <label for="tgl_hitung"><b>Tanggal Imunisasi</b></label>
                                     </div>
@@ -68,7 +67,7 @@
                                     <div class="col-8"> 
                                     <p class="form-control">
                                         <input type="number" name="tinggi" id="tinggi" style="border: none;" >
-                                        <span style="margin-left: 43%;">cm</span>
+                                        <span style="margin-left: 90%;">cm</span>
                                     </p>
                                     </div>
                                 </div>
@@ -80,7 +79,7 @@
                                     <div class="col-8">
                                         <p class="form-control">
                                             <input type="number" name="berat" id="berat" style="border: none;">
-                                            <span style="margin-left: 45%;">kg</span>                     
+                                            <span style="margin-left: 90%;">kg</span>                     
                                         </p>
                                     </div>
                                 </div>
@@ -92,7 +91,7 @@
                                     <div class="col-8">
                                         <p class="form-control">
                                             <input type="number" name="lingkar_kepala" id="lingkar_kepala" style="border: none;">
-                                            <span style="margin-left: 43%;">cm</span>            
+                                            <span style="margin-left: 90%;">cm</span>            
                                         </p>                   
                                     </div>
                                 </div>

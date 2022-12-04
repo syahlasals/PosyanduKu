@@ -3,7 +3,6 @@
 <html lang="en">
 
 <head>
-    <title>Petugas Pengelola</title>
     @include('template.head')
 </head>
 

@@ -4,7 +4,6 @@
 <html lang="en">
 
 <head>
-    <title>Petugas Entry</title>
     @include('template.head')
 </head>
 

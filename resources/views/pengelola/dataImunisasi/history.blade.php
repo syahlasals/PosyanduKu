@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <title>Petugas Pengelola</title>
     @include('template.head')
 </head>
 
@@ -82,12 +81,12 @@
                 <table id="datahistory" class="table table-striped table-bordered text-center my-3">
                     <tbody>
                         <tr>
-                            <td colspan="2"><b>pertumbuhan</b></td>
+                            <td colspan="2"><b>Pertumbuhan Anak</b></td>
                         </tr>
                         @foreach ($pertumbuhans as $key => $ptm)
                         <tr style="background-color: white;">
                             <td>{{ $ptm->tgl_hitung }}</td>
-                            <td>bb : {{ $ptm->berat }}<br> tb : {{ $ptm->tinggi }}<br> lk : {{ $ptm->lingkar_kepala }} <br></td>
+                            <td>Berat Badan : {{ $ptm->berat }}<br> Tinggi Badan : {{ $ptm->tinggi }}<br> Lingkar Kepala : {{ $ptm->lingkar_kepala }} <br></td>
                         </tr>
                         @endforeach
                     </tbody>
@@ -114,7 +113,7 @@
         <div class="row">
             <div class="col" colspan="3">
                 {{-- <button class="btn btn-main" type="submit" style="margin-left: 260px;">Simpan</button> --}}
-                <a href="{{ url('/pengelola/dataAnak') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
+                <a href="{{ url('/pengelola/dataImunisasi') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
             </div>
         </div>
 

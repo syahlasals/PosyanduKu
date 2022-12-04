@@ -40,12 +40,12 @@ class StuntingController extends Controller
     {
         $semua = Anak::count();
         $normal = Penyimpangan::where('status_penyimpangan','Normal')->count();
-        $gejalastunting = Penyimpangan::where('status_penyimpangan','Gejala Stunting')->count();
+        $giziBuruk = Penyimpangan::where('status_penyimpangan','Gizi Buruk')->count();
         $stunting = Penyimpangan::where('status_penyimpangan','Stunting')->count();
         return view('pengelola.dataImunisasi.index', [
             'semua' => $semua,
             'normal' => $normal,
-            'gejalastunting' => $gejalastunting,
+            'giziBuruk' => $giziBuruk,
             'stunting' => $stunting,
         ]);
     }

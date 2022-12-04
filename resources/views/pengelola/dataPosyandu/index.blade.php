@@ -3,7 +3,6 @@
 <html lang="en">
 
 <head>
-    <title>Data Posyandu</title>
     @include('template.head')
 </head>
 <body id="page-top">

@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <title>Data Posyandu</title>
     @include('template.head')
 </head>
 <body id="page-top">
@@ -51,15 +50,23 @@
                 </a>
             </div>
             <div class="col">
-                <a href="{{ url('pengelola/dataImunisasi/gejalaStunting') }}" class="card card-ap">
+                <a href="{{ url('pengelola/dataImunisasi/giziBuruk') }}" class="card card-ap">
                 <div class="card-body">
-                    <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita Gejala <br> Stunting</b></span> 
-                    <h1 class="text-center">{{ $gejalastunting }}</h1>
+                    <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita <br> Gizi Buruk</b></span> 
+                    <h1 class="text-center">{{ $giziBuruk }}</h1>
                 </div>
                 </a>
             </div>
             <div class="col">
-                <a href="{{ url('pengelola/dataImunisasi/stunting') }}" class="card card-ip">
+                <a href="{{ url('pengelola/dataImunisasi/obesitas') }}" class="card card-ip">
+                <div class="card-body">
+                    <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita <br> Obesitas</b></span> 
+                    <h1 class="text-center">{{ $obesitas }}</h1>
+                </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="{{ url('pengelola/dataImunisasi/stunting') }}" class="card card-ap">
                 <div class="card-body">
                     <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita <br> Stunting</b></span> 
                     <h1 class="text-center">{{ $stunting }}</h1>
@@ -70,7 +77,7 @@
 
         <br><br>
 
-        <a href="{{ url('pengelola/dataImunisasi/gejalaStunting/print') }}" class="btn btn-primary" target="_blank">Print Rekap Anak</a><br><br>
+        <a href="{{ url('pengelola/dataImunisasi/giziBuruk/print') }}" class="btn btn-primary" target="_blank">Print Rekap Anak</a><br><br>
         <table id="dataimunisasi" class="table table-striped table-bordered text-center" border="1">
         <thead>
             <tr>
@@ -98,16 +105,16 @@
                 </td> --}}
                 <td>
                     @foreach ($data->vaksins as $item)
-                    {{ $item->jenis_vaksin }}
+                    {{ $item->jenis_vaksin }},
                     @endforeach
                 </td>
                 <td>
                     @foreach ($data->vitamins as $item)
-                    {{ $item->jenis_vitamin }}
+                    {{ $item->jenis_vitamin }},
                     @endforeach
                 </td>
                 <td>@foreach ($data->tumbuhs as $item)
-                    {{ $item->status_penyimpangan }}
+                    {{ $item->status_penyimpangan }},
                     @endforeach
                 </td>
             </tr>
