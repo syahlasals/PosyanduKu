@@ -70,7 +70,7 @@
 
         <br><br>
 
-        <a href="{{ url('pengelola/dataImunisasi/print') }}" class="btn btn-primary" target="_blank">Print Rekap Anak</a><br><br>
+        <a href="{{ url('pengelola/dataImunisasi/normal/print') }}" class="btn btn-primary" target="_blank">Print Rekap Anak</a><br><br>
         <table id="dataimunisasi" class="table table-striped table-bordered text-center" border="1">
         <thead>
             <tr>
