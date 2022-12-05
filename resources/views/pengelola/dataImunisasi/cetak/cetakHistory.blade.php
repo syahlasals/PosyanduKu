@@ -5,12 +5,11 @@
     @include('template.head')
 </head>
 
-<body id="page-top">
+<body id="page-top" onload="window.print();">
 
     <!-- Page Wrapper -->
     <div id="wrapper">
     <!--sidebar-->
-       @include('template.sidepengelola')
     <!--End Sidebar-->
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -19,10 +18,9 @@
             <div id="content">
 
                 <!--Topbar-->
-                @include('template.nav')
                 <!--End of Topbar-->
-    <div class="container"><br>
-        <h2 class="text-center" ><b>History Imunisasi</b></h2>
+    <div class="container m-y-5"><br>
+        <h2 class="text-center"><b>History Imunisasi</b></h2>
         <div>
             @if ($message = Session::get('success'))
             <div class="alert alert-success " role="alert">
@@ -33,11 +31,8 @@
         </div>
     </div>
 
-    <br><br>
-    
     <div class="container">
-        <a href="{{ $anak->nik_anak }}/print" class="btn btn-primary" target="_blank">Cetak Riwayat Anak</a>
-        <div class="card my-4">
+        <div class="card my-5">
             <div class="card-body">
                 <h5 class="text-center">Data An. {{$anak->nama_anak}}</h5>
                 <hr>
@@ -67,21 +62,21 @@
                             <div class="col">
                                 <span><h6><u>Tanggal</u></h6>
                                     @foreach ($vitamins as $key => $vitamin)
-                                    {{ $vitamin->tgl_vitamin }}    <br>                                
+                                    {{ $vitamin->tgl_vitamin }}    <br>
                                     @endforeach
                                 </span>
                             </div>
                             <div class="col">
                                 <span><h6><u>Jenis Vaksin</u></h6>
                                     @foreach ($vitamins as $key => $vitamin)
-                                    {{ $vitamin->jenis_vitamin }}    <br>                                
+                                    {{ $vitamin->jenis_vitamin }}    <br>
                                     @endforeach
                                 </span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <table id="datahistory" class="table table-striped table-bordered text-center my-3">
+                <table id="datahistory" class="table table-bordered text-center my-3">
                     <tbody>
                         <tr>
                             <td colspan="2"><b>Pertumbuhan Anak</b></td>
@@ -94,7 +89,7 @@
                         @endforeach
                     </tbody>
                 </table>
-                <table id="datahistory" class="table table-striped table-bordered text-center my-3">
+                <table id="datahistory" class="table table-bordered text-center my-3">
                     <tbody>
                         <tr>
                             <td colspan="2"><b>Status Penyimpangan</b></td>
@@ -116,7 +111,7 @@
         <div class="row">
             <div class="col" colspan="3">
                 {{-- <button class="btn btn-main" type="submit" style="margin-left: 260px;">Simpan</button> --}}
-                <a href="{{ url('/pengelola/dataImunisasi') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
+                {{-- <a href="{{ url('/pengelola/dataImunisasi') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a> --}}
             </div>
         </div>
 

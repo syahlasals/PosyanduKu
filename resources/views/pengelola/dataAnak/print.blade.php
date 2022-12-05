@@ -4,12 +4,10 @@
 <head>
     @include('template.head')
 </head>
-<body>
-<div id="wrapper">
-       @include('template.sidepengelola')
+<body id="page-top" onload="window.print();">
+    <div id="wrapper">
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
-                @include('template.nav')
 <body>
     <div class="container"><br>
         <h2 class="text-center" >HASIL PELAYANAN
@@ -27,8 +25,7 @@
             @endif
         </div>
 
-        <a href="{{ $anak->nik_anak }}/print" class="btn btn-primary" target="_blank">Print SDIDTK Anak</a><br><br>
-        <table id="datastunting" class="table table-striped table-bordered text-center">
+        <table id="datastunting" class="table table-bordered text-center">
             <thead>
                 <tr>
                     <th rowspan="3" class="justify-content-center">No</th>
@@ -75,7 +72,6 @@
             </tr>
             @endforeach
         </table>
-        <a href="{{ url('/pengelola/dataAnak') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
     </div>
     @include('template.footer')
     <!-- End of Footer -->

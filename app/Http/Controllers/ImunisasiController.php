@@ -122,7 +122,7 @@ class ImunisasiController extends Controller
 
     public function cetakSemua()
     {
-        $tanggal = date('d F y');
+        $tanggal = date('l, d F y');
         $anaks = Anak::all();
         $semua = Anak::count();
         $normal = Penyimpangan::where('status_penyimpangan','Normal')->count();
@@ -136,7 +136,7 @@ class ImunisasiController extends Controller
             'giziBuruk' => $giziBuruk,
             'stunting' => $stunting,
             'obesitas' => $obesitas,
-            'tanggal' => $tanggal
+            'tanggal' => $tanggalapp
         ]);
     }
 
