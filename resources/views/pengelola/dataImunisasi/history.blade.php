@@ -22,7 +22,7 @@
                 @include('template.nav')
                 <!--End of Topbar-->
     <div class="container"><br>
-        <h2 class="text-center" ><b>History Imunisasi</b></h2>
+        <h2 class="text-center" ><b>Riwayat Imunisasi</b></h2>
         <div>
             @if ($message = Session::get('success'))
             <div class="alert alert-success " role="alert">
