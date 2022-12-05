@@ -34,12 +34,12 @@ class DaftarAnakController extends Controller
         $date = Carbon::parse($lahir)->diff(Carbon::now())->format('%y,%m,%d');
         $umur = explode(',', $date);
     
-        if($ortu == null || $anak != null){
-        return back()->with([
-            'msg' => 'No KK belum terdaftar!',
-            'anak' => 'NIK anak sudah terdaftar!'
-         ]);
-        }else{
+        if($ortu == null){
+        return back()->with('msg', 'No KK belum terdaftar!');
+        }elseif( $anak != null){
+            return back()->with('anak', 'Nik Anak Sudah terdaftar!');
+        }
+        else{
 
 
         $anaks = Anak::create([
