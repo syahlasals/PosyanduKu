@@ -36,7 +36,7 @@
             <div class="col">
                 <a href="{{ url('pengelola/dataImunisasi') }}" class="card card-ap">
                 <div class="card-body">
-                    <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita <br> Terdaftar</b></span> 
+                    <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Anak <br> Terdaftar</b></span> 
                     <h1 class="text-center">{{ $semua }}</h1>
                 </div>
                 </a>
@@ -44,7 +44,7 @@
             <div class="col">
                 <a href="{{ url('pengelola/dataImunisasi/normal') }}" class="card card-ip">
                 <div class="card-body">
-                    <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita <br> Normal</b></span> 
+                    <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Anak <br> Normal</b></span> 
                     <h1 class="text-center">{{ $normal }}</h1>
                 </div>
                 </a>
@@ -52,7 +52,7 @@
             <div class="col">
                 <a href="{{ url('pengelola/dataImunisasi/giziBuruk') }}" class="card card-ap">
                 <div class="card-body">
-                    <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita <br> Gizi Buruk</b></span> 
+                    <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Anak <br> Gizi Buruk</b></span> 
                     <h1 class="text-center">{{ $giziBuruk }}</h1>
                 </div>
                 </a>
@@ -60,7 +60,7 @@
             <div class="col">
                 <a href="{{ url('pengelola/dataImunisasi/obesitas') }}" class="card card-ip">
                 <div class="card-body">
-                    <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita <br> Obesitas</b></span> 
+                    <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Anak <br> Obesitas</b></span> 
                     <h1 class="text-center">{{ $obesitas }}</h1>
                 </div>
                 </a>
@@ -68,7 +68,7 @@
             <div class="col">
                 <a href="{{ url('pengelola/dataImunisasi/stunting') }}" class="card card-ap">
                 <div class="card-body">
-                    <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita <br> Stunting</b></span> 
+                    <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Anak <br> Stunting</b></span> 
                     <h1 class="text-center">{{ $stunting }}</h1>
                 </div>
                 </a>
