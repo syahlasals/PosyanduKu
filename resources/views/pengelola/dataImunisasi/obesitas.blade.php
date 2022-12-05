@@ -86,7 +86,7 @@
 
                     <br><br>
 
-                    <a href="{{ url('/pengelola/dataImunisasi/obesitas/print') }}" class="btn btn-main" target="_blank" role="button" aria-disabled="true">Cetak Rekap Anak</a><br><br>
+                    <a href="{{ url('/pengelola/dataImunisasi/obesitas/print') }}" class="btn btn-main" target="_blank" role="button" aria-disabled="true">Cetak Rekap Anak <i class="fa-solid fa-print ml-1"></i></a><br><br>
 
                     <table id="dataimunisasi" class="table table-striped table-bordered text-center" border="1">
                         <thead>

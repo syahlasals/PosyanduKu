@@ -36,7 +36,7 @@
     <br><br>
     
     <div class="container">
-        <a href="{{ $anak->nik_anak }}/print" class="btn btn-main" target="_blank" role="button" aria-disabled="true">Cetak Riwayat Anak</a><br><br>
+        <a href="{{ $anak->nik_anak }}/print" class="btn btn-main" target="_blank" role="button" aria-disabled="true">Cetak Riwayat Anak <i class="fa-solid fa-print ml-1"></i></a><br>
 
         <div class="card my-4">
             <div class="card-body">
@@ -82,9 +82,9 @@
                         </div>
                     </div>
                 </div>
-                <table id="datahistory" class="table table-striped table-bordered text-center my-3">
+                <table id="datahistory" class="table table-bordered text-center my-3" style="color: black">
                     <tbody>
-                        <tr>
+                        <tr class="table-secondary">
                             <td colspan="2"><b>Pertumbuhan Anak</b></td>
                         </tr>
                         @foreach ($pertumbuhans as $key => $ptm)
@@ -95,13 +95,13 @@
                         @endforeach
                     </tbody>
                 </table>
-                <table id="datahistory" class="table table-striped table-bordered text-center my-3">
+                <table id="datahistory" class="table table-bordered text-center my-3" style="color: black">
                     <tbody>
-                        <tr>
+                        <tr class="table-secondary">
                             <td colspan="2"><b>Status Penyimpangan</b></td>
                         </tr>
                         @foreach ($penyimpangans as $key => $simpang)
-                        <tr>
+                        <tr style="background-color: white;">
                             <td colspan="2">
                                 {{ $simpang->tgl_hitung }}<br>            
                                 {{ $simpang->status_penyimpangan }}

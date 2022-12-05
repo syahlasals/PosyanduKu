@@ -27,7 +27,7 @@
             @endif
         </div>
 
-        <a href="{{ $anak->nik_anak }}/print" class="btn btn-main" target="_blank" role="button" aria-disabled="true">Cetak SDIDTK Anak</a><br><br>
+        <a href="{{ $anak->nik_anak }}/print" class="btn btn-main" target="_blank" role="button" aria-disabled="true">Cetak SDIDTK Anak <i class="fa-solid fa-print ml-1"></i></a><br><br>
 
         <table id="datastunting" class="table table-striped table-bordered text-center">
             <thead>

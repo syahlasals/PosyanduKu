@@ -87,7 +87,7 @@
                             <td colspan="2"><b>Pertumbuhan Anak</b></td>
                         </tr>
                         @foreach ($pertumbuhans as $key => $ptm)
-                        <tr style="background-color: white;">
+                        <tr style="background-color: white; color:black">
                             <td>{{ $ptm->tgl_hitung }}</td>
                             <td>Berat Badan : {{ $ptm->berat }}<br> Tinggi Badan : {{ $ptm->tinggi }}<br> Lingkar Kepala : {{ $ptm->lingkar_kepala }} <br></td>
                         </tr>
@@ -100,7 +100,7 @@
                             <td colspan="2"><b>Status Penyimpangan</b></td>
                         </tr>
                         @foreach ($penyimpangans as $key => $simpang)
-                        <tr>
+                        <tr style="background-color: white; color:black">
                             <td colspan="2">
                                 {{ $simpang->tgl_hitung }}<br>            
                                 {{ $simpang->status_penyimpangan }}
