@@ -38,7 +38,9 @@ body{
     background: #647BB1;
     color: #ffffff;
 }
-
+.btn-h:hover{
+    color: #000000;
+}
 .card-welcomep{
     height: 226px;
     background: #CCB2E0;

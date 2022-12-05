@@ -4,14 +4,17 @@
 <head>
     @include('template.head')
 </head>
-<body>
-<div id="wrapper">
-       @include('template.sidepengelola')
+<body id="page-top" onload="window.print();">
+    <div id="wrapper">
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
-                @include('template.nav')
 <body>
     <div class="container"><br>
+
+        <h2 class="text-center mt-5 mb-3"><b>LAPORAN HASIL KEGIATAN POSYANDU RW 05<br>DESA LAGADAR KECAMATAN MARGAASIH KABUPATEN BANDUNG</b></h2>
+        <h6 class="text-center mb-5">Jl. Nanjung Kp. Mekar Bakti RT 02 RW 05 Desa Lagadar Kecamatan Margaasih Kabupaten Bandung</h6>
+        <div class="card" style="background-color: black; height:5px;"></div><br><br>
+        
         <h2 class="text-center" >HASIL PELAYANAN
         <br>SIMULASI DETEKSI INTERVENSI DINI TUMBUH KEMBANG (SDIDTK)</h2>
         <h5 class="text-center">(dilaksanakan oleh dokter/perawat/bidan/tenaga terlatih)</h5>
@@ -27,9 +30,7 @@
             @endif
         </div>
 
-        <a href="{{ $anak->nik_anak }}/print" class="btn btn-main" target="_blank" role="button" aria-disabled="true">Cetak SDIDTK Anak <i class="fa-solid fa-print ml-1"></i></a><br><br>
-
-        <table id="datastunting" class="table table-striped table-bordered text-center">
+        <table id="datastunting" class="table table-bordered text-center">
             <thead>
                 <tr>
                     <th rowspan="3" class="justify-content-center">No</th>
@@ -76,7 +77,6 @@
             </tr>
             @endforeach
         </table>
-        <a href="{{ url('/pengelola/dataAnak') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
     </div>
     @include('template.footer')
     <!-- End of Footer -->
