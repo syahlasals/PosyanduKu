@@ -37,7 +37,7 @@ class DaftarAnakController extends Controller
         if($ortu == null){
         return back()->with('msg', 'No KK belum terdaftar!');
         }elseif( $anak != null){
-            return back()->with('anak', 'Nik Anak Sudah terdaftar!');
+            return back()->with('anak', 'NIK Anak Sudah terdaftar!');
         }
         else{
 
