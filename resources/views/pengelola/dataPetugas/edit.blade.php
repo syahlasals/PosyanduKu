@@ -53,7 +53,7 @@
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
-                                        <label for="nama"><b>NAMA</b></label>
+                                        <label for="nama"><b>Nama</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8"> 
@@ -62,7 +62,7 @@
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
-                                        <label for="jenkel_petugas"><b>JENIS KELAMIN</b></label>
+                                        <label for="jenkel_petugas"><b>Jenis Kelamin</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
@@ -78,7 +78,7 @@
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
-                                        <label for="jabatan"><b>JABATAN</b></label>
+                                        <label for="jabatan"><b>Jabatan</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
@@ -87,16 +87,20 @@
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
-                                        <label for="alamat_petugas"><b>ALAMAT</b></label>
+                                        <label for="alamat_petugas"><b>Alamat</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
                                         <input type="text" name="alamat_petugas" id="alamat_petugas" class="form-control" value="{{ $ptgs->alamat_petugas }}" required="">
                                     </div>
                                 </div>
-                                <button class="btn btn-main" type="submit">Simpan</button>
-                                {{-- <button class="btn btn-main" type="btn" href="{{ url('/pengelola/dataPetugas') }}">Kembali</button> --}}
-                                <a href="{{ url('/pengelola/dataPetugas') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
+                                <br>
+                                <div class="row">
+                                    <div class="col" colspan="3">
+                                    <button class="btn btn-main" type="submit" style="margin-left: 260px;">Simpan</button>
+                                    <a href="{{ url('/pengelola/dataPetugas') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
+                                    </div>
+                                </div>
                             </form>
                         </div><br>
                     </div>

@@ -25,13 +25,13 @@
         <table id="datapetugas" class="table table-striped table-bordered text-center">
             <thead>
                 <tr>
-                    <th>NOMOR</th>
+                    <th>No</th>
                     <th>NIP</th>
-                    <th>NAMA</th>
-                    <th>JENIS KELAMIN</th>
-                    <th>JABATAN</th>
-                    <th>ALAMAT</th>
-                    <th>AKSI</th>
+                    <th>Nama Petugas</th>
+                    <th>Jenis Kelamin</th>
+                    <th>Jabatan</th>
+                    <th>Alamat</th>
+                    <th>Aksi</th>
 
                 </tr>
             </thead>
@@ -48,8 +48,8 @@
                 <td>
                     <div class="row d-flex">
                         <div class="col-16">
-                            <a href="{{ route('edit', $ptgs->nip) }}"><button type="button" class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><i class="fas fa-pencil-alt"></i></button></a>
-                            <button type="button" class="delete btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus" data-id="{{ $ptgs->nip }}"><i class="fas fa-trash-alt"></i></button>
+                            <a href="{{ route('edit', $ptgs->nip) }}"><button type="button" class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><i class="fas fa-pencil-alt btn-h"></i></button></a>
+                            <button type="button" class="delete btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus" data-id="{{ $ptgs->nip }}"><i class="fas fa-trash-alt btn-h"></i></button>
                     </div>
                 </td>
             </tr>

@@ -118,9 +118,13 @@
                                         </select>                                    
                                     </div>
                                 </div>
-                                <button class="btn btn-main" type="submit">Simpan</button>
-                                {{-- <button class="btn btn-main" type="btn" href="{{ url('pengelola/dataAnak') }}">Kembali</button> --}}
-                                <a href="{{ url('/pengelola/dataAnak') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
+                                <br>
+                                <div class="row">
+                                    <div class="col" colspan="3">
+                                    <button class="btn btn-main" type="submit" style="margin-left: 260px;">Simpan</button>
+                                    <a href="{{ url('/pengelola/dataAnak') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
+                                    </div>
+                                </div>
                             </form>
                         </div><br>
                     </div>

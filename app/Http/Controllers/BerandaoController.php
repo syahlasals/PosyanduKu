@@ -91,6 +91,6 @@ class BerandaoController extends Controller
             'rw'=>$request->rw
         ]);
 
-        return redirect('/entry')->with('success', 'Data Berhasil di Tambahkan');
+        return redirect('/entry/pendaftaranAnak')->with('success', 'Data Berhasil di Tambahkan');
     }
 }

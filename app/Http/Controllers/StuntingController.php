@@ -19,6 +19,13 @@ class StuntingController extends Controller
         return view('pengelola.dataAnak.sdidtkAnak', compact('sdidtks','anak'));
     }
 
+    public function print($nik_anak)
+    {
+        $sdidtks = Stunting::where('nik_anak', $nik_anak)->get();
+        $anak = Anak::where('nik_anak', $nik_anak)->first();
+        return view('pengelola.dataAnak.print', compact('sdidtks','anak'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

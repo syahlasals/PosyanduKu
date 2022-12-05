@@ -48,12 +48,12 @@
                                 <td>
                                 <div class="row d-flex">
                                     <div class="col-16">
-                                        <a href="dataAnak/{{ $anak->nik_anak }}"><button type="button" class="btn btn-info" style="background-color: #C7BCA1; border-color: #C7BCA1;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Detail"><i class="fa-solid fa-eye"></i></button></a>
-                                        <a href="dataAnak/sdidtkAnak/{{$anak->nik_anak}}"><button type="button" class="btn btn-danger" style="background-color: #68B984; border-color: #68B984;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Data SDIDTK"><i class="fa-solid fa-calendar"></i></button></a>
-                                        <a href="dataAnak/{{ $anak->nik_anak }}/edit"><button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><i class="fa-solid fa-pen-to-square"></i></button></a>
+                                        <a href="dataAnak/{{ $anak->nik_anak }}"><button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Detail"><i class="fa-solid fa-eye btn-h"></i></button></a>
+                                        <a href="dataAnak/sdidtkAnak/{{$anak->nik_anak}}"><button type="button" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Data SDIDTK"><i class="fa-solid fa-calendar btn-h"></i></button></a>
+                                        <a href="dataAnak/{{ $anak->nik_anak }}/edit"><button type="button" class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><i class="fa-solid fa-pen-to-square btn-h"></i></button></a>
                                         @csrf
                                         @method('delete')
-                                            <button type="button" class="delete btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus" data-id="{{ $anak->nik_anak }}"><i class="fa-solid fa-trash"></i></button>
+                                            <button type="button" class="delete btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus" data-id="{{ $anak->nik_anak }}"><i class="fa-solid fa-trash btn-h"></i></button>
                                     </div>
                                 </div>
                                 </td>

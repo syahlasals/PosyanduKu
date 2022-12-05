@@ -36,7 +36,7 @@
             <div class="col">
                 <a href="{{ url('pengelola/dataImunisasi') }}" class="card card-ap">
                 <div class="card-body">
-                    <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita <br> Terdaftar</b></span> 
+                    <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Anak <br> Terdaftar</b></span> 
                     <h1 class="text-center">{{ $semua }}</h1>
                 </div>
                 </a>
@@ -44,7 +44,7 @@
             <div class="col">
                 <a href="{{ url('pengelola/dataImunisasi/normal') }}" class="card card-ip">
                 <div class="card-body">
-                    <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita <br> Normal</b></span> 
+                    <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Anak <br> Normal</b></span> 
                     <h1 class="text-center">{{ $normal }}</h1>
                 </div>
                 </a>
@@ -52,7 +52,7 @@
             <div class="col">
                 <a href="{{ url('pengelola/dataImunisasi/giziBuruk') }}" class="card card-ap">
                 <div class="card-body">
-                    <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita <br> Gizi Buruk</b></span> 
+                    <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Anak <br> Gizi Buruk</b></span> 
                     <h1 class="text-center">{{ $giziBuruk }}</h1>
                 </div>
                 </a>
@@ -60,7 +60,7 @@
             <div class="col">
                 <a href="{{ url('pengelola/dataImunisasi/obesitas') }}" class="card card-ip">
                 <div class="card-body">
-                    <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita <br> Obesitas</b></span> 
+                    <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Anak <br> Obesitas</b></span> 
                     <h1 class="text-center">{{ $obesitas }}</h1>
                 </div>
                 </a>
@@ -68,7 +68,7 @@
             <div class="col">
                 <a href="{{ url('pengelola/dataImunisasi/stunting') }}" class="card card-ap">
                 <div class="card-body">
-                    <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Balita <br> Stunting</b></span> 
+                    <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Jumlah Anak <br> Stunting</b></span> 
                     <h1 class="text-center">{{ $stunting }}</h1>
                 </div>
                 </a>
@@ -77,7 +77,7 @@
 
         <br><br>
 
-        <a href="{{ url('pengelola/dataImunisasi/stunting/print') }}" class="btn btn-primary" target="_blank">Print Rekap Anak</a><br><br>
+        <a href="{{ url('/pengelola/dataImunisasi/stunting/print') }}" class="btn btn-main" target="_blank" role="button" aria-disabled="true">Cetak Rekap Anak</a><br><br>
         <table id="dataimunisasi" class="table table-striped table-bordered text-center" border="1">
         <thead>
             <tr>
@@ -106,16 +106,16 @@
                 </td> --}}
                 <td>
                     @foreach ($data->vaksins as $item)
-                    {{ $item->jenis_vaksin }},
+                    {{ $item->jenis_vaksin }} <br>
                     @endforeach
                 </td>
                 <td>
                     @foreach ($data->vitamins as $item)
-                    {{ $item->jenis_vitamin }},
+                    {{ $item->jenis_vitamin }} <br>
                     @endforeach
                 </td>
                 <td>@foreach ($data->tumbuhs as $item)
-                    {{ $item->status_penyimpangan }},
+                    {{ $item->status_penyimpangan }} <br>
                     @endforeach
                 </td>
                 <td>
@@ -149,4 +149,9 @@
 <i class="fas fa-angle-up"></i>
 </a>
 </body>
+<script> 
+    $(document).ready( function () {
+        $('#dataimunisasi').DataTable();
+    } );
+    </script>
 </html>

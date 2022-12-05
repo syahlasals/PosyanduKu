@@ -26,27 +26,24 @@
     </a>
     </li>
 
-    <!-- Nav Item - Pages Collapse Menu -->
-    <li class="nav-item {{ Request::is('entry/daftarOrtu') ? 'active' : '' }}">
-        <a class="nav-link" href="{{ url('entry/daftarOrtu') }}">
-            <i class="fa-solid fa-user-plus"></i> 
-            <span>Daftar Orangtua</span>
+    <li class="nav-item">
+        <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true"
+            aria-controls="collapsePages">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Entry</span>
         </a>
+        <div id="collapsePages" class="collapse show" aria-labelledby="headingPages"
+            data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Pendaftaran :</h6>
+                <a class="collapse-item {{ Request::is('entry/pendaftaranAnak*') ? 'active' : '' }}" href="{{ url('entry/pendaftaranAnak') }}">Daftar Anak</a>
+                <a class="collapse-item {{ Request::is('entry/daftarOrtu*') ? 'active' : '' }}" href="{{ url('entry/daftarOrtu') }}">Daftar Orang Tua</a>
+                <div class="collapse-divider"></div>
+                <h6 class="collapse-header">Inputan :</h6>
+                <a class="collapse-item {{ Request::is('entry/InputImunisasi*') || Request::is('entry/pertumbuhan/*') || Request::is('entry/vaksin/*') || Request::is('entry/vitamin/*') || Request::is('entry/statusPenyimpangan/*') ? 'active' : '' }} " href="{{ url('entry/InputImunisasi') }}">Input Imunisasi</a>
+            </div>
+        </div>
     </li>
-    <li class="nav-item {{ Request::is('entry/pendaftaranAnak') ? 'active' : '' }}">
-        <a class="nav-link" href="{{ url('entry/pendaftaranAnak') }}">
-            <i class="fa-solid fa-child"></i>
-            <span>Daftar Anak</span>
-        </a>
-    </li>
-    <li class="nav-item {{ Request::is('entry/InputImunisasi') || Request::is('entry/pertumbuhan*') || Request::is('entry/vaksin*') || Request::is('entry/vitamin*') || Request::is('entry/formSdidtk*') || Request::is('entry/statusPenyimpangan*') || Request::is('entry/sdidtkAnsk*') ? 'active' : '' }}">
-        <a class="nav-link" href="{{ url('entry/InputImunisasi') }}">
-            <i class="fa-solid fa-pen-to-square"></i> 
-            <span>Input Imunisasi</span>
-        </a>
-    </li>
-    
-
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 
