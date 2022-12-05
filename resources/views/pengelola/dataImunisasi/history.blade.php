@@ -36,7 +36,8 @@
     <br><br>
     
     <div class="container">
-        <a href="{{ $anak->nik_anak }}/print" class="btn btn-primary" target="_blank">Cetak Riwayat Anak</a>
+        <a href="{{ $anak->nik_anak }}/print" class="btn btn-main" target="_blank" role="button" aria-disabled="true">Cetak Riwayat Anak</a><br><br>
+
         <div class="card my-4">
             <div class="card-body">
                 <h4 class="text-center">Data An. {{$anak->nama_anak}}</h4>

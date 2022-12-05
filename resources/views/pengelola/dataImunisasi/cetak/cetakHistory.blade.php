@@ -20,7 +20,12 @@
                 <!--Topbar-->
                 <!--End of Topbar-->
     <div class="container m-y-5"><br>
-        <h2 class="text-center"><b>History Imunisasi</b></h2>
+
+        <h2 class="text-center mt-5 mb-3"><b>LAPORAN HASIL KEGIATAN POSYANDU RW 05<br>DESA LAGADAR KECAMATAN MARGAASIH KABUPATEN BANDUNG</b></h2>
+        <h6 class="text-center mb-5">Jl. Nanjung Kp. Mekar Bakti RT 02 RW 05 Desa Lagadar Kecamatan Margaasih Kabupaten Bandung</h6>
+        <div class="card" style="background-color: black; height:5px;"></div><br><br>
+
+        <h3 class="text-center"><b>Riwayat Imunisasi Anak</b></h3>
         <div>
             @if ($message = Session::get('success'))
             <div class="alert alert-success " role="alert">
