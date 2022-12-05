@@ -114,7 +114,7 @@
                                 </button>
                             </h2>
                             <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">Jl. Nanjung Kp. Mekar Bakti RT 02 RW 05 Desa Lagadar Kecamatan Margaasih Kabupaten Bandung</div>
+                                <div class="accordion-body">Jl. Nanjung Kp. Mekar Bakti RT 01 RW 05 Desa Lagadar Kecamatan Margaasih Kabupaten Bandung</div>
                             </div>
                         </div>
                     </div>
