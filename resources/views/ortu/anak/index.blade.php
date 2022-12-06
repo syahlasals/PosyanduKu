@@ -23,7 +23,7 @@
                             <form method="POST" action="/ortu" id="myform">
                             @csrf
                             <div class="row">
-                                <h5 class="text-center my-3"><b>Masukan Data Diri Orangtua</b></h5>
+                                <h5 class="text-center my-3"><b>Pendaftaran Orang Tua</b></h5>
                                 <div class="col-12 col-lg-12 col-md-12 col-sm-12 d-flex my-3 justify-content-center" style="height: 40%; width:40%;">
                                     <img src="{{ asset('template/img/motherhood.svg') }}" alt="" style="height: 40%; width:40%;">
                                 </div>

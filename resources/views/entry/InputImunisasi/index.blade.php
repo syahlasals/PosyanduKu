@@ -33,7 +33,7 @@
                     <th>NIK Anak</th>
                     <th>Nama Anak</th>
                     <th>Jenis Kelamin</th>
-                    <th>Golongan Darah</th>
+                    <th>Usia/bulan</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
@@ -46,7 +46,7 @@
                 <td>
                     {{ $anak->jenkel_anak == 'L' ? 'Laki-Laki' : 'Perempuan' }}
                 </td>
-                <td>{{ $anak->golongan_darah }}</td>
+                <td>{{ $anak->bulan }}</td>
                 <td width="35%">
                 <div class="row d-flex">
                     <div class="col-14">
