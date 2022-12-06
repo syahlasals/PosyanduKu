@@ -54,7 +54,7 @@ class BerandaoController extends Controller
             'rw'=>$request->rw
         ]);
 
-        return redirect('/ortu')->with('success', 'Data berhasil di tambahkan');
+        return redirect('/ortu')->with('success', 'Data Berhasil di Tambahkan!');
     }
 
     public function index2()

@@ -104,5 +104,6 @@
         </div>
         @include('template.modalLogout')
         @include('template.script')
+        @include('sweetalert::alert')
     </body>
 </html>
