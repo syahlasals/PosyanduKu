@@ -33,7 +33,7 @@
                     <th>NIK Anak</th>
                     <th>Nama Anak</th>
                     <th>Jenis Kelamin</th>
-                    <th>Usia/Tahun/Bulan</th>
+                    <th>Usia</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
