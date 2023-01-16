@@ -88,7 +88,7 @@
                 <!--<th>Tanggal Imunisasi</th>-->
                 <th>Vaksin</th>
                 <th>Vitamin</th>
-                <th>Status Pertumbuhan</th>
+                <th>Status Penyimpangan</th>
                 <th>Aksi</th>
 
             </tr>
