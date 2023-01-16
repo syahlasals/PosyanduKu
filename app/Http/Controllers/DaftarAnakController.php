@@ -33,14 +33,16 @@ class DaftarAnakController extends Controller
         $lahir = Carbon::createFromFormat('Y-m-d', $request->tgl_anak);
         $date = Carbon::parse($lahir)->diff(Carbon::now())->format('%y,%m,%d');
         $umur = explode(',', $date);
-    
+
         if($ortu == null){
         return back()->with('msg', 'No KK belum terdaftar!');
         }elseif( $anak != null){
             return back()->with('anak', 'NIK Anak Sudah terdaftar!');
         }
-        else{
-
+        elseif($umur[0] > 2){
+            return back()->with('tahun', 'Maaf usia anak lebih dari 2 tahun!');
+        }else{
+  
 
         $anaks = Anak::create([
             'no_kk'=>$request->no_kk,
