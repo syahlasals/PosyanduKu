@@ -54,7 +54,7 @@
                         <a href="/entry/pertumbuhan/{{$anak->nik_anak}}"><button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Form Pertumbuhan"><i class="fa-solid fa-hands-holding-child btn-h"></i></button></a>
                         <a href="/entry/vaksin/{{$anak->nik_anak}}"><button type="button" class="btn btn-success" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Form Vaksin"><i class="fa-solid fa-syringe btn-h"></i></button></a>
                         <a href="/entry/vitamin/{{$anak->nik_anak}}"><button type="button" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Form Vitamin"><i class="fa-solid fa-capsules btn-h"></i></button></a>
-                        <a href="/entry/statusPenyimpangan/{{$anak->nik_anak}}"><button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Status Penyimpangan"><i class="fa-solid fa-baby btn-h"></i></button></a>
+                        <a href="/entry/statusPenyimpangan/{{$anak->nik_anak}}"><button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Kondisi Anak"><i class="fa-solid fa-baby btn-h"></i></button></a>
                         <!-- <a href="/entry/sdidtkAnak/{{$anak->nik_anak}}"><button type="button" class="btn btn-danger" style="background-color: #FFD700; border-color: #FFD700;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Data SDIDTK"><i class="fa-solid fa-calendar"></i></button></a> -->
                     </div>
                 </div>

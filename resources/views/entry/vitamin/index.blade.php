@@ -62,6 +62,28 @@
                                         <input type="date" name="tgl_vitamin" id="tgl_vitamin" class="form-control">
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <label for="tgl_vaksin"><b>Riwayat Vitamin</b></label>
+                                        </div>
+                                        <div class="col-1"><b> :</b></div>
+                                        <div class="col-2">
+                                    <div class="y"  style="width:100px;">
+                                            <p>@foreach ($vitamins as $key => $vitamin)
+                                                    {{ $vitamin->tgl_vitamin }}
+                                                @endforeach
+                                            </p>
+                                            </div>
+                                    </div> 
+                                    <div class="col-6">
+                                    <div class="y"  style="width:120px;">
+                                            <p>@foreach ($vitamins as $key => $vitamin)
+                                                    {{ $vitamin->jenis_vitamin }}                            
+                                                @endforeach
+                                            </p>
+                                            </div>
+                                    </div>    
+                                    </div><br>
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
                                         <label for="janis_vitamin"><b>Jenis Vitamin</b></label>

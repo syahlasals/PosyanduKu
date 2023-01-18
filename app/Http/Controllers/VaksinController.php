@@ -4,14 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Vaksin;
+use App\Models\Anak;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class VaksinController extends Controller
 {
     public function index($nik_anak)
     {
+        $vaksins = Vaksin::where('nik_anak', $nik_anak)->get();
+        $anak = Anak::where('nik_anak', $nik_anak)->first();
         return view('entry.vaksin.index',[
-            "nik_anak" => $nik_anak
+            'nik_anak' => $nik_anak,
+            'vaksins' => $vaksins
         ]);
     }
 

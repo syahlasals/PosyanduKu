@@ -26,7 +26,7 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid"><br>
-                    <h1 class="text-center"><b>Status Penyimpangan</b></h1><br><br>
+                    <h1 class="text-center"><b>Kondisi Anak</b></h1><br><br>
                     <div class="container d-flex justify-item-center justify-content-center"><br>
                         <div class="card card-form">
                             <div class="card-body">

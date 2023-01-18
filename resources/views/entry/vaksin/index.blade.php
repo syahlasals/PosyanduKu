@@ -48,12 +48,36 @@
                                     <div class="col-3">
                                         <label for="nik_anak"><b>NIK Anak</b></label>
                                     </div>
+
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
                                         <input type="number" name="nik_anak" id="nik_anak" class="form-control"value="{{$nik_anak}}" disabled>
                                     </div>
                                     <input type="hidden" name="nik_anak" id="nik_anak" class="form-control" value={{$nik_anak}}>
-                                </div>
+                                
+                                    <div class="row">
+                                    <div class="col-3"><br>
+                                        <label for="tgl_vaksin"><b>Riwayat Vaksin</b></label>
+                                        </div>
+                                        <div class="col-1"><br><b> :</b></div>
+                                        <div class="col-2"><br>
+                                    <div class="y"  style="width:100px;">
+                                            <p>@foreach ($vaksins as $key => $vaksin)
+                                                    {{ $vaksin->tgl_vaksin }}
+                                                @endforeach
+                                            </p>
+                                            </div>
+                                    </div> 
+                                    <div class="col-6"><br>
+                                    <div class="y"  style="width:120px;">
+                                            <p>@foreach ($vaksins as $key => $vaksin)
+                                                    {{ $vaksin->jenis_vaksin }}
+                                                @endforeach
+                                            </p>
+                                            </div>
+                                    </div>    
+                                    </div><br>
+                                    
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
                                         <label for="tgl_vaksin"><b>Tanggal Imunisasi</b></label>
@@ -84,6 +108,7 @@
                                         </select>                                    
                                     </div>
                                 </div>
+
                                 <br>
                                 <div class="row">
                                     <div class="col" colspan="3">
