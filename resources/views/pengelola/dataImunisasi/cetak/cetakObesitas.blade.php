@@ -10,7 +10,7 @@
                 <!--<th>Tanggal Imunisasi</th>-->
                 <th>Vaksin</th>
                 <th>Vitamin</th>
-                <th>Status Penyimpangan</th>
+                <th>Kondisi Anak</th>
             </tr>
         </thead>
         <tbody>

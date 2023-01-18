@@ -21,7 +21,7 @@
                 <!--End of Topbar-->
 
     <div class="container-fluid">
-        <h1 class="text-center mt-5 mb-5"><b>KONDISI ANAK</b></h1>
+        <h1 class="text-center mt-5 mb-5"><b>REKAP ANAK</b></h1>
         
         <div>
             @if ($message = Session::get('success'))
@@ -79,7 +79,7 @@
             <div class="col">
                 <a href="{{ url('pengelola/dataImunisasi/notvaksin') }}" class="card card-ap">
                 <div class="card-body">
-                    <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Anak yang<br>belum dapat vaksin</b></span> 
+                    <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Anak Yang<br>Belum Dapat Vaksin</b></span> 
                     <h1 class="text-center">{{ count($notvaksin) }}</h1>
                 </div>
                 </a>
@@ -87,7 +87,7 @@
             <div class="col">
                 <a href="{{ url('pengelola/dataImunisasi/notvitamin') }}" class="card card-ip">
                 <div class="card-body">
-                    <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Anak yang<br>belum dapat vitamin</b></span> 
+                    <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Anak Yang<br>Belum Dapat Vitamin</b></span> 
                     <h1 class="text-center">{{ count($notvitamin) }}</h1>
                 </div>
                 </a>
@@ -95,7 +95,7 @@
             <div class="col">
                 <a href="{{ url('pengelola/dataImunisasi/notkondisi') }}" class="card card-ap">
                 <div class="card-body">
-                    <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Anak yang<br> belum terdeteksi kelainan </b></span> 
+                    <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Anak Yang<br>Belum Terdeteksi Kelainan </b></span> 
                     <h1 class="text-center">{{ count($notkondisi) }}</h1>
                 </div>
                 </a>
