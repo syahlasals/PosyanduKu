@@ -97,7 +97,7 @@
                 <table id="datahistory" class="table table-bordered text-center my-3">
                     <tbody>
                         <tr>
-                            <td colspan="2"><b>Status Penyimpangan</b></td>
+                            <td colspan="2"><b>Kondisi Anak</b></td>
                         </tr>
                         @foreach ($penyimpangans as $key => $simpang)
                         <tr style="background-color: white; color:black">
