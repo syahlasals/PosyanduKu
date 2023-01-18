@@ -43,6 +43,7 @@ class PertumbuhanController extends Controller
         //     }
         // }
 
+        // IF ELSE BERAT
         if($bulan == 0){
             $result = 3;
             if($request->berat == $result){
@@ -76,7 +77,7 @@ class PertumbuhanController extends Controller
                 }
             }
         }if($bulan == 4){
-            $result = 7;
+            $result = 6;
             if($request->berat == $result){
                 $berat = 1;
             }else{
@@ -84,7 +85,7 @@ class PertumbuhanController extends Controller
             }
         }else{
             if($bulan == 5){
-                $result = 8;
+                $result = 7;
                 if($request->berat == $result){
                     $berat = 1;
                 }else{
@@ -100,7 +101,7 @@ class PertumbuhanController extends Controller
             }
         }else{
             if($bulan == 7){
-                $result = 9;
+                $result = 8;
                 if($request->berat == $result){
                     $berat = 1;
                 }else{
@@ -124,7 +125,7 @@ class PertumbuhanController extends Controller
                 }
             }
         }if($bulan == 10){
-            $result =10;
+            $result = 9;
             if($request->berat == $result){
                 $berat = 1;
             }else{
@@ -139,7 +140,7 @@ class PertumbuhanController extends Controller
                     $berat = '0';
                 }
             }
-        }if($tahun == 1){
+        }if($tahun == 1 && $bulan == 0){
             $result = 10;
             if($request->berat == $result){
                 $berat = 1;
@@ -147,7 +148,71 @@ class PertumbuhanController extends Controller
                 $berat = '0';
             }
         }else{
-            if($tahun == 2){
+            if($tahun == 1 && $bulan == 1){
+                $result = 10;
+                if($request->berat == $result){
+                    $berat = 1;
+                }else{
+                    $berat = '0';
+                }
+            }
+        }if($tahun == 1 && $bulan == 2){
+            $result = 10;
+            if($request->berat == $result){
+                $berat = 1;
+            }else{
+                $berat = '0';
+            }
+        }else{
+            if($tahun == 1 && $bulan == 3){
+                $result = 10;
+                if($request->berat == $result){
+                    $berat = 1;
+                }else{
+                    $berat = '0';
+                }
+            }
+        }if($tahun == 1 && $bulan == 4){
+            $result = 11;
+            if($request->berat == $result){
+                $berat = 1;
+            }else{
+                $berat = '0';
+            }
+        }else{
+            if($tahun == 1 && $bulan == 5){
+                $result = 11;
+                if($request->berat == $result){
+                    $berat = 1;
+                }else{
+                    $berat = '0';
+                }
+            }
+        }if($tahun == 1 && $bulan == 6){
+            $result = 11;
+            if($request->berat == $result){
+                $berat = 1;
+            }else{
+                $berat = '0';
+            }
+        }else{
+            if($tahun == 1 && $bulan == 7){
+                $result = 11;
+                if($request->berat == $result){
+                    $berat = 1;
+                }else{
+                    $berat = '0';
+                }
+            }
+        }if($tahun == 1 && $bulan == 8){
+            $result = 11;
+            if($request->berat == $result){
+                $berat = 1;
+            }else{
+                $berat = '0';
+            }
+        }else{
+            if($tahun == 1 && $bulan == 9){
                 $result = 12;
                 if($request->berat == $result){
                     $berat = 1;
@@ -155,95 +220,103 @@ class PertumbuhanController extends Controller
                     $berat = '0';
                 }
             }
-        }if($bulan == 0){
-            $result = 46;
-            if($request->tinggi == $result){
-                $tinggi = 1;
+        }if($tahun == 1 && $bulan == 10){
+            $result = 12;
+            if($request->berat == $result){
+                $berat = 1;
             }else{
-                $tinggi = '0';
+                $berat = '0';
             }
         }else{
-            if($bulan == 1){
-                $result = 50;
+            if($tahun == 1 && $bulan == 11){
+                $result = 12;
+                if($request->berat == $result){
+                    $berat = 1;
+                }else{
+                    $berat = '0';
+                }
+            }
+        }if($tahun == 2 && $bulan == 0 ){
+            $result = 12;
+            if($request->berat == $result){
+                $berat = 1;
+            }else{
+                $berat = '0';
+            }
+        }
+        
+        
+        
+        
+        
+        
+        // IF ELSE TINGGI
+        else{
+            if($bulan == 0){
+                $result = 49;
                 if($request->tinggi == $result){
                     $tinggi = 1;
                 }else{
                     $tinggi = '0';
                 }
             }
-        }if($bulan == 2){
-            $result = 54;
+        }if($bulan == 1){
+            $result =  55;
             if($request->tinggi == $result){
                 $tinggi = 1;
             }else{
                 $tinggi = '0';
             }
         }else{
-            if($bulan == 3){
-                $result = 56;
+            if($bulan == 2){
+                $result = 57;
                 if($request->tinggi == $result){
                     $tinggi = 1;
                 }else{
                     $tinggi = '0';
                 }
             }
-        }if($bulan == 4){
-            $result = 58;
+        }if($bulan == 3){
+            $result = 60;
             if($request->tinggi == $result){
                 $tinggi = 1;
             }else{
                 $tinggi = '0';
             }
         }else{
-            if($bulan == 5){
-                $result = 60;
+            if($bulan == 4){
+                $result = 62;
                 if($request->tinggi == $result){
                     $tinggi = 1;
                 }else{
                     $tinggi = '0';
                 }
             }
-        }if($bulan == 6){
-            $result = 62;
+        }if($bulan == 5){
+            $result = 64;
             if($request->tinggi == $result){
                 $tinggi = 1;
             }else{
                 $tinggi = '0';
             }
         }else{
-            if($bulan == 7){
-                $result = 63;
+            if($bulan == 6){
+                $result = 66;
                 if($request->tinggi == $result){
                     $tinggi = 1;
                 }else{
                     $tinggi = '0';
                 }
             }
-        }if($bulan == 8){
-            $result = 65;
+        }if($bulan == 7){
+            $result = 67;
             if($request->tinggi == $result){
                 $tinggi = 1;
             }else{
                 $tinggi = '0';
             }
         }else{
-            if($bulan == 9){
-                $result = 67;
-                if($request->tinggi == $result){
-                    $tinggi = 1;
-                }else{
-                    $tinggi = '0';
-                }
-            }
-        }if($bulan == 10){
-            $result = 68;
-            if($request->tinggi == $result){
-                $tinggi = 1;
-            }else{
-                $tinggi = '0';
-            }
-        }else{
-            if($bulan == 11){
+            if($bulan == 8){
                 $result = 69;
                 if($request->tinggi == $result){
                     $tinggi = 1;
@@ -251,15 +324,111 @@ class PertumbuhanController extends Controller
                     $tinggi = '0';
                 }
             }
-        }if($tahun == 1){
-            $result = 71;
+        }if($bulan == 9){
+            $result = 70;
             if($request->tinggi == $result){
                 $tinggi = 1;
             }else{
                 $tinggi = '0';
             }
         }else{
-            if($tahun == 2){
+            if($bulan == 10){
+                $result = 71;
+                if($request->tinggi == $result){
+                    $tinggi = 1;
+                }else{
+                    $tinggi = '0';
+                }
+            }
+        }if($bulan == 11){
+            $result = 73;
+            if($request->tinggi == $result){
+                $tinggi = 1;
+            }else{
+                $tinggi = '0';
+            }
+        }else{
+            if($tahun == 1 && $bulan == 0){
+                $result = 74;
+                if($request->tinggi == $result){
+                    $tinggi = 1;
+                }else{
+                    $tinggi = '0';
+                }
+            }
+        }if($tahun == 1 && $bulan == 1){
+            $result = 75;
+            if($request->tinggi == $result){
+                $tinggi = 1;
+            }else{
+                $tinggi = '0';
+            }
+        }else{
+            if($tahun == 1 && $bulan == 2){
+                $result = 76;
+                if($request->tinggi == $result){
+                    $tinggi = 1;
+                }else{
+                    $tinggi = '0';
+                }
+            }
+        }if($tahun == 1 && $bulan == 3){
+            $result = 77;
+            if($request->tinggi == $result){
+                $tinggi = 1;
+            }else{
+                $tinggi = '0';
+            }
+        }else{
+            if($tahun == 1 && $bulan == 4){
+                $result = 79;
+                if($request->tinggi == $result){
+                    $tinggi = 1;
+                }else{
+                    $tinggi = '0';
+                }
+            }
+        }if($tahun == 1 && $bulan == 5){
+            $result = 80;
+            if($request->tinggi == $result){
+                $tinggi = 1;
+            }else{
+                $tinggi = '0';
+            }
+        }else{
+            if($tahun == 1 && $bulan == 6){
+                $result = 81;
+                if($request->tinggi == $result){
+                    $tinggi = 1;
+                }else{
+                    $tinggi = '0';
+                }
+            }
+        }if($tahun == 1 && $bulan == 7){
+            $result = 82;
+            if($request->tinggi == $result){
+                $tinggi = 1;
+            }else{
+                $tinggi = '0';
+            }
+        }else{
+            if($tahun == 1 && $bulan == 8){
+                $result = 83;
+                if($request->tinggi == $result){
+                    $tinggi = 1;
+                }else{
+                    $tinggi = '0';
+                }
+            }
+        }if($tahun == 1 && $bulan == 9){
+            $result = 84;
+            if($request->tinggi == $result){
+                $tinggi = 1;
+            }else{
+                $tinggi = '0';
+            }
+        }else{
+            if($tahun == 1 && $bulan == 10){
                 $result = 85;
                 if($request->tinggi == $result){
                     $tinggi = 1;
@@ -267,8 +436,33 @@ class PertumbuhanController extends Controller
                     $tinggi = '0';
                 }
             }
-        }if($bulan == 0){
-            $result = 32;
+        }if($tahun == 1 && $bulan == 11){
+            $result = 86;
+            if($request->tinggi == $result){
+                $tinggi = 1;
+            }else{
+                $tinggi = '0';
+            }
+        }else{
+            if($tahun == 2 && $bulan == 0 ){
+                $result = 86;
+                if($request->tinggi == $result){
+                    $tinggi = 1;
+                }else{
+                    $tinggi = '0';
+                }
+            }
+        }
+        
+        
+        
+        
+        
+        
+        
+        // IF ELSE LINGKAR KEPALA
+        if($bulan == 0){
+            $result = 34;
             if($request->lingkar_kepala == $result){
                 $lingkar_kepala = 1;
             }else{
@@ -276,7 +470,7 @@ class PertumbuhanController extends Controller
             }
         }else{
             if($bulan == 1){
-                $result = 37;
+                $result = 36;
                 if($request->lingkar_kepala == $result){
                     $lingkar_kepala = 1;
                 }else{
@@ -284,7 +478,7 @@ class PertumbuhanController extends Controller
                 }
             }
         }if($bulan == 2){
-            $result = 39;
+            $result = 38;
             if($request->lingkar_kepala == $result){
                 $lingkar_kepala = 1;
             }else{
@@ -292,7 +486,7 @@ class PertumbuhanController extends Controller
             }
         }else{
             if($bulan == 3){
-                $result = 41;
+                $result = 40;
                 if($request->lingkar_kepala == $result){
                     $lingkar_kepala = 1;
                 }else{
@@ -300,7 +494,7 @@ class PertumbuhanController extends Controller
                 }
             }
         }if($bulan == 4){
-            $result = 42;
+            $result = 40;
             if($request->lingkar_kepala == $result){
                 $lingkar_kepala = 1;
             }else{
@@ -308,7 +502,7 @@ class PertumbuhanController extends Controller
             }
         }else{
             if($bulan == 5){
-                $result = 43;
+                $result = 41;
                 if($request->lingkar_kepala == $result){
                     $lingkar_kepala = 1;
                 }else{
@@ -316,7 +510,7 @@ class PertumbuhanController extends Controller
                 }
             }
         }if($bulan == 6){
-            $result = 44;
+            $result = 42;
             if($request->lingkar_kepala == $result){
                 $lingkar_kepala = 1;
             }else{
@@ -324,7 +518,7 @@ class PertumbuhanController extends Controller
             }
         }else{
             if($bulan == 7){
-                $result = 45;
+                $result = 43;
                 if($request->lingkar_kepala == $result){
                     $lingkar_kepala = 1;
                 }else{
@@ -332,7 +526,7 @@ class PertumbuhanController extends Controller
                 }
             }
         }if($bulan == 8){
-            $result = 45;
+            $result = 43;
             if($request->lingkar_kepala == $result){
                 $lingkar_kepala = 1;
             }else{
@@ -340,7 +534,7 @@ class PertumbuhanController extends Controller
             }
         }else{
             if($bulan == 9){
-                $result = 46;
+                $result = 44;
                 if($request->lingkar_kepala == $result){
                     $lingkar_kepala = 1;
                 }else{
@@ -348,7 +542,7 @@ class PertumbuhanController extends Controller
                 }
             }
         }if($bulan == 10){
-            $result = 46;
+            $result = 44;
             if($request->lingkar_kepala == $result){
                 $lingkar_kepala = 1;
             }else{
@@ -356,6 +550,54 @@ class PertumbuhanController extends Controller
             }
         }else{
             if($bulan == 11){
+                $result = 44;
+                if($request->lingkar_kepala == $result){
+                    $lingkar_kepala = 1;
+                }else{
+                    $lingkar_kepala = '0';
+                }
+            }
+        }if($tahun == 1 && $bulan == 0){
+            $result = 45;
+            if($request->lingkar_kepala == $result){
+                $lingkar_kepala = 1;
+            }else{
+                $lingkar_kepala = '0';
+            }
+        }else{
+            if($tahun == 1 && $bulan == 1){
+                $result = 45;
+                if($request->lingkar_kepala == $result){
+                    $lingkar_kepala = 1;
+                }else{
+                    $lingkar_kepala = '0';
+                }
+            }
+        }if($tahun == 1 && $bulan == 2){
+            $result = 45;
+            if($request->lingkar_kepala == $result){
+                $lingkar_kepala = 1;
+            }else{
+                $lingkar_kepala = '0';
+            }
+        }else{
+            if($tahun == 1 && $bulan == 3){
+                $result = 45;
+                if($request->lingkar_kepala == $result){
+                    $lingkar_kepala = 1;
+                }else{
+                    $lingkar_kepala = '0';
+                }
+            }
+        }if($tahun == 1 && $bulan == 4){
+            $result = 46;
+            if($request->lingkar_kepala == $result){
+                $lingkar_kepala = 1;
+            }else{
+                $lingkar_kepala = '0';
+            }
+        }else{
+            if($tahun == 1 && $bulan == 5){
                 $result = 46;
                 if($request->lingkar_kepala == $result){
                     $lingkar_kepala = 1;
@@ -363,7 +605,23 @@ class PertumbuhanController extends Controller
                     $lingkar_kepala = '0';
                 }
             }
-        }if($bulan == 12){
+        }if($tahun == 1 && $bulan == 6){
+            $result = 46;
+            if($request->lingkar_kepala == $result){
+                $lingkar_kepala = 1;
+            }else{
+                $lingkar_kepala = '0';
+            }
+        }else{
+            if($tahun == 1 && $bulan == 7){
+                $result = 46;
+                if($request->lingkar_kepala == $result){
+                    $lingkar_kepala = 1;
+                }else{
+                    $lingkar_kepala = '0';
+                }
+            }
+        }if($tahun == 1 && $bulan == 8){
             $result = 47;
             if($request->lingkar_kepala == $result){
                 $lingkar_kepala = 1;
@@ -371,16 +629,32 @@ class PertumbuhanController extends Controller
                 $lingkar_kepala = '0';
             }
         }else{
-            if($tahun == 1){
-                $result = 48;
+            if($tahun == 1 && $bulan == 9){
+                $result = 47;
                 if($request->lingkar_kepala == $result){
                     $lingkar_kepala = 1;
                 }else{
                     $lingkar_kepala = '0';
                 }
             }
-        }if($tahun == 2){
-            $result = 48;
+        }if($tahun == 1 && $bulan == 10){
+            $result = 47;
+            if($request->lingkar_kepala == $result){
+                $lingkar_kepala = 1;
+            }else{
+                $lingkar_kepala = '0';
+            }
+        }else{
+            if($tahun == 1 && $bulan == 11){
+                $result = 47;
+                if($request->lingkar_kepala == $result){
+                    $lingkar_kepala = 1;
+                }else{
+                    $lingkar_kepala = '0';
+                }
+            }
+        }if($tahun == 2 && $bulan == 0 ){
+            $result = 47;
             if($request->lingkar_kepala == $result){
                 $lingkar_kepala = 1;
             }else{
