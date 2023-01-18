@@ -1,7 +1,6 @@
-@include('template.cetakimun')
-
-
-        <table id="dataimunisasi" class="table table-bordered text-center" border="1">
+@include('template.imun')
+        <a href="{{ url('/pengelola/dataImunisasi/notvitamin/print') }}" class="btn btn-main" target="_blank" role="button" aria-disabled="true">Cetak Rekap Anak <i class="fa-solid fa-print ml-1"></i></a><br><br>
+        <table id="dataimunisasi" class="table table-striped table-bordered text-center" border="1">
         <thead>
             <tr>
                 <th>Nomor</th>
@@ -12,10 +11,12 @@
                 <th>Vaksin</th>
                 <th>Vitamin</th>
                 <th>Status Penyimpangan</th>
+                <th>Aksi</th>
+
             </tr>
         </thead>
         <tbody>
-            @foreach ($anakList as $data)
+            @foreach ($notvitamin as $data)
             <tr>
                 <td>{{ $loop->iteration }}</td>
                 <!--<td></td>-->
@@ -40,30 +41,12 @@
                     {{ $item->status_penyimpangan }} <br>
                     @endforeach
                 </td>
+                <td>
+                    <a href="history/{{$data->nik_anak}}"><button type="button" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Riwayat"><i class="fa-solid fa-clock-rotate-left"></i></button></a>
+                </td>
             </tr>
             @endforeach
         </tbody>
     </table>
 
-
-<!-- Footer -->
-@include('template.footer')
-<!-- End of Footer -->
-
-</div>
-<!-- End of Content Wrapper -->
-
-</div>
-<!-- End of Page Wrapper -->
-
-<!-- Scroll to Top Button-->
-<a class="scroll-to-top rounded" href="#page-top">
-<i class="fas fa-angle-up"></i>
-</a>
-</body>
-<!-- <script> 
-$(document).ready( function () {
-    $('#dataimunisasi').DataTable();
-} );
-</script> -->
-</html>
+    @include('template.imun2')

@@ -44,6 +44,9 @@
                             @if (Session::has('anak'))
                                 <div class="alert alert-danger">{{ Session::get('anak') }}</div>
                             @endif
+                            @if (Session::has('tahun'))
+                                <div class="alert alert-danger">{{ Session::get('tahun') }}</div>
+                            @endif
                             <form method="POST" action="/entry/pendaftaranAnak" id="myform" style="margin-top: 15px; margin-bottom: 15px;">
                                 @csrf
                                 <div class="row" style="margin-bottom: 15px;">
