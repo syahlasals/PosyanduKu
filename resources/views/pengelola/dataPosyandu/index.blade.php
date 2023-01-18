@@ -24,7 +24,7 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid"><br>
                     <!-- Page Heading -->
-                    <h1 class="text-center mb-3 mt-5"><b>PROFIL POSYANDU</b></h1>
+                    <h1 class="text-center mb-3 mt-2"><b>PROFIL POSYANDU</b></h1>
                     <div class="horizon d-flex align-items-center justify-content-center">
                         <hr width="40%">
                     </div>

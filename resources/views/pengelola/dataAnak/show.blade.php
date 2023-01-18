@@ -68,6 +68,7 @@
                                 </div>
                                 <div class="col-1"><b>:</b></div>
                                 <div class="col-6">
+                                    {{ $anak->tahun }} tahun 
                                     {{ $anak->bulan }} bulan
                                 </div>
                             </div>
