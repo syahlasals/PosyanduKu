@@ -12,12 +12,15 @@ class VaksinController extends Controller
     public function index($nik_anak)
     {
         $vaksins = Vaksin::where('nik_anak', $nik_anak)->get();
-        $anak = Anak::where('nik_anak', $nik_anak)->first();
+        $nama_anak = Anak::where('nik_anak', $nik_anak)->first();
+        $nama = $nama_anak->nama_anak;
         return view('entry.vaksin.index',[
-            'nik_anak' => $nik_anak,
-            'vaksins' => $vaksins
+            "nik_anak" => $nik_anak,
+            "vaksins" => $vaksins,
+            "nama_anak" => $nama
         ]);
     }
+
 
         public function store(Request $request)
         {

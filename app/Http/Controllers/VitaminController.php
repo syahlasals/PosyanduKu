@@ -12,9 +12,12 @@ class VitaminController extends Controller
     public function index($nik_anak)
     {
         $vitamins= Vitamin::where('nik_anak', $nik_anak)->get();
+        $nama_anak = Anak::where('nik_anak', $nik_anak)->first();
+        $nama = $nama_anak->nama_anak;
         return view ('entry.vitamin.index', [
             'nik_anak' => $nik_anak,
-            'vitamins' => $vitamins
+            'vitamins' => $vitamins,
+            'nama_anak' => $nama
           ]);
     }
 
