@@ -56,10 +56,20 @@
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
+                                        <label for="nama_anak"><b>Nama Anak</b></label>
+                                    </div>
+                                    <div class="col-1"><b>:</b></div>
+                                    <div class="col-8">
+                                        <input type="text" name="nama_anak" id="nama_anak" class="form-control"value="{{$nama_anak}}" disabled>
+                                    </div>
+                                    <input type="hidden" name="nama_anak" id="nama_anak" class="form-control" value={{$nama_anak}}>
+                                </div>     
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <div class="col-3">
                                         <label for="tgl_vaksin"><b>Tanggal Imunisasi</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
-                                    <div class="col-8"> 
+                                    <div class="col-8">
                                         <input type="date" name="tgl_vaksin" id="tgl_vaksin" class="form-control">
                                     </div>
                                 </div>
@@ -86,9 +96,9 @@
                                 </div>
                                 <br>
                                 <div class="row">
-                                    <div class="col" colspan="3">
-                                    <button class="btn btn-main" type="submit" style="margin-left: 260px;">Simpan</button>
+                                    <div class="col" colspan="3" style="margin-left: 240px;">
                                     <a href="{{ url('entry/InputImunisasi') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
+                                    <button class="btn btn-main" type="submit" style="margin-left: 15px;">Simpan</button>
                                     </div>
                                 </div>
                             </form>

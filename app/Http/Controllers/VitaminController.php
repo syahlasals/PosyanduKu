@@ -4,14 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Vitamin;
+use App\Models\Anak;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class VitaminController extends Controller
 {
     public function index($nik_anak)
     {
+        $nama_anak = Anak::where('nik_anak', $nik_anak)->first();
+        $nama = $nama_anak->nama_anak;
         return view ('entry.vitamin.index', [
-            "nik_anak" => $nik_anak
+            "nik_anak" => $nik_anak,
+            "nama_anak" => $nama
           ]);
     }
 
@@ -25,6 +29,7 @@ class VitaminController extends Controller
 
         $vitamins = Vitamin::create([
             'nik_anak'=>$request->nik_anak,
+            'nama_anak'=>$request->nama_anak,
             'jenis_vitamin'=>$request->jenis_vitamin,
             'tgl_vitamin'=>$request->tgl_vitamin,
         ]);

@@ -128,7 +128,7 @@
             labels:  {!!json_encode($chart->labels)!!} ,
             datasets: [
                 {
-                    label: 'Status Pertumbuhan per Anak',
+                    label: 'Status Penyimpangan per Anak',
                     // backgroundColor: {!! json_encode($chart->colours)!!} ,
                     backgroundColor: ["#647BB1", "#CCB2E0", "#B198E3", "#9FD8FB", "#E2E2E2" ] ,
                     data:  {!! json_encode($chart->dataset)!!} ,

@@ -126,9 +126,9 @@
                                 </div>
                                 <br>
                                 <div class="row">
-                                    <div class="col" colspan="3">
-                                        <button class="btn btn-main" type="submit" style="margin-left: 260px;">Daftar</button>
+                                    <div class="col" colspan="3" style="margin-left: 245px;">
                                         <a href="{{ url('entry') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
+                                        <button class="btn btn-main" type="submit" style="margin-left: 15px;">Daftar</button>
                                     </div>
                                 </div>
                                 </form>

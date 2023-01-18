@@ -14,8 +14,11 @@ class PertumbuhanController extends Controller
 {
     public function index($nik_anak)
     {
+        $nama_anak = Anak::where('nik_anak', $nik_anak)->first();
+        $nama = $nama_anak->nama_anak;
         return view ('entry.pertumbuhan.index', [
-            "nik_anak" => $nik_anak
+            "nik_anak" => $nik_anak,
+            "nama_anak" => $nama
         ]);
     }
 
@@ -425,12 +428,15 @@ class PertumbuhanController extends Controller
 
     public function indexs($nik_anak)
     {
+        $nama_anak = Anak::where('nik_anak', $nik_anak)->first();
+        $nama = $nama_anak->nama_anak;
         $kode_pertumbuhan = Pertumbuhan::where('nik_anak', $nik_anak)->first();
         $tgl_hitung = Pertumbuhan::where('nik_anak', $nik_anak)->first();
         return view ('entry.statusPenyimpangan.index', [
             "nik_anak" => $nik_anak,
             "kode_pertumbuhan" =>  $kode_pertumbuhan,
             "tgl_hitung" =>  $tgl_hitung,
+            "nama_anak" => $nama
           ]);
     }
 

@@ -4,14 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Vaksin;
+use App\Models\Anak;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class VaksinController extends Controller
 {
     public function index($nik_anak)
     {
+        $nama_anak = Anak::where('nik_anak', $nik_anak)->first();
+        $nama = $nama_anak->nama_anak;
         return view('entry.vaksin.index',[
-            "nik_anak" => $nik_anak
+            "nik_anak" => $nik_anak,
+            "nama_anak" => $nama
         ]);
     }
 
@@ -20,10 +24,12 @@ class VaksinController extends Controller
             $this->validate($request, [
                 'jenis_vaksin'=>'required',
                 'tgl_vaksin'=>'required',
+
             ]);
     
             $vaksins = Vaksin::create([
                 'nik_anak'=>$request->nik_anak,
+                'nama_anak'=>$request->nama_anak,
                 'jenis_vaksin'=>$request->jenis_vaksin,
                 'tgl_vaksin'=>$request->tgl_vaksin,
             ]);
