@@ -24,10 +24,12 @@ class VaksinController extends Controller
             $this->validate($request, [
                 'jenis_vaksin'=>'required',
                 'tgl_vaksin'=>'required',
+
             ]);
     
             $vaksins = Vaksin::create([
                 'nik_anak'=>$request->nik_anak,
+                'nama_anak'=>$request->nama_anak,
                 'jenis_vaksin'=>$request->jenis_vaksin,
                 'tgl_vaksin'=>$request->tgl_vaksin,
             ]);

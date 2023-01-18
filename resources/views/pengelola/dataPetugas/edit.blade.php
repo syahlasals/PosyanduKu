@@ -96,9 +96,9 @@
                                 </div>
                                 <br>
                                 <div class="row">
-                                    <div class="col" colspan="3">
-                                    <button class="btn btn-main" type="submit" style="margin-left: 260px;">Simpan</button>
+                                    <div class="col" colspan="3" style="margin-left: 240px;">
                                     <a href="{{ url('/pengelola/dataPetugas') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
+                                    <button class="btn btn-main" type="submit" style="margin-left: 15px;">Simpan</button>
                                     </div>
                                 </div>
                             </form>
