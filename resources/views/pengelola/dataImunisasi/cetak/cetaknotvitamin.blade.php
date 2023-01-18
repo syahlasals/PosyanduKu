@@ -1,6 +1,4 @@
 @include('template.cetakimun')
-
-
         <table id="dataimunisasi" class="table table-bordered text-center" border="1">
         <thead>
             <tr>
@@ -15,7 +13,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($anakList as $data)
+            @foreach ($notvitamin as $data)
             <tr>
                 <td>{{ $loop->iteration }}</td>
                 <!--<td></td>-->

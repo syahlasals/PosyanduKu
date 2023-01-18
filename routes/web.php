@@ -49,14 +49,20 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
         Route::get('hapuspetugas/dataPetugas', [PetugasController::class,'hapuspetugas'])->name('hapuspetugas');
         Route::get('dataPetugas/edit/{nip}',[PetugasController::class,'edit'])->name('edit');
         Route::post('dataPetugas/update/{nip}',[PetugasController::class,'update']);
-        Route::get('dataImunisasi/history/{id}', [HistoryController::class, 'historyImunisasi'])->middleware('pengelola');
+        Route::get('/dataImunisasi/history/{id}', [HistoryController::class, 'historyImunisasi'])->middleware('pengelola');
         Route::get('dataImunisasi/history/{id}/print', [HistoryController::class, 'print'])->middleware('pengelola');
         Route::get('dataImunisasi', [ImunisasiController::class, 'index']);
+        Route::get('dataImunisasi/notvaksin', [ImunisasiController::class, 'notvaksin']);
+        Route::get('dataImunisasi/notvitamin', [ImunisasiController::class, 'notvitamin']);
+        Route::get('dataImunisasi/notkondisi', [ImunisasiController::class, 'notkondisi']);
         Route::get('dataImunisasi/normal', [ImunisasiController::class, 'normal']);
         Route::get('dataImunisasi/giziBuruk', [ImunisasiController::class, 'giziBuruk']);
         Route::get('dataImunisasi/stunting', [ImunisasiController::class, 'stunting']);
         Route::get('dataImunisasi/obesitas', [ImunisasiController::class, 'obesitas']);
         Route::get('dataImunisasi/print', [ImunisasiController::class, 'cetakSemua']);
+        Route::get('dataImunisasi/notvaksin/print', [ImunisasiController::class, 'cetaknotvaksin']);
+        Route::get('dataImunisasi/notvitamin/print', [ImunisasiController::class, 'cetaknotvitamin']);
+        Route::get('dataImunisasi/notkondisi/print', [ImunisasiController::class, 'cetaknotkondisi']);
         Route::get('dataImunisasi/normal/print', [ImunisasiController::class, 'cetakNormal']);
         Route::get('dataImunisasi/giziBuruk/print', [ImunisasiController::class, 'cetakGiziBuruk']);
         Route::get('dataImunisasi/stunting/print', [ImunisasiController::class, 'cetakStunting']);
@@ -95,5 +101,3 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
         Route::get('/redirects', [HomeController::class, 'index'])->middleware('ortu');
     });
 // });
-
-
