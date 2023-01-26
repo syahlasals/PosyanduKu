@@ -90,6 +90,17 @@ body{
     box-shadow: 0px 0px 10px #CCB2E0;
 }
 
+
+.table-filter{
+    text-decoration: none;
+    color:  #647BB1;
+}
+.table-filter:hover{
+    text-decoration: none;
+    color: #000000;
+    transform: scale(1.05);
+}
+
 .card-form{
     width: 70%;
     /* border-color: #CCB2E0; */

@@ -20,7 +20,7 @@ class HistoryController extends Controller
         $anak = Anak::where('nik_anak', $nik_anak)->first();
         return view('pengelola.dataImunisasi.history', compact('vaksins','anak', 'vitamins', 'pertumbuhans', 'penyimpangans'));
     }
-
+ 
     public function print($nik_anak)
     {
         $anaks = Anak::all();

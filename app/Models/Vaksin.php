@@ -19,4 +19,5 @@ class Vaksin extends Model
     {
         return $this->hasOne(Anak::class, 'nik_anak');
     }
+    
 }
