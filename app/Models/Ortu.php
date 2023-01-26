@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Anak;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Ortu extends Model
 {
@@ -14,4 +15,9 @@ class Ortu extends Model
     protected $primaryKey = 'no_kk';
     protected $fillable = [
         'no_kk', 'alamat_ortu', 'rt', 'rw', 'nama_ayah','pekerjaan_ayah', 'nik_ayah', 'nama_ibu', 'pekerjaan_ibu', 'nik_ibu'];
+
+        public function anaks()
+        {
+            return $this->hasMany(Anak::class, 'no_kk');
+        }
 }

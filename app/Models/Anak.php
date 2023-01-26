@@ -25,6 +25,11 @@ class Anak extends Model
         'hari',
         'golongan_darah'
     ];
+
+    public function ortus()
+    {
+        return $this->belongsTo(Ortu::class, 'no_kk');
+    }
     
     public function vaksins()
     {

@@ -55,11 +55,28 @@
                             </div>
                             <div class="row">
                                 <div class="col-5">
-                                    <label for="nokk"><b>Anak</b></label>
+                                    <label for="nokk"><b>Nama Anak</b></label>
                                 </div>
                                 <div class="col-1"><b>:</b></div>
                                 <div class="col-6">
                                     {{ $anak->nama_anak }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-5">
+                                    <label for="nokk"><b>Nama Ayah</b></label>
+                                </div>
+                                <div class="col-1"><b>:</b></div>
+                                <div class="col-6">
+                                    {{ $anak->ortus->nama_ayah}}
+                            </div>
+                            <div class="row">
+                                <div class="col-5">
+                                    <label for="nokk"><b>Nama Ibu</b></label>
+                                </div>
+                                <div class="col-1"><b>:</b></div>
+                                <div class="col-6">
+                                    {{ $anak->ortus->nama_ibu }}
                                 </div>
                             </div>
                             <div class="row">
@@ -97,6 +114,7 @@
                                 <div class="col-6">
                                     {{ $anak->golongan_darah }}
                                 </div>
+                            </div>
                             </div>
                         </div>
                     </div>

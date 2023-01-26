@@ -32,17 +32,19 @@
                     <th>No KK</th>
                     <th>NIK Anak</th>
                     <th>Nama Anak</th>
+                    <th>Nama Ayah/Ibu</th>
                     <th>Jenis Kelamin</th>
                     <th>Usia</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
-            @foreach ($anaks as $key => $anak)
+            @foreach ($anakList as $key => $anak)
             <tr>
                 <td>{{$key+1}}</td>
                 <td>{{ $anak->no_kk }}</td>
                 <td>{{ $anak->nik_anak }}</td>
                 <td>{{ $anak->nama_anak }}</td>
+                <td>{{ $anak->ortus->nama_ayah}} / {{ $anak->ortus->nama_ibu }}</td>
                 <td>
                     {{ $anak->jenkel_anak == 'L' ? 'Laki-Laki' : 'Perempuan' }}
                 </td>

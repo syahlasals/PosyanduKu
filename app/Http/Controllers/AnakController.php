@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Carbon\Carbon;
 use App\Models\Anak;
+use App\Models\Ortu;
 use App\Models\Stunting;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -124,8 +125,18 @@ class AnakController extends Controller
     // PETUGAS ENTRY
     public function indexInputImunisasi()
     {
-        $anaks = Anak::all();
-        return view('entry.inputImunisasi.index', compact('anaks'));
+        $anaks = Anak::with('ortus')->get();
+        return view('entry.InputImunisasi.index', ['anakList' => $anaks]);
+        // // $anaks = Anak::all();
+        // // $ortus = Ortu::whereHas('no_kk', $no_kk)->get();
+        // $ortus = Ortu::whereHas('anaks', function ($query) {
+        //     return $query->where('no_kk', $no_kk);
+        // })->get();
+        // // $ortus = Ortu::where('no_kk', $no_kk)->get();
+        // return view('entry.inputImunisasi.index', [ 
+        //     'anaks' => $anaks, 
+        //     'ortus' => $ortus
+        //     ]);
     }
 
     public function historyImunisasi()
