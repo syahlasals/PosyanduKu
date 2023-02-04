@@ -84,7 +84,7 @@
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
-                                        <label for="tgl_anak"><b>Tempat Lahir Anak</b></label>
+                                        <label for="tgl_anak"><b>Tanggal Lahir Anak</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">

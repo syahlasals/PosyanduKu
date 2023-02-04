@@ -32,9 +32,6 @@
                             
                             <div class="card">
                                 <div class="card-body">
-                                    @if (Session::has('nokk'))
-                                <div class="alert alert-danger">{{ Session::get('nokk') }}</div>
-                                @endif
                                 @if (Session::has('nokk'))
                                 <div class="alert alert-danger">{{ Session::get('nokk') }}</div>
                                 @endif
