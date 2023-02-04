@@ -70,16 +70,16 @@
                                         <label for="tgl_vaksin"><b>Riwayat Vaksin</b></label>
                                         </div>
                                         <div class="col-1"><b> :</b></div>
-                                        <div class="col-2">
-                                    <div class="y"  style="width:100px;">
+                                        <div class="col-4">
+                                    <div class="y">
                                             <p>@foreach ($vaksins as $key => $vaksin)
-                                                    {{ $vaksin->tgl_vaksin }}
+                                                    {{ $vaksin->tgl_vaksin ->format('d F Y')}}
                                                 @endforeach
                                             </p>
                                             </div>
                                     </div> 
-                                    <div class="col-6">
-                                    <div class="y"  style="width:120px;">
+                                    <div class="col-4">
+                                    <div class="y">
                                             <p>@foreach ($vaksins as $key => $vaksin)
                                                     {{ $vaksin->jenis_vaksin }}
                                                 @endforeach
