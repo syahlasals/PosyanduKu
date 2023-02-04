@@ -1,6 +1,8 @@
 @include('template.imun')
 
-        <a href="{{ url('/pengelola/dataImunisasi/giziBuruk/print') }}" class="btn btn-main" target="_blank" role="button" aria-disabled="true">Cetak Rekap Anak <i class="fa-solid fa-print ml-1"></i></a><br><br>
+
+                    <div class="container">
+                        <a href="{{ url('/pengelola/dataImunisasi/giziBuruk/print') }}" class="btn btn-main" target="_blank" role="button" aria-disabled="true">Cetak Rekap Anak <i class="fa-solid fa-print ml-1"></i></a><br><br>
         <table id="dataimunisasi" class="table table-striped table-bordered text-center" border="1">
         <thead>
             <tr>
@@ -48,3 +50,15 @@
             @endforeach
         </tbody>
     </table>
+                        <a href="{{ url('pengelola') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
+                    </div>
+                    <!-- /.container-fluid -->
+        
+    </div>
+    <!-- End of Main Content -->
+
+ @include('template.imun2')
+
+
+
+
