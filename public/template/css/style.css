@@ -53,7 +53,8 @@ body{
 }
 
 .card-ip{
-    background: #C8C8C8;
+    /* background: #C8C8C8; */
+    background: #DFE0E3;
     color: #000000;
     transition: transform .5s;
 }
@@ -90,15 +91,19 @@ body{
     box-shadow: 0px 0px 10px #CCB2E0;
 }
 
-
 .table-filter{
+    background-color: #DFE0E3;
+    border: none;
+    font-weight: bold;
     text-decoration: none;
-    color:  #647BB1;
+    color:  #000000;
+    transition: transform .5s;
 }
 .table-filter:hover{
     text-decoration: none;
     color: #000000;
     transform: scale(1.05);
+    box-shadow: 0px 0px 10px #DFE0E3;
 }
 
 .card-form{
@@ -118,9 +123,20 @@ box-shadow: 0px 0px 10px #647BB1;
     border-radius: 0;
     border-width: 3px;
 }
+
 .nav-ortu{
     background-color: #647BB1;
 }
+.sidebar-brand-ortu{
+    color: #ffffff;
+    font-weight: bold;
+    text-transform:uppercase;
+}
+.sidebar-brand-ortu:hover{
+    text-decoration: none;
+    color: #f8f9fc;
+}
+
 .greeting{
     border-radius: 10px;
     box-shadow: 2px 2px 20px 0px #647BB1;

@@ -77,23 +77,23 @@
         </div>
 <br>
 
-        <table class="table table-bordered text-center">
+        <table class="table table-borderless text-center">
             <tr>
-                <th>
-                    <a class="table-filter" href="{{ url('pengelola/dataImunisasi/notvaksin') }}">
-                            <span class=" d-flex align-items-center justify-content-center mb-3 text-center">Anak Yang Belum Dapat Vaksin : {{ count($notvaksin) }} </span>
+                <td>
+                    <a class="card table-filter d-flex p-2" href="{{ url('pengelola/dataImunisasi/notvaksin') }}">
+                            <span class=" d-flex align-items-center justify-content-center text-center">Anak Yang Belum Dapat Vaksin : {{ count($notvaksin) }} </span>
                     </a>
-                </th>
-                <th>
-                    <a class="table-filter" href="{{ url('pengelola/dataImunisasi/notvitamin') }}" >
-                            <span class=" d-flex align-items-center justify-content-center mb-3 text-center">Anak Yang Belum Dapat Vitamin : {{ count($notvitamin) }}</span> 
+                </td>
+                <td>
+                    <a class="card table-filter d-flex p-2" href="{{ url('pengelola/dataImunisasi/notvitamin') }}" >
+                            <span class=" d-flex align-items-center justify-content-center text-center">Anak Yang Belum Dapat Vitamin : {{ count($notvitamin) }}</span> 
                     </a>
-                </th>
-                <th>
-                    <a class="table-filter" href="{{ url('pengelola/dataImunisasi/notkondisi') }}" >
-                            <span class=" d-flex align-items-center justify-content-center mb-3 text-center">Anak Yang Belum Terdeteksi Kelainan  : {{ count($notvitamin) }}</span> 
+                </td>
+                <td>
+                    <a class="card table-filter d-flex p-2" href="{{ url('pengelola/dataImunisasi/notkondisi') }}" >
+                            <span class=" d-flex align-items-center justify-content-center text-center">Anak Yang Belum Terdeteksi Kelainan  : {{ count($notvitamin) }}</span> 
                     </a>
-                </th>
+                </td>
             </tr>
         </table>
 

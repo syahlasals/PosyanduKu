@@ -23,9 +23,9 @@
                             <form method="POST" action="/ortu" id="myform">
                             @csrf
                             <div class="row">
-                                <h5 class="text-center my-3"><b>PENDAFTARAN ORANG TUA</b></h5>
+                                <h4 class="text-center my-3"><b>PENDAFTARAN ORANG TUA</b></h4>
                                 <div class="col-12 col-lg-12 col-md-12 col-sm-12 d-flex my-3 justify-content-center" style="height: 40%; width:40%;">
-                                    <img src="{{ asset('template/img/motherhood.svg') }}" alt="" style="height: 40%; width:40%;">
+                                    <img src="{{ asset('template/img/posyandu-welcome.svg') }}" alt="" style="height: 15%; width:15%;">
                                 </div>
                             </div>
                             <div class="card">
@@ -56,7 +56,7 @@
                                                 <div class="col-5"> <label for="nik_ayah"><b>NIK Ayah</b></label></div>
                                                 <div class="col-1">:</div>
                                                 <div class="col-6"><input type="number" name="nik_ayah" id="nik_ayah" class="form-control"></div>
-                                            </div>                                            
+                                            </div>
                                         </div>
                                         <div class="col-12 col-lg-6 col-md-6 col-sm-6">
                                             <div class="d-flex mb-3">

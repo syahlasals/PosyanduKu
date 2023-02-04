@@ -252,7 +252,7 @@ class ImunisasiController extends Controller
         })->get();
         $notvaksin = Anak::doesntHave('vaksins')->get();
         $notvitamin = Anak::doesntHave('vitamins')->get();
-        $notkondisi = Anak::doesntHave('penyimpangans')->get();   
+        $notkondisi = Anak::doesntHave('penyimpangans')->get();
         return view('pengelola.dataImunisasi.obesitas', [
             'anakList' => $anaks,
             'semua' => $semua,
@@ -279,10 +279,10 @@ class ImunisasiController extends Controller
         })->count();
         $obesitas = Anak::whereHas('penyimpangans', function ($query) {
             return $query->where('status_penyimpangan', 'Obesitas');
-        })->count();        
+        })->count();
         $stunting = Anak::whereHas('penyimpangans', function ($query) {
             return $query->where('status_penyimpangan', 'Stunting');
-        })->count();       
+        })->count();
         $notvaksin = Anak::doesntHave('vaksins')->count();
         $notvitamin = Anak::doesntHave('vitamins')->count();
         $notkondisi = Anak::doesntHave('penyimpangans')->count();    
@@ -303,11 +303,9 @@ class ImunisasiController extends Controller
     public function cetakNormal()
     {
         $tanggal = date('d F y');
-        $anaks = Anak::join('tb_vaksin', 'tb_vaksin.nik_anak', '=', 'tb_anak.nik_anak')
-            ->join('tb_vitamin', 'tb_vitamin.nik_anak', '=', 'tb_anak.nik_anak')
-            ->join('tb_pertumbuhan', 'tb_pertumbuhan.nik_anak', '=', 'tb_anak.nik_anak')
-            ->where('tb_pertumbuhan.status_penyimpangan', 'Normal')
-            ->get(['tb_anak.nik_anak', 'tb_anak.nama_anak', 'tb_vaksin.jenis_vaksin', 'tb_vaksin.tgl_vaksin', 'tb_vitamin.jenis_vitamin', 'tb_vitamin.tgl_vitamin', 'tb_pertumbuhan.status_penyimpangan']);
+        $anaks = Anak::whereHas('penyimpangans', function ($query) {
+            return $query->where('status_penyimpangan', 'Normal');
+        })->get();
         $semua = Anak::count();
         $normal = Anak::whereHas('penyimpangans', function ($query) {
             return $query->where('status_penyimpangan', 'Normal');
@@ -317,13 +315,13 @@ class ImunisasiController extends Controller
         })->count();
         $obesitas = Anak::whereHas('penyimpangans', function ($query) {
             return $query->where('status_penyimpangan', 'Obesitas');
-        })->count();        
+        })->count();
         $stunting = Anak::whereHas('penyimpangans', function ($query) {
             return $query->where('status_penyimpangan', 'Stunting');
-        })->count();       
+        })->count();
         $notvaksin = Anak::doesntHave('vaksins')->count();
         $notvitamin = Anak::doesntHave('vitamins')->count();
-        $notkondisi = Anak::doesntHave('penyimpangans')->count();    
+        $notkondisi = Anak::doesntHave('penyimpangans')->count();
         return view('pengelola.dataImunisasi.cetak.cetakNormal', [
             'anakList' => $anaks,
             'semua' => $semua,
@@ -341,12 +339,9 @@ class ImunisasiController extends Controller
     public function cetakGiziBuruk()
     {
         $tanggal = date('d F y');
-        $anaks = Anak::join('tb_vaksin', 'tb_vaksin.nik_anak', '=', 'tb_anak.nik_anak')
-            ->join('tb_vitamin', 'tb_vitamin.nik_anak', '=', 'tb_anak.nik_anak')
-            ->join('tb_pertumbuhan', 'tb_pertumbuhan.nik_anak', '=', 'tb_anak.nik_anak')
-            ->where('tb_pertumbuhan.status_penyimpangan', 'Gizi Buruk')
-            ->get(['tb_anak.nik_anak', 'tb_anak.nama_anak', 'tb_vaksin.jenis_vaksin', 'tb_vaksin.tgl_vaksin', 'tb_vitamin.jenis_vitamin', 'tb_vitamin.tgl_vitamin', 'tb_pertumbuhan.status_penyimpangan']);
-
+        $anaks = Anak::whereHas('penyimpangans', function ($query) {
+            return $query->where('status_penyimpangan', 'Gizi Buruk');
+        })->get();
         $semua = Anak::count();
         $normal = Anak::whereHas('penyimpangans', function ($query) {
             return $query->where('status_penyimpangan', 'Normal');
@@ -356,13 +351,13 @@ class ImunisasiController extends Controller
         })->count();
         $obesitas = Anak::whereHas('penyimpangans', function ($query) {
             return $query->where('status_penyimpangan', 'Obesitas');
-        })->count();        
+        })->count();
         $stunting = Anak::whereHas('penyimpangans', function ($query) {
             return $query->where('status_penyimpangan', 'Stunting');
-        })->count();       
+        })->count();
         $notvaksin = Anak::doesntHave('vaksins')->count();
         $notvitamin = Anak::doesntHave('vitamins')->count();
-        $notkondisi = Anak::doesntHave('penyimpangans')->count();    
+        $notkondisi = Anak::doesntHave('penyimpangans')->count();
         return view('pengelola.dataImunisasi.cetak.cetakGiziBuruk', [
             'anakList' => $anaks,
             'semua' => $semua,
@@ -380,11 +375,9 @@ class ImunisasiController extends Controller
     public function cetakStunting()
     {
         $tanggal = date('d F y');
-        $anaks = Anak::join('tb_vaksin', 'tb_vaksin.nik_anak', '=', 'tb_anak.nik_anak')
-            ->join('tb_vitamin', 'tb_vitamin.nik_anak', '=', 'tb_anak.nik_anak')
-            ->join('tb_pertumbuhan', 'tb_pertumbuhan.nik_anak', '=', 'tb_anak.nik_anak')
-            ->where('tb_pertumbuhan.status_penyimpangan', 'Stunting')
-            ->get(['tb_anak.nik_anak', 'tb_anak.nama_anak', 'tb_vaksin.jenis_vaksin', 'tb_vaksin.tgl_vaksin', 'tb_vitamin.jenis_vitamin', 'tb_vitamin.tgl_vitamin', 'tb_pertumbuhan.status_penyimpangan']);
+        $anaks = Anak::whereHas('penyimpangans', function ($query) {
+            return $query->where('status_penyimpangan', 'Stunting');
+        })->get();
         $semua = Anak::count();
         $normal = Anak::whereHas('penyimpangans', function ($query) {
             return $query->where('status_penyimpangan', 'Normal');
@@ -394,13 +387,13 @@ class ImunisasiController extends Controller
         })->count();
         $obesitas = Anak::whereHas('penyimpangans', function ($query) {
             return $query->where('status_penyimpangan', 'Obesitas');
-        })->count();        
+        })->count();
         $stunting = Anak::whereHas('penyimpangans', function ($query) {
             return $query->where('status_penyimpangan', 'Stunting');
-        })->count();       
+        })->count();
         $notvaksin = Anak::doesntHave('vaksins')->count();
         $notvitamin = Anak::doesntHave('vitamins')->count();
-        $notkondisi = Anak::doesntHave('penyimpangans')->count();    
+        $notkondisi = Anak::doesntHave('penyimpangans')->count();
         return view('pengelola.dataImunisasi.cetak.cetakStunting', [
             'anakList' => $anaks,
             'semua' => $semua,
@@ -418,11 +411,9 @@ class ImunisasiController extends Controller
     public function cetakObesitas()
     {
         $tanggal = date('d F y');
-        $anaks = Anak::join('tb_vaksin', 'tb_vaksin.nik_anak', '=', 'tb_anak.nik_anak')
-            ->join('tb_vitamin', 'tb_vitamin.nik_anak', '=', 'tb_anak.nik_anak')
-            ->join('tb_pertumbuhan', 'tb_pertumbuhan.nik_anak', '=', 'tb_anak.nik_anak')
-            ->where('tb_pertumbuhan.status_penyimpangan', 'Obesitas')
-            ->get(['tb_anak.nik_anak', 'tb_anak.nama_anak', 'tb_vaksin.jenis_vaksin', 'tb_vaksin.tgl_vaksin', 'tb_vitamin.jenis_vitamin', 'tb_vitamin.tgl_vitamin', 'tb_pertumbuhan.status_penyimpangan']);
+        $anaks = Anak::whereHas('penyimpangans', function ($query) {
+            return $query->where('status_penyimpangan', 'Obesitas');
+        })->get();
         $semua = Anak::count();
         $normal = Anak::whereHas('penyimpangans', function ($query) {
             return $query->where('status_penyimpangan', 'Normal');
@@ -432,13 +423,13 @@ class ImunisasiController extends Controller
         })->count();
         $obesitas = Anak::whereHas('penyimpangans', function ($query) {
             return $query->where('status_penyimpangan', 'Obesitas');
-        })->count();        
+        })->count();
         $stunting = Anak::whereHas('penyimpangans', function ($query) {
             return $query->where('status_penyimpangan', 'Stunting');
-        })->count();       
+        })->count();
         $notvaksin = Anak::doesntHave('vaksins')->count();
         $notvitamin = Anak::doesntHave('vitamins')->count();
-        $notkondisi = Anak::doesntHave('penyimpangans')->count();    
+        $notkondisi = Anak::doesntHave('penyimpangans')->count();
         return view('pengelola.dataImunisasi.cetak.cetakObesitas', [
             'anakList' => $anaks,
             'semua' => $semua,
@@ -456,11 +447,6 @@ class ImunisasiController extends Controller
     public function cetaknotvaksin()
     {
         $tanggal = date('d F y');
-        $anaks = Anak::join('tb_vaksin', 'tb_vaksin.nik_anak', '=', 'tb_anak.nik_anak')
-            ->join('tb_vitamin', 'tb_vitamin.nik_anak', '=', 'tb_anak.nik_anak')
-            ->join('tb_pertumbuhan', 'tb_pertumbuhan.nik_anak', '=', 'tb_anak.nik_anak')
-            ->where('tb_pertumbuhan.status_penyimpangan', 'Obesitas')
-            ->get(['tb_anak.nik_anak', 'tb_anak.nama_anak', 'tb_vaksin.jenis_vaksin', 'tb_vaksin.tgl_vaksin', 'tb_vitamin.jenis_vitamin', 'tb_vitamin.tgl_vitamin', 'tb_pertumbuhan.status_penyimpangan']);
         $semua = Anak::count();
         $normal = Anak::whereHas('penyimpangans', function ($query) {
             return $query->where('status_penyimpangan', 'Normal');
@@ -470,15 +456,14 @@ class ImunisasiController extends Controller
         })->count();
         $obesitas = Anak::whereHas('penyimpangans', function ($query) {
             return $query->where('status_penyimpangan', 'Obesitas');
-        })->count();        
+        })->count();
         $stunting = Anak::whereHas('penyimpangans', function ($query) {
             return $query->where('status_penyimpangan', 'Stunting');
-        })->count();       
+        })->count();
         $notvaksin = Anak::doesntHave('vaksins')->get();
         $notvitamin = Anak::doesntHave('vitamins')->get();
         $notkondisi = Anak::doesntHave('penyimpangans')->get();    
         return view('pengelola.dataImunisasi.cetak.cetaknotvaksin', [
-            'anakList' => $anaks,
             'semua' => $semua,
             'giziBuruk' => $giziBuruk,
             'normal' => $normal,
@@ -494,11 +479,6 @@ class ImunisasiController extends Controller
     public function cetaknotvitamin()
     {
         $tanggal = date('d F y');
-        $anaks = Anak::join('tb_vaksin', 'tb_vaksin.nik_anak', '=', 'tb_anak.nik_anak')
-            ->join('tb_vitamin', 'tb_vitamin.nik_anak', '=', 'tb_anak.nik_anak')
-            ->join('tb_pertumbuhan', 'tb_pertumbuhan.nik_anak', '=', 'tb_anak.nik_anak')
-            ->where('tb_pertumbuhan.status_penyimpangan', 'Obesitas')
-            ->get(['tb_anak.nik_anak', 'tb_anak.nama_anak', 'tb_vaksin.jenis_vaksin', 'tb_vaksin.tgl_vaksin', 'tb_vitamin.jenis_vitamin', 'tb_vitamin.tgl_vitamin', 'tb_pertumbuhan.status_penyimpangan']);
         $semua = Anak::count();
         $normal = Anak::whereHas('penyimpangans', function ($query) {
             return $query->where('status_penyimpangan', 'Normal');
@@ -508,15 +488,14 @@ class ImunisasiController extends Controller
         })->count();
         $obesitas = Anak::whereHas('penyimpangans', function ($query) {
             return $query->where('status_penyimpangan', 'Obesitas');
-        })->count();        
+        })->count();
         $stunting = Anak::whereHas('penyimpangans', function ($query) {
             return $query->where('status_penyimpangan', 'Stunting');
-        })->count();       
+        })->count();
         $notvaksin = Anak::doesntHave('vaksins')->get();
         $notvitamin = Anak::doesntHave('vitamins')->get();
-        $notkondisi = Anak::doesntHave('penyimpangans')->get();    
+        $notkondisi = Anak::doesntHave('penyimpangans')->get();
         return view('pengelola.dataImunisasi.cetak.cetaknotvitamin', [
-            'anakList' => $anaks,
             'semua' => $semua,
             'giziBuruk' => $giziBuruk,
             'normal' => $normal,
@@ -532,11 +511,6 @@ class ImunisasiController extends Controller
     public function cetaknotkondisi()
     {
         $tanggal = date('d F y');
-        $anaks = Anak::join('tb_vaksin', 'tb_vaksin.nik_anak', '=', 'tb_anak.nik_anak')
-            ->join('tb_vitamin', 'tb_vitamin.nik_anak', '=', 'tb_anak.nik_anak')
-            ->join('tb_pertumbuhan', 'tb_pertumbuhan.nik_anak', '=', 'tb_anak.nik_anak')
-            ->where('tb_pertumbuhan.status_penyimpangan', 'Obesitas')
-            ->get(['tb_anak.nik_anak', 'tb_anak.nama_anak', 'tb_vaksin.jenis_vaksin', 'tb_vaksin.tgl_vaksin', 'tb_vitamin.jenis_vitamin', 'tb_vitamin.tgl_vitamin', 'tb_pertumbuhan.status_penyimpangan']);
         $semua = Anak::count();
         $normal = Anak::whereHas('penyimpangans', function ($query) {
             return $query->where('status_penyimpangan', 'Normal');
@@ -546,15 +520,14 @@ class ImunisasiController extends Controller
         })->count();
         $obesitas = Anak::whereHas('penyimpangans', function ($query) {
             return $query->where('status_penyimpangan', 'Obesitas');
-        })->count();        
+        })->count();
         $stunting = Anak::whereHas('penyimpangans', function ($query) {
             return $query->where('status_penyimpangan', 'Stunting');
-        })->count();       
+        })->count();
         $notvaksin = Anak::doesntHave('vaksins')->get();
         $notvitamin = Anak::doesntHave('vitamins')->get();
-        $notkondisi = Anak::doesntHave('penyimpangans')->get();    
+        $notkondisi = Anak::doesntHave('penyimpangans')->get();
         return view('pengelola.dataImunisasi.cetak.cetaknotkondisi', [
-            'anakList' => $anaks,
             'semua' => $semua,
             'giziBuruk' => $giziBuruk,
             'normal' => $normal,
