@@ -49,11 +49,7 @@
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
                                         <input type="text" name="nama_posyandu" id="nama_posyandu" class="form-control" value="{{ $prfl->nama_posyandu }}" disabled>
-<<<<<<< HEAD
-                                        <input type="hidden" name="nama_posyandu" id="nama_posyandu" class="form-control" value="{{$prfl->nama_posyandu}}">
-=======
-                                        <input type="hidden" name="nama_posyandu" id="nama_posyandu" class="form-control" value="{{ $prfl->nama_posyandu }}" >
->>>>>>> 29d42f445282bf04d5b0c2501116b9b28e9336ad
+                                        <input type="hidden" name="nama_posyandu" id="nama_posyandu" class="form-control" value="{{$prfl ->nama_posyandu}}">
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
