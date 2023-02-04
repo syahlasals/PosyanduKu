@@ -12,6 +12,7 @@ class Penyimpangan extends Model
     public $incrementing = true;
     // protected $primaryKey = "kode_pertumbuhan";
     protected $table = "tb_pertumbuhan";
+    protected $dates = ['tgl_hitung'];
     protected $fillable = [
        'kode_pertumbuhan','nik_anak','hasil_imt','riwayat_penyakit','status_penyimpangan','tgl_hitung'];
 
