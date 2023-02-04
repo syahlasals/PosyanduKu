@@ -68,7 +68,7 @@
                                         <label for="tgl_vaksin"><b>Riwayat Vitamin</b></label>
                                         </div>
                                         <div class="col-1"><b> :</b></div>
-                                        <div class="col-4">
+                                        <div class="col-3">
                                     <div class="y">
                                             <p>@foreach ($vitamins as $key => $vitamin)
                                                     {{ $vitamin->tgl_vitamin ->format('d F Y')}}
@@ -76,7 +76,7 @@
                                             </p>
                                             </div>
                                     </div> 
-                                    <div class="col-4">
+                                    <div class="col-3">
                                     <div class="y">
                                             <p>@foreach ($vitamins as $key => $vitamin)
                                                     {{ $vitamin->jenis_vitamin }}                            

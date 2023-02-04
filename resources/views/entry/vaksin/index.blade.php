@@ -39,9 +39,6 @@
                                     </ul>
                                 </div>
                             @endif
-                            @if (Session::has('jenisvaksin'))
-                                <div class="alert alert-danger">{{ Session::get('jenisvaksin') }}</div>
-                            @endif
                             <form method="POST" action="/store/vaksin" id="myform">
                                 @csrf
                                 <div class="row" style="margin-bottom: 15px;">
@@ -70,7 +67,7 @@
                                         <label for="tgl_vaksin"><b>Riwayat Vaksin</b></label>
                                         </div>
                                         <div class="col-1"><b> :</b></div>
-                                        <div class="col-4">
+                                        <div class="col-3">
                                     <div class="y">
                                             <p>@foreach ($vaksins as $key => $vaksin)
                                                     {{ $vaksin->tgl_vaksin ->format('d F Y')}}

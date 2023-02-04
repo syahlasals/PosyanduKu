@@ -142,16 +142,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item" style="background-color: #edf0f2;">
-                            <h2 class="accordion-header" id="flush-headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                    Alamat Lengkap
-                                </button>
-                            </h2>
-                            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">Jl. Nanjung Kp. Mekar Bakti RT 01 RW 05 Desa Lagadar Kecamatan Margaasih Kabupaten Bandung</div>
-                            </div>
-                        </div>
                     </div>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-3">
                         <a href="{{ url('pengelola') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
