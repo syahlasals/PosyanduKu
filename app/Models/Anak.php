@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use PDF;
 
+
+
 class Anak extends Model
 {
     use HasFactory;
@@ -13,6 +15,7 @@ class Anak extends Model
     public $timestamps = false;
     protected $table = "tb_anak";
     protected $primaryKey = 'nik_anak';
+    protected $dates = ['tgl_anak'];
     protected $fillable = [
         'no_kk',
         'nik_anak',
