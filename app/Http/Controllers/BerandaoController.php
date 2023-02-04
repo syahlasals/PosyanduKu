@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Ortu;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -40,6 +41,40 @@ class BerandaoController extends Controller
             'rt'=>'required',
             'rw'=>'required'
         ]);
+        
+        $this->validate($request, [
+            'no_kk'=>'required',
+            'nik_ayah'=>'required',
+            'nik_ibu'=>'required',
+            'nama_ayah'=>'required',
+            'nama_ibu'=>'required',
+            'pekerjaan_ayah'=>'required',
+            'pekerjaan_ibu'=>'required',
+            'alamat_ortu'=>'required',
+            'rt'=>'required',
+            'rw'=>'required'
+        ]);
+        
+        $nokk_ortu = Ortu::where('no_kk', $request->no_kk)->first();
+        $nikayah = Str::length($request->nik_ayah);
+        $nikibu = Str::length($request->nik_ibu);
+        $nokk = Str::length($request->no_kk);
+
+        if($nokk_ortu != null ){
+            return back()->with('nokk_ortu', 'No KK sudah terdaftar!');
+        }elseif($nokk > 16) {
+            return back()->with('nokk', 'No KK tidak sesuai ketentuan!');
+        }elseif($nokk < 16){
+            return back()->with('nokk', 'No KK tidak sesuai ketentuan!');
+        }elseif($nikayah > 16 ){
+            return back()->with('nikayah', 'NIK Ayah tidak sesuai ketentuan!');
+        }elseif($nikayah < 16) {
+            return back()->with('nikayah', 'NIK Ayah tidak sesuai ketentuan!');
+        }elseif($nikibu > 16 ){
+            return back()->with('nikibu', 'NIK Ibu tidak sesuai ketentuan!');
+        }elseif($nikibu < 16) {
+            return back()->with('nikibu', 'NIK Ibu tidak sesuai ketentuan!');
+        }else{
 
         $ortus = Ortu::create([
             'no_kk'=>$request->no_kk,
@@ -54,7 +89,8 @@ class BerandaoController extends Controller
             'rw'=>$request->rw
         ]);
 
-        return redirect('/ortu')->with('success', 'Data Berhasil di Tambahkan!');
+        return redirect('/redirects')->with('success', 'Data Berhasil di Tambahkan!');
+        }
     }
 
     public function index2()
@@ -77,6 +113,27 @@ class BerandaoController extends Controller
             'rt'=>'required',
             'rw'=>'required'
         ]);
+        
+        $nokk_ortu = Ortu::where('no_kk', $request->no_kk)->first();
+        $nikayah = Str::length($request->nik_ayah);
+        $nikibu = Str::length($request->nik_ibu);
+        $nokk = Str::length($request->no_kk);
+
+        if($nokk_ortu != null ){
+            return back()->with('nokk_ortu', 'No KK sudah terdaftar!');
+        }elseif($nokk > 16) {
+            return back()->with('nokk', 'No KK tidak sesuai ketentuan!');
+        }elseif($nokk < 16){
+            return back()->with('nokk', 'No KK tidak sesuai ketentuan!');
+        }elseif($nikayah > 16 ){
+            return back()->with('nikayah', 'NIK Ayah tidak sesuai ketentuan!');
+        }elseif($nikayah < 16) {
+            return back()->with('nikayah', 'NIK Ayah tidak sesuai ketentuan!');
+        }elseif($nikibu > 16 ){
+            return back()->with('nikibu', 'NIK Ibu tidak sesuai ketentuan!');
+        }elseif($nikibu < 16) {
+            return back()->with('nikibu', 'NIK Ibu tidak sesuai ketentuan!');
+        }else{
 
         $ortus = Ortu::create([
             'no_kk'=>$request->no_kk,
@@ -92,5 +149,6 @@ class BerandaoController extends Controller
         ]);
 
         return redirect('/entry/pendaftaranAnak')->with('success', 'Data Berhasil di Tambahkan');
+    }
     }
 }

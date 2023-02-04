@@ -24,7 +24,7 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid"><br>
-                    <h1 class="text-center"><b>Perbaharui Data Anak</b></h1><br><br>
+                    <h1 class="text-center"><b>Perbaharui Data Posyandu</b></h1><br><br>
                     <div class="container d-flex justify-item-center justify-content-center"><br>
                         <div class="card card-form">
                             <div class="card-body">
@@ -38,93 +38,77 @@
                                     </ul>
                                 </div>
                             @endif
-                            @if (Session::has('tahun'))
-                                <div class="alert alert-danger">{{ Session::get('tahun') }}</div>
-                            @endif
-                            <form method="POST" action="/pengelola/dataAnak/{{ $anak->nik_anak }}" id="myform">
+                            <form method="POST" action="{{ route('dataPosyandu.update', $prfl->id_posyandu) }}" id="myform">
                                 @csrf
                                 @method('PUT')
+                                    <input type="hidden" name="id_posyandu" id="id_posyandu" class="form-control" value="{{ $prfl->id_posyandu }}">
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
-                                        <label for="no_kk"><b>Nomor Kartu Keluarga</b></label>
+                                        <label for="nama_posyandu"><b>Nama Posyandu</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="integer" name="no_kk" id="no_kk" class="form-control" value="{{ $anak->no_kk }}" disabled>
-                                        <input type="hidden" name="no_kk" id="no_kk" class="form-control" value="{{ $anak->no_kk }}">
+                                        <input type="text" name="nama_posyandu" id="nama_posyandu" class="form-control" value="{{ $prfl->nama_posyandu }}">
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
-                                        <label for="nik_anak"><b>NIK Anak</b></label>
+                                        <label for="alamat_posyandu"><b>Alamat Posyandu</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8"> 
-                                        <input type="text" name="nik_anak" id="nik_anak" class="form-control" value="{{ $anak->nik_anak }}" disabled>
-                                        <input type="hidden" name="nik_anak" id="nik_anak" class="form-control" value="{{ $anak->nik_anak }}" >
+                                        <input type="text" name="alamat_posyandu" id="alamat_posyandu" class="form-control" value="{{ $prfl->alamat_posyandu }}">
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
-                                        <label for="nama_anak"><b>Nama Anak</b></label>
+                                        <label for="nama_rt"><b>Nama RT</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="text" name="nama_anak" id="nama_anak" class="form-control" value="{{ $anak->nama_anak }}">
+                                        <input type="text" name="nama_rt" id="nama_rt" class="form-control" value="{{ $prfl->nama_rt }}">
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
-                                        <label for="tmp_anak"><b>Tempat Lahir Anak</b></label>
+                                        <label for="nama_rw"><b>Nama RW</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="text" name="tmp_anak" id="tmp_anak" class="form-control" value="{{ $anak->tmp_anak }}">                        
+                                        <input type="text" name="nama_rw" id="nama_rw" class="form-control" value="{{ $prfl->nama_rw }}">                        
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
-                                        <label for="tgl_anak"><b>Tempat Lahir Anak</b></label>
+                                        <label for="ketua"><b>Ketua Posyandu</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="date" name="tgl_anak" id="tgl_anak" class="form-control" value="{{ $anak->tgl_anak }}">                        
+                                        <input type="text" name="ketua" id="ketua" class="form-control" value="{{ $prfl->ketua }}">                        
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
-                                        <label for="jenkel_anak"><b>Jenis Kelamin Anak</b></label>
+                                        <label for="sekretaris"><b>Sekretaris</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <div class="form-check">
-                                            <input type="radio" class="form-check-input" name="jenkel_anak" id="lakilaki" value="L"  {{ $anak->jenkel_anak == 'L' ? 'checked' : '' }}>
-                                            <label for="lakilaki" class="form-check-label">Laki-laki</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input type="radio" class="form-check-input" name="jenkel_anak" id="perempuan" value="P"  {{ $anak->jenkel_anak == 'P' ? 'checked' : '' }}>
-                                            <label for="perempuan" class="form-check-label">Perempuan</label>
-                                        </div>
+                                        <input type="text" name="sekretaris" id="sekretaris" class="form-control" value="{{ $prfl->sekretaris }}">                        
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col-3">
-                                        <label for="golongan_darah"><b>Golongan Darah</b></label>
+                                        <label for="bendahara"><b>Bendahara</b></label>
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <select class="form-select" aria-label="Default select example" style="border-radius: 30px; width: 250px;" name="golongan_darah" id="golongan_darah">
-                                            <option value="A">A</option>
-                                            <option value="B">B</option>
-                                            <option value="AB">AB</option>
-                                            <option value="O">O</option>
-                                        </select>                                    
+                                        <input type="text" name="bendahara" id="bendahara" class="form-control" value="{{ $prfl->bendahara }}">                        
                                     </div>
                                 </div>
                                 <br>
                                 <div class="row">
                                     <div class="col" colspan="3" style="margin-left: 240px;">
-                                    <a href="{{ url('/pengelola/dataAnak') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
+                                    <a href="{{ url('/pengelola/dataPosyandu') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Kembali</a>
                                     <button class="btn btn-main" type="submit" style="margin-left: 15px;">Simpan</button>
                                     </div>
                                 </div>

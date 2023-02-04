@@ -25,7 +25,7 @@
                 <h5 class="text-center">
                     Tanggal : {{ $tanggal }} <br><br>
                     Balita Terdaftar : {{ $semua }} <br>
-                    Jumlah Balita belum terdeteksi kelainan : {{ $stunting }} 
+                    Jumlah Balita belum terdeteksi kelainan : {{ $notkondisi }} 
                 </h5>
             </div> 
         </div><br>

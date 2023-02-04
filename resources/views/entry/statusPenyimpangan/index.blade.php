@@ -70,7 +70,7 @@
                                         </div>
                                         <div class="col-1"><b>:</b></div>
                                         <div class="col-8"> 
-                                            <input type="date" name="tgl_hitung" id="tgl_hitung" class="form-control">
+                                            <input type="date" name="tgl_hitung" id="tgl_hitung" class="form-control" required>
                                         </div>
                                     </div>
                                     <div class="row">

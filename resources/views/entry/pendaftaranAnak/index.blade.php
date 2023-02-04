@@ -47,6 +47,9 @@
                             @if (Session::has('tahun'))
                                 <div class="alert alert-danger">{{ Session::get('tahun') }}</div>
                             @endif
+                            @if (Session::has('nikanak'))
+                                <div class="alert alert-danger">{{ Session::get('nikanak') }}</div>
+                            @endif
                             <form method="POST" action="/entry/pendaftaranAnak" id="myform" style="margin-top: 15px; margin-bottom: 15px;">
                                 @csrf
                                 <div class="row" style="margin-bottom: 15px;">
@@ -55,7 +58,7 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="number" name="no_kk" id="no_kk" class="form-control">
+                                        <input type="number" name="no_kk" id="no_kk" class="form-control" required>
                                     </div>
                                 </div>
                                         
@@ -65,7 +68,7 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="number" name="nik_anak" id="nik_anak" class="form-control">
+                                        <input type="number" name="nik_anak" id="nik_anak" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
@@ -74,7 +77,7 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="text" name="nama_anak" id="nama_anak" class="form-control">
+                                        <input type="text" name="nama_anak" id="nama_anak" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
@@ -101,7 +104,7 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="date" name="tgl_anak" id="tgl_anak" class="form-control">
+                                        <input type="date" name="tgl_anak" id="tgl_anak" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
@@ -110,7 +113,7 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="text" name="tmp_anak" id="tmp_anak" class="form-control">
+                                        <input type="text" name="tmp_anak" id="tmp_anak" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">

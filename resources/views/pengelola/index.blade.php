@@ -41,11 +41,11 @@
                     <div class="container">
                         <div class="row">
                             <div class="col">
-                                <a href="{{ url('pengelola/dataAnak') }}"class="card card-ap">
+                                <a href="{{ url('pengelola/dataAnak') }}"class="card card-ip">
                                     <div class="card-body">
                                         <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Data Anak</b></span> 
                                         <div class="baby d-flex align-items-center justify-content-center">
-                                            <iconify-icon icon="cil:baby" style="color:white;" width="30" height="30"></iconify-icon>
+                                            <iconify-icon icon="cil:baby" style="color:black;" width="30" height="30"></iconify-icon>
                                         </div> 
                                     </div>
                                 </a>
@@ -60,7 +60,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="col">
+                            <!-- <div class="col">
                                 <a href="{{ url('pengelola/dataPetugas') }}" class="card card-ap ">
                                     <div class="card-body">
                                         <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Data Petugas</b></span> 
@@ -69,7 +69,7 @@
                                         </div> 
                                     </div>
                                 </a>
-                            </div>
+                            </div> -->
                             <div class="col">
                                 <a href="{{ url('pengelola/dataPosyandu') }}" class="card card-ip">
                                     <div class="card-body">

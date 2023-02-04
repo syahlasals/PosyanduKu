@@ -11,6 +11,7 @@ class Pertumbuhan extends Model
     public $timestamps = false;
     protected $primaryKey = "kode_pertumbuhan";
     protected $table = "tb_detailpertumbuhan";
+    protected $dates = ['tgl_hitung'];
     protected $fillable = [
        'kode_pertumbuhan', 'nik_anak', 'tinggi','berat', 'lingkar_kepala','tgl_hitung'];
        
