@@ -38,6 +38,9 @@
                                     </ul>
                                 </div>
                             @endif
+                            @if (Session::has('tahun'))
+                                <div class="alert alert-danger">{{ Session::get('tahun') }}</div>
+                            @endif
                             <form method="POST" action="/pengelola/dataAnak/{{ $anak->nik_anak }}" id="myform">
                                 @csrf
                                 @method('PUT')

@@ -91,7 +91,7 @@
                 </th>
                 <th>
                     <a class="table-filter" href="{{ url('pengelola/dataImunisasi/notkondisi') }}" >
-                            <span class=" d-flex align-items-center justify-content-center mb-3 text-center">Anak Yang Belum Terdeteksi Kelainan  : {{ count($notvitamin) }}</span> 
+                            <span class=" d-flex align-items-center justify-content-center mb-3 text-center">Anak Yang Belum Terdeteksi Kelainan  : {{ count($notkondisi) }}</span> 
                     </a>
                 </th>
             </tr>

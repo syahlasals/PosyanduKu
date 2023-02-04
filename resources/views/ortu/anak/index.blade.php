@@ -20,6 +20,7 @@
                                     </ul>
                                 </div>
                             @endif
+                            
                             <form method="POST" action="/ortu" id="myform">
                             @csrf
                             <div class="row">
@@ -28,8 +29,24 @@
                                     <img src="{{ asset('template/img/motherhood.svg') }}" alt="" style="height: 40%; width:40%;">
                                 </div>
                             </div>
+                            
                             <div class="card">
                                 <div class="card-body">
+                                    @if (Session::has('nokk'))
+                                <div class="alert alert-danger">{{ Session::get('nokk') }}</div>
+                                @endif
+                                @if (Session::has('nokk'))
+                                <div class="alert alert-danger">{{ Session::get('nokk') }}</div>
+                                @endif
+                                @if (Session::has('nokk_ortu'))
+                                    <div class="alert alert-danger">{{ Session::get('nokk_ortu') }}</div>
+                                @endif
+                                @if (Session::has('nikayah'))
+                                    <div class="alert alert-danger">{{ Session::get('nikayah') }}</div>
+                                @endif
+                                @if (Session::has('nikibu'))
+                                    <div class="alert alert-danger">{{ Session::get('nikibu') }}</div>
+                                @endif
                                     <div class="row my-3">
                                         <div class="col-12 col-lg-6 col-md-6 col-sm-6">
                                             <div class="d-flex mb-3">
