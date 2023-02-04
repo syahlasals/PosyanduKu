@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Anak;
+use App\Models\PertumbuhanStatus;
 use App\Models\Stunting;
 use App\Models\Pertumbuhan;
 use App\Models\Penyimpangan;
@@ -702,6 +703,7 @@ class PertumbuhanController extends Controller
 
     public function indexs($nik_anak)
     {
+        $tumbuhs = PertumbuhanStatus::where('nik_anak', $nik_anak)->get();
         $nama_anak = Anak::where('nik_anak', $nik_anak)->first();
         $nama = $nama_anak->nama_anak;
         $kode_pertumbuhan = Pertumbuhan::where('nik_anak', $nik_anak)->first();
@@ -709,6 +711,7 @@ class PertumbuhanController extends Controller
         return view ('entry.statusPenyimpangan.index', [
             "nik_anak" => $nik_anak,
             "kode_pertumbuhan" =>  $kode_pertumbuhan,
+            "tumbuhs" => $tumbuhs,
             "tgl_hitung" =>  $tgl_hitung,
             "nama_anak" => $nama
           ]);

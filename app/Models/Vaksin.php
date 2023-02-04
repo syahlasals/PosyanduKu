@@ -12,6 +12,7 @@ class Vaksin extends Model
     public $incrementing = true;
     protected $primaryKey = "kode_vaksin";
     protected $table = "tb_vaksin";
+    protected $dates = ['tgl_vaksin'];
     protected $fillable = [
        'nik_anak', 'jenis_vaksin', 'tgl_vaksin'];
 

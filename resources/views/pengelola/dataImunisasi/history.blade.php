@@ -49,7 +49,7 @@
                             <div class="col">
                                 <span><h6><u>Tanggal</u></h6>
                                     @foreach ($vaksins as $key => $vaksin)
-                                        {{ $vaksin->tgl_vaksin }} <br>
+                                        {{ $vaksin->tgl_vaksin ->format('d F Y')}} <br>
                                     @endforeach
                                 </span>
                             </div>
@@ -68,7 +68,7 @@
                             <div class="col">
                                 <span><h6><u>Tanggal</u></h6>
                                     @foreach ($vitamins as $key => $vitamin)
-                                    {{ $vitamin->tgl_vitamin }}    <br>                                
+                                    {{ $vitamin->tgl_vitamin ->format('d F Y')}}    <br>                                
                                     @endforeach
                                 </span>
                             </div>
@@ -89,7 +89,7 @@
                         </tr>
                         @foreach ($pertumbuhans as $key => $ptm)
                         <tr style="background-color: white;">
-                            <td>{{ $ptm->tgl_hitung }}</td>
+                            <td>{{ $ptm->tgl_hitung ->format('d F Y')}}</td>
                             <td>Berat Badan : {{ $ptm->berat }}<br> Tinggi Badan : {{ $ptm->tinggi }}<br> Lingkar Kepala : {{ $ptm->lingkar_kepala }} <br></td>
                         </tr>
                         @endforeach
@@ -103,7 +103,7 @@
                         @foreach ($penyimpangans as $key => $simpang)
                         <tr style="background-color: white;">
                             <td colspan="2">
-                                {{ $simpang->tgl_hitung }}<br>            
+                                {{ $simpang->tgl_hitung ->format('d F Y')}}<br>            
                                 {{ $simpang->status_penyimpangan }}
                             </td>
                         </tr>

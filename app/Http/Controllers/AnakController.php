@@ -92,8 +92,11 @@ class AnakController extends Controller
         $date = Carbon::parse($lahir)->diff(Carbon::now())->format('%y,%m,%d');
         $umur = explode(',', $date);
 
-        $anaks = Anak::find($nik_anak);
+        if($umur[0] > 2){
+            return back()->with('tahun', 'Maaf usia anak lebih dari 2 tahun!');
+        }
         
+        $anaks = Anak::find($nik_anak);
         $anaks->update(['no_kk'=>$request->no_kk,
         'nik_anak'=>$request->nik_anak,
         'nama_anak'=>$request->nama_anak,

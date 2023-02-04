@@ -28,7 +28,7 @@
                             </div>
                             <div class="col-1"><b>:</b></div>
                             <div class="col-8">
-                                <input type="text" name="no_kk" id="no_kk" class="form-control disable" value="{{ $ortu->no_kk }}" required="">
+                                <input type="text" name="no_kk" id="no_kk" class="form-control disable" value="{{ $ortu->no_kk }}" required>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 15px;">
@@ -37,7 +37,7 @@
                             </div>
                             <div class="col-1"><b>:</b></div>
                             <div class="col-8"> 
-                                <input type="text" name="alamat" id="alamat" class="form-control" value="{{ $ortu->alamat }}" required="">
+                                <input type="text" name="alamat" id="alamat" class="form-control" value="{{ $ortu->alamat }}" required>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 15px;">
@@ -46,7 +46,7 @@
                             </div>
                             <div class="col-1"><b>:</b></div>
                             <div class="col-8"> 
-                                <input type="text" name="rt" id="rt" class="form-control" value="{{ $ortu->rt }}" required="">
+                                <input type="text" name="rt" id="rt" class="form-control" value="{{ $ortu->rt }}" required>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 15px;">
@@ -55,7 +55,7 @@
                             </div>
                             <div class="col-1"><b>:</b></div>
                             <div class="col-8"> 
-                                <input type="text" name="rw" id="rw" class="form-control" value="{{ $ortu->rw }}" required="">
+                                <input type="text" name="rw" id="rw" class="form-control" value="{{ $ortu->rw }}" required>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 15px;">
@@ -64,7 +64,7 @@
                             </div>
                             <div class="col-1"><b>:</b></div>
                             <div class="col-8"> 
-                                <input type="text" name="nama_ayah" id="nama_ayah" class="form-control" value="{{ $ortu->nama_ayah }}" required="">
+                                <input type="text" name="nama_ayah" id="nama_ayah" class="form-control" value="{{ $ortu->nama_ayah }}" required>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 15px;">
@@ -73,7 +73,7 @@
                             </div>
                             <div class="col-1"><b>:</b></div>
                             <div class="col-8"> 
-                                <input type="text" name="pekerjaan_ayah" id="pekerjaan_ayah" class="form-control" value="{{ $ortu->pekerjaan_ayah }}" required="">
+                                <input type="text" name="pekerjaan_ayah" id="pekerjaan_ayah" class="form-control" value="{{ $ortu->pekerjaan_ayah }}" required>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 15px;">
@@ -82,7 +82,7 @@
                             </div>
                             <div class="col-1"><b>:</b></div>
                             <div class="col-8"> 
-                                <input type="text" name="nik_ayah" id="nik_ayah" class="form-control" value="{{ $ortu->nik_ayah }}" required="">
+                                <input type="text" name="nik_ayah" id="nik_ayah" class="form-control" value="{{ $ortu->nik_ayah }}" required>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 15px;">
@@ -91,7 +91,7 @@
                             </div>
                             <div class="col-1"><b>:</b></div>
                             <div class="col-8"> 
-                                <input type="text" name="nama_ibu" id="nama_ibu" class="form-control" value="{{ $ortu->nama_ibu }}" required="">
+                                <input type="text" name="nama_ibu" id="nama_ibu" class="form-control" value="{{ $ortu->nama_ibu }}" required>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 15px;">
@@ -100,7 +100,7 @@
                             </div>
                             <div class="col-1"><b>:</b></div>
                             <div class="col-8"> 
-                                <input type="text" name="pekerjaan_ibu" id="pekerjaan_ibu" class="form-control" value="{{ $ortu->pekerjaan_ibu }}" required="">
+                                <input type="text" name="pekerjaan_ibu" id="pekerjaan_ibu" class="form-control" value="{{ $ortu->pekerjaan_ibu }}" required>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 15px;">
@@ -109,7 +109,7 @@
                             </div>
                             <div class="col-1"><b>:</b></div>
                             <div class="col-8"> 
-                                <input type="text" name="nik_ibu" id="nik_ibu" class="form-control" value="{{ $ortu->nik_ibu }}" required="">
+                                <input type="text" name="nik_ibu" id="nik_ibu" class="form-control" value="{{ $ortu->nik_ibu }}" required>
                             </div>
                         </div>
                         <button class="btn btn-main" type="submit">Simpan</button>

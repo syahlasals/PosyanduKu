@@ -2,8 +2,10 @@
 <html lang="en">
 
 <head>
+    <title>Data Posyandu</title>
     @include('template.head')
 </head>
+<?php session_start(); ?>
 <body id="page-top">
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -19,17 +21,6 @@
                 <!--Topbar-->
                 @include('template.nav')
                 <!--End of Topbar-->
-    <div class="container-fluid">
-        <h1 class="text-center mt-5 mb-5"><b>REKAP ANAK</b></h1>
-        
-        <div>
-            @if ($message = Session::get('success'))
-            <div class="alert alert-success " role="alert">
-                <strong><p>{{ $message }}</p></strong>
-                <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"></button>
-            </div>
-            @endif
-        </div>
 
         
 
@@ -77,23 +68,23 @@
         </div>
 <br>
 
-        <table class="table table-borderless text-center">
+        <table class="table table-bordered text-center">
             <tr>
-                <td>
-                    <a class="card table-filter d-flex p-2" href="{{ url('pengelola/dataImunisasi/notvaksin') }}">
-                            <span class=" d-flex align-items-center justify-content-center text-center">Anak Yang Belum Dapat Vaksin : {{ count($notvaksin) }} </span>
+                <th>
+                    <a class="table-filter" href="{{ url('pengelola/dataImunisasi/notvaksin') }}">
+                            <span class=" d-flex align-items-center justify-content-center mb-3 text-center">Anak Yang Belum Dapat Vaksin : {{ count($notvaksin) }} </span>
                     </a>
-                </td>
-                <td>
-                    <a class="card table-filter d-flex p-2" href="{{ url('pengelola/dataImunisasi/notvitamin') }}" >
-                            <span class=" d-flex align-items-center justify-content-center text-center">Anak Yang Belum Dapat Vitamin : {{ count($notvitamin) }}</span> 
+                </th>
+                <th>
+                    <a class="table-filter" href="{{ url('pengelola/dataImunisasi/notvitamin') }}" >
+                            <span class=" d-flex align-items-center justify-content-center mb-3 text-center">Anak Yang Belum Dapat Vitamin : {{ count($notvitamin) }}</span> 
                     </a>
-                </td>
-                <td>
-                    <a class="card table-filter d-flex p-2" href="{{ url('pengelola/dataImunisasi/notkondisi') }}" >
-                            <span class=" d-flex align-items-center justify-content-center text-center">Anak Yang Belum Terdeteksi Kelainan  : {{ count($notvitamin) }}</span> 
+                </th>
+                <th>
+                    <a class="table-filter" href="{{ url('pengelola/dataImunisasi/notkondisi') }}" >
+                            <span class=" d-flex align-items-center justify-content-center mb-3 text-center">Anak Yang Belum Terdeteksi Kelainan  : {{ count($notkondisi) }}</span> 
                     </a>
-                </td>
+                </th>
             </tr>
         </table>
 

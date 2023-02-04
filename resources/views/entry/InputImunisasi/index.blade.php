@@ -91,7 +91,7 @@
         @include('template.modalLogout')
     
         <!-- Script-->   
-        @include('template.script2')
+        @include('template.script3')
 
 
         <!-- End of Script-->    
