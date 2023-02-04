@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Profile;
 use Illuminate\Support\Facades\DB;
+use RealRashid\SweetAlert\Facades\Alert;
 
 use Illuminate\Http\Request;
 
@@ -34,7 +35,7 @@ class ProfileController extends Controller
                 'sekretaris'=>$request->sekretaris,
                 'bendahara'=>$request->bendahara,
              ]);
-             return redirect('/pengelola/dataPosyandu')->with('success', 'Data Berhasil Diubah!');
+        return redirect('/pengelola/dataPosyandu')->with('success', 'Data Berhasil Diubah!');
     }
 
 
