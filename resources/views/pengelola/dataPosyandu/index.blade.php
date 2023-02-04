@@ -8,14 +8,15 @@
 <body id="page-top">
     <!-- Page Wrapper -->
     <div id="wrapper">
-    <!--sidebar-->
-       @include('template.sidepengelola')
+        <!--sidebar-->
+        @include('template.sidepengelola')
     <!--End Sidebar-->
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
             <!-- Main Content -->
             <div id="content">
+                @foreach ($profilesList as $key => $prfl)
 
                 <!--Topbar-->
                 <!-- Topbar -->
@@ -67,7 +68,6 @@
                         <img  src="{{ asset('template/img/logo_posyandu.svg') }}" alt="logo posyandu">
                     </div>
 
-                    @foreach ($profilesList as $key => $prfl)
                     <div class="main-content">
                         <div class="d-flex align-items-center justify-content-center mb-5">
                             <h3><b>{{ $prfl->nama_posyandu }}</b></h3>
@@ -112,9 +112,6 @@
                             </div>
                         </div>
                    </div>
-                   
-                   <a href="dataPosyandu/{{ $prfl->id_posyandu }}/edit"><button type="button" class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><i class="fa-solid fa-pen-to-square btn-h"></i></button></a>
-
 
                     @endforeach
 
