@@ -69,17 +69,17 @@
                                         </div>
                                         <div class="col-1"><b> :</b></div>
                                         <div class="col-3">
-                                    <div class="y">
+                                    <div class="y" style="width:auto;">
                                             <p>@foreach ($vitamins as $key => $vitamin)
-                                                    {{ $vitamin->tgl_vitamin ->format('d F Y')}}
+                                                    {{ $vitamin->tgl_vitamin ->format('d F Y')}} <br>
                                                 @endforeach
                                             </p>
                                             </div>
                                     </div> 
-                                    <div class="col-3">
-                                    <div class="y">
+                                    <div class="col-4">
+                                    <div class="y" style="width:auto;">
                                             <p>@foreach ($vitamins as $key => $vitamin)
-                                                    {{ $vitamin->jenis_vitamin }}                            
+                                                    {{ $vitamin->jenis_vitamin }}   <br>                        
                                                 @endforeach
                                             </p>
                                             </div>

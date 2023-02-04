@@ -68,17 +68,17 @@
                                         </div>
                                         <div class="col-1"><b> :</b></div>
                                         <div class="col-3">
-                                    <div class="y">
+                                    <div class="y" style="width:auto;">
                                             <p>@foreach ($vaksins as $key => $vaksin)
-                                                    {{ $vaksin->tgl_vaksin ->format('d F Y')}}
+                                                    {{ $vaksin->tgl_vaksin ->format('d F Y')}} <br>
                                                 @endforeach
                                             </p>
                                             </div>
                                     </div> 
-                                    <div class="col-4">
-                                    <div class="y">
+                                    <div class="col-4" >
+                                    <div class="y" style="width:auto;">
                                             <p>@foreach ($vaksins as $key => $vaksin)
-                                                    {{ $vaksin->jenis_vaksin }}
+                                                    {{ $vaksin->jenis_vaksin }}<br>
                                                 @endforeach
                                             </p>
                                             </div>
