@@ -42,19 +42,6 @@ class BerandaoController extends Controller
             'rw'=>'required'
         ]);
         
-        $this->validate($request, [
-            'no_kk'=>'required',
-            'nik_ayah'=>'required',
-            'nik_ibu'=>'required',
-            'nama_ayah'=>'required',
-            'nama_ibu'=>'required',
-            'pekerjaan_ayah'=>'required',
-            'pekerjaan_ibu'=>'required',
-            'alamat_ortu'=>'required',
-            'rt'=>'required',
-            'rw'=>'required'
-        ]);
-        
         $nokk_ortu = Ortu::where('no_kk', $request->no_kk)->first();
         $nikayah = Str::length($request->nik_ayah);
         $nikibu = Str::length($request->nik_ibu);
