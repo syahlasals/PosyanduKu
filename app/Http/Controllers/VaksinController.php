@@ -29,6 +29,12 @@ class VaksinController extends Controller
                 'tgl_vaksin'=>'required',
 
             ]);
+
+            $jenisvaksin = Vaksin::where('jenis_vaksin', $request->jenis_vaksin)->first();
+            
+            if($jenisvaksin != null){
+                return back()->with('jenisvaksin', 'Sudah mendapatkan vaksin ini!');
+            }else{
     
             $vaksins = Vaksin::create([
                 'nik_anak'=>$request->nik_anak,
@@ -38,7 +44,7 @@ class VaksinController extends Controller
             ]);
             
             return redirect('/entry/InputImunisasi')->with('success', 'Data Vaksin Berhasil Ditambahkan!');
-    
+            }
         }
     }
 

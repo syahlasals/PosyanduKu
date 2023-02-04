@@ -24,9 +24,9 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid"><br>
                     <!-- Page Heading -->
-                    <h1 class="text-center mb-3 mt-5"><b>PROFIL POSYANDU</b></h1>
+                    <h1 class="text-center mb-3 mt-2"><b>PROFIL POSYANDU</b></h1>
                     <div class="horizon d-flex align-items-center justify-content-center">
-                        <hr width="40%">
+                        <hr width="35%">
                     </div>
                     
                     <div class="d-flex align-items-center justify-content-center mb-3">
@@ -78,6 +78,10 @@
                             </div>
                         </div>
                    </div>
+                   
+                   <a href="dataPosyandu/{{ $prfl->id_posyandu }}/edit"><button type="button" class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><i class="fa-solid fa-pen-to-square btn-h"></i></button></a>
+
+
                     @endforeach
 
                     <div class="accordion accordion-flush profile-acor my-5" id="accordionFlushExample">

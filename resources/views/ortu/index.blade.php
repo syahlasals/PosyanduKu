@@ -10,7 +10,7 @@
             <div class="wrapper my-5">
                 <div class="card greeting">
                     <div class="card-body text-center lg-h2 sm-h6 xm-h6 md-h6">
-                        <h5><b>Selamat Datang, {{ Auth::user()->name }}</b></h5>
+                        <h5><b>Selamat Datang, {{ Auth::user()->name }}</b></h5>Anda Telah Terdaftar!
                     </div>
                 </div>
             </div>

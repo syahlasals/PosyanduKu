@@ -38,11 +38,17 @@
                                     </ul>
                                 </div>
                             @endif
-                            @if (Session::has('msg'))
-                                <div class="alert alert-danger">{{ Session::get('msg') }}</div>
+                            @if (Session::has('nokk'))
+                                <div class="alert alert-danger">{{ Session::get('nokk') }}</div>
                             @endif
-                            @if (Session::has('anak'))
-                                <div class="alert alert-danger">{{ Session::get('anak') }}</div>
+                            @if (Session::has('nokk_ortu'))
+                                <div class="alert alert-danger">{{ Session::get('nokk_ortu') }}</div>
+                            @endif
+                            @if (Session::has('nikayah'))
+                                <div class="alert alert-danger">{{ Session::get('nikayah') }}</div>
+                            @endif
+                            @if (Session::has('nikibu'))
+                                <div class="alert alert-danger">{{ Session::get('nikibu') }}</div>
                             @endif
                             @if (Session::has('ortu'))
                                 <div class="alert alert-danger">{{ Session::get('ortu') }}</div>

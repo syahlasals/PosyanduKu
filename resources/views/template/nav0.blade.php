@@ -34,7 +34,7 @@
                     <!-- Left Side Of Navbar -->
                     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
                         <ul class="navbar-nav ml-auto text-center">
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="ortu">Beranda</a>
                             </li>
                             <li class="nav-item">
@@ -51,7 +51,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">IMT</a>
-                            </li>
+                            </li> -->
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}

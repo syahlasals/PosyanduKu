@@ -12,6 +12,7 @@ class Stunting extends Model
     public $incrementing = true;
     // protected $primaryKey = "kode_pertumbuhan";
     protected $table = "tb_sdidtk";
+    protected $dates = ['tgl_hitung'];
     protected $fillable = [
        'kode_pertumbuhan','bb','tb','lk','kpsp', 'tdd', 'tdl', 'kmpe', 'mchat', 'gpph', 'nik_anak', 'tgl_hitung'];
 
