@@ -48,7 +48,7 @@
                 <td>
                     <div class="row d-flex">
                         <div class="col-16">
-                            <a href="{{ route('edit', $ptgs->nip) }}"><button type="button" class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><i class="fas fa-pencil-alt btn-h"></i></button></a>
+                            <a href="{{ route('edit', $ptgs->nip) }}"><button type="button" class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><i class="fas fa-pencil-alt btn-h" style="color: #ffffff;"></i></button></a>
                             <button type="button" class="delete btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus" data-id="{{ $ptgs->nip }}"><i class="fas fa-trash-alt btn-h"></i></button>
                     </div>
                 </td>
@@ -72,16 +72,13 @@
 </div>
 <!-- End of Page Wrapper -->
 
-@include('sweetalert::alert')
-
 <!-- Scroll to Top Button-->
 <a class="scroll-to-top rounded" href="#page-top">
 <i class="fas fa-angle-up"></i>
 </a>
-</body>
+@include('sweetalert::alert')
 
-<script scr="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+@include('template.script3')
 
     </body>
     <script>

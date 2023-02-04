@@ -67,7 +67,7 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8"> 
-                                        <input type="date" name="tgl_hitung" id="tgl_hitung" class="form-control">
+                                        <input type="date" name="tgl_hitung" id="tgl_hitung" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
@@ -77,7 +77,7 @@
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8"> 
                                     <p class="form-control">
-                                        <input type="number" name="tinggi" id="tinggi" style="border: none;" >
+                                        <input type="number" name="tinggi" id="tinggi" style="border: none;" required>
                                         <span style="margin-left: 43%;">cm</span>
                                     </p>
                                     </div>
@@ -89,7 +89,7 @@
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
                                         <p class="form-control">
-                                            <input type="number" name="berat" id="berat" style="border: none;">
+                                            <input type="number" name="berat" id="berat" style="border: none;" required>
                                             <span style="margin-left: 45%;">kg</span>                     
                                         </p>
                                     </div>
@@ -101,7 +101,7 @@
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
                                         <p class="form-control">
-                                            <input type="number" name="lingkar_kepala" id="lingkar_kepala" style="border: none;">
+                                            <input type="number" name="lingkar_kepala" id="lingkar_kepala" style="border: none;" required>
                                             <span style="margin-left: 43%;">cm</span>            
                                         </p>                   
                                     </div>

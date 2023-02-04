@@ -11,4 +11,10 @@ class PertumbuhanStatus extends Model
     public $timestamps = false;
     protected $primaryKey = "kode_pertumbuhan";
     protected $table = "tb_pertumbuhan";
+
+    public function Anak()
+    {
+        return $this->hasOne(Anak::class, 'nik_anak');
+    }
 }
+

@@ -6,6 +6,7 @@ use DateTime;
 use Carbon\Carbon;
 use App\Models\Anak;
 use App\Models\Ortu;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -33,16 +34,19 @@ class DaftarAnakController extends Controller
         $lahir = Carbon::createFromFormat('Y-m-d', $request->tgl_anak);
         $date = Carbon::parse($lahir)->diff(Carbon::now())->format('%y,%m,%d');
         $umur = explode(',', $date);
+        $nikanak = Str::length($request->nik_anak);
 
         if($ortu == null){
-        return back()->with('msg', 'No KK belum terdaftar!');
+        return back()-> with('msg', 'No KK belum terdaftar!');
         }elseif( $anak != null){
-            return back()->with('anak', 'NIK Anak Sudah terdaftar!');
-        }
-        elseif($umur[0] > 2){
+            return back()->with('anak', 'NIK Anak sudah terdaftar!');
+        }elseif($umur[0] > 2){
             return back()->with('tahun', 'Maaf usia anak lebih dari 2 tahun!');
+        }elseif($nikanak > 16){
+            return back()->with('nikanak', 'NIK Anak tidak sesuai ketentuan!');
+        }elseif($nikanak < 16) {
+            return back()->with('nikanak', 'NIK Anak tidak sesuai ketentuan!');
         }else{
-  
 
         $anaks = Anak::create([
             'no_kk'=>$request->no_kk,
@@ -59,5 +63,5 @@ class DaftarAnakController extends Controller
 
         return redirect('/entry/InputImunisasi')->with('success', 'Berhasil Mendaftar');
     };
-    }
+}
 }

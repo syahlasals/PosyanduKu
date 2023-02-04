@@ -49,8 +49,8 @@
                                 <div class="row d-flex">
                                     <div class="col-16">
                                         <a href="dataAnak/{{ $anak->nik_anak }}"><button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Detail"><i class="fa-solid fa-eye btn-h"></i></button></a>
-                                        <a href="dataAnak/sdidtkAnak/{{$anak->nik_anak}}"><button type="button" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Data SDIDTK"><i class="fa-solid fa-calendar btn-h"></i></button></a>
-                                        <a href="dataAnak/{{ $anak->nik_anak }}/edit"><button type="button" class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><i class="fa-solid fa-pen-to-square btn-h"></i></button></a>
+                                        <a href="dataAnak/sdidtkAnak/{{$anak->nik_anak}}"><button type="button" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Data SDIDTK"><i class="fa-solid fa-calendar btn-h" style="color: #ffffff;"></i></button></a>
+                                        <a href="dataAnak/{{ $anak->nik_anak }}/edit"><button type="button" class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><i class="fa-solid fa-pen-to-square btn-h" style="color: #ffffff;"></i></button></a>
                                         @csrf
                                         @method('delete')
                                             <button type="button" class="delete btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus" data-id="{{ $anak->nik_anak }}"><i class="fa-solid fa-trash btn-h"></i></button>
@@ -87,13 +87,10 @@
 @include('template.modalLogout')
 
 <!--Script-->
-@include('template.script2')
+@include('template.script3')
 <!-- End of Script-->
  
 @include('sweetalert::alert')
-
-<script scr="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     </body>
     <script>

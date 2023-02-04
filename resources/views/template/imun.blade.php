@@ -2,8 +2,10 @@
 <html lang="en">
 
 <head>
+    <title>Data Posyandu</title>
     @include('template.head')
 </head>
+<?php session_start(); ?>
 <body id="page-top">
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -19,17 +21,6 @@
                 <!--Topbar-->
                 @include('template.nav')
                 <!--End of Topbar-->
-    <div class="container-fluid">
-        <h1 class="text-center mt-5 mb-5"><b>REKAP ANAK</b></h1>
-        
-        <div>
-            @if ($message = Session::get('success'))
-            <div class="alert alert-success " role="alert">
-                <strong><p>{{ $message }}</p></strong>
-                <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"></button>
-            </div>
-            @endif
-        </div>
 
         
 
@@ -91,7 +82,7 @@
                 </th>
                 <th>
                     <a class="table-filter" href="{{ url('pengelola/dataImunisasi/notkondisi') }}" >
-                            <span class=" d-flex align-items-center justify-content-center mb-3 text-center">Anak Yang Belum Terdeteksi Kelainan  : {{ count($notvitamin) }}</span> 
+                            <span class=" d-flex align-items-center justify-content-center mb-3 text-center">Anak Yang Belum Terdeteksi Kelainan  : {{ count($notkondisi) }}</span> 
                     </a>
                 </th>
             </tr>
