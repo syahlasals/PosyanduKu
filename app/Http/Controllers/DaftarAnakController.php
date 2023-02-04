@@ -35,12 +35,12 @@ class DaftarAnakController extends Controller
         $umur = explode(',', $date);
 
         if($ortu == null){
-        return back()->with('msg', 'No KK belum terdaftar!');
+        return back()->with('msg', 'Nomor Kartu Keluarga Belum Terdaftar!');
         }elseif( $anak != null){
-            return back()->with('anak', 'NIK Anak Sudah terdaftar!');
+            return back()->with('anak', 'NIK Anak Sudah Terdaftar!');
         }
         elseif($umur[0] > 2){
-            return back()->with('tahun', 'Maaf usia anak lebih dari 2 tahun!');
+            return back()->with('tahun', 'Maaf, Usia Anak Lebih Dari 2 Tahun!');
         }else{
   
 

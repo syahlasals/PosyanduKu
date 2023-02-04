@@ -35,58 +35,59 @@
                                             <div class="d-flex mb-3">
                                                 <div class="col-5"> <label for="no_kk"><b>No KK</b></label></div>
                                                 <div class="col-1">:</div>
-                                                <div class="col-6"><input type="number" name="no_kk" id="no_kk" class="form-control"></div>
+                                                <div class="col-6"><input type="number" name="no_kk" id="no_kk" class="form-control" required></div>
                                             </div>
                                             <div class="d-flex mb-3">
                                                 <div class="col-5"> <label for="alamat_ortu"><b>Alamat</b></label></div>
                                                 <div class="col-1">:</div>
-                                                <div class="col-6"><input type="text" name="alamat_ortu" id="alamat_ortu" class="form-control"></div>
+                                                <div class="col-6"><input type="text" name="alamat_ortu" id="alamat_ortu" class="form-control" required></div>
                                             </div>
                                             <div class="d-flex mb-3">
                                                 <div class="col-5"> <label for="rw"><b>RW</b></label></div>
                                                 <div class="col-1">:</div>
-                                                <div class="col-6"><input type="number" name="rw" id="rw" class="form-control"></div>
+                                                <div class="col-6"><input type="number" name="rw" id="rw" class="form-control" required></div>
                                             </div>
                                             <div class="d-flex mb-3">
                                                 <div class="col-5"> <label for="rt"><b>RT</b></label></div>
                                                 <div class="col-1">:</div>
-                                                <div class="col-6"><input type="number" name="rt" id="rt" class="form-control"></div>
+                                                <div class="col-6"><input type="number" name="rt" id="rt" class="form-control" required></div>
                                             </div>
                                             <div class="d-flex mb-3">
                                                 <div class="col-5"> <label for="nik_ayah"><b>NIK Ayah</b></label></div>
                                                 <div class="col-1">:</div>
-                                                <div class="col-6"><input type="number" name="nik_ayah" id="nik_ayah" class="form-control"></div>
+                                                <div class="col-6"><input type="number" name="nik_ayah" id="nik_ayah" class="form-control" required></div>
                                             </div>                                            
                                         </div>
                                         <div class="col-12 col-lg-6 col-md-6 col-sm-6">
                                             <div class="d-flex mb-3">
                                                 <div class="col-5"> <label for="nama_ayah"><b>Nama Ayah</b></label></div>
                                                 <div class="col-1">:</div>
-                                                <div class="col-6"><input type="text" name="nama_ayah" id="nama_ayah" class="form-control"></div>
+                                                <div class="col-6"><input type="text" name="nama_ayah" id="nama_ayah" class="form-control" required></div>
                                             </div>
                                             <div class="d-flex mb-3">
                                                 <div class="col-5"> <label for="pekerjaan_ayah"><b>Pekerjaan Ayah</b></label></div>
                                                 <div class="col-1">:</div>
-                                                <div class="col-6"><input type="text" name="pekerjaan_ayah" id="pekerjaan_ayah" class="form-control"></div>
+                                                <div class="col-6"><input type="text" name="pekerjaan_ayah" id="pekerjaan_ayah" class="form-control" required></div>
                                             </div>
                                             <div class="d-flex mb-3">
                                                 <div class="col-5"> <label for="nik_ibu"><b>NIK Ibu</b></label></div>
                                                 <div class="col-1">:</div>
-                                                <div class="col-6"><input type="number" name="nik_ibu" id="nik_ibu" class="form-control"></div>
+                                                <div class="col-6"><input type="number" name="nik_ibu" id="nik_ibu" class="form-control" required></div>
                                             </div>
                                             <div class="d-flex mb-3">
                                                 <div class="col-5"> <label for="nama_ibu"><b>Nama Ibu</b></label></div>
                                                 <div class="col-1">:</div>
-                                                <div class="col-6"> <input type="text" name="nama_ibu" id="nama_ibu" class="form-control"></div>
+                                                <div class="col-6"> <input type="text" name="nama_ibu" id="nama_ibu" class="form-control" required></div>
                                             </div>
                                             <div class="d-flex mb-3">
                                                 <div class="col-5"> <label for="pekerjaan_ibu"><b>Pekerjaan Ibu</b></label></div>
                                                 <div class="col-1">:</div>
-                                                <div class="col-6"><input type="text" name="pekerjaan_ibu" id="pekerjaan_ibu" class="form-control"></div>
+                                                <div class="col-6"><input type="text" name="pekerjaan_ibu" id="pekerjaan_ibu" class="form-control" required></div>
                                             </div> <br>
                                             <div class="row">
                                                 <div class="row">
                                                     <div class="col" colspan="3">
+                                                    <!-- <a href="{{ url('ortu') }}" class="btn btn-main ml-3" role="button" aria-disabled="true">Daftar</a> -->
                                                         <button class="btn btn-main" type="submit" style="margin-left: 260px;">Daftar</button>
                                                     </div>
                                                 </div>
@@ -96,7 +97,7 @@
                                     </div>
                                 </div>
                             </div><br>
-                            Sudah daftar? <a href="{{ url('ortu') }}">Klik ini untuk masuk ke dashboard.</a><br>
+                            <!-- Sudah daftar? <a href="{{ url('ortu') }}">Klik ini untuk masuk ke dashboard.</a><br> -->
                         </div>
                     </div> 
                 </div>

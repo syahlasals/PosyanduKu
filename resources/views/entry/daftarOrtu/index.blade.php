@@ -44,6 +44,9 @@
                             @if (Session::has('anak'))
                                 <div class="alert alert-danger">{{ Session::get('anak') }}</div>
                             @endif
+                            @if (Session::has('ortu'))
+                                <div class="alert alert-danger">{{ Session::get('ortu') }}</div>
+                            @endif
                             <form method="POST" action="/store2/daftarOrtu" id="myform" style="margin-top: 15px; margin-bottom: 15px;">
                                 @csrf
                                 <div class="row" style="margin-bottom: 15px;">
@@ -52,7 +55,7 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="number" name="no_kk" id="no_kk" class="form-control">
+                                        <input type="number" name="no_kk" id="no_kk" class="form-control" required>
                                     </div>
                                 </div>
                                         
@@ -62,7 +65,7 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="text" name="alamat_ortu" id="alamat_ortu" class="form-control">
+                                        <input type="text" name="alamat_ortu" id="alamat_ortu" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
@@ -71,7 +74,7 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="number" name="rt" id="rt" class="form-control">
+                                        <input type="number" name="rt" id="rt" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
@@ -80,7 +83,7 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="number" name="rw" id="rw" class="form-control">
+                                        <input type="number" name="rw" id="rw" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
@@ -89,7 +92,7 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="number" name="nik_ayah" id="nik_ayah" class="form-control">
+                                        <input type="number" name="nik_ayah" id="nik_ayah" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
@@ -98,7 +101,7 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="number" name="nik_ibu" id="nik_ibu" class="form-control">
+                                        <input type="number" name="nik_ibu" id="nik_ibu" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
@@ -107,7 +110,7 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="text" name="nama_ayah" id="nama_ayah" class="form-control">
+                                        <input type="text" name="nama_ayah" id="nama_ayah" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
@@ -116,7 +119,7 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="text" name="nama_ibu" id="nama_ibu" class="form-control">
+                                        <input type="text" name="nama_ibu" id="nama_ibu" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
@@ -125,7 +128,7 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="text" name="pekerjaan_ayah" id="pekerjaan_ayah" class="form-control">
+                                        <input type="text" name="pekerjaan_ayah" id="pekerjaan_ayah" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
@@ -134,7 +137,7 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="text" name="pekerjaan_ibu" id="pekerjaan_ibu" class="form-control">
+                                        <input type="text" name="pekerjaan_ibu" id="pekerjaan_ibu" class="form-control" required>
                                     </div>
                                 </div>
                                 <br>
