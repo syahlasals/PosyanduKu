@@ -48,7 +48,8 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="text" name="nama_posyandu" id="nama_posyandu" class="form-control" value="{{ $prfl->nama_posyandu }}">
+                                        <input type="text" name="nama_posyandu" id="nama_posyandu" class="form-control" value="{{ $prfl->nama_posyandu }}" disabled>
+                                        <input type="hidden" name="nama_posyandu" id="nama_posyandu" class="form-control" value="{{$prfl ->nama_posyandu}}">
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">

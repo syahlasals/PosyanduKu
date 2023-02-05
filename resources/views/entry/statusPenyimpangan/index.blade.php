@@ -63,7 +63,28 @@
                                         </div>
                                         <input type="hidden" name="nama_anak" id="nama_anak" class="form-control" value={{$nama_anak}}>
                                     </div>
-
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <label for="tgl_vaksin"><b>Riwayat Kondisi</b></label>
+                                        </div>
+                                        <div class="col-1"><b> :</b></div>
+                                            <div class="col-3">
+                                                <div class="y"  style="width:auto;">
+                                                    <p>@foreach ($tumbuhs as $key => $simpang)
+                                                            {{ $simpang->tgl_hitung ->format('d F Y')}} <br>
+                                                        @endforeach
+                                                    </p>
+                                                </div>
+                                            </div> 
+                                        <div class="col-4">
+                                            <div class="y"  style="width:auto;">
+                                                <p>@foreach ($tumbuhs as $key => $simpang)
+                                                        {{ $simpang->status_penyimpangan }} <br>
+                                                    @endforeach
+                                                </p>
+                                            </div>
+                                        </div>    
+                                    </div>
                                     <div class="row" style="margin-bottom: 15px;">
                                         <div class="col-3">
                                             <label for="tgl_hitung"><b>Tanggal Imunisasi</b></label>
@@ -73,31 +94,10 @@
                                             <input type="date" name="tgl_hitung" id="tgl_hitung" class="form-control" required>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-3">
-                                            <label for="tgl_vaksin"><b>Riwayat Kondisi</b></label>
-                                        </div>
-                                        <div class="col-1"><b> :</b></div>
-                                            <div class="col-2">
-                                                <div class="y"  style="width:100px;">
-                                                    <p>@foreach ($tumbuhs as $key => $simpang)
-                                                            {{ $simpang->tgl_hitung }}
-                                                        @endforeach
-                                                    </p>
-                                                </div>
-                                            </div> 
-                                        <div class="col-6">
-                                            <div class="y"  style="width:90px;">
-                                                <p>@foreach ($tumbuhs as $key => $simpang)
-                                                        {{ $simpang->status_penyimpangan }}
-                                                    @endforeach
-                                                </p>
-                                            </div>
-                                        </div>    
-                                    </div>
+                                    
                                     <div class="row" style="margin-bottom: 15px;">
                                         <div class="col-3">
-                                            <label for="status_penyimpangan"><b>Status Penyimpangan</b></label>
+                                            <label for="status_penyimpangan"><b>Kondisi Anak</b></label>
                                         </div>
                                         <div class="col-1"><b>:</b></div>
                                         <div class="col-8">

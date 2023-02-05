@@ -17,10 +17,10 @@ body{
     height: 50px;
 }
 .garis_verikal{
-    border-left: 10px black solid;
+    border-left: 5px #bbbbbe solid;
     height: 40px;
     width: 0px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .horizon{
     border-color: 10px black solid;
@@ -126,7 +126,7 @@ body{
 box-shadow: 0px 0px 10px #647BB1;
 }
 .card-form2{
-    width: 50%;
+    width: 60%;
     border-color: #CCB2E0;
     border-radius: 10px;
 }
