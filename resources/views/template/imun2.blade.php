@@ -1,3 +1,6 @@
+</div>
+<!-- End of Main Content -->
+   
    <!-- Footer -->
    @include('template.footer')
    <!-- End of Footer -->
