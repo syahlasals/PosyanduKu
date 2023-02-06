@@ -88,7 +88,7 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="date" name="tgl_anak" id="tgl_anak" class="form-control" value="{{ $anak->tgl_anak }}">                        
+                                        <input type="date" name="tgl_anak" id="tgl_anak" class="form-control" value="{{ $anak->tgl_anak->format('Y-m-d') }}">                    
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
