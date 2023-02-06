@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Data Posyandu</title>
+    <title>Rekap Anak</title>
     @include('template.head')
 </head>
 <?php session_start(); ?>
@@ -32,9 +32,7 @@
                         </div>
                         @endif
                     </div>
-            
-                    
-            
+
                     <div class="row">
                         <div class="col">
                             <a href="{{ url('pengelola/dataImunisasi') }}" class="card card-ap">
@@ -79,21 +77,21 @@
                     </div>
             <br>
             
-                    <table class="table table-bordered text-center">
+                    <table class="table table-borderless text-center">
                         <tr>
                             <th>
-                                <a class="table-filter" href="{{ url('pengelola/dataImunisasi/notvaksin') }}">
-                                        <span class=" d-flex align-items-center justify-content-center mb-3 text-center">Anak Yang Belum Dapat Vaksin : {{ count($notvaksin) }} </span>
+                                <a class="card table-filter" href="{{ url('pengelola/dataImunisasi/notvaksin') }}">
+                                        <span class=" d-flex align-items-center justify-content-center text-center p-2">Anak Yang Belum Dapat Vaksin : {{ count($notvaksin) }} </span>
                                 </a>
                             </th>
                             <th>
-                                <a class="table-filter" href="{{ url('pengelola/dataImunisasi/notvitamin') }}" >
-                                        <span class=" d-flex align-items-center justify-content-center mb-3 text-center">Anak Yang Belum Dapat Vitamin : {{ count($notvitamin) }}</span> 
+                                <a class="card table-filter" href="{{ url('pengelola/dataImunisasi/notvitamin') }}" >
+                                        <span class=" d-flex align-items-center justify-content-center text-center p-2">Anak Yang Belum Dapat Vitamin : {{ count($notvitamin) }}</span> 
                                 </a>
                             </th>
                             <th>
-                                <a class="table-filter" href="{{ url('pengelola/dataImunisasi/notkondisi') }}" >
-                                        <span class=" d-flex align-items-center justify-content-center mb-3 text-center">Anak Yang Belum Terdeteksi Kelainan  : {{ count($notvitamin) }}</span> 
+                                <a class="card table-filter" href="{{ url('pengelola/dataImunisasi/notkondisi') }}" >
+                                        <span class=" d-flex align-items-center justify-content-center text-center p-2">Anak Yang Belum Terdeteksi Kelainan  : {{ count($notkondisi) }}</span> 
                                 </a>
                             </th>
                         </tr>

@@ -47,3 +47,4 @@ class VaksinController extends Controller
             }
         }
 }
+

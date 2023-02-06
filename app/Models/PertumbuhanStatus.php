@@ -11,6 +11,7 @@ class PertumbuhanStatus extends Model
     public $timestamps = false;
     protected $primaryKey = "kode_pertumbuhan";
     protected $table = "tb_pertumbuhan";
+    protected $dates = ['tgl_hitung'];
 
     public function Anak()
     {
