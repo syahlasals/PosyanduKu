@@ -25,7 +25,7 @@
                 <h5 class="text-center">
                     Tanggal : {{ $tanggal }} <br><br>
                     Balita Terdaftar : {{ $semua }} <br>
-                    Jumlah Balita belum terdeteksi kelainan : {{ count($notkondisi) }} 
+                    Jumlah Balita belum terdeteksi kelainan : {{ gettype($notkondisi) == 'integer' ? $notkondisi  : count($notkondisi) }} 
                 </h5>
             </div> 
         </div><br>

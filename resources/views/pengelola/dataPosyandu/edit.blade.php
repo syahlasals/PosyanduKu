@@ -58,7 +58,7 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8"> 
-                                        <input type="text" name="alamat_posyandu" id="alamat_posyandu" class="form-control" value="{{ $prfl->alamat_posyandu }}">
+                                        <input type="text" name="alamat_posyandu" id="alamat_posyandu" class="form-control" value="{{ $prfl->alamat_posyandu }}" required>
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
@@ -67,7 +67,7 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="text" name="nama_rt" id="nama_rt" class="form-control" value="{{ $prfl->nama_rt }}">
+                                        <input type="text" name="nama_rt" id="nama_rt" class="form-control" value="{{ $prfl->nama_rt }}" required>
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
@@ -76,7 +76,7 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="text" name="nama_rw" id="nama_rw" class="form-control" value="{{ $prfl->nama_rw }}">                        
+                                        <input type="text" name="nama_rw" id="nama_rw" class="form-control" value="{{ $prfl->nama_rw }}" required>                        
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
@@ -85,7 +85,7 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="text" name="ketua" id="ketua" class="form-control" value="{{ $prfl->ketua }}">                        
+                                        <input type="text" name="ketua" id="ketua" class="form-control" value="{{ $prfl->ketua }}" required>                        
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
@@ -94,7 +94,7 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="text" name="sekretaris" id="sekretaris" class="form-control" value="{{ $prfl->sekretaris }}">                        
+                                        <input type="text" name="sekretaris" id="sekretaris" class="form-control" value="{{ $prfl->sekretaris }}" required>                        
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
@@ -103,7 +103,7 @@
                                     </div>
                                     <div class="col-1"><b>:</b></div>
                                     <div class="col-8">
-                                        <input type="text" name="bendahara" id="bendahara" class="form-control" value="{{ $prfl->bendahara }}">                        
+                                        <input type="text" name="bendahara" id="bendahara" class="form-control" value="{{ $prfl->bendahara }}" required>                        
                                     </div>
                                 </div>
                                 <br>
