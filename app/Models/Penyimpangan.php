@@ -10,7 +10,6 @@ class Penyimpangan extends Model
     use HasFactory;
     public $timestamps = false;
     public $incrementing = true;
-    // protected $primaryKey = "kode_pertumbuhan";
     protected $table = "tb_pertumbuhan";
     protected $dates = ['tgl_hitung'];
     protected $fillable = [
