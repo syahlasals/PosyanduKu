@@ -47,8 +47,8 @@ class DaftarAnakController extends Controller
         }elseif($nikanak < 16) {
             return back()->with('nikanak', 'NIK Anak tidak sesuai ketentuan!');
         }else{
-
-        $anaks = Anak::create([
+            
+        Anak::create([
             'no_kk'=>$request->no_kk,
             'nik_anak'=>$request->nik_anak,
             'nama_anak'=>$request->nama_anak,

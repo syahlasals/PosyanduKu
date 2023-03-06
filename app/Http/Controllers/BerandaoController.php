@@ -63,7 +63,7 @@ class BerandaoController extends Controller
             return back()->with('nikibu', 'NIK Ibu tidak sesuai ketentuan!');
         }else{
 
-        $ortus = Ortu::create([
+        Ortu::create([
             'no_kk'=>$request->no_kk,
             'nik_ayah'=>$request->nik_ayah,
             'nik_ibu'=>$request->nik_ibu,
@@ -122,7 +122,7 @@ class BerandaoController extends Controller
             return back()->with('nikibu', 'NIK Ibu tidak sesuai ketentuan!');
         }else{
 
-        $ortus = Ortu::create([
+        Ortu::create([
             'no_kk'=>$request->no_kk,
             'nik_ayah'=>$request->nik_ayah,
             'nik_ibu'=>$request->nik_ibu,

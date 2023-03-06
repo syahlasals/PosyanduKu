@@ -28,7 +28,7 @@ class BioController extends Controller
             'nik_ibu'=>'required'
         ]);
 
-        $anaks = ProfileOrtu::create([
+        ProfileOrtu::create([
             'no_kk'=>$request->no_kk, 
             'alamat_ortu'=>$request->alamat_ortu, 
             'rt'=>$request->rt, 
