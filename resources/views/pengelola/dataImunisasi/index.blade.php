@@ -42,7 +42,7 @@
                     @endforeach
                 </td>
                 <td>
-                    <a href="/pengelola/dataImunisasi/history/{{$data->nik_anak}}"><button type="button" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Riwayat"><i class="fa-solid fa-clock-rotate-left"></i></button></a>
+                    <a href="/pengelola/dataImunisasi/history/{{$data->nik_anak}}"><button type="button" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Riwayat"><i class="fa-solid fa-clock-rotate-left btn-h" style="color: #ffffff;"></i></button></a>
                 </td>
             </tr>
             @endforeach

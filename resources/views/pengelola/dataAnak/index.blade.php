@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <title>Data Posyandu</title>
     @include('template.head')
 </head>
 <?php session_start(); ?>
