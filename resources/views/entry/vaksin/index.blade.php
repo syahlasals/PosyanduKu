@@ -39,6 +39,9 @@
                                     </ul>
                                 </div>
                             @endif
+                            @if (Session::has('jenisvaksin'))
+                                <div class="alert alert-danger">{{ Session::get('jenisvaksin') }}</div>
+                            @endif
                             <form method="POST" action="/store/vaksin" id="myform">
                                 @csrf
                                 <div class="row" style="margin-bottom: 15px;">

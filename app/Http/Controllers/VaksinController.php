@@ -30,8 +30,13 @@ class VaksinController extends Controller
 
             ]);
 
+            $carianak = Vaksin::where('nik_anak', $request->nik_anak)->where('jenis_vaksin', $request->jenis_vaksin)->exists();
+
+            if($carianak){
+                return back()->with('jenisvaksin', 'Sudah mendapatkan vaksin ini!');
+            } else {
     
-            $vaksins = Vaksin::create([
+             Vaksin::create([
                 'nik_anak'=>$request->nik_anak,
                 'nama_anak'=>$request->nama_anak,
                 'jenis_vaksin'=>$request->jenis_vaksin,
@@ -41,4 +46,6 @@ class VaksinController extends Controller
             return redirect('/entry/InputImunisasi')->with('success', 'Data Vaksin Berhasil Ditambahkan!');
             }
         }
+}
 
+?>

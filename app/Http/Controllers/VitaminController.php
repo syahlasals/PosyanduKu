@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Vitamin;
 use App\Models\Anak;
+use App\Models\Vitamin;
+use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class VitaminController extends Controller
@@ -29,16 +30,20 @@ class VitaminController extends Controller
         ]);
 
 
-        $vitamins = Vitamin::create([
-            'nik_anak'=>$request->nik_anak,
-            'nama_anak'=>$request->nama_anak,
-            'jenis_vitamin'=>$request->jenis_vitamin,
-            'tgl_vitamin'=>$request->tgl_vitamin,
-        ]);
+        $tglvtmn = Vitamin::where('nik_anak', $request->nik_anak)->where('tgl_vitamin', $request->tgl_vitamin)->exists();
+        $tgltoday = Vitamin::where('nik_anak', $request->nik_anak)->where('tgl_vitamin', date('Y-m-d'))->exists();
+        if($tglvtmn || $tgltoday){
+            return back()->with('tglvitamin', 'Anda tidak bisa mendaparkan vitamin dalam satu waktu!');
+        } else {
+            Vitamin::create([
+                'nik_anak'=>$request->nik_anak,
+                'nama_anak'=>$request->nama_anak,
+                'jenis_vitamin'=>$request->jenis_vitamin,
+                'tgl_vitamin'=>$request->tgl_vitamin,
+            ]);
 
-        return redirect('/entry/InputImunisasi')->with('success', 'Data Vitamin Berhasil Ditambahkan!');
-
+            return redirect('/entry/InputImunisasi')->with('success', 'Data Vitamin Berhasil Ditambahkan!');
+        }
     }
-    
-
 }
+?>

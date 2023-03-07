@@ -40,6 +40,9 @@
                                     </ul>
                                 </div>
                             @endif -->
+                            @if (Session::has('tglvitamin'))
+                                <div class="alert alert-danger">{{ Session::get('tglvitamin') }}</div>
+                            @endif
                             <form method="POST" action="/store/vitamin" id="myform">
                                 @csrf
                                

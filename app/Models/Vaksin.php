@@ -22,3 +22,4 @@ class Vaksin extends Model
     }
     
 }
+?>

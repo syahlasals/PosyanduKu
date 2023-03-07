@@ -41,6 +41,7 @@
                 <div class="collapse-divider"></div>
                 <h6 class="collapse-header">Inputan :</h6>
                 <a class="collapse-item {{ Request::is('entry/InputImunisasi*') || Request::is('entry/pertumbuhan/*') || Request::is('entry/vaksin/*') || Request::is('entry/vitamin/*') || Request::is('entry/statusPenyimpangan/*') ? 'active' : '' }} " href="{{ url('entry/InputImunisasi') }}">Input Imunisasi</a>
+                <a class="collapse-item {{ Request::is('entry/logActivity*') ? 'active' : '' }}" href="{{ url('entry/logActivity') }}">Aktivitas Log</a>
             </div>
         </div>
     </li>

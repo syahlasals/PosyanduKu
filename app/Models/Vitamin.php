@@ -21,3 +21,4 @@ class Vitamin extends Model
     }
 
 }
+?>

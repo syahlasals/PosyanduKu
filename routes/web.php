@@ -2,11 +2,11 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\BioController;
 use App\Http\Controllers\AnakController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\VaksinController;
+use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\PetugasController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\VitaminController;
@@ -17,6 +17,7 @@ use App\Http\Controllers\StuntingController;
 use App\Http\Controllers\ImunisasiController;
 use App\Http\Controllers\DaftarAnakController;
 use App\Http\Controllers\PertumbuhanController;
+use App\Http\Controllers\LogActivitiesController;
 
 
 /*
@@ -71,6 +72,7 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
         Route::get('dataImunisasi/obesitas/print', [ImunisasiController::class, 'cetakObesitas']);
         Route::resource('sdidtkAnak', StuntingController::class);
         Route::get('/', [StuntingController::class, 'charts'])->name('charts');
+        Route::get('logActivity', [LogActivitiesController::class, 'indexpengelola']);
     });
 
     
@@ -94,7 +96,7 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
         Route::post('store/formSdidtk', [StuntingController::class, 'store'])->middleware('entry');
         Route::get('entry/statusPenyimpangan/{nik_anak}', [PertumbuhanController::class, 'indexs'])->middleware('entry');
         Route::post('stores/statusPenyimpangan', [PertumbuhanController::class, 'stores'])->middleware('entry');
-    
+        Route::get('entry/logActivity', [LogActivitiesController::class, 'indexentry']);
     
     // Route::prefix('ortu')->middleware('ortu')->group(function () {
         Route::get('ortu', [BerandaoController::class, 'index'])->middleware('ortu');

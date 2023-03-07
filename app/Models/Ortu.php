@@ -2,12 +2,15 @@
 
 namespace App\Models;
 
+use App\Blameable;
 use App\Models\Anak;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Ortu extends Model
 {
+    use Blameable;
+
     use HasFactory;
 
     public $timestamps = false;
