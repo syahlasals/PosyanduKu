@@ -5,6 +5,7 @@
     @include('template.head')
 </head>
 <body id="page-top">
+@include('template.load')
     <!-- Page Wrapper -->
     <div id="wrapper">
     <!--sidebar-->

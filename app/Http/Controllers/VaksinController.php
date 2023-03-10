@@ -7,7 +7,12 @@ use App\Models\Vaksin;
 use App\Models\Anak;
 use RealRashid\SweetAlert\Facades\Alert;
 
-class VaksinController extends Controller
+interface VaksinInterface {
+    public function index($nik_anak);
+    public function store(Request $request);
+}
+
+class VaksinController extends Controller implements VaksinInterface
 {
     public function index($nik_anak)
     {

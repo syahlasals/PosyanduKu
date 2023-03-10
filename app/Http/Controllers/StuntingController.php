@@ -65,7 +65,8 @@ class StuntingController extends Controller
 
     public function charts()
     {
-        $groups = , DB::raw('count(*) as total'))
+        $groups = DB::table('tb_pertumbuhan')
+                            ->select('status_penyimpangan', DB::raw('count(*) as total'))
                             ->groupBy('status_penyimpangan')
                             ->pluck('total', 'status_penyimpangan')->all();
         for ($i=0; $i<=count($groups); $i++) {

@@ -4,6 +4,7 @@
     @include('template.head')
 </head>
     <body>  
+    @include('template.load')
         {{-- @include('template.navortu') --}}
         @include('template.nav0')
         <div class="container my-5">

@@ -6,7 +6,7 @@
 </head>
 
 <body id="page-top">
-
+@include('template.load')
     <!-- Page Wrapper -->
     <div id="wrapper">
     <!--sidebar-->
@@ -55,7 +55,7 @@
                                     <div class="card-body">
                                         <span class=" d-flex align-items-center justify-content-center mb-3 text-center"><b>Rekap Anak</b></span> 
                                         <div class="baby d-flex align-items-center justify-content-center">
-                                            <iconify-icon icon="fontisto:injection-syringe" style="color: black;" width="30" height="30"></iconify-icon>
+                                            <iconify-icon icon="bxs:report" style="color: black;" width="30" height="30"></iconify-icon>
                                         </div> 
                                     </div>
                                 </a>

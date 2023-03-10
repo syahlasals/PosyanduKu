@@ -30,18 +30,24 @@ use App\Http\Controllers\LogActivitiesController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/backup', [LogActivitiesController::class, 'backup']);
 Route::group(['middleware' => 'prevent-back-history'],function(){
+    Route::get('/', function () {
+        return view('auth/login');
+    })->middleware('guest');
 	Auth::routes();
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-    Route::get('/', function () {
-        return view('auth/login');
-    });
     
     Route::prefix('pengelola')->middleware('pengelola')->group(function () {
         Route::get('/',[BerandapController::class,'index'])->name('pengelola');
         Route::resource('/dataAnak', AnakController::class);
+
+        Route::get('goldaro', [DaftarAnakController::class,'goldaro']);
+        Route::get('goldara', [DaftarAnakController::class,'goldara']);
+        Route::get('goldarab', [DaftarAnakController::class,'goldarab']);
+        Route::get('goldarb', [DaftarAnakController::class,'goldarb']);
+        
         Route::get('/delete/dataAnak/{id}', [AnakController::class,'destroy']);
         Route::get('dataAnak/sdidtkAnak/{id}', [StuntingController::class, 'index'])->middleware('pengelola');
         Route::get('dataAnak/sdidtkAnak/{id}/print', [StuntingController::class, 'print'])->middleware('pengelola');
@@ -70,9 +76,15 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
         Route::get('dataImunisasi/giziBuruk/print', [ImunisasiController::class, 'cetakGiziBuruk']);
         Route::get('dataImunisasi/stunting/print', [ImunisasiController::class, 'cetakStunting']);
         Route::get('dataImunisasi/obesitas/print', [ImunisasiController::class, 'cetakObesitas']);
+        Route::get('dataOrtu', [BerandaoController::class, 'tampilsatu']);
+        Route::get('dataOrtu/tampildua', [BerandaoController::class, 'tampildua']);
+        Route::get('dataOrtu/tampiltiga', [BerandaoController::class, 'tampiltiga']);
+        Route::get('dataOrtu/tampilempat', [BerandaoController::class, 'tampilempat']);
+        Route::get('dataOrtu/tampillima', [BerandaoController::class, 'tampillima']);
         Route::resource('sdidtkAnak', StuntingController::class);
         Route::get('/', [StuntingController::class, 'charts'])->name('charts');
         Route::get('logActivity', [LogActivitiesController::class, 'indexpengelola']);
+       
     });
 
     
@@ -97,6 +109,8 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
         Route::get('entry/statusPenyimpangan/{nik_anak}', [PertumbuhanController::class, 'indexs'])->middleware('entry');
         Route::post('stores/statusPenyimpangan', [PertumbuhanController::class, 'stores'])->middleware('entry');
         Route::get('entry/logActivity', [LogActivitiesController::class, 'indexentry']);
+        Route::get('entry/backup', [LogActivitiesController::class, 'backup']);
+
     
     // Route::prefix('ortu')->middleware('ortu')->group(function () {
         Route::get('ortu', [BerandaoController::class, 'index'])->middleware('ortu');
@@ -105,3 +119,4 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
         Route::get('/redirects', [HomeController::class, 'index'])->middleware('ortu');
     });
 // });
+?>

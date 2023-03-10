@@ -6,7 +6,7 @@
 </head>
 
 <body id="page-top">
-
+@include('template.load')
     <!-- Page Wrapper -->
     <div id="wrapper">
     <!--sidebar-->
@@ -28,16 +28,7 @@
                     <div class="container d-flex justify-item-center justify-content-center"><br>
                         <div class="card card-form">
                             <div class="card-body">
-                            @if ($errors->any())
-                                <div class="alert alert-danger">
-                                    <strong>Waduh!</strong>Kesalahan input.<br><br>
-                                    <ul>
-                                        @foreach ($errors->all() as $error)
-                                            <li>{{ $error }}</li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                            @endif
+            
                             @if (Session::has('msg'))
                                 <div class="alert alert-danger">{{ Session::get('msg') }}</div>
                             @endif
@@ -49,6 +40,9 @@
                             @endif
                             @if (Session::has('nikanak'))
                                 <div class="alert alert-danger">{{ Session::get('nikanak') }}</div>
+                            @endif
+                            @if (Session::has('errors'))
+                                <div class="alert alert-danger">{{ Session::get('errors') }}</div>
                             @endif
                             <form method="POST" action="/entry/pendaftaranAnak" id="myform" style="margin-top: 15px; margin-bottom: 15px;">
                                 @csrf

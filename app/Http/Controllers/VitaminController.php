@@ -8,7 +8,12 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use RealRashid\SweetAlert\Facades\Alert;
 
-class VitaminController extends Controller
+interface VitaminInterface {
+    public function index($nik_anak);
+    public function store(Request $request);
+}
+
+class VitaminController extends Controller implements VitaminInterface
 {
     public function index($nik_anak)
     {

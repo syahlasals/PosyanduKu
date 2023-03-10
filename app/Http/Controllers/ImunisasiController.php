@@ -10,8 +10,13 @@ use Illuminate\Support\Facades\DB;
 
 class ImunisasiController extends Controller
 {
+
     public function index()
     {
+        // $results = DB::table('tb_anak')
+        // ->selectRaw('status_anak()')
+        // ->get();
+        
         $anaks = Anak::all();
         $semua = Anak::count();
         $normal = Anak::whereHas('penyimpangans', function ($query) {
@@ -38,8 +43,9 @@ class ImunisasiController extends Controller
             'obesitas' => $obesitas,
             'notvaksin' => $notvaksin,
             'notvitamin' => $notvitamin,
-            'notkondisi' => $notkondisi
+            'notkondisi' => $notkondisi 
         ]);
+
     }
 
     public function notvaksin()

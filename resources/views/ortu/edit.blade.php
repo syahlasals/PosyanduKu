@@ -4,6 +4,7 @@
     @include('template.head')
 </head>
     <body>  
+    @include('template.load')
         @include('template.navortu')
         <div class="container-fluid">
             <h1 class="text-center"><b>Edit Data</b></h1><br>

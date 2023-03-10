@@ -6,6 +6,7 @@
     @include('template.head')
 </head>
 <body id="page-top">
+@include('template.load')
     <!-- Page Wrapper -->
     <div id="wrapper">
         <!--sidebar-->
@@ -145,7 +146,7 @@
                     </div>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-3">
                         <a href="{{ url('pengelola') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
-                      </div>
+                    </div>
                 </div>
                 <!-- /.container-fluid -->
 

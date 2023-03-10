@@ -6,7 +6,7 @@
 </head>
 
 <body id="page-top">
-
+@include('template.load')
     <!-- Page Wrapper -->
     <div id="wrapper">
     <!--sidebar-->
@@ -52,6 +52,9 @@
                             @endif
                             @if (Session::has('ortu'))
                                 <div class="alert alert-danger">{{ Session::get('ortu') }}</div>
+                            @endif
+                            @if (Session::has('rw'))
+                                <div class="alert alert-danger">{{ Session::get('rw') }}</div>
                             @endif
                             <form method="POST" action="/store2/daftarOrtu" id="myform" style="margin-top: 15px; margin-bottom: 15px;">
                                 @csrf

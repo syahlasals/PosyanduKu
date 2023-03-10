@@ -5,6 +5,7 @@
     @include('template.head')
 </head>
 <body>
+@include('template.load')
 <div id="wrapper">
        @include('template.sidepengelola')
         <div id="content-wrapper" class="d-flex flex-column">

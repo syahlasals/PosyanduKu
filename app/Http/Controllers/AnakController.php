@@ -7,6 +7,8 @@ use App\Models\Anak;
 use App\Models\Ortu;
 use App\Models\Stunting;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\DB;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class AnakController extends Controller
@@ -19,8 +21,14 @@ class AnakController extends Controller
     public function index()
     {
         $anaks = Anak::all();
-        return view('pengelola.dataAnak.index', compact('anaks'));
+        $p_anak = 'P';
+        $p_anakdua = 'L';
+        $gender = DB::select('SELECT gender_anak(?) AS gender' , [$p_anak]);
+        $genderdua = DB::select('SELECT gender_anak(?) AS genderdua' , [$p_anakdua]);
+
+        return view('pengelola.dataAnak.index', compact('anaks', 'gender', 'genderdua'));
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -130,16 +138,6 @@ class AnakController extends Controller
     {
         $anaks = Anak::with('ortus')->get();
         return view('entry.InputImunisasi.index', ['anakList' => $anaks]);
-        // // $anaks = Anak::all();
-        // // $ortus = Ortu::whereHas('no_kk', $no_kk)->get();
-        // $ortus = Ortu::whereHas('anaks', function ($query) {
-        //     return $query->where('no_kk', $no_kk);
-        // })->get();
-        // // $ortus = Ortu::where('no_kk', $no_kk)->get();
-        // return view('entry.inputImunisasi.index', [ 
-        //     'anaks' => $anaks, 
-        //     'ortus' => $ortus
-        //     ]);
     }
 
     public function historyImunisasi()
@@ -152,66 +150,5 @@ class AnakController extends Controller
         return view('entry.pertumbuhan.index');
     }
 
-    // public function stunting($nik_anak)
-    // {
-    //     $sdidtks = Stunting::find($nik_anak);
-    //         return view('entry.sdidtkAnak.index',[
-    //             "sdidtk" => $sdidtks
-    //     ]);
-    // }
-
-    // public function vaksin()
-    // {
-    //     return view('entry.InputImunisasi.vaksin');
-    // }
-
-    // public function vitamin()
-    // {
-    //     return view('entry.InputImunisasi.vitamin');
-    // }
-
-    // public function search(Request $request)
-    // {
-
-    //     $output="";
-
-    //     $anaks=Anak::where('nama_anak', 'Like', '%'.$request->
-    //         search.'%')->orWhere('no_kk', 'Like', '%'.$request->
-    //         search.'%')->orWhere('nik_anak', 'Like', '%'.$request->
-    //         search.'%')->get();
-
-    //     // foreach($anaks as $anak)
-    //     // {
-    //     //     $output.=
-
-    //     //     '<tr>
-            
-    //     //     <td> '.$anak->nama_anak.' </td>
-            
-    //     //     <tr>';
-    //     // }
-
-    //     foreach ($anaks as $key => $anak)
-
-    //         $output.=
-    //             '<tr>
-    //                 <td> '.$key + 1..' </td>
-    //                 <td> '.$anak->no_kk.' </td>
-    //                 <td> '.$anak->nik_anak.'</td>
-    //                 <td> '.$anak->nama_anak.'</td>
-    //                 <td> '.$anak->tmp_anak.', '.$anak->tgl_anak.'</td>
-    //                 <td> '.$anak->jenkel_anak.'</td>
-    //                 <td> '.$anak->golongan_darah.' </td>
-
-    //                 <td>
-    //                 '.'
-    //                     <a href="/anak/'.$anak->nik_anak.'/edit" class="btn btn-warning"><i class="bi bi-pencil-fill"></i></a>
-    //                 '.'
-    //                     <a href="/anak/'.$anak->nik_anak.'" class="btn btn-info"><i class="bi bi-eye-fill"></i></a>
-    //                 '.'
-    //                 </td>
-    //             </tr>';
-
-    //     return response($output);
-    // }
 }
+?>

@@ -28,7 +28,7 @@
 
     <li class="nav-item">
         <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true"
-            aria-controls="collapsePages">
+            aria-controls="collapsePages" style="margin-top: -15px;">
             <i class="fas fa-fw fa-folder"></i>
             <span>Entry</span>
         </a>
@@ -41,10 +41,16 @@
                 <div class="collapse-divider"></div>
                 <h6 class="collapse-header">Inputan :</h6>
                 <a class="collapse-item {{ Request::is('entry/InputImunisasi*') || Request::is('entry/pertumbuhan/*') || Request::is('entry/vaksin/*') || Request::is('entry/vitamin/*') || Request::is('entry/statusPenyimpangan/*') ? 'active' : '' }} " href="{{ url('entry/InputImunisasi') }}">Input Imunisasi</a>
-                <a class="collapse-item {{ Request::is('entry/logActivity*') ? 'active' : '' }}" href="{{ url('entry/logActivity') }}">Aktivitas Log</a>
+                <!-- <a class="collapse-item {{ Request::is('entry/logActivity*') ? 'active' : '' }}" href="{{ url('entry/logActivity') }}">Aktivitas Log</a> -->
             </div>
         </div>
     </li>
+    <li class="nav-item {{ Request::is('entry/logActivity') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ url('entry/logActivity') }}" style="margin-top: -15px;">
+        <i class="fas fa-list fa-sm fa-fw"></i>
+            <span>Aktivitas Log</span></a>
+    </li>
+
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 

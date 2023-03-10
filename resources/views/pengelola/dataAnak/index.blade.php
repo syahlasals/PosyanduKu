@@ -6,6 +6,7 @@
 </head>
 <?php session_start(); ?>
 <body id="page-top">
+@include('template.load')
     <!-- Page Wrapper -->
     <div id="wrapper">
     <!--sidebar-->
@@ -24,7 +25,65 @@
         <div class="container-fluid">
                     <h1 class="text-center mt-5 mb-5"><b>DATA ANAK</b></h1>
                     <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <th>
+                                    <a class="card" style="text-decoration: none; color:black; font-weight:bold">
+                                            <span class=" d-flex align-items-center justify-content-center text-center p-2">Perempuan : {{ $gender[0]->gender }} Orang</span>
+                                    </a>
+                                </th>
+                            </div>
+                            <div class="col">
+                                <th>
+                                    <a class="card" style="text-decoration: none; color:black; font-weight:bold">
+                                            <span class=" d-flex align-items-center justify-content-center text-center p-2">Laki-Laki : {{ $genderdua[0]->genderdua }} Orang</span>
+                                    </a>
+                                </th>
+                            </div>
+
+                            <div class="dropdown-center mt-3 mb-3">
+                            <button class="btn btn-white btn-md dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="border-color: #647BB1; color:black;">
+                                Lihat Golongan Darah
+                            </button>
+                            <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item {{ Request::is('pengelola/goldara') ? 'active' : '' }}" href="{{ url('pengelola/goldara') }}">A</a></li>
+                                        <li><a class="dropdown-item {{ Request::is('pengelola/goldarb') ? 'active' : '' }}" href="{{ url('pengelola/goldarb') }}">B</a></li>
+                                        <li><a class="dropdown-item {{ Request::is('pengelola/goldarab') ? 'active' : '' }}" href="{{ url('pengelola/goldarab') }}">AB</a></li>
+                                        <li><a class="dropdown-item {{ Request::is('pengelola/goldaro') ? 'active' : '' }}" href="{{ url('pengelola/goldaro') }}">O</a></li>
+                            </ul>
+                            </div>
+                        </div>
+
+                        
+                        
+
+                        <!-- <table class="table table-borderless text-center">
+                        <tr>
+                            <th>
+                                <a class="card table-filter" href="{{ url('pengelola/goldaro') }}">
+                                        <span class=" d-flex align-items-center justify-content-center text-center p-2">Golongan Darah O</span>
+                                </a>
+                            </th>
+                            <th>
+                                <a class="card table-filter" href="{{ url('pengelola/goldara') }}">
+                                        <span class=" d-flex align-items-center justify-content-center text-center p-2">Golongan Darah A</span>
+                                </a>
+                            </th>
+                            <th>
+                                <a class="card table-filter" href="{{ url('pengelola/goldarb') }}">
+                                        <span class=" d-flex align-items-center justify-content-center text-center p-2">Golongan Darah B</span>
+                                </a>
+                            </th>
+                            <th>
+                                <a class="card table-filter" href="{{ url('pengelola/goldarab') }}">
+                                        <span class=" d-flex align-items-center justify-content-center text-center p-2">Golongan Darah AB</span>
+                                </a>
+                            </th>
+                        </tr>
+                        </table> -->
+
                         <table id="dataanak" class="table table-striped table-bordered text-center">
+                            
                             <thead>
                                 <tr>
                                     <th>No</th>

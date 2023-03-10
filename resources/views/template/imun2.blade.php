@@ -1,4 +1,9 @@
+<div class="d-grid gap-2 d-md-flex justify-content-md mb-3 mt-3">
+   <a href="{{ url('pengelola') }}" class="btn btn-main" role="button" aria-disabled="true">Kembali</a>
 </div>
+</div>
+
+
 <!-- End of Main Content -->
    
    <!-- Footer -->

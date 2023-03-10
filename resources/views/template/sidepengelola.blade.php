@@ -27,7 +27,7 @@
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true"
-            aria-controls="collapsePages">
+            aria-controls="collapsePages" style="margin-top: -15px;">
             <i class="fas fa-fw fa-folder"></i>
             <span>Pengelola</span>
         </a>
@@ -39,12 +39,25 @@
                 {{-- <a class="collapse-item {{ Request::is('pengelola/dataStunting') ? 'active' : '' }}" href="{{ url('pengelola/dataStunting') }}">Data Stunting</a> --}}
                 <div class="collapse-divider"></div>
                 <h6 class="collapse-header">Data Utama :</h6>
-                <a class="collapse-item {{ Request::is('pengelola/dataAnak*') ? 'active' : '' }}" href="{{ url('pengelola/dataAnak') }}">Data Anak</a>
-                <!-- <a class="collapse-item {{ Request::is('pengelola/dataPetugas*') ? 'active' : '' }}" href="{{ url('pengelola/dataPetugas') }}">Data Petugas</a> -->
+                <a class="collapse-item {{ Request::is('pengelola/dataAnak*') ? 'active' : '' }} || {{ Request::is('pengelola/goldaro') ? 'active' : '' }} || {{ Request::is('pengelola/goldaro') ? 'active' : '' }} || {{ Request::is('pengelola/goldara') ? 'active' : '' }} || {{ Request::is('pengelola/goldarb') ? 'active' : '' }} || {{ Request::is('pengelola/goldarab') ? 'active' : '' }}" href="{{ url('pengelola/dataAnak') }}">Data Anak</a>
+                <a class="collapse-item {{ Request::is('pengelola/dataOrtu*') ? 'active' : '' }}" href="{{ url('pengelola/dataOrtu') }}">Data Ortu</a>
+                <h6 class="collapse-header">Lainnya :</h6>
                 <a class="collapse-item {{ Request::is('pengelola/dataPosyandu*') ? 'active' : '' }}" href="{{ url('pengelola/dataPosyandu') }}">Profil Posyandu</a>
-                <a class="collapse-item {{ Request::is('pengelola/logActivity*') ? 'active' : '' }}" href="{{ url('pengelola/logActivity') }}">Aktivitas Log</a>
+                <!-- <a class="collapse-item {{ Request::is('pengelola/logActivity*') ? 'active' : '' }}" href="{{ url('pengelola/logActivity') }}">Aktivitas Log</a> -->
+                <!-- <a class="collapse-item {{ Request::is('pengelola/backup*') ? 'active' : '' }}" href="{{ url('pengelola/backup') }}">Backup database</a> -->
             </div>
         </div>
+    </li>
+
+    <li class="nav-item {{ Request::is('pengelola/logActivity') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ url('pengelola/logActivity') }}" style="margin-top: -15px;">
+        <i class="fas fa-list fa-sm fa-fw"></i>
+            <span>Aktivitas Log</span></a>
+    </li>
+    <li class="nav-item {{ Request::is('http://localhost/posyanduku/public/backup') ? 'active' : '' }}">
+        <a class="nav-link" href="http://localhost/posyanduku/public/backup" style="margin-top: -15px;">
+        <i class="fa-solid fa-database"></i>
+        <span>Backup Database</span></a>
     </li>
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">

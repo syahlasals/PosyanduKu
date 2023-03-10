@@ -1,3 +1,4 @@
+@include('template.load')
 @include('template.imun')
 
         <a href="{{ url('/pengelola/dataImunisasi/notvaksin/print') }}" class="btn btn-main" target="_blank" role="button" aria-disabled="true">Cetak Rekap Anak <i class="fa-solid fa-print ml-1"></i></a><br><br>

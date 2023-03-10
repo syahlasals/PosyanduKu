@@ -6,6 +6,7 @@
 </head>
 <body>
 <div id="wrapper">
+@include('template.load')
        @include('template.sideentry')
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
